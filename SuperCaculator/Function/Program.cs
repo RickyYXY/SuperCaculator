@@ -10,6 +10,12 @@ namespace Function
     {
         static void Main(string[] args)
         {
+            string exp = "x*sin(1)+x+458";
+            Function f = new Function(exp);
+            foreach(string s in f.RPNExpression)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
