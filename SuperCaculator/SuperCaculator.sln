@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "MainForm\MainFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Function", "Function\Function.csproj", "{67D272CD-ED3E-41B3-96D3-A9F2FA133F01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPaintForm", "PaintForm\FunctionPaintForm.csproj", "{F7C824AF-0C98-4BD9-B9E3-35A59AE618A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67D272CD-ED3E-41B3-96D3-A9F2FA133F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D272CD-ED3E-41B3-96D3-A9F2FA133F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D272CD-ED3E-41B3-96D3-A9F2FA133F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C824AF-0C98-4BD9-B9E3-35A59AE618A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C824AF-0C98-4BD9-B9E3-35A59AE618A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C824AF-0C98-4BD9-B9E3-35A59AE618A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C824AF-0C98-4BD9-B9E3-35A59AE618A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
