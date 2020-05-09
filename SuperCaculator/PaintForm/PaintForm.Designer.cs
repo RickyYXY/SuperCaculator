@@ -42,6 +42,7 @@
             this.labelx = new System.Windows.Forms.Label();
             this.labely = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_func = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_paint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.label_func);
             this.panel1.Controls.Add(this.button_clean);
             this.panel1.Controls.Add(this.button_close);
             this.panel1.Controls.Add(this.button_draw);
@@ -62,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 200);
+            this.panel1.Size = new System.Drawing.Size(807, 250);
             this.panel1.TabIndex = 1;
             // 
             // button_clean
@@ -70,10 +72,10 @@
             this.button_clean.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_clean.BackColor = System.Drawing.Color.LightCyan;
             this.button_clean.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_clean.Location = new System.Drawing.Point(410, 115);
+            this.button_clean.Location = new System.Drawing.Point(410, 175);
             this.button_clean.Name = "button_clean";
             this.button_clean.Size = new System.Drawing.Size(150, 55);
-            this.button_clean.TabIndex = 13;
+            this.button_clean.TabIndex = 12;
             this.button_clean.Text = "Clean";
             this.button_clean.UseVisualStyleBackColor = false;
             this.button_clean.Click += new System.EventHandler(this.Button_clean_Click);
@@ -83,10 +85,10 @@
             this.button_close.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_close.BackColor = System.Drawing.Color.LightCyan;
             this.button_close.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_close.Location = new System.Drawing.Point(595, 115);
+            this.button_close.Location = new System.Drawing.Point(595, 175);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(150, 55);
-            this.button_close.TabIndex = 12;
+            this.button_close.TabIndex = 13;
             this.button_close.Text = "Close";
             this.button_close.UseVisualStyleBackColor = false;
             this.button_close.Click += new System.EventHandler(this.Button_close_Click);
@@ -96,7 +98,7 @@
             this.button_draw.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_draw.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_draw.Location = new System.Drawing.Point(225, 115);
+            this.button_draw.Location = new System.Drawing.Point(225, 175);
             this.button_draw.Name = "button_draw";
             this.button_draw.Size = new System.Drawing.Size(150, 55);
             this.button_draw.TabIndex = 11;
@@ -109,7 +111,7 @@
             this.button_color.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_color.BackColor = System.Drawing.Color.LightCyan;
             this.button_color.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_color.Location = new System.Drawing.Point(40, 115);
+            this.button_color.Location = new System.Drawing.Point(40, 175);
             this.button_color.Name = "button_color";
             this.button_color.Size = new System.Drawing.Size(150, 55);
             this.button_color.TabIndex = 10;
@@ -122,7 +124,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label1.Location = new System.Drawing.Point(35, 30);
+            this.label1.Location = new System.Drawing.Point(35, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 52);
             this.label1.TabIndex = 9;
@@ -132,7 +134,7 @@
             // 
             this.textBox_max.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_max.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_max.Location = new System.Drawing.Point(545, 30);
+            this.textBox_max.Location = new System.Drawing.Point(545, 90);
             this.textBox_max.Name = "textBox_max";
             this.textBox_max.Size = new System.Drawing.Size(200, 59);
             this.textBox_max.TabIndex = 8;
@@ -143,7 +145,7 @@
             // 
             this.textBox_min.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_min.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_min.Location = new System.Drawing.Point(205, 30);
+            this.textBox_min.Location = new System.Drawing.Point(205, 90);
             this.textBox_min.Name = "textBox_min";
             this.textBox_min.Size = new System.Drawing.Size(200, 59);
             this.textBox_min.TabIndex = 7;
@@ -155,7 +157,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label2.Location = new System.Drawing.Point(425, 30);
+            this.label2.Location = new System.Drawing.Point(425, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 52);
             this.label2.TabIndex = 6;
@@ -166,9 +168,9 @@
             this.panel_paint.AutoScroll = true;
             this.panel_paint.Controls.Add(this.pictureBox);
             this.panel_paint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_paint.Location = new System.Drawing.Point(0, 200);
+            this.panel_paint.Location = new System.Drawing.Point(0, 250);
             this.panel_paint.Name = "panel_paint";
-            this.panel_paint.Size = new System.Drawing.Size(807, 503);
+            this.panel_paint.Size = new System.Drawing.Size(807, 453);
             this.panel_paint.TabIndex = 2;
             // 
             // pictureBox
@@ -177,7 +179,7 @@
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(807, 503);
+            this.pictureBox.Size = new System.Drawing.Size(807, 453);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
@@ -215,6 +217,17 @@
             this.panel2.Size = new System.Drawing.Size(807, 31);
             this.panel2.TabIndex = 4;
             // 
+            // label_func
+            // 
+            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_func.AutoSize = true;
+            this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func.Location = new System.Drawing.Point(35, 20);
+            this.label_func.Name = "label_func";
+            this.label_func.Size = new System.Drawing.Size(143, 52);
+            this.label_func.TabIndex = 14;
+            this.label_func.Text = "F(x) = ";
+            // 
             // PaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -250,5 +263,6 @@
         private System.Windows.Forms.Label labelx;
         private System.Windows.Forms.Label labely;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_func;
     }
 }
