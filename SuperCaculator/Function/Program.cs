@@ -10,12 +10,16 @@ namespace Function
     {
         static void Main(string[] args)
         {
-            string exp = "x*sin(1)+x+458";
+            string exp = "-x*x";
             Function f = new Function(exp);
-            foreach(string s in f.RPNExpression)
+            for(double x=1;x<100;x+=1)
             {
-                Console.WriteLine(s);
+                Console.WriteLine("test:{0},true:{1}",f.GetValue(x),Test_cal(x));
             }
+        }
+        public static double Test_cal(double x)
+        {
+            return -x * x;
         }
     }
 }

@@ -9,14 +9,66 @@ namespace Function
     class Function
     {
         protected Stack<double> figures;
-        protected Stack<string> operators;
+        //protected Stack<string> operators;
 
-        public List<string> RPNExpression; //后缀表达式
-        public string Signature { set; get; } //函数签名
+        protected List<string> RPNExpression; //后缀表达式
+        //public string Signature { set; get; } //函数签名
 
-        public virtual double GetValue(double x) { return 0; }  //计算函数值
+        public virtual double GetValue(double x)//计算函数值
+        {
+            foreach (string unit in RPNExpression)
+            {
 
-        public void BuildRPN(string exp)
+                if (unit == "x")
+                    figures.Push(x);
+                else if (double.TryParse(unit, out double result))
+                    figures.Push(result);
+                else if (unit == "+" || unit == "-" || unit == "*" || unit == "/" || unit == "^")
+                {
+                    double n1, n2;
+                    switch (unit)
+                    {
+                        case "+":
+                            n1 = figures.Pop();
+                            n2 = figures.Pop();
+                            figures.Push(n1 + n2);
+                            break;
+                        case "-":
+                            n1 = figures.Pop();
+                            n2 = figures.Pop();
+                            figures.Push(n2 - n1);
+                            break;
+                        case "*":
+                            n1 = figures.Pop();
+                            n2 = figures.Pop();
+                            figures.Push(n1 * n2);
+                            break;
+                        case "/":
+                            n1 = figures.Pop();
+                            n2 = figures.Pop();
+                            figures.Push(n1 / n2);
+                            break;
+                        case "^":
+                            n1 = figures.Pop();
+                            n2 = figures.Pop();
+                            figures.Push(Math.Pow(n1, n2));
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    double func_result = FuncMatch.MatchFuncCal(unit, x);
+                    figures.Push(func_result);
+                }
+            }
+            double ans = figures.Pop();
+            figures.Clear();
+            return ans;
+        }
+
+        public void BuildRPN(string exp) //生成后缀表达式
         {
             Stack<string> st = new Stack<string>();
             //st.Push("");
@@ -29,7 +81,7 @@ namespace Function
                     {
                         st.Push(temp);
                         continue;
-                    }    
+                    }
                     while (st.Peek() == "^")
                     {
                         RPNExpression.Add(st.Pop());
@@ -51,12 +103,16 @@ namespace Function
                 }
                 else if (temp == "+" || temp == "-")
                 {
+                    if (temp == "-" && (i == 0 || exp[i - 1] == '('))
+                    {
+                        RPNExpression.Add("0");
+                    }
                     if (st.Count == 0)
                     {
                         st.Push(temp);
                         continue;
                     }
-                    while (st.Count!=0&&st.Peek() != "(")
+                    while (st.Count != 0 && st.Peek() != "(")
                     {
                         RPNExpression.Add(st.Pop());
                     }
@@ -76,14 +132,16 @@ namespace Function
                 }
                 else if (temp == "x")
                 {
+                    
                     RPNExpression.Add(temp);
                 }
                 else if (exp[i] <= '9' && exp[i] >= '0')
                 {
                     int j = i;
-                    while (j<exp.Length&&exp[j] <= '9' && exp[j] >= '0')
+                    while (j < exp.Length && (exp[j] <= '9' && exp[j] >= '0' || exp[j] == '.'))
                         j++;
-                    RPNExpression.Add(exp.Substring(i, j - i));
+                    temp = exp.Substring(i, j - i);
+                    RPNExpression.Add(temp);
                     i = j - 1;
                 }
                 else
@@ -124,12 +182,15 @@ namespace Function
                                 else if (bnum == 0)
                                     break;
                             }
-                            if(bnum==0)
+                            if (bnum == 0)
                             {
-                                RPNExpression.Add(exp.Substring(i, j - i + 1));
+                                temp = exp.Substring(i, j - i + 1);                               
+                                RPNExpression.Add(temp);
                                 i = j;
                                 flag2 = true;
                             }
+                            else
+                                throw new FunctionException("括弧输入非法!", 3);
                             break;
                         }
                     }
@@ -137,24 +198,47 @@ namespace Function
                         throw new FunctionException("使用了非库函数!", 3);
                 }
             }
-            while (st.Count>0)
+            while (st.Count > 0)
                 RPNExpression.Add(st.Pop());
         }
+
         public Function(string exp)
         {
             RPNExpression = new List<string>();
-            BuildRPN(exp);
+            figures = new Stack<double>();
+            try
+            {
+                BuildRPN(exp);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                throw new FunctionException("数学符号式输入非法,请检查格式是否正确!", 4);
+            }
+            catch (InvalidOperationException)
+            {
+                throw new FunctionException("输入算式形式非法,请检查!", 5);
+            }
         }
-
     }
+
     class Sin_function : Function
     {
 
-        public Sin_function(string exp, string sign) : base(exp) { }
-        //public override double GetValue(double x)
-        //{
+        public Sin_function(string exp) : base(exp) { }
+        public override double GetValue(double x)
+        {
+            return Math.Sin(base.GetValue(x));
+        }
 
-        //}
+    }
+
+    class Cos_function:Function
+    {
+        public Cos_function(string exp) : base(exp) { }
+        public override double GetValue(double x)
+        {
+            return Math.Cos(base.GetValue(x));
+        }
     }
 
     class FunctionException : Exception
