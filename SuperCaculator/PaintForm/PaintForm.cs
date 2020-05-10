@@ -27,9 +27,10 @@ namespace PaintForm
         double maxValue, minValue;
         bool ShowXY = false;
 
-        public PaintForm()
+        public PaintForm(string exp)
         {
             InitializeComponent();
+            label_func.Text += exp;
             mypen = new Pen(Color.Black);
             pen_coordinate = new Pen(Color.Black);
             pen_coor = new Pen(Color.Gray);
@@ -79,7 +80,7 @@ namespace PaintForm
             labelx.Text = "X: ";
             labely.Text = "Y: ";
         }
-        
+
         private void Button_close_Click(object sender, EventArgs e)
         {
             Close();
@@ -105,10 +106,10 @@ namespace PaintForm
 
         private void DrawFunction(double min, double max)
         {
-            XLENGTH = (int)(Width * 0.65);
-            YLENGTH = (int)(Height * 0.5);
-            Xstart = (int)(Width * 0.15);
-            Ystart = (int)(Height * 0.58);
+            XLENGTH = (int)(pictureBox.Width * 0.65);
+            YLENGTH = (int)(pictureBox.Height * 0.65);
+            Xstart = (int)(pictureBox.Width * 0.15);
+            Ystart = (int)(pictureBox.Height * 0.85);
             dx = (max - min) / XLENGTH;
             List<double> values = new List<double>();
             double pre_result = Caculate(min);
@@ -154,7 +155,7 @@ namespace PaintForm
             }
             Graphics g = pictureBox.CreateGraphics();
             g.Clear(Color.White);
-            g.DrawLine(pen_coordinate, Xstart, Ystart, Xstart, Ystart - (int)(YLENGTH * 1.1));
+            g.DrawLine(pen_coordinate, Xstart, Ystart, Xstart, Ystart - (int)(YLENGTH * 1.2));
             g.DrawLine(pen_coordinate, Xstart, Ystart, Xstart + (int)(XLENGTH * 1.2), Ystart);
             g.DrawLine(pen_coordinate, Xstart, Ystart, Xstart + (int)(XLENGTH * 1.2), Ystart);
             foreach (List<Point> pts in lines)
@@ -178,7 +179,7 @@ namespace PaintForm
             StringFormat sf = new StringFormat();
             sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
             g.DrawString("x", font, brush, Xstart + (int)(XLENGTH * 1.2), Ystart);
-            g.DrawString("y", font, brush, Xstart, Ystart - (int)(YLENGTH * 1.1), sf);
+            g.DrawString("y", font, brush, Xstart, Ystart - (int)(YLENGTH * 1.2), sf);
             if (maxValue >= 0 && minValue < 0)
             {
                 int zero = Ystart + (int)(minValue / dy);

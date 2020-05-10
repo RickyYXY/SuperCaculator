@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Function
 {
-    class Function
+    public class Function
     {
         protected Stack<double> figures;
         //protected Stack<string> operators;
