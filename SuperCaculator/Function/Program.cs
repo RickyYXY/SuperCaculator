@@ -11,7 +11,7 @@ namespace Function
         //
         static void Main(string[] args)
         {
-            string exp = "-x*x";
+            string exp = "log10(x)";
             Function f = new Function(exp);
             for(double x=1;x<100;x+=1)
             {
@@ -20,7 +20,7 @@ namespace Function
         }
         public static double Test_cal(double x)
         {
-            return -x * x;
+            return Math.Log10(x);
         }
     }
 }

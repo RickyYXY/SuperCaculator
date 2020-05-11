@@ -157,9 +157,11 @@ namespace Function
                             if (reg == "log")
                             {
                                 //func_exp = exp.Substring(i, 4); //log函数后必须指明底数大小,大小为数字
-                                j = i + 4;
-                                if (exp[i + 1 + reg.Length] > '9' || exp[i + 1 + reg.Length] < '2')
-                                    throw new FunctionException("log函数后必须含有数字底数值(>=2)!", 1);
+                                j = i;
+                                while (exp[j] != '(')
+                                    j++;
+                                if (exp[i + reg.Length] > '9' || exp[i + reg.Length] < '1')
+                                    throw new FunctionException("log函数后必须含有合法数字底数值!", 1);
                             }
                             else
                             {
@@ -247,6 +249,19 @@ namespace Function
         public override double GetValue(double x)
         {
             return Math.Log(base.GetValue(x), Math.E);
+        }
+    }
+
+    class Log_function : Function
+    {
+        private double log_base;
+        public Log_function(string exp, double newbase) : base(exp)
+        {
+            log_base = newbase;
+        }
+        public override double GetValue(double x)
+        {
+            return Math.Log(base.GetValue(x), log_base);
         }
     }
 

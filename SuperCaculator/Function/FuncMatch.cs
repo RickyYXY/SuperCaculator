@@ -19,11 +19,23 @@ namespace Function
                     switch (s)
                     {
                         case "sin":
-                            Sin_function sin_func = new Sin_function(exp);
-                            return sin_func.GetValue(x);
+                            Sin_function sin_Function = new Sin_function(exp);
+                            return sin_Function.GetValue(x);
                         case "cos":
-                            Cos_function cos_func = new Cos_function(exp);
-                            return cos_func.GetValue(x);
+                            Cos_function cos_Function = new Cos_function(exp);
+                            return cos_Function.GetValue(x);
+                        case "ln":
+                            Ln_function ln_Function = new Ln_function(exp);
+                            return ln_Function.GetValue(x);
+                        case "log":
+                            int j = 0;
+                            string temp = input.Substring(s.Length);
+                            while (j < temp.Length && (temp[j] <= '9' && temp[j] >= '0' || temp[j] == '.'))
+                                j++;
+                            double newbase = double.Parse(temp.Substring(0, j));
+                            exp = temp.Substring(j + 1, temp.Length - j - 2);
+                            Log_function log_Function = new Log_function(exp, newbase);
+                            return log_Function.GetValue(x);
                     }
                 }
             }
