@@ -241,6 +241,15 @@ namespace Function
         }
     }
 
+    class Ln_function:Function
+    {
+        public Ln_function(string exp) : base(exp) { }
+        public override double GetValue(double x)
+        {
+            return Math.Log(base.GetValue(x), Math.E);
+        }
+    }
+
     class FunctionException : Exception
     {
         public int Code { set; get; }
