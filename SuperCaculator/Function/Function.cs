@@ -146,31 +146,29 @@ namespace Function
                 }
                 else
                 {
-                    //string func_exp; //函数符号，如sin
                     bool flag2 = false;
                     foreach (string reg in FuncMatch.func_names)
                     {
-                        int ind = exp.IndexOf(reg, i);
+                        int ind = exp.IndexOf(reg, i); //确认exp中含有reg函数
                         if (ind == i)
                         {
-                            int j;     //e.g. sin()中(后一位的下标号
-                            if (reg == "log")
+                            int j;     
+                            if (reg == "log") //log后面的底数长度未知，需要单独判断
                             {
-                                //func_exp = exp.Substring(i, 4); //log函数后必须指明底数大小,大小为数字
+                                if (exp[i + reg.Length] > '9' || exp[i + reg.Length] < '1')
+                                    throw new FunctionException("log函数后必须含有合法数字底数值!", 1);
                                 j = i;
                                 while (exp[j] != '(')
                                     j++;
-                                if (exp[i + reg.Length] > '9' || exp[i + reg.Length] < '1')
-                                    throw new FunctionException("log函数后必须含有合法数字底数值!", 1);
                             }
-                            else
+                            else //其余函数正常处理
                             {
-                                //func_exp = exp.Substring(i, reg.Length);
                                 j = i + reg.Length;
                             }
+                            //j对应： e.g. sin()中(后一位的下标号
                             if (exp[j] != '(')
                                 throw new FunctionException("函数后必须含有括弧!", 2);
-                            int bnum = 0;//左右括弧数
+                            int bnum = 0;  //左右括弧对称数
                             for (; j < exp.Length; j++)
                             {
                                 if (exp[j] == '(')
