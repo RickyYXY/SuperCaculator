@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PaintForm
 {
-    public partial class PaintForm : Form
+    public partial class Paint2DForm : Form
     {
         private Pen mypen;
         private Pen pen_coordinate;
@@ -27,7 +27,7 @@ namespace PaintForm
         double maxValue, minValue;
         bool ShowXY = false;
 
-        public PaintForm(string exp)
+        public Paint2DForm(string exp)
         {
             InitializeComponent();
             label_func.Text += exp;
@@ -69,7 +69,7 @@ namespace PaintForm
                 MessageBox.Show("数值输入不合法。");
                 return;
             }
-            DrawFunction(minX, maxX);
+            DrawFunction();
         }
 
         private void Button_clean_Click(object sender, EventArgs e)
@@ -104,18 +104,18 @@ namespace PaintForm
             }
         }
 
-        private void DrawFunction(double min, double max)
+        private void DrawFunction()
         {
             XLENGTH = (int)(pictureBox.Width * 0.65);
             YLENGTH = (int)(pictureBox.Height * 0.65);
             Xstart = (int)(pictureBox.Width * 0.15);
             Ystart = (int)(pictureBox.Height * 0.85);
-            dx = (max - min) / XLENGTH;
+            dx = (maxX - minX) / XLENGTH;
             List<double> values = new List<double>();
-            double pre_result = Caculate(min);
+            double pre_result = Caculate(minX);
             for (int i = 0; i < XLENGTH; i++)
             {
-                double result = Caculate(min + dx * i);
+                double result = Caculate(minX + dx * i);
                 if (double.IsNaN(result))
                 {
                     MessageBox.Show("数值无意义。");

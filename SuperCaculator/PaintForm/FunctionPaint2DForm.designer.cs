@@ -1,6 +1,6 @@
 ﻿namespace PaintForm
 {
-    partial class FunctionPaintForm
+    partial class FunctionPaint2DForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -32,7 +32,7 @@
             this.button_cancel = new System.Windows.Forms.Button();
             this.button_confirm = new System.Windows.Forms.Button();
             this.textBox_exp = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_func = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             this.panel1.Controls.Add(this.button_cancel);
             this.panel1.Controls.Add(this.button_confirm);
             this.panel1.Controls.Add(this.textBox_exp);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label_func);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -89,24 +89,24 @@
             this.textBox_exp.Text = "x+x*sin(x)+2";
             this.textBox_exp.TextChanged += new System.EventHandler(this.TextBox_exp_TextChanged);
             // 
-            // label1
+            // label_func
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label1.Location = new System.Drawing.Point(25, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 52);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "F(x) = ";
+            this.label_func.AutoSize = true;
+            this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func.Location = new System.Drawing.Point(25, 40);
+            this.label_func.Name = "label_func";
+            this.label_func.Size = new System.Drawing.Size(143, 52);
+            this.label_func.TabIndex = 0;
+            this.label_func.Text = "F(x) = ";
             // 
-            // FunctionPaintForm
+            // FunctionPaint2DForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.panel1);
-            this.Name = "FunctionPaintForm";
-            this.Text = "FunctionPaint";
+            this.Name = "FunctionPaint2DForm";
+            this.Text = "FunctionPaint2D";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -117,7 +117,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox_exp;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_func;
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_cancel;
     }
