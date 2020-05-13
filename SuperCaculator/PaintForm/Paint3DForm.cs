@@ -35,6 +35,7 @@ namespace PaintForm
             rate = trackBar.Value + 1;
             Caculate = (x, y) => x * x * y * y;
             //Caculate = (x, y) => x + y;
+            //Caculate = (x, y) => x * y;
         }
 
         private void TrackBar_Scroll(object sender, EventArgs e)
@@ -147,9 +148,12 @@ namespace PaintForm
             g.DrawString("y", font, brush,
                 Xstart + XLENGTH + (int)(YLENGTH / sqrt2 / 2), Ystart - (int)(YLENGTH / sqrt2 / 2));
             g.DrawString("z", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
-            g.DrawString(minZ.ToString("#0.0"), font1, brush, Xstart, Ystart, sf);
-            g.DrawString(maxZ.ToString("#0.0"), font1, brush, Xstart, Ystart - ZLENGTH, sf);
+            g.DrawString(NumToString(minZ), font1, brush, Xstart, Ystart, sf);
+            g.DrawString(NumToString(maxZ), font1, brush, Xstart, Ystart - ZLENGTH, sf);
 
+            List<Point> firsts, lasts;
+            firsts = new List<Point>();
+            lasts = new List<Point>();
             for (int i = 0; i < XL; i++)
             {
                 List<Point> points = new List<Point>();
@@ -157,11 +161,12 @@ namespace PaintForm
                 {
                     points.Add(new Point(Xstart + x[i, j], Ystart - y[i, j]));
                 }
-                if (points.Count > 1)
-                {
-                    g.DrawCurve(mypen, points.ToArray());
-                }
+                g.DrawCurve(mypen, points.ToArray());
+                firsts.Add(points.First());
+                lasts.Add(points.Last());
             }
+            g.DrawCurve(mypen, firsts.ToArray());
+            g.DrawCurve(mypen, lasts.ToArray());
         }
 
         private void DrawBox()
@@ -193,6 +198,21 @@ namespace PaintForm
         {
             cx = (int)(x * rate + y / sqrt2);
             cy = z + (int)(y / sqrt2);
+        }
+
+        private string NumToString(double num)
+        {
+            string str;
+            if (num < 0)
+            {
+                str = (-num).ToString("#0.0");
+                str += "-";
+            }
+            else
+            {
+                str = num.ToString("#0.0");
+            }
+            return str;
         }
     }
 }
