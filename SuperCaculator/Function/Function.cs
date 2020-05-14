@@ -31,7 +31,7 @@ namespace Function
                         case "+":
                             n1 = figures.Pop();
                             n2 = figures.Pop();
-                            figures.Push(n1 + n2);
+                            figures.Push(n2 + n1);
                             break;
                         case "-":
                             n1 = figures.Pop();
@@ -41,17 +41,17 @@ namespace Function
                         case "*":
                             n1 = figures.Pop();
                             n2 = figures.Pop();
-                            figures.Push(n1 * n2);
+                            figures.Push(n2 * n1);
                             break;
                         case "/":
                             n1 = figures.Pop();
                             n2 = figures.Pop();
-                            figures.Push(n1 / n2);
+                            figures.Push(n2 / n1);
                             break;
                         case "^":
                             n1 = figures.Pop();
                             n2 = figures.Pop();
-                            figures.Push(Math.Pow(n1, n2));
+                            figures.Push(Math.Pow(n2, n1));
                             break;
                         default:
                             break;

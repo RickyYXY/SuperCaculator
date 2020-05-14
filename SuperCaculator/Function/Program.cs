@@ -11,16 +11,21 @@ namespace Function
         //
         static void Main(string[] args)
         {
-            string exp = "log10(x)";
+            string exp = "sin(sin(x)*x^3)/45";
+            string exp2 = "sin(x)*x^3";
             Function f = new Function(exp);
             for(double x=1;x<100;x+=1)
             {
-                Console.WriteLine("test:{0},true:{1}",f.GetValue(x),Test_cal(x));
+                Console.WriteLine("x={2},test:{0},true:{1}",f.GetValue(x),Test_cal1(x),x);
             }
         }
-        public static double Test_cal(double x)
+        public static double Test_cal1(double x)
         {
-            return Math.Log10(x);
+            return Math.Sin(Math.Sin(x)*Math.Pow(x,3))/45;
+        }
+        public static double Test_cal2(double x)
+        {
+            return Math.Sin(x) * Math.Pow(x, 3);
         }
     }
 }
