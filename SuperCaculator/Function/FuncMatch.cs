@@ -8,7 +8,7 @@ namespace Function
 {
     class FuncMatch
     {
-        public static string[] func_names = { "sin", "cos", "tan", "exp", "log" ,"ln"};
+        public static readonly string[] func_names = { "sin", "cos", "tan", "exp", "log" ,"ln"};
         public static double MatchFuncCal(string input,double x)
         {
             foreach (string s in func_names)
