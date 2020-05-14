@@ -13,10 +13,13 @@ namespace Function
         {
             foreach (string s in func_names)
             {
-                if (input.IndexOf(s + "(") == 0) //区分tan与tanh
+                string func_name = s;
+                if (func_name != "log")
+                    func_name += "("; //log函数后面接非(的数字，其余函数均接(，由此区分tan(与tanh(
+                if (input.IndexOf(func_name) == 0)
                 {
-                    string exp = input.Substring(s.Length + 1, input.Length - s.Length - 2);
-                    switch (s)
+                    string exp = input.Substring(func_name.Length + 1, input.Length - func_name.Length - 2);
+                    switch (func_name)
                     {
                         case "sin":
                             Sin_function sin_Function = new Sin_function(exp);
@@ -35,7 +38,7 @@ namespace Function
                             return ln_Function.GetValue(x);
                         case "log":
                             int j = 0;
-                            string temp = input.Substring(s.Length);
+                            string temp = input.Substring(func_name.Length);
                             while (j < temp.Length && (temp[j] <= '9' && temp[j] >= '0' || temp[j] == '.'))
                                 j++;
                             double newbase = double.Parse(temp.Substring(0, j));
