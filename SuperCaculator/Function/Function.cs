@@ -8,22 +8,37 @@ namespace Function
 {
     public class Function
     {
-        protected Stack<double> figures;
-        //protected Stack<string> operators;
-
+        protected Stack<double> figures; //计算使用栈
         protected List<string> RPNExpression; //后缀表达式
-        //public string Signature { set; get; } //函数签名
+
+        public Function(string exp)
+        {
+            RPNExpression = new List<string>();
+            figures = new Stack<double>();
+            try
+            {
+                BuildRPN(exp);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                throw new FunctionException("数学符号式输入非法,请检查格式是否正确!", 4);
+            }
+            catch (InvalidOperationException)
+            {
+                throw new FunctionException("输入算式形式非法,请检查!", 5);
+            }
+        }
 
         public virtual double GetValue(double x)//计算函数值
         {
             foreach (string unit in RPNExpression)
             {
-
                 if (unit == "x")
                     figures.Push(x);
                 else if (double.TryParse(unit, out double result))
                     figures.Push(result);
-                else if (unit == "+" || unit == "-" || unit == "*" || unit == "/" || unit == "^")
+                else if (unit == "+" || unit == "-" || unit == "*"
+                    || unit == "/" || unit == "^" || unit == "!")
                 {
                     double n1, n2;
                     switch (unit)
@@ -53,6 +68,11 @@ namespace Function
                             n2 = figures.Pop();
                             figures.Push(Math.Pow(n2, n1));
                             break;
+                        case "!":
+                            n1 = figures.Pop(); //0弹出
+                            n2 = figures.Pop();
+                            figures.Push(Factorial(n2));
+                            break;
                         default:
                             break;
                     }
@@ -71,18 +91,33 @@ namespace Function
         public void BuildRPN(string exp) //生成后缀表达式
         {
             Stack<string> st = new Stack<string>();
-            //st.Push("");
+
             for (int i = 0; i < exp.Length; i++)
             {
                 string temp = exp[i].ToString();
-                if (temp == "^")
+                if (temp == "!")
+                {
+                    if (st.Count == 0)
+                    {
+                        RPNExpression.Add("0");//将x!转化为x!0
+                        st.Push(temp);
+                        continue;
+                    }
+                    while (st.Count != 0 && st.Peek() == "!")
+                    {
+                        RPNExpression.Add(st.Pop());
+                    }
+                    RPNExpression.Add("0");//将x!转化为x!0
+                    st.Push(temp);
+                }
+                else if (temp == "^")
                 {
                     if (st.Count == 0)
                     {
                         st.Push(temp);
                         continue;
                     }
-                    while (st.Peek() == "^")
+                    while (st.Count != 0 && (st.Peek() == "^" || st.Peek() == "!"))
                     {
                         RPNExpression.Add(st.Pop());
                     }
@@ -95,7 +130,8 @@ namespace Function
                         st.Push(temp);
                         continue;
                     }
-                    while (st.Peek() == "^" || st.Peek() == "*" || st.Peek() == "/")
+                    while (st.Count != 0 && (st.Peek() == "!" || st.Peek() == "^" ||
+                        st.Peek() == "*" || st.Peek() == "/"))
                     {
                         RPNExpression.Add(st.Pop());
                     }
@@ -105,7 +141,7 @@ namespace Function
                 {
                     if (temp == "-" && (i == 0 || exp[i - 1] == '('))
                     {
-                        RPNExpression.Add("0");
+                        RPNExpression.Add("0"); //将-x转化为0-x
                     }
                     if (st.Count == 0)
                     {
@@ -132,7 +168,7 @@ namespace Function
                 }
                 else if (temp == "x")
                 {
-                    
+
                     RPNExpression.Add(temp);
                 }
                 else if (exp[i] <= '9' && exp[i] >= '0')
@@ -152,7 +188,7 @@ namespace Function
                         int ind = exp.IndexOf(reg, i); //确认exp中含有reg函数
                         if (ind == i)
                         {
-                            int j;     
+                            int j;
                             if (reg == "log") //log后面的底数长度未知，需要单独判断
                             {
                                 if (exp[i + reg.Length] > '9' || exp[i + reg.Length] < '1')
@@ -184,7 +220,7 @@ namespace Function
                             }
                             if (bnum == 0)
                             {
-                                temp = exp.Substring(i, j - i + 1);                               
+                                temp = exp.Substring(i, j - i + 1);
                                 RPNExpression.Add(temp);
                                 i = j;
                                 flag2 = true;
@@ -202,22 +238,12 @@ namespace Function
                 RPNExpression.Add(st.Pop());
         }
 
-        public Function(string exp)
+        public double Factorial(double x)
         {
-            RPNExpression = new List<string>();
-            figures = new Stack<double>();
-            try
-            {
-                BuildRPN(exp);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                throw new FunctionException("数学符号式输入非法,请检查格式是否正确!", 4);
-            }
-            catch (InvalidOperationException)
-            {
-                throw new FunctionException("输入算式形式非法,请检查!", 5);
-            }
+            double result = 1;
+            while (x > 0)
+                result *= x--;
+            return result;
         }
     }
 
@@ -232,7 +258,7 @@ namespace Function
 
     }
 
-    class Cos_function:Function
+    class Cos_function : Function
     {
         public Cos_function(string exp) : base(exp) { }
         public override double GetValue(double x)
@@ -241,12 +267,30 @@ namespace Function
         }
     }
 
-    class Ln_function:Function
+    class Tan_function : Function
+    {
+        public Tan_function(string exp) : base(exp) { }
+        public override double GetValue(double x)
+        {
+            return Math.Tan(base.GetValue(x));
+        }
+    }
+
+    class Ln_function : Function
     {
         public Ln_function(string exp) : base(exp) { }
         public override double GetValue(double x)
         {
             return Math.Log(base.GetValue(x), Math.E);
+        }
+    }
+
+    class Exp_function : Function
+    {
+        public Exp_function(string exp) : base(exp) { }
+        public override double GetValue(double x)
+        {
+            return Math.Exp(base.GetValue(x));
         }
     }
 

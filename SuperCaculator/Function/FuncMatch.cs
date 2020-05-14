@@ -13,7 +13,7 @@ namespace Function
         {
             foreach (string s in func_names)
             {
-                if (input.IndexOf(s) == 0)
+                if (input.IndexOf(s + "(") == 0) //区分tan与tanh
                 {
                     string exp = input.Substring(s.Length + 1, input.Length - s.Length - 2);
                     switch (s)
@@ -24,6 +24,12 @@ namespace Function
                         case "cos":
                             Cos_function cos_Function = new Cos_function(exp);
                             return cos_Function.GetValue(x);
+                        case "tan":
+                            Tan_function tan_Function = new Tan_function(exp);
+                            return tan_Function.GetValue(x);
+                        case "exp":
+                            Exp_function exp_Function = new Exp_function(exp);
+                            return exp_Function.GetValue(x);
                         case "ln":
                             Ln_function ln_Function = new Ln_function(exp);
                             return ln_Function.GetValue(x);
