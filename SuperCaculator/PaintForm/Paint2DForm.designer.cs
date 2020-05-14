@@ -1,6 +1,6 @@
 ﻿namespace PaintForm
 {
-    partial class PaintForm
+    partial class Paint2DForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_func = new System.Windows.Forms.Label();
             this.button_clean = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.button_draw = new System.Windows.Forms.Button();
             this.button_color = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_range = new System.Windows.Forms.Label();
             this.textBox_max = new System.Windows.Forms.TextBox();
             this.textBox_min = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_X = new System.Windows.Forms.Label();
             this.panel_paint = new System.Windows.Forms.Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.labelx = new System.Windows.Forms.Label();
             this.labely = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label_func = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_paint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -57,15 +57,26 @@
             this.panel1.Controls.Add(this.button_close);
             this.panel1.Controls.Add(this.button_draw);
             this.panel1.Controls.Add(this.button_color);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label_range);
             this.panel1.Controls.Add(this.textBox_max);
             this.panel1.Controls.Add(this.textBox_min);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label_X);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(807, 250);
             this.panel1.TabIndex = 1;
+            // 
+            // label_func
+            // 
+            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_func.AutoSize = true;
+            this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func.Location = new System.Drawing.Point(35, 20);
+            this.label_func.Name = "label_func";
+            this.label_func.Size = new System.Drawing.Size(143, 52);
+            this.label_func.TabIndex = 14;
+            this.label_func.Text = "F(x) = ";
             // 
             // button_clean
             // 
@@ -119,16 +130,16 @@
             this.button_color.UseVisualStyleBackColor = false;
             this.button_color.Click += new System.EventHandler(this.Button_color_Click);
             // 
-            // label1
+            // label_range
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label1.Location = new System.Drawing.Point(35, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 52);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Range:";
+            this.label_range.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_range.AutoSize = true;
+            this.label_range.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_range.Location = new System.Drawing.Point(35, 90);
+            this.label_range.Name = "label_range";
+            this.label_range.Size = new System.Drawing.Size(141, 52);
+            this.label_range.TabIndex = 9;
+            this.label_range.Text = "Range:";
             // 
             // textBox_max
             // 
@@ -152,16 +163,16 @@
             this.textBox_min.Text = "-1";
             this.textBox_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // label_X
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label2.Location = new System.Drawing.Point(425, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 52);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "< x <";
+            this.label_X.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_X.AutoSize = true;
+            this.label_X.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_X.Location = new System.Drawing.Point(425, 90);
+            this.label_X.Name = "label_X";
+            this.label_X.Size = new System.Drawing.Size(103, 52);
+            this.label_X.TabIndex = 6;
+            this.label_X.Text = "< x <";
             // 
             // panel_paint
             // 
@@ -217,18 +228,7 @@
             this.panel2.Size = new System.Drawing.Size(807, 31);
             this.panel2.TabIndex = 4;
             // 
-            // label_func
-            // 
-            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label_func.AutoSize = true;
-            this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_func.Location = new System.Drawing.Point(35, 20);
-            this.label_func.Name = "label_func";
-            this.label_func.Size = new System.Drawing.Size(143, 52);
-            this.label_func.TabIndex = 14;
-            this.label_func.Text = "F(x) = ";
-            // 
-            // PaintForm
+            // Paint2DForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,8 +236,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_paint);
             this.Controls.Add(this.panel1);
-            this.Name = "PaintForm";
-            this.Text = "Paint";
+            this.Name = "Paint2DForm";
+            this.Text = "Paint2D";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel_paint.ResumeLayout(false);
@@ -250,10 +250,10 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_range;
         private System.Windows.Forms.TextBox textBox_max;
         private System.Windows.Forms.TextBox textBox_min;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_X;
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Button button_draw;
         private System.Windows.Forms.Button button_color;

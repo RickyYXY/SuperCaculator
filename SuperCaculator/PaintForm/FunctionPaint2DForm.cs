@@ -11,9 +11,9 @@ using Function;
 
 namespace PaintForm
 {
-    public partial class FunctionPaintForm : Form
+    public partial class FunctionPaint2DForm : Form
     {
-        public FunctionPaintForm()
+        public FunctionPaint2DForm()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace PaintForm
         private void Button_confirm_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp.Text;
-            using(PaintForm form = new PaintForm(exp))
+            using(Paint2DForm form = new Paint2DForm(exp))
             {
                 try
                 {
