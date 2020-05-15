@@ -16,7 +16,8 @@ namespace PaintForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Paint3DForm(""));
+            //Application.Run(new FunctionPaint2DForm());
+            Application.Run(new FunctionPaint3DForm());
         }
     }
 }

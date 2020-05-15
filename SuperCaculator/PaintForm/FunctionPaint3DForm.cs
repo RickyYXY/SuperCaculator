@@ -30,7 +30,7 @@ namespace PaintForm
                 try
                 {
                     Function.Function func = new Function.Function(exp);
-                    //form.Caculate += func.GetValue;
+                    form.Caculate += func.GetValue;
                     form.ShowDialog();
                 }
                 catch (Exception ex)

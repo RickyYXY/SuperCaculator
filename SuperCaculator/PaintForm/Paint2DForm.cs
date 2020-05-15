@@ -16,7 +16,7 @@ namespace PaintForm
         private Pen pen_coordinate;
         private Pen pen_coor;
         Font font = new Font("Ink Free", 15f);
-        public delegate double CaculateHandler(double x);
+        public delegate double CaculateHandler(double x, double y = 0);
         public event CaculateHandler Caculate;
 
         private const double limit = 1024;
@@ -36,7 +36,7 @@ namespace PaintForm
             pen_coor = new Pen(Color.Gray);
             float[] dashValues = { 5, 2 };
             pen_coor.DashPattern = dashValues;
-            Caculate = x => x * x;
+            //Caculate = x => x * x;
             //Caculate = x => Math.Log(x);
             //Caculate = x => x * x * x;
         }
