@@ -29,12 +29,14 @@ namespace Function
             }
         }
 
-        public virtual double GetValue(double x)//计算函数值
+        public virtual double GetValue(double x,double y)//计算二元函数值
         {
             foreach (string unit in RPNExpression)
             {
                 if (unit == "x")
                     figures.Push(x);
+                else if (unit == "y")
+                    figures.Push(y);
                 else if (double.TryParse(unit, out double result))
                     figures.Push(result);
                 else if (unit == "+" || unit == "-" || unit == "*"
@@ -79,7 +81,7 @@ namespace Function
                 }
                 else
                 {
-                    double func_result = FuncMatch.MatchFuncCal(unit, x);
+                    double func_result = FuncMatch.MatchFuncCal(unit, x,y);
                     figures.Push(func_result);
                 }
             }
@@ -166,7 +168,7 @@ namespace Function
                     }
                     st.Pop();
                 }
-                else if (temp == "x")
+                else if (temp == "x"||temp=="y")
                 {
 
                     RPNExpression.Add(temp);
@@ -251,9 +253,9 @@ namespace Function
     {
 
         public Sin_function(string exp) : base(exp) { }
-        public override double GetValue(double x)
+        public override double GetValue(double x,double y)
         {
-            return Math.Sin(base.GetValue(x));
+            return Math.Sin(base.GetValue(x, y));
         }
 
     }
@@ -261,36 +263,36 @@ namespace Function
     class Cos_function : Function
     {
         public Cos_function(string exp) : base(exp) { }
-        public override double GetValue(double x)
+        public override double GetValue(double x,double y)
         {
-            return Math.Cos(base.GetValue(x));
+            return Math.Cos(base.GetValue(x,y));
         }
     }
 
     class Tan_function : Function
     {
         public Tan_function(string exp) : base(exp) { }
-        public override double GetValue(double x)
+        public override double GetValue(double x,double y)
         {
-            return Math.Tan(base.GetValue(x));
+            return Math.Tan(base.GetValue(x,y));
         }
     }
 
     class Ln_function : Function
     {
         public Ln_function(string exp) : base(exp) { }
-        public override double GetValue(double x)
+        public override double GetValue(double x,double y)
         {
-            return Math.Log(base.GetValue(x), Math.E);
+            return Math.Log(base.GetValue(x,y), Math.E);
         }
     }
 
     class Exp_function : Function
     {
         public Exp_function(string exp) : base(exp) { }
-        public override double GetValue(double x)
+        public override double GetValue(double x,double y)
         {
-            return Math.Exp(base.GetValue(x));
+            return Math.Exp(base.GetValue(x,y));
         }
     }
 
@@ -301,9 +303,9 @@ namespace Function
         {
             log_base = newbase;
         }
-        public override double GetValue(double x)
+        public override double GetValue(double x,double y)
         {
-            return Math.Log(base.GetValue(x), log_base);
+            return Math.Log(base.GetValue(x,y), log_base);
         }
     }
 
