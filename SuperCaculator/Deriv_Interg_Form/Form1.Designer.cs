@@ -32,6 +32,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.exit_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pre_trackBar = new System.Windows.Forms.TrackBar();
             this.Clear_button = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.result_textBox = new System.Windows.Forms.TextBox();
@@ -43,15 +46,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exp_textBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pre_trackBar = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.exit_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -76,7 +76,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(792, 413);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "导数计算";
+            this.tabPage1.Text = "微分计算";
             // 
             // tabPage2
             // 
@@ -95,6 +95,38 @@
             this.tabPage2.Size = new System.Drawing.Size(792, 413);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "积分计算";
+            // 
+            // exit_button
+            // 
+            this.exit_button.BackColor = System.Drawing.Color.LightCyan;
+            this.exit_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.exit_button.Location = new System.Drawing.Point(490, 292);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(266, 61);
+            this.exit_button.TabIndex = 11;
+            this.exit_button.Text = "Exit";
+            this.exit_button.UseVisualStyleBackColor = false;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(674, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Precision";
+            // 
+            // pre_trackBar
+            // 
+            this.pre_trackBar.BackColor = System.Drawing.Color.LightBlue;
+            this.pre_trackBar.Location = new System.Drawing.Point(700, 55);
+            this.pre_trackBar.Maximum = 4;
+            this.pre_trackBar.Name = "pre_trackBar";
+            this.pre_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.pre_trackBar.Size = new System.Drawing.Size(56, 119);
+            this.pre_trackBar.TabIndex = 9;
+            this.pre_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
             // Clear_button
             // 
@@ -201,10 +233,10 @@
             // 
             // exp_textBox
             // 
-            this.exp_textBox.Font = new System.Drawing.Font("Candara Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exp_textBox.Location = new System.Drawing.Point(61, 80);
             this.exp_textBox.Name = "exp_textBox";
-            this.exp_textBox.Size = new System.Drawing.Size(348, 44);
+            this.exp_textBox.Size = new System.Drawing.Size(348, 43);
             this.exp_textBox.TabIndex = 4;
             // 
             // tabPage3
@@ -219,38 +251,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "极值计算";
             // 
-            // pre_trackBar
-            // 
-            this.pre_trackBar.BackColor = System.Drawing.Color.LightBlue;
-            this.pre_trackBar.Location = new System.Drawing.Point(700, 55);
-            this.pre_trackBar.Maximum = 4;
-            this.pre_trackBar.Name = "pre_trackBar";
-            this.pre_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.pre_trackBar.Size = new System.Drawing.Size(56, 119);
-            this.pre_trackBar.TabIndex = 9;
-            this.pre_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(674, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Precision";
-            // 
-            // exit_button
-            // 
-            this.exit_button.BackColor = System.Drawing.Color.LightCyan;
-            this.exit_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.exit_button.Location = new System.Drawing.Point(490, 292);
-            this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(266, 61);
-            this.exit_button.TabIndex = 11;
-            this.exit_button.Text = "Exit";
-            this.exit_button.UseVisualStyleBackColor = false;
-            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -262,12 +262,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
