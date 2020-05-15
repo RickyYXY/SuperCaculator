@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPaintForm", "PaintF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionTests", "FunctionFunctionTests\FunctionTests.csproj", "{7AF6B26A-C741-4CFC-86EB-0F886B97CB31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deriv_Interg_Form", "Deriv_Interg_Form\Deriv_Interg_Form.csproj", "{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deriv_Integ_Form", "Deriv_Interg_Form\Deriv_Integ_Form.csproj", "{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
