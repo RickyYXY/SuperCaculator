@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,7 +36,7 @@ namespace PaintForm
             rate = trackBar.Value + 1;
             Caculate = (x, y) => x * x * y * y;
             //Caculate = (x, y) => x + y;
-            //Caculate = (x, y) => x * y;
+            //Caculate = (x, y) => x / y;
         }
 
         private void TrackBar_Scroll(object sender, EventArgs e)
@@ -159,14 +160,28 @@ namespace PaintForm
                 List<Point> points = new List<Point>();
                 for (int j = 0; j < YLENGTH; j++)
                 {
-                    points.Add(new Point(Xstart + x[i, j], Ystart - y[i, j]));
+                    int y0 = Ystart - y[i, j];
+                    if (y0 > pictureBox.Height || y0 < 0)
+                    {
+                        continue;
+                    }
+                    points.Add(new Point(Xstart + x[i, j], y0));
                 }
-                g.DrawCurve(mypen, points.ToArray());
-                firsts.Add(points.First());
-                lasts.Add(points.Last());
+                if (points.Count > 1)
+                {
+                    g.DrawCurve(mypen, points.ToArray());
+                    firsts.Add(points.First());
+                    lasts.Add(points.Last());
+                }
             }
-            g.DrawCurve(mypen, firsts.ToArray());
-            g.DrawCurve(mypen, lasts.ToArray());
+            if (firsts.Count > 1)
+            {
+                g.DrawCurve(mypen, firsts.ToArray());
+            }
+            if(lasts.Count > 1)
+            {
+                g.DrawCurve(mypen, lasts.ToArray());
+            }
         }
 
         private void DrawBox()
