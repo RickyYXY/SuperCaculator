@@ -35,7 +35,7 @@ namespace PaintForm
             }
         }
 
-        private void Button_confirm_Click(object sender, EventArgs e)
+        private void Button_confirm_3D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_3D.Text;
             using (Paint3DForm form = new Paint3DForm(exp))
@@ -62,5 +62,6 @@ namespace PaintForm
         {
             Close();
         }
+
     }
 }

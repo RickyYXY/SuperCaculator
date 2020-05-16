@@ -38,7 +38,7 @@
             this.tabPage_3D = new System.Windows.Forms.TabPage();
             this.panel_3D = new System.Windows.Forms.Panel();
             this.button_cancel_3D = new System.Windows.Forms.Button();
-            this.button_confirm = new System.Windows.Forms.Button();
+            this.button_confirm_3D = new System.Windows.Forms.Button();
             this.textBox_exp_3D = new System.Windows.Forms.TextBox();
             this.label_func_3D = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             this.panel_3D.BackColor = System.Drawing.Color.MintCream;
             this.panel_3D.Controls.Add(this.button_cancel_3D);
-            this.panel_3D.Controls.Add(this.button_confirm);
+            this.panel_3D.Controls.Add(this.button_confirm_3D);
             this.panel_3D.Controls.Add(this.textBox_exp_3D);
             this.panel_3D.Controls.Add(this.label_func_3D);
             this.panel_3D.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -172,19 +172,19 @@
             this.button_cancel_3D.UseVisualStyleBackColor = false;
             this.button_cancel_3D.Click += new System.EventHandler(this.Button_cancel_3D_Click);
             // 
-            // button_confirm
+            // button_confirm_3D
             // 
-            this.button_confirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_confirm.BackColor = System.Drawing.Color.LightCyan;
-            this.button_confirm.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_confirm.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_confirm.Location = new System.Drawing.Point(604, 300);
-            this.button_confirm.Name = "button_confirm";
-            this.button_confirm.Size = new System.Drawing.Size(150, 80);
-            this.button_confirm.TabIndex = 2;
-            this.button_confirm.Text = "Confirm";
-            this.button_confirm.UseVisualStyleBackColor = false;
-            this.button_confirm.Click += new System.EventHandler(this.Button_confirm_Click);
+            this.button_confirm_3D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_confirm_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_confirm_3D.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_confirm_3D.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_confirm_3D.Location = new System.Drawing.Point(604, 300);
+            this.button_confirm_3D.Name = "button_confirm_3D";
+            this.button_confirm_3D.Size = new System.Drawing.Size(150, 80);
+            this.button_confirm_3D.TabIndex = 2;
+            this.button_confirm_3D.Text = "Confirm";
+            this.button_confirm_3D.UseVisualStyleBackColor = false;
+            this.button_confirm_3D.Click += new System.EventHandler(this.Button_confirm_3D_Click);
             // 
             // textBox_exp_3D
             // 
@@ -233,7 +233,7 @@
         private System.Windows.Forms.TabPage tabPage_3D;
         private System.Windows.Forms.Panel panel_3D;
         private System.Windows.Forms.Button button_cancel_3D;
-        private System.Windows.Forms.Button button_confirm;
+        private System.Windows.Forms.Button button_confirm_3D;
         private System.Windows.Forms.TextBox textBox_exp_3D;
         private System.Windows.Forms.Label label_func_3D;
         private System.Windows.Forms.Panel panel_2D;
