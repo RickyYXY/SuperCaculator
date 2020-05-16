@@ -16,7 +16,7 @@ namespace PaintForm
         private Pen pen_coordinate;
         private Pen pen_coor;
         Font font = new Font("Ink Free", 15f);
-        public delegate double CaculateHandler(double x, double y = 0);
+        public delegate double CaculateHandler(double? x, double? y = 0);
         public event CaculateHandler Caculate;
 
         private const double limit = 1024;

@@ -13,7 +13,7 @@ namespace PaintForm
 {
     public partial class Paint3DForm : Form
     {
-        public delegate double CaculateHandler(double x, double y);
+        public delegate double CaculateHandler(double? x, double? y);
         public event CaculateHandler Caculate;
 
         Pen mypen, pen_coor;
@@ -34,7 +34,7 @@ namespace PaintForm
             float[] dashValues = { 5, 2 };
             pen_coor.DashPattern = dashValues;
             rate = trackBar.Value + 1;
-            Caculate = (x, y) => x * x * y * y;
+            //Caculate = (x, y) => x * x * y * y;
             //Caculate = (x, y) => x + y;
             //Caculate = (x, y) => x / y;
         }
