@@ -1,4 +1,4 @@
-﻿namespace Deriv_Integ_Form
+﻿namespace DerivIntegForm
 {
     partial class Form1
     {
@@ -163,9 +163,6 @@
             // 
             // Cal_button
             // 
-            this.Cal_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Cal_button.AutoSize = true;
             this.Cal_button.BackColor = System.Drawing.Color.LightCyan;
             this.Cal_button.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

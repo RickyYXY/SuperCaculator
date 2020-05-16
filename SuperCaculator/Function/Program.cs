@@ -15,9 +15,9 @@ namespace Function
             string exp2 = "sin(x)*x^3";
             string exp3 = "3!";
             Function f = new Function(exp);
-            for(double x=1;x<100;x+=1)
+            for (double x = 1; x < 100; x += 1)
             {
-                Console.WriteLine("x={2},test:{0},true:{1}",f.GetValue(x),Test_cal1(x,x),x);
+                Console.WriteLine("x={2},test:{0},true:{1}", f.GetValue(x), Test_cal1(x, x), x);
             }
         }
         public static double Test_cal1(double x,double y)

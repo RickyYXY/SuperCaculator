@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Deriv_Integ_Form
+namespace DerivIntegForm
 {
     static class Program
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Deriv_Integ_Form.Properties
+namespace DerivIntegForm.Properties
 {
 
 
