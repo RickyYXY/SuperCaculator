@@ -10,7 +10,7 @@ namespace Function
     {
         public static readonly string[] func_names = { "sin", "cos", "tan", "exp", "log" ,"ln"};
         
-        public static double MatchFuncCal(string input, double x,double y)
+        public static double MatchFuncCal(string input, double? x,double? y)
         {
             foreach (string s in func_names)
             {
