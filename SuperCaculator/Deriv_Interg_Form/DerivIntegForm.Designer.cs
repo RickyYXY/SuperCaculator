@@ -1,6 +1,6 @@
 ﻿namespace DerivIntegForm
 {
-    partial class Form1
+    partial class DIForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DIForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -41,6 +42,7 @@
             this.Cal_button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.down_num_comboBox = new System.Windows.Forms.ComboBox();
+            this.input_bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.up_num_comboBox = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,14 +194,22 @@
             // 
             // down_num_comboBox
             // 
+            this.down_num_comboBox.DataSource = this.input_bindingSource;
+            this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
             this.down_num_comboBox.Location = new System.Drawing.Point(61, 144);
             this.down_num_comboBox.Name = "down_num_comboBox";
             this.down_num_comboBox.Size = new System.Drawing.Size(121, 32);
             this.down_num_comboBox.TabIndex = 7;
             // 
+            // input_bindingSource
+            // 
+            this.input_bindingSource.DataSource = typeof(LogUtils.Log);
+            // 
             // up_num_comboBox
             // 
+            this.up_num_comboBox.DataSource = this.input_bindingSource;
+            this.up_num_comboBox.DisplayMember = "Context";
             this.up_num_comboBox.FormattingEnabled = true;
             this.up_num_comboBox.Location = new System.Drawing.Point(61, 31);
             this.up_num_comboBox.Name = "up_num_comboBox";
@@ -248,13 +259,13 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "极值计算";
             // 
-            // Form1
+            // DIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "DIForm";
             this.Text = "函数运算";
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -264,6 +275,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -288,6 +300,7 @@
         private System.Windows.Forms.TrackBar pre_trackBar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button exit_button;
+        private System.Windows.Forms.BindingSource input_bindingSource;
     }
 }
 
