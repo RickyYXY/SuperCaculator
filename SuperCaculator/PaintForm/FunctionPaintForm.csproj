@@ -52,6 +52,7 @@
     <Compile Include="FunctionPaintForm.Designer.cs">
       <DependentUpon>FunctionPaintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Painter2D.cs" />
     <Compile Include="Paint3DForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,7 @@
     <Compile Include="Paint2DForm.designer.cs">
       <DependentUpon>Paint2DForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Painter3D.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FunctionPaintForm.resx">

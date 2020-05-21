@@ -20,36 +20,34 @@ namespace PaintForm
         private void Button_confirm_2D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_2D.Text;
-            using (Paint2DForm form = new Paint2DForm(exp))
+            try
             {
-                try
+                Function.Function func = new Function.Function(exp);
+                using (Paint2DForm form = new Paint2DForm(exp, func.GetValue))
                 {
-                    Function.Function func = new Function.Function(exp);
-                    form.Caculate += func.GetValue;
                     form.ShowDialog();
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
         }
 
         private void Button_confirm_3D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_3D.Text;
-            using (Paint3DForm form = new Paint3DForm(exp))
+            try
             {
-                try
+                Function.Function func = new Function.Function(exp);
+                using (Paint3DForm form = new Paint3DForm(exp, func.GetValue))
                 {
-                    Function.Function func = new Function.Function(exp);
-                    form.Caculate += func.GetValue;
                     form.ShowDialog();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
