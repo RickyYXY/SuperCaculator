@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Deriv_Interg_Form</RootNamespace>
-    <AssemblyName>Deriv_Interg_Form</AssemblyName>
+    <ProjectGuid>{C7ACFD59-1732-477C-8BF8-88AC69C07ED9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LogUtils</RootNamespace>
+    <AssemblyName>LogUtils</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,57 +39,16 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DerivIntegForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DerivIntegForm.Designer.cs">
-      <DependentUpon>DerivIntegForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Integral.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DerivIntegForm.resx">
-      <DependentUpon>DerivIntegForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\DataSources\LogUtils.Log.datasource" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Function\Function.csproj">
-      <Project>{67D272CD-ED3E-41B3-96D3-A9F2FA133F01}</Project>
-      <Name>Function</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogUtils\LogUtils.csproj">
-      <Project>{c7acfd59-1732-477c-8bf8-88ac69c07ed9}</Project>
-      <Name>LogUtils</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

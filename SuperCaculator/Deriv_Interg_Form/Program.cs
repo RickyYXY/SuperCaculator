@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Deriv_Integ_Form
+namespace DerivIntegForm
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Deriv_Integ_Form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new DIForm());
         }
     }
 }

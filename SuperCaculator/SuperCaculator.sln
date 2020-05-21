@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionTests", "FunctionFu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerivIntegForm", "Deriv_Interg_Form\DerivIntegForm.csproj", "{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogUtils", "LogUtils\LogUtils.csproj", "{C7ACFD59-1732-477C-8BF8-88AC69C07ED9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7ACFD59-1732-477C-8BF8-88AC69C07ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7ACFD59-1732-477C-8BF8-88AC69C07ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7ACFD59-1732-477C-8BF8-88AC69C07ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7ACFD59-1732-477C-8BF8-88AC69C07ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

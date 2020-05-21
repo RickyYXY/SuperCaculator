@@ -5,50 +5,88 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Deriv_Integ_Form
-{
+namespace DerivIntegForm
+{ 
     class Integral
     {
         private double precision;
         private double result;
-        private string threadLock;
+        private double interval;
         private string funcExp;
+        private List<Task<double>> taskList;
         public Integral(double pre = 0.001)
         {
+            taskList = new List<Task<double>>();
             precision = pre;
-            threadLock = "";
         }
 
         //梯形逼近法计算函数积分
-        public double IntegCal(double up, double down, string exp, int concurr_num = 1000)
+        public double IntegCal(double up, double down, string exp, int concurr_num = 25000)
         {
-            ThreadPool.SetMaxThreads(concurr_num, 10);
+            taskList.Clear();
+            double sign = 1;
+            if (up < down)
+            {
+                double temp = up;
+                up = down;
+                down = temp;
+                sign = -1;
+            }
             result = 0;
             funcExp = exp;
             Function.Function function = new Function.Function(exp);
             result += function.GetValue(up);
             result += function.GetValue(down);
-            for (double x = down + precision; x < up; x += precision)
+
+            if (concurr_num * 2 >= (int)((up - down) / precision))
             {
-                ThreadPool.QueueUserWorkItem(ThreadCal, x);
+                for (double x = down + precision; x < up; x += precision)
+                {
+                    double temp = x;
+                    Task<double> task = Task.Run(() => ThreadCal_S(temp));
+                    taskList.Add(task);
+                }
             }
-            while (true)//等待所有线程运行结束
+            else
             {
-                ThreadPool.GetAvailableThreads(out int workNum, out int ioNum);
-                if (workNum == concurr_num)
-                    break;
+                interval = (up - down) / (2 * concurr_num);
+                double x = down + interval;
+                for (; x < up; x += interval)
+                {
+                    double temp = x;
+                    Task<double> task = Task.Run(() => ThreadCal_M(temp));
+                    taskList.Add(task);
+                }
+                double sum = 0;
+                for (x = (x - interval + precision); x < up; x += precision)
+                {
+                    sum += 2 * function.GetValue(x);
+                }
+                result += sum;
             }
-            return result * precision / 2;
+
+            Task.WaitAll(taskList.ToArray());
+            foreach(Task<double> t in taskList)
+            {
+                result += t.Result;
+            }
+            return sign * result * precision / 2;
         }
-        private void ThreadCal(object input)
+        private double ThreadCal_S(double x)
         {
-            double x = (double)input;
             Function.Function function = new Function.Function(funcExp);
             double temp = 2 * function.GetValue(x);
-            lock (threadLock)
+            return temp;
+        }
+        private double ThreadCal_M(double x)
+        {
+            Function.Function function = new Function.Function(funcExp);
+            double temp = 0;
+            for (double t = 0; t < interval; t += precision)
             {
-                result += temp;
+                temp += 2 * function.GetValue(x - t);
             }
+            return temp;
         }
     }
 }
