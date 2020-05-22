@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FF50AEE9-2BB2-4E91-A925-2BA3A90F1CFF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Deriv_Interg_Form</RootNamespace>
-    <AssemblyName>Deriv_Interg_Form</AssemblyName>
+    <RootNamespace>DerivIntergForm</RootNamespace>
+    <AssemblyName>DerivIntergForm</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deriviation.cs" />
     <Compile Include="DerivIntegForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\LogUtils.Log.datasource" />
     <None Include="Properties\Settings.settings">
