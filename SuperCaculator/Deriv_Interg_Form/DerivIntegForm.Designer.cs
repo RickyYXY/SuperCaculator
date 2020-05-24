@@ -32,6 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DIForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.der_exit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dpre_trackBar = new System.Windows.Forms.TrackBar();
+            this.der_clear_button = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.doutput_textBox = new System.Windows.Forms.TextBox();
+            this.der_cal_button = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dinput_comboBox = new System.Windows.Forms.ComboBox();
+            this.input_bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dinput_textBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.exit_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,36 +56,22 @@
             this.Cal_button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.down_num_comboBox = new System.Windows.Forms.ComboBox();
-            this.input_bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.up_num_comboBox = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exp_textBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.doutput_textBox = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dinput_textBox = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dpre_trackBar)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,12 +90,12 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.MintCream;
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.der_exit);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.trackBar1);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.dpre_trackBar);
+            this.tabPage1.Controls.Add(this.der_clear_button);
             this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.der_cal_button);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
@@ -104,6 +104,162 @@
             this.tabPage1.Size = new System.Drawing.Size(792, 413);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "微分计算";
+            // 
+            // der_exit
+            // 
+            this.der_exit.BackColor = System.Drawing.Color.LightCyan;
+            this.der_exit.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.der_exit.Location = new System.Drawing.Point(490, 292);
+            this.der_exit.Name = "der_exit";
+            this.der_exit.Size = new System.Drawing.Size(266, 61);
+            this.der_exit.TabIndex = 18;
+            this.der_exit.Text = "Exit";
+            this.der_exit.UseVisualStyleBackColor = false;
+            this.der_exit.Click += new System.EventHandler(this.der_exit_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(674, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Precision";
+            // 
+            // dpre_trackBar
+            // 
+            this.dpre_trackBar.BackColor = System.Drawing.Color.LightBlue;
+            this.dpre_trackBar.Location = new System.Drawing.Point(700, 55);
+            this.dpre_trackBar.Maximum = 4;
+            this.dpre_trackBar.Name = "dpre_trackBar";
+            this.dpre_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.dpre_trackBar.Size = new System.Drawing.Size(56, 119);
+            this.dpre_trackBar.TabIndex = 16;
+            this.dpre_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
+            // 
+            // der_clear_button
+            // 
+            this.der_clear_button.BackColor = System.Drawing.Color.LightCyan;
+            this.der_clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.der_clear_button.Location = new System.Drawing.Point(490, 225);
+            this.der_clear_button.Name = "der_clear_button";
+            this.der_clear_button.Size = new System.Drawing.Size(266, 61);
+            this.der_clear_button.TabIndex = 15;
+            this.der_clear_button.Text = "Clear";
+            this.der_clear_button.UseVisualStyleBackColor = false;
+            this.der_clear_button.Click += new System.EventHandler(this.der_clear_button_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.doutput_textBox);
+            this.groupBox3.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Location = new System.Drawing.Point(8, 225);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(463, 128);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Output";
+            // 
+            // doutput_textBox
+            // 
+            this.doutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.doutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doutput_textBox.Location = new System.Drawing.Point(6, 52);
+            this.doutput_textBox.Name = "doutput_textBox";
+            this.doutput_textBox.ReadOnly = true;
+            this.doutput_textBox.Size = new System.Drawing.Size(434, 39);
+            this.doutput_textBox.TabIndex = 0;
+            // 
+            // der_cal_button
+            // 
+            this.der_cal_button.AutoSize = true;
+            this.der_cal_button.BackColor = System.Drawing.Color.LightCyan;
+            this.der_cal_button.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.der_cal_button.Location = new System.Drawing.Point(490, 16);
+            this.der_cal_button.Name = "der_cal_button";
+            this.der_cal_button.Size = new System.Drawing.Size(178, 166);
+            this.der_cal_button.TabIndex = 13;
+            this.der_cal_button.Text = "Caculate";
+            this.der_cal_button.UseVisualStyleBackColor = false;
+            this.der_cal_button.Click += new System.EventHandler(this.der_cal_button_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dinput_comboBox);
+            this.groupBox4.Controls.Add(this.textBox6);
+            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.dinput_textBox);
+            this.groupBox4.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox4.Location = new System.Drawing.Point(8, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(461, 199);
+            this.groupBox4.TabIndex = 12;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Input";
+            // 
+            // dinput_comboBox
+            // 
+            this.dinput_comboBox.DataSource = this.input_bindingSource;
+            this.dinput_comboBox.DisplayMember = "Context";
+            this.dinput_comboBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dinput_comboBox.FormattingEnabled = true;
+            this.dinput_comboBox.Location = new System.Drawing.Point(45, 106);
+            this.dinput_comboBox.Name = "dinput_comboBox";
+            this.dinput_comboBox.Size = new System.Drawing.Size(224, 44);
+            this.dinput_comboBox.TabIndex = 9;
+            // 
+            // input_bindingSource
+            // 
+            this.input_bindingSource.DataSource = typeof(LogUtils.Log);
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.MintCream;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox6.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(9, 109);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(38, 36);
+            this.textBox6.TabIndex = 7;
+            this.textBox6.Text = "x=";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.MintCream;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox5.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(6, 52);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox5.Size = new System.Drawing.Size(20, 36);
+            this.textBox5.TabIndex = 6;
+            this.textBox5.Text = "d";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.MintCream;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(387, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(53, 36);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Text = "/dx";
+            // 
+            // dinput_textBox
+            // 
+            this.dinput_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dinput_textBox.Location = new System.Drawing.Point(32, 49);
+            this.dinput_textBox.Name = "dinput_textBox";
+            this.dinput_textBox.Size = new System.Drawing.Size(348, 43);
+            this.dinput_textBox.TabIndex = 4;
             // 
             // tabPage2
             // 
@@ -226,10 +382,6 @@
             this.down_num_comboBox.Size = new System.Drawing.Size(121, 32);
             this.down_num_comboBox.TabIndex = 7;
             // 
-            // input_bindingSource
-            // 
-            this.input_bindingSource.DataSource = typeof(LogUtils.Log);
-            // 
             // up_num_comboBox
             // 
             this.up_num_comboBox.DataSource = this.input_bindingSource;
@@ -283,155 +435,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "极值计算";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(490, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 61);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(674, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 25);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Precision";
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.BackColor = System.Drawing.Color.LightBlue;
-            this.trackBar1.Location = new System.Drawing.Point(700, 55);
-            this.trackBar1.Maximum = 4;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(56, 119);
-            this.trackBar1.TabIndex = 16;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightCyan;
-            this.button2.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(490, 225);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(266, 61);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.doutput_textBox);
-            this.groupBox3.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(8, 225);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(463, 128);
-            this.groupBox3.TabIndex = 14;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Output";
-            // 
-            // doutput_textBox
-            // 
-            this.doutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.doutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doutput_textBox.Location = new System.Drawing.Point(6, 52);
-            this.doutput_textBox.Name = "doutput_textBox";
-            this.doutput_textBox.ReadOnly = true;
-            this.doutput_textBox.Size = new System.Drawing.Size(434, 39);
-            this.doutput_textBox.TabIndex = 0;
-            // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.LightCyan;
-            this.button3.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(490, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 166);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Caculate";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.dinput_textBox);
-            this.groupBox4.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(8, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(461, 199);
-            this.groupBox4.TabIndex = 12;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Input";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.MintCream;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(387, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(53, 36);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "/dx";
-            // 
-            // dinput_textBox
-            // 
-            this.dinput_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinput_textBox.Location = new System.Drawing.Point(32, 49);
-            this.dinput_textBox.Name = "dinput_textBox";
-            this.dinput_textBox.Size = new System.Drawing.Size(348, 43);
-            this.dinput_textBox.TabIndex = 4;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.MintCream;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox5.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(6, 52);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox5.Size = new System.Drawing.Size(20, 36);
-            this.textBox5.TabIndex = 6;
-            this.textBox5.Text = "d";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.MintCream;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox6.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(9, 109);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(38, 36);
-            this.textBox6.TabIndex = 7;
-            this.textBox6.Text = "x=";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.input_bindingSource;
-            this.comboBox1.DisplayMember = "Context";
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(45, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 44);
-            this.comboBox1.TabIndex = 9;
-            // 
             // DIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -443,6 +446,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dpre_trackBar)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).EndInit();
@@ -450,13 +459,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -481,19 +484,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.BindingSource input_bindingSource;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button der_exit;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TrackBar dpre_trackBar;
+        private System.Windows.Forms.Button der_clear_button;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox doutput_textBox;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button der_cal_button;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox dinput_textBox;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox dinput_comboBox;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DerivIntergForm;
 using LogUtils;
 
 namespace DerivIntegForm
@@ -32,7 +33,7 @@ namespace DerivIntegForm
         {
             if (exp_textBox.Text == "" || up_num_comboBox.Text == "" || down_num_comboBox.Text == "")
             {
-                MessageBox.Show("函数输入/积分上限/积分下限不可为空！");
+                MessageBox.Show("函数输入/积分上限/积分下限 不可为空！");
                 return;
             }    
             try
@@ -68,6 +69,46 @@ namespace DerivIntegForm
         }
 
         private void exit_button_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void der_cal_button_Click(object sender, EventArgs e)
+        {
+            if(dinput_comboBox.Text==""||dinput_textBox.Text=="")
+            {
+                MessageBox.Show("函数输入/计算点坐标 不可为空！");
+                return;
+            }
+            try
+            {
+                string x = dinput_comboBox.Text;
+                string funExp = dinput_textBox.Text;
+                double precision = 0.00001 * Math.Pow(100, -dpre_trackBar.Value);
+                Deriviation deriviation = new Deriviation(precision);
+                double result = deriviation.DerivCal(double.Parse(x), funExp);
+                doutput_textBox.Text = result.ToString("f10");
+                log.Enqueue(new Log(result));
+                if (log.Count > 5)
+                    log.Dequeue();
+                input_bindingSource.DataSource = log.ToList();
+                input_bindingSource.ResetBindings(false);
+                dinput_comboBox.Text = x;
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        private void der_clear_button_Click(object sender, EventArgs e)
+        {
+            dinput_comboBox.Text = "";
+            dinput_textBox.Text = "";
+            doutput_textBox.Text = "";
+        }
+
+        private void der_exit_Click(object sender, EventArgs e)
         {
             Close();
         }
