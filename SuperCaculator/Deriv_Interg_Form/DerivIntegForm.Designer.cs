@@ -66,18 +66,18 @@
             this.v_trackBar = new System.Windows.Forms.TrackBar();
             this.vclear_button = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.vminoutput_textBox = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.vmaxoutput_textBox = new System.Windows.Forms.TextBox();
             this.vcal_button = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.vup_comboBox = new System.Windows.Forms.ComboBox();
             this.vdown_comboBox = new System.Windows.Forms.ComboBox();
             this.vinput_exp_textBox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.vminoutput_textBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dpre_trackBar)).BeginInit();
@@ -519,14 +519,50 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Output";
             // 
+            // vminoutput_textBox
+            // 
+            this.vminoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.vminoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.vminoutput_textBox.Location = new System.Drawing.Point(154, 78);
+            this.vminoutput_textBox.Name = "vminoutput_textBox";
+            this.vminoutput_textBox.ReadOnly = true;
+            this.vminoutput_textBox.Size = new System.Drawing.Size(303, 39);
+            this.vminoutput_textBox.TabIndex = 12;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.MintCream;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox11.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(6, 79);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(142, 36);
+            this.textBox11.TabIndex = 11;
+            this.textBox11.Text = "Min Value";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.MintCream;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox10.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(6, 34);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(142, 36);
+            this.textBox10.TabIndex = 10;
+            this.textBox10.Text = "Max Value";
+            // 
             // vmaxoutput_textBox
             // 
             this.vmaxoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.vmaxoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vmaxoutput_textBox.Location = new System.Drawing.Point(149, 31);
+            this.vmaxoutput_textBox.Location = new System.Drawing.Point(154, 31);
             this.vmaxoutput_textBox.Name = "vmaxoutput_textBox";
             this.vmaxoutput_textBox.ReadOnly = true;
-            this.vmaxoutput_textBox.Size = new System.Drawing.Size(308, 39);
+            this.vmaxoutput_textBox.Size = new System.Drawing.Size(303, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
             // 
             // vcal_button
@@ -557,33 +593,31 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Input";
             // 
-            // vup_comboBox
+            // textBox9
             // 
-            this.vup_comboBox.DataSource = this.input_bindingSource;
-            this.vup_comboBox.DisplayMember = "Context";
-            this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(269, 100);
-            this.vup_comboBox.Name = "vup_comboBox";
-            this.vup_comboBox.Size = new System.Drawing.Size(121, 32);
-            this.vup_comboBox.TabIndex = 7;
+            this.textBox9.BackColor = System.Drawing.Color.MintCream;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox9.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(83, 139);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(189, 36);
+            this.textBox9.TabIndex = 10;
+            this.textBox9.Text = "Lower Bound";
             // 
-            // vdown_comboBox
+            // textBox8
             // 
-            this.vdown_comboBox.DataSource = this.input_bindingSource;
-            this.vdown_comboBox.DisplayMember = "Context";
-            this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(269, 144);
-            this.vdown_comboBox.Name = "vdown_comboBox";
-            this.vdown_comboBox.Size = new System.Drawing.Size(121, 32);
-            this.vdown_comboBox.TabIndex = 6;
-            // 
-            // vinput_exp_textBox
-            // 
-            this.vinput_exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vinput_exp_textBox.Location = new System.Drawing.Point(83, 46);
-            this.vinput_exp_textBox.Name = "vinput_exp_textBox";
-            this.vinput_exp_textBox.Size = new System.Drawing.Size(348, 43);
-            this.vinput_exp_textBox.TabIndex = 4;
+            this.textBox8.BackColor = System.Drawing.Color.MintCream;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox8.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(83, 95);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(189, 36);
+            this.textBox8.TabIndex = 9;
+            this.textBox8.Text = "Upper Bound";
             // 
             // textBox3
             // 
@@ -598,67 +632,33 @@
             this.textBox3.TabIndex = 8;
             this.textBox3.Text = "Func";
             // 
-            // textBox8
+            // vup_comboBox
             // 
-            this.textBox8.BackColor = System.Drawing.Color.MintCream;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox8.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(83, 95);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(180, 36);
-            this.textBox8.TabIndex = 9;
-            this.textBox8.Text = "Upper Bound";
+            this.vup_comboBox.DataSource = this.input_bindingSource;
+            this.vup_comboBox.DisplayMember = "Context";
+            this.vup_comboBox.FormattingEnabled = true;
+            this.vup_comboBox.Location = new System.Drawing.Point(278, 100);
+            this.vup_comboBox.Name = "vup_comboBox";
+            this.vup_comboBox.Size = new System.Drawing.Size(153, 32);
+            this.vup_comboBox.TabIndex = 7;
             // 
-            // textBox9
+            // vdown_comboBox
             // 
-            this.textBox9.BackColor = System.Drawing.Color.MintCream;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox9.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(83, 139);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(180, 36);
-            this.textBox9.TabIndex = 10;
-            this.textBox9.Text = "Lower Bound";
+            this.vdown_comboBox.DataSource = this.input_bindingSource;
+            this.vdown_comboBox.DisplayMember = "Context";
+            this.vdown_comboBox.FormattingEnabled = true;
+            this.vdown_comboBox.Location = new System.Drawing.Point(278, 144);
+            this.vdown_comboBox.Name = "vdown_comboBox";
+            this.vdown_comboBox.Size = new System.Drawing.Size(153, 32);
+            this.vdown_comboBox.TabIndex = 6;
             // 
-            // textBox10
+            // vinput_exp_textBox
             // 
-            this.textBox10.BackColor = System.Drawing.Color.MintCream;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox10.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(6, 34);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(137, 36);
-            this.textBox10.TabIndex = 10;
-            this.textBox10.Text = "Max Value";
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.MintCream;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox11.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(6, 79);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(137, 36);
-            this.textBox11.TabIndex = 11;
-            this.textBox11.Text = "Min Value";
-            // 
-            // vminoutput_textBox
-            // 
-            this.vminoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.vminoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vminoutput_textBox.Location = new System.Drawing.Point(149, 78);
-            this.vminoutput_textBox.Name = "vminoutput_textBox";
-            this.vminoutput_textBox.ReadOnly = true;
-            this.vminoutput_textBox.Size = new System.Drawing.Size(308, 39);
-            this.vminoutput_textBox.TabIndex = 12;
+            this.vinput_exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vinput_exp_textBox.Location = new System.Drawing.Point(83, 46);
+            this.vinput_exp_textBox.Name = "vinput_exp_textBox";
+            this.vinput_exp_textBox.Size = new System.Drawing.Size(348, 43);
+            this.vinput_exp_textBox.TabIndex = 4;
             // 
             // DIForm
             // 
