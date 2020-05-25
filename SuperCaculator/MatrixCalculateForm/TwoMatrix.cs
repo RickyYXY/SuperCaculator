@@ -8,5 +8,6 @@ namespace MatrixCalculateForm
 {
     class TwoMatrix : Matrix
     {
+
     }
 }

@@ -15,6 +15,7 @@ namespace MatrixCalculateForm
             ValueNumbers = new int[MatrixRow, MatrixColumn];
         }
 
+        //生成零矩阵
         public void ZerosMatrix()
         {
             for(int i = 0; i < MatrixRow; i++)
@@ -26,6 +27,7 @@ namespace MatrixCalculateForm
             }
         }
 
+        //生成单位矩阵
         public void IdentityMatrix()
         {
             int temp = 0;
@@ -43,6 +45,11 @@ namespace MatrixCalculateForm
                     }
                 }
             }
+        }
+
+        public Matrix DiagonalMatrix(int element)
+        {
+
         }
     }
 }
