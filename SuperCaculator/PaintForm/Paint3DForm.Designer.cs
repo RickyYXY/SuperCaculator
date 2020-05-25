@@ -31,6 +31,7 @@
             this.panel_paint = new System.Windows.Forms.Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_save = new System.Windows.Forms.Button();
             this.label_rate = new System.Windows.Forms.Label();
             this.trackBar = new System.Windows.Forms.TrackBar();
             this.textBox_maxY = new System.Windows.Forms.TextBox();
@@ -58,7 +59,7 @@
             this.panel_paint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_paint.Location = new System.Drawing.Point(0, 300);
             this.panel_paint.Name = "panel_paint";
-            this.panel_paint.Size = new System.Drawing.Size(882, 453);
+            this.panel_paint.Size = new System.Drawing.Size(1032, 453);
             this.panel_paint.TabIndex = 6;
             // 
             // pictureBox
@@ -67,13 +68,14 @@
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(882, 453);
+            this.pictureBox.Size = new System.Drawing.Size(1032, 453);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.button_save);
             this.panel1.Controls.Add(this.label_rate);
             this.panel1.Controls.Add(this.trackBar);
             this.panel1.Controls.Add(this.textBox_maxY);
@@ -91,15 +93,26 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 300);
+            this.panel1.Size = new System.Drawing.Size(1032, 300);
             this.panel1.TabIndex = 5;
+            // 
+            // button_save
+            // 
+            this.button_save.BackColor = System.Drawing.Color.LightCyan;
+            this.button_save.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_save.Location = new System.Drawing.Point(580, 235);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(150, 55);
+            this.button_save.TabIndex = 20;
+            this.button_save.Text = "Save";
+            this.button_save.UseVisualStyleBackColor = false;
+            this.button_save.Click += new System.EventHandler(this.Button_save_Click);
             // 
             // label_rate
             // 
-            this.label_rate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_rate.AutoSize = true;
             this.label_rate.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.label_rate.Location = new System.Drawing.Point(765, 85);
+            this.label_rate.Location = new System.Drawing.Point(918, 85);
             this.label_rate.Name = "label_rate";
             this.label_rate.Size = new System.Drawing.Size(97, 42);
             this.label_rate.TabIndex = 19;
@@ -107,9 +120,8 @@
             // 
             // trackBar
             // 
-            this.trackBar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trackBar.BackColor = System.Drawing.Color.LightBlue;
-            this.trackBar.Location = new System.Drawing.Point(785, 130);
+            this.trackBar.Location = new System.Drawing.Point(938, 130);
             this.trackBar.Name = "trackBar";
             this.trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trackBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -121,32 +133,29 @@
             // 
             // textBox_maxY
             // 
-            this.textBox_maxY.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_maxY.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_maxY.Location = new System.Drawing.Point(545, 160);
+            this.textBox_maxY.Location = new System.Drawing.Point(595, 160);
             this.textBox_maxY.Name = "textBox_maxY";
-            this.textBox_maxY.Size = new System.Drawing.Size(200, 59);
+            this.textBox_maxY.Size = new System.Drawing.Size(250, 59);
             this.textBox_maxY.TabIndex = 17;
             this.textBox_maxY.Text = "1";
             this.textBox_maxY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_minY
             // 
-            this.textBox_minY.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_minY.Font = new System.Drawing.Font("Ink Free", 25F);
             this.textBox_minY.Location = new System.Drawing.Point(205, 160);
             this.textBox_minY.Name = "textBox_minY";
-            this.textBox_minY.Size = new System.Drawing.Size(200, 59);
+            this.textBox_minY.Size = new System.Drawing.Size(250, 59);
             this.textBox_minY.TabIndex = 16;
             this.textBox_minY.Text = "-1";
             this.textBox_minY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_Y
             // 
-            this.label_Y.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_Y.AutoSize = true;
             this.label_Y.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_Y.Location = new System.Drawing.Point(425, 160);
+            this.label_Y.Location = new System.Drawing.Point(475, 160);
             this.label_Y.Name = "label_Y";
             this.label_Y.Size = new System.Drawing.Size(105, 52);
             this.label_Y.TabIndex = 15;
@@ -154,7 +163,6 @@
             // 
             // label_func
             // 
-            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_func.AutoSize = true;
             this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
             this.label_func.Location = new System.Drawing.Point(35, 20);
@@ -165,10 +173,9 @@
             // 
             // button_clean
             // 
-            this.button_clean.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_clean.BackColor = System.Drawing.Color.LightCyan;
             this.button_clean.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_clean.Location = new System.Drawing.Point(410, 235);
+            this.button_clean.Location = new System.Drawing.Point(400, 235);
             this.button_clean.Name = "button_clean";
             this.button_clean.Size = new System.Drawing.Size(150, 55);
             this.button_clean.TabIndex = 12;
@@ -178,10 +185,9 @@
             // 
             // button_close
             // 
-            this.button_close.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_close.BackColor = System.Drawing.Color.LightCyan;
             this.button_close.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_close.Location = new System.Drawing.Point(595, 235);
+            this.button_close.Location = new System.Drawing.Point(760, 235);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(150, 55);
             this.button_close.TabIndex = 13;
@@ -191,10 +197,9 @@
             // 
             // button_draw
             // 
-            this.button_draw.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_draw.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_draw.Location = new System.Drawing.Point(225, 235);
+            this.button_draw.Location = new System.Drawing.Point(220, 235);
             this.button_draw.Name = "button_draw";
             this.button_draw.Size = new System.Drawing.Size(150, 55);
             this.button_draw.TabIndex = 11;
@@ -204,7 +209,6 @@
             // 
             // button_color
             // 
-            this.button_color.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_color.BackColor = System.Drawing.Color.LightCyan;
             this.button_color.Font = new System.Drawing.Font("Ink Free", 20F);
             this.button_color.Location = new System.Drawing.Point(40, 235);
@@ -217,7 +221,6 @@
             // 
             // label_range
             // 
-            this.label_range.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_range.AutoSize = true;
             this.label_range.Font = new System.Drawing.Font("Ink Free", 25F);
             this.label_range.Location = new System.Drawing.Point(35, 125);
@@ -228,32 +231,29 @@
             // 
             // textBox_maxX
             // 
-            this.textBox_maxX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_maxX.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_maxX.Location = new System.Drawing.Point(545, 90);
+            this.textBox_maxX.Location = new System.Drawing.Point(595, 90);
             this.textBox_maxX.Name = "textBox_maxX";
-            this.textBox_maxX.Size = new System.Drawing.Size(200, 59);
+            this.textBox_maxX.Size = new System.Drawing.Size(250, 59);
             this.textBox_maxX.TabIndex = 8;
             this.textBox_maxX.Text = "1";
             this.textBox_maxX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_minX
             // 
-            this.textBox_minX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_minX.Font = new System.Drawing.Font("Ink Free", 25F);
             this.textBox_minX.Location = new System.Drawing.Point(205, 90);
             this.textBox_minX.Name = "textBox_minX";
-            this.textBox_minX.Size = new System.Drawing.Size(200, 59);
+            this.textBox_minX.Size = new System.Drawing.Size(250, 59);
             this.textBox_minX.TabIndex = 7;
             this.textBox_minX.Text = "-1";
             this.textBox_minX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_X
             // 
-            this.label_X.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_X.AutoSize = true;
             this.label_X.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_X.Location = new System.Drawing.Point(425, 90);
+            this.label_X.Location = new System.Drawing.Point(475, 90);
             this.label_X.Name = "label_X";
             this.label_X.Size = new System.Drawing.Size(103, 52);
             this.label_X.TabIndex = 6;
@@ -263,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 753);
+            this.ClientSize = new System.Drawing.Size(1032, 753);
             this.Controls.Add(this.panel_paint);
             this.Controls.Add(this.panel1);
             this.Name = "Paint3DForm";
@@ -295,5 +295,6 @@
         private System.Windows.Forms.Label label_Y;
         private System.Windows.Forms.Label label_rate;
         private System.Windows.Forms.TrackBar trackBar;
+        private System.Windows.Forms.Button button_save;
     }
 }
