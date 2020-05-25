@@ -84,7 +84,7 @@ namespace DerivIntegForm
             {
                 string x = dinput_comboBox.Text;
                 string funExp = dinput_textBox.Text;
-                double precision = 0.00001 * Math.Pow(100, -dpre_trackBar.Value);
+                double precision = 0.00001 * Math.Pow(10, -dpre_trackBar.Value);
                 Deriviation deriviation = new Deriviation(precision);
                 double result = deriviation.DerivCal(double.Parse(x), funExp);
                 doutput_textBox.Text = result.ToString("f10");

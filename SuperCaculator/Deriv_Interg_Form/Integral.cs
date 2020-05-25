@@ -19,7 +19,6 @@ namespace DerivIntegForm
             taskList = new List<Task<double>>();
             precision = pre;
         }
-
         //梯形逼近法计算函数积分
         public double IntegCal(double up, double down, string exp, int concurr_num = 25000)
         {
@@ -72,12 +71,14 @@ namespace DerivIntegForm
             }
             return sign * result * precision / 2;
         }
+
         private double ThreadCal_S(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             double temp = 2 * function.GetValue(x);
             return temp;
         }
+
         private double ThreadCal_M(double x)
         {
             Function.Function function = new Function.Function(funcExp);
