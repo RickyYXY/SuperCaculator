@@ -61,6 +61,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exp_textBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.vexit_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.v_trackBar = new System.Windows.Forms.TrackBar();
+            this.vclear_button = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.vminoutput_textBox = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.vmaxoutput_textBox = new System.Windows.Forms.TextBox();
+            this.vcal_button = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.vup_comboBox = new System.Windows.Forms.ComboBox();
+            this.vdown_comboBox = new System.Windows.Forms.ComboBox();
+            this.vinput_exp_textBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dpre_trackBar)).BeginInit();
@@ -72,6 +89,10 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_trackBar)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -426,6 +447,13 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.MintCream;
+            this.tabPage3.Controls.Add(this.vexit_button);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.v_trackBar);
+            this.tabPage3.Controls.Add(this.vclear_button);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.vcal_button);
+            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
@@ -434,6 +462,203 @@
             this.tabPage3.Size = new System.Drawing.Size(792, 413);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "极值计算";
+            // 
+            // vexit_button
+            // 
+            this.vexit_button.BackColor = System.Drawing.Color.LightCyan;
+            this.vexit_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.vexit_button.Location = new System.Drawing.Point(490, 292);
+            this.vexit_button.Name = "vexit_button";
+            this.vexit_button.Size = new System.Drawing.Size(266, 61);
+            this.vexit_button.TabIndex = 18;
+            this.vexit_button.Text = "Exit";
+            this.vexit_button.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(674, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Precision";
+            // 
+            // v_trackBar
+            // 
+            this.v_trackBar.BackColor = System.Drawing.Color.LightBlue;
+            this.v_trackBar.Location = new System.Drawing.Point(700, 55);
+            this.v_trackBar.Maximum = 4;
+            this.v_trackBar.Name = "v_trackBar";
+            this.v_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.v_trackBar.Size = new System.Drawing.Size(56, 119);
+            this.v_trackBar.TabIndex = 16;
+            this.v_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
+            // 
+            // vclear_button
+            // 
+            this.vclear_button.BackColor = System.Drawing.Color.LightCyan;
+            this.vclear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.vclear_button.Location = new System.Drawing.Point(490, 225);
+            this.vclear_button.Name = "vclear_button";
+            this.vclear_button.Size = new System.Drawing.Size(266, 61);
+            this.vclear_button.TabIndex = 15;
+            this.vclear_button.Text = "Clear";
+            this.vclear_button.UseVisualStyleBackColor = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.vminoutput_textBox);
+            this.groupBox5.Controls.Add(this.textBox11);
+            this.groupBox5.Controls.Add(this.textBox10);
+            this.groupBox5.Controls.Add(this.vmaxoutput_textBox);
+            this.groupBox5.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox5.Location = new System.Drawing.Point(8, 225);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(463, 128);
+            this.groupBox5.TabIndex = 14;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Output";
+            // 
+            // vminoutput_textBox
+            // 
+            this.vminoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.vminoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.vminoutput_textBox.Location = new System.Drawing.Point(154, 78);
+            this.vminoutput_textBox.Name = "vminoutput_textBox";
+            this.vminoutput_textBox.ReadOnly = true;
+            this.vminoutput_textBox.Size = new System.Drawing.Size(303, 39);
+            this.vminoutput_textBox.TabIndex = 12;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.MintCream;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox11.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(6, 79);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(142, 36);
+            this.textBox11.TabIndex = 11;
+            this.textBox11.Text = "Min Value";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.MintCream;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox10.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(6, 34);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(142, 36);
+            this.textBox10.TabIndex = 10;
+            this.textBox10.Text = "Max Value";
+            // 
+            // vmaxoutput_textBox
+            // 
+            this.vmaxoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.vmaxoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.vmaxoutput_textBox.Location = new System.Drawing.Point(154, 31);
+            this.vmaxoutput_textBox.Name = "vmaxoutput_textBox";
+            this.vmaxoutput_textBox.ReadOnly = true;
+            this.vmaxoutput_textBox.Size = new System.Drawing.Size(303, 39);
+            this.vmaxoutput_textBox.TabIndex = 0;
+            // 
+            // vcal_button
+            // 
+            this.vcal_button.AutoSize = true;
+            this.vcal_button.BackColor = System.Drawing.Color.LightCyan;
+            this.vcal_button.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.vcal_button.Location = new System.Drawing.Point(490, 16);
+            this.vcal_button.Name = "vcal_button";
+            this.vcal_button.Size = new System.Drawing.Size(178, 166);
+            this.vcal_button.TabIndex = 13;
+            this.vcal_button.Text = "Caculate";
+            this.vcal_button.UseVisualStyleBackColor = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.textBox9);
+            this.groupBox6.Controls.Add(this.textBox8);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.vup_comboBox);
+            this.groupBox6.Controls.Add(this.vdown_comboBox);
+            this.groupBox6.Controls.Add(this.vinput_exp_textBox);
+            this.groupBox6.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox6.Location = new System.Drawing.Point(8, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(461, 199);
+            this.groupBox6.TabIndex = 12;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Input";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.MintCream;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox9.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(83, 139);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(189, 36);
+            this.textBox9.TabIndex = 10;
+            this.textBox9.Text = "Lower Bound";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.MintCream;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox8.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(83, 95);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(189, 36);
+            this.textBox8.TabIndex = 9;
+            this.textBox8.Text = "Upper Bound";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.MintCream;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox3.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(6, 49);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(71, 36);
+            this.textBox3.TabIndex = 8;
+            this.textBox3.Text = "Func";
+            // 
+            // vup_comboBox
+            // 
+            this.vup_comboBox.DataSource = this.input_bindingSource;
+            this.vup_comboBox.DisplayMember = "Context";
+            this.vup_comboBox.FormattingEnabled = true;
+            this.vup_comboBox.Location = new System.Drawing.Point(278, 100);
+            this.vup_comboBox.Name = "vup_comboBox";
+            this.vup_comboBox.Size = new System.Drawing.Size(153, 32);
+            this.vup_comboBox.TabIndex = 7;
+            // 
+            // vdown_comboBox
+            // 
+            this.vdown_comboBox.DataSource = this.input_bindingSource;
+            this.vdown_comboBox.DisplayMember = "Context";
+            this.vdown_comboBox.FormattingEnabled = true;
+            this.vdown_comboBox.Location = new System.Drawing.Point(278, 144);
+            this.vdown_comboBox.Name = "vdown_comboBox";
+            this.vdown_comboBox.Size = new System.Drawing.Size(153, 32);
+            this.vdown_comboBox.TabIndex = 6;
+            // 
+            // vinput_exp_textBox
+            // 
+            this.vinput_exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vinput_exp_textBox.Location = new System.Drawing.Point(83, 46);
+            this.vinput_exp_textBox.Name = "vinput_exp_textBox";
+            this.vinput_exp_textBox.Size = new System.Drawing.Size(348, 43);
+            this.vinput_exp_textBox.TabIndex = 4;
             // 
             // DIForm
             // 
@@ -460,6 +685,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_trackBar)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -497,6 +729,23 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox dinput_comboBox;
+        private System.Windows.Forms.Button vexit_button;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TrackBar v_trackBar;
+        private System.Windows.Forms.Button vclear_button;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox vmaxoutput_textBox;
+        private System.Windows.Forms.Button vcal_button;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox vup_comboBox;
+        private System.Windows.Forms.ComboBox vdown_comboBox;
+        private System.Windows.Forms.TextBox vinput_exp_textBox;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox vminoutput_textBox;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
 
