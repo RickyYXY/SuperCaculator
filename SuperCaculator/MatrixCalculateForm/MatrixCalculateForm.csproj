@@ -53,7 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Matrix.cs" />
-    <Compile Include="MatrixCheck.cs" />
+    <Compile Include="MatrixReadAndCheck.cs" />
     <Compile Include="MatrixCreate.cs" />
     <Compile Include="OneMatrix.cs" />
     <Compile Include="Program.cs" />

@@ -8,26 +8,42 @@ namespace MatrixCalculateForm
 {
     class MatrixCreate : Matrix
     {
-        public MatrixCreate(int rowNum, int columnNum) : base(rowNum, columnNum)
-        {
-           
-        }
-
         //生成零矩阵
-        public void ZerosMatrix()
+        public bool ZerosMatrix()
         {
-            
+            for (int i = 0; i < numRows; ++i)
+                for (int j = 0; j < numColumns; ++j)
+                    if (i == j)
+                        SetElement(i, j, 1);
+
+            return true;
         }
 
         //生成单位矩阵
-        public void IdentityMatrix()
+        public bool IdentityMatrix()
         {
-            
+            for (int i = 0; i < numRows; ++i)
+                for (int j = 0; j < numColumns; ++j)
+                    if (i == j)
+                        SetElement(i, j, 1);
+
+            return true;
         }
 
-        public Matrix DiagonalMatrix(int element)
+        //生成对角矩阵
+        public bool DiagonalMatrix(int element)
         {
-
+            for (int i = 0; i < numRows; ++i)
+            {
+                for (int j = 0; j < numColumns; ++j)
+                {
+                    if (i == j)
+                    {
+                        SetElement(i, j, element);
+                    }
+                }
+            }                       
+            return true;
         }
     }
 }
