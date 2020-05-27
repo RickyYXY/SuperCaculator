@@ -24,10 +24,10 @@ namespace PaintForm
         public double Dx { get => dx; }
         public double Dy { get => dy; }
 
-        public Painter2D(PictureBox pb, Pen pen,
+        public Painter2D(PictureBox pb, Graphics g, Pen pen,
             Func<double?, double?, double> Caculate, double minX, double maxX)
         {
-            g = pb.CreateGraphics();
+            this.g = g;
             this.pen = pen;
             this.Caculate = Caculate;
             this.minX = minX;
@@ -123,7 +123,8 @@ namespace PaintForm
             string sx, sy;
             sx = NumToString(minX);
             sy = NumToString(minY);
-            g.DrawString("(" + sy + " ," + sx + ")", font, brush, XSTART, YSTART, sf);
+            //g.DrawString("(" + sy + " ," + sx + ")", font, brush, XSTART, YSTART, sf);
+            g.DrawString("Ymin: " + sy, font, brush, XSTART, YSTART, sf);
             g.DrawString(maxX.ToString("#0.0"), font, brush, XSTART + XLENGTH, YSTART);
         }
 

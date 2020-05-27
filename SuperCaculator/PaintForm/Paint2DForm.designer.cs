@@ -43,6 +43,7 @@
             this.labelx = new System.Windows.Forms.Label();
             this.labely = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_save = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_paint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.button_save);
             this.panel1.Controls.Add(this.label_func);
             this.panel1.Controls.Add(this.button_clean);
             this.panel1.Controls.Add(this.button_close);
@@ -64,12 +66,11 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 250);
+            this.panel1.Size = new System.Drawing.Size(932, 250);
             this.panel1.TabIndex = 1;
             // 
             // label_func
             // 
-            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_func.AutoSize = true;
             this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
             this.label_func.Location = new System.Drawing.Point(35, 20);
@@ -80,10 +81,9 @@
             // 
             // button_clean
             // 
-            this.button_clean.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_clean.BackColor = System.Drawing.Color.LightCyan;
             this.button_clean.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_clean.Location = new System.Drawing.Point(410, 175);
+            this.button_clean.Location = new System.Drawing.Point(400, 175);
             this.button_clean.Name = "button_clean";
             this.button_clean.Size = new System.Drawing.Size(150, 55);
             this.button_clean.TabIndex = 12;
@@ -93,10 +93,9 @@
             // 
             // button_close
             // 
-            this.button_close.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_close.BackColor = System.Drawing.Color.LightCyan;
             this.button_close.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_close.Location = new System.Drawing.Point(595, 175);
+            this.button_close.Location = new System.Drawing.Point(760, 175);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(150, 55);
             this.button_close.TabIndex = 13;
@@ -106,10 +105,9 @@
             // 
             // button_draw
             // 
-            this.button_draw.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_draw.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_draw.Location = new System.Drawing.Point(225, 175);
+            this.button_draw.Location = new System.Drawing.Point(220, 175);
             this.button_draw.Name = "button_draw";
             this.button_draw.Size = new System.Drawing.Size(150, 55);
             this.button_draw.TabIndex = 11;
@@ -119,7 +117,6 @@
             // 
             // button_color
             // 
-            this.button_color.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_color.BackColor = System.Drawing.Color.LightCyan;
             this.button_color.Font = new System.Drawing.Font("Ink Free", 20F);
             this.button_color.Location = new System.Drawing.Point(40, 175);
@@ -132,7 +129,6 @@
             // 
             // label_range
             // 
-            this.label_range.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_range.AutoSize = true;
             this.label_range.Font = new System.Drawing.Font("Ink Free", 25F);
             this.label_range.Location = new System.Drawing.Point(35, 90);
@@ -143,32 +139,29 @@
             // 
             // textBox_max
             // 
-            this.textBox_max.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_max.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_max.Location = new System.Drawing.Point(545, 90);
+            this.textBox_max.Location = new System.Drawing.Point(570, 90);
             this.textBox_max.Name = "textBox_max";
-            this.textBox_max.Size = new System.Drawing.Size(200, 59);
+            this.textBox_max.Size = new System.Drawing.Size(225, 59);
             this.textBox_max.TabIndex = 8;
             this.textBox_max.Text = "1";
             this.textBox_max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_min
             // 
-            this.textBox_min.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_min.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_min.Location = new System.Drawing.Point(205, 90);
+            this.textBox_min.Location = new System.Drawing.Point(206, 90);
             this.textBox_min.Name = "textBox_min";
-            this.textBox_min.Size = new System.Drawing.Size(200, 59);
+            this.textBox_min.Size = new System.Drawing.Size(225, 59);
             this.textBox_min.TabIndex = 7;
             this.textBox_min.Text = "-1";
             this.textBox_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_X
             // 
-            this.label_X.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_X.AutoSize = true;
             this.label_X.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_X.Location = new System.Drawing.Point(425, 90);
+            this.label_X.Location = new System.Drawing.Point(450, 90);
             this.label_X.Name = "label_X";
             this.label_X.Size = new System.Drawing.Size(103, 52);
             this.label_X.TabIndex = 6;
@@ -181,7 +174,7 @@
             this.panel_paint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_paint.Location = new System.Drawing.Point(0, 250);
             this.panel_paint.Name = "panel_paint";
-            this.panel_paint.Size = new System.Drawing.Size(807, 453);
+            this.panel_paint.Size = new System.Drawing.Size(932, 453);
             this.panel_paint.TabIndex = 2;
             // 
             // pictureBox
@@ -190,7 +183,7 @@
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(807, 453);
+            this.pictureBox.Size = new System.Drawing.Size(932, 453);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
@@ -225,14 +218,26 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 672);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 31);
+            this.panel2.Size = new System.Drawing.Size(932, 31);
             this.panel2.TabIndex = 4;
+            // 
+            // button_save
+            // 
+            this.button_save.BackColor = System.Drawing.Color.LightCyan;
+            this.button_save.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_save.Location = new System.Drawing.Point(580, 175);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(150, 55);
+            this.button_save.TabIndex = 15;
+            this.button_save.Text = "Save";
+            this.button_save.UseVisualStyleBackColor = false;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // Paint2DForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 703);
+            this.ClientSize = new System.Drawing.Size(932, 703);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_paint);
             this.Controls.Add(this.panel1);
@@ -264,5 +269,6 @@
         private System.Windows.Forms.Label labely;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label_func;
+        private System.Windows.Forms.Button button_save;
     }
 }

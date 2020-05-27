@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,7 @@ namespace PaintForm
             //pen_coor = new Pen(Color.Gray);
             //float[] dashValues = { 5, 2 };
             //pen_coor.DashPattern = dashValues;
+            pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height);
         }
 
         private void Button_color_Click(object sender, EventArgs e)
@@ -70,22 +72,34 @@ namespace PaintForm
                 return;
             }
             //DrawFunction();
-            painter = new Painter2D(pictureBox, mypen, Caculate, minX, maxX);
+            Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            Graphics g = Graphics.FromImage(bitmap);
+            painter = new Painter2D(pictureBox, g, mypen, Caculate, minX, maxX);
             try
             {
                 painter.Draw();
+                pictureBox.Image = bitmap;
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                g.Dispose();
             }
             ShowXY = true;
         }
 
         private void Button_clean_Click(object sender, EventArgs e)
         {
-            Graphics g = pictureBox.CreateGraphics();
+            //Graphics g = pictureBox.CreateGraphics();
+            //g.Clear(Color.White);
+            Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            Graphics g = Graphics.FromImage(bitmap);
             g.Clear(Color.White);
+            pictureBox.Image = bitmap;
+            g.Dispose();
             ShowXY = false;
             labelx.Text = "X: ";
             labely.Text = "Y: ";
@@ -94,6 +108,20 @@ namespace PaintForm
         private void Button_close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog save = new SaveFileDialog())
+            {
+                save.FileName = "picture2D";
+                save.Filter = "(.jpg)|*.jpg";
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.Image.Save(save.FileName, ImageFormat.Jpeg);
+                    MessageBox.Show("保存成功");
+                }
+            }
         }
 
         private void PictureBox_MouseMove(object sender, MouseEventArgs e)
