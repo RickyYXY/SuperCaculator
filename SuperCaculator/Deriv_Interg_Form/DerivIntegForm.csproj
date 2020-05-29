@@ -53,6 +53,7 @@
     <Compile Include="DerivIntegForm.Designer.cs">
       <DependentUpon>DerivIntegForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extremum.cs" />
     <Compile Include="Integral.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

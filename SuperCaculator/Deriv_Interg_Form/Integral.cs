@@ -10,7 +10,6 @@ namespace DerivIntegForm
     class Integral
     {
         private double precision;
-        private double result;
         private double interval;
         private string funcExp;
         private List<Task<double>> taskList;
@@ -20,7 +19,7 @@ namespace DerivIntegForm
             precision = pre;
         }
         //梯形逼近法计算函数积分
-        public double IntegCal(double up, double down, string exp, int concurr_num = 25000)
+        public double IntegCal(double up, double down, string exp, int concurr_num = 50000)
         {
             taskList.Clear();
             double sign = 1;
@@ -31,13 +30,13 @@ namespace DerivIntegForm
                 down = temp;
                 sign = -1;
             }
-            result = 0;
+            double result = 0;
             funcExp = exp;
             Function.Function function = new Function.Function(exp);
             result += function.GetValue(up);
             result += function.GetValue(down);
 
-            if (concurr_num * 2 >= (int)((up - down) / precision))
+            if (concurr_num >= (int)((up - down) / precision))
             {
                 for (double x = down + precision; x < up; x += precision)
                 {
