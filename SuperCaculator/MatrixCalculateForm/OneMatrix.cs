@@ -9,7 +9,7 @@ namespace MatrixCalculateForm
     class OneMatrix
     {
         //矩阵转置
-        public Matrix MatrixTranspose(Matrix matrix)
+        static public Matrix MatrixTranspose(Matrix matrix)
         {
             // 构造目标矩阵
             Matrix Trans = new Matrix(matrix.Columns, matrix.Rows);
@@ -25,7 +25,7 @@ namespace MatrixCalculateForm
         }
         //矩阵求逆
         //没有逆矩阵的情况在form中处理
-        public bool MatrixInverse(Matrix matrix)
+        static public bool MatrixInverse(Matrix matrix)
         {
             int i, j, k, l, u, v;
             double d = 0, p = 0;
@@ -154,7 +154,7 @@ namespace MatrixCalculateForm
          * 
          * @return double型，行列式的值
          */
-        public double ComputeDetGauss(Matrix matrix)
+        static public double ComputeDetGauss(Matrix matrix)
         {
             int i, j, k, nis = 0, js = 0, l, u, v;
             double f, det, q, d;
@@ -237,7 +237,7 @@ namespace MatrixCalculateForm
          * 
          * @return int型，矩阵的秩
          */
-        public int ComputeRankGauss(Matrix matrix)
+        static public int ComputeRankGauss(Matrix matrix)
         {
             int i, j, k, nn, nis = 0, js = 0, l, ll, u, v;
             double q, d;
@@ -319,7 +319,7 @@ namespace MatrixCalculateForm
          * @param eps - 计算精度
          * @return bool型，求解是否成功
          */
-        public bool ComputeEvJacobi(Matrix matrix, double[] dblEigenValue, Matrix mtxEigenVector, int nMaxIt, double eps)
+        static public bool ComputeEvJacobi(Matrix matrix, double[] dblEigenValue, Matrix mtxEigenVector, int nMaxIt, double eps)
         {
             int i, j, p = 0, q = 0, u, w, t, s, l;
             double fm, cn, sn, omega, x, y, d;

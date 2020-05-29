@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogUtils", "LogUtils\LogUti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixCalculateForm", "MatrixCalculateForm\MatrixCalculateForm.csproj", "{068AB8DC-8AFA-4ED5-80AF-BF3A6BB749B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixCalculateFormTests", "MatrixCalculateFormTests\MatrixCalculateFormTests.csproj", "{07CD1460-3D18-48A4-B6AC-A0E38D781C63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{068AB8DC-8AFA-4ED5-80AF-BF3A6BB749B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{068AB8DC-8AFA-4ED5-80AF-BF3A6BB749B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{068AB8DC-8AFA-4ED5-80AF-BF3A6BB749B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CD1460-3D18-48A4-B6AC-A0E38D781C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CD1460-3D18-48A4-B6AC-A0E38D781C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CD1460-3D18-48A4-B6AC-A0E38D781C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CD1460-3D18-48A4-B6AC-A0E38D781C63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
