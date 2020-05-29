@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -35,6 +36,7 @@ namespace PaintForm
             //Caculate = (x, y) => x * x * y * y;
             //Caculate = (x, y) => x + y;
             //Caculate = (x, y) => x / y;
+            pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height);
         }
 
         private void TrackBar_Scroll(object sender, EventArgs e)
@@ -54,14 +56,14 @@ namespace PaintForm
         }
         private void Button_clean_Click(object sender, EventArgs e)
         {
-            Graphics g = pictureBox.CreateGraphics();
+            //Graphics g = pictureBox.CreateGraphics();
+            Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            Graphics g = Graphics.FromImage(bitmap);
             g.Clear(Color.White);
+            pictureBox.Image = bitmap;
+            g.Dispose();
         }
 
-        private void Button_close_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void Button_draw_Click(object sender, EventArgs e)
         {
@@ -84,17 +86,42 @@ namespace PaintForm
                 return;
             }
             //DrawFunction();
-            Painter3D painter = new Painter3D(pictureBox, mypen, Caculate, minX, maxX, minY, maxY, rate);
+            Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            Graphics g = Graphics.FromImage(bitmap);
+            Painter3D painter = new Painter3D(pictureBox, g, mypen, Caculate, minX, maxX, minY, maxY, rate);
             try
             {
                 painter.Draw();
+                pictureBox.Image = bitmap;
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                g.Dispose();
+            }
         }
 
+        private void Button_save_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog save = new SaveFileDialog())
+            {
+                save.FileName = "picture3D";
+                save.Filter = "(.jpg)|*.jpg";
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.Image.Save(save.FileName, ImageFormat.Jpeg);
+                    MessageBox.Show("保存成功");
+                }
+            }
+        }
+
+        private void Button_close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
         //private void DrawFunction()
         //{
         //    XLENGTH = (int)(pictureBox.Width * 0.5);

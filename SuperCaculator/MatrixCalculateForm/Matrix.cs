@@ -8,9 +8,9 @@ namespace MatrixCalculateForm
 {
     public class Matrix
     {
-        private int numColumns = 0;			// 矩阵列数
-        private int numRows = 0;			// 矩阵行数
-        private double eps = 0.0;			// 缺省精度
+        protected int numColumns = 0;			// 矩阵列数
+        protected int numRows = 0;			// 矩阵行数
+        protected double eps = 0.0;			// 缺省精度
         public double[] elements = null;	// 矩阵数据缓冲区
         //属性:矩阵列数
         public int Columns
@@ -180,6 +180,7 @@ namespace MatrixCalculateForm
                 return false;
 
             // 分配内存
+            //同时会初始化为0
             elements = new double[nSize];
 
             return true;

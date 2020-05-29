@@ -19,10 +19,11 @@ namespace PaintForm
 
         const double sqrt2 = 1.4142135623730950488016887242;
 
-        public Painter3D(PictureBox pb, Pen pen, Func<double?, double?, double> Caculate,
+        public Painter3D(PictureBox pb, Graphics g, Pen pen, Func<double?, double?, double> Caculate,
             double minX, double maxX, double minY, double maxY, double rate)
         {
-            g = pb.CreateGraphics();
+            //g = pb.CreateGraphics();
+            this.g = g;
             this.pen = pen;
             this.Caculate = Caculate;
             this.minX = minX;
