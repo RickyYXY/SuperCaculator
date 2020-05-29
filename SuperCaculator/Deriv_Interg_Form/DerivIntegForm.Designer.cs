@@ -227,7 +227,7 @@
             this.dinput_comboBox.FormattingEnabled = true;
             this.dinput_comboBox.Location = new System.Drawing.Point(45, 106);
             this.dinput_comboBox.Name = "dinput_comboBox";
-            this.dinput_comboBox.Size = new System.Drawing.Size(224, 44);
+            this.dinput_comboBox.Size = new System.Drawing.Size(303, 44);
             this.dinput_comboBox.TabIndex = 9;
             // 
             // input_bindingSource
@@ -400,7 +400,7 @@
             this.down_num_comboBox.FormattingEnabled = true;
             this.down_num_comboBox.Location = new System.Drawing.Point(61, 144);
             this.down_num_comboBox.Name = "down_num_comboBox";
-            this.down_num_comboBox.Size = new System.Drawing.Size(121, 32);
+            this.down_num_comboBox.Size = new System.Drawing.Size(245, 32);
             this.down_num_comboBox.TabIndex = 7;
             // 
             // up_num_comboBox
@@ -410,7 +410,7 @@
             this.up_num_comboBox.FormattingEnabled = true;
             this.up_num_comboBox.Location = new System.Drawing.Point(61, 31);
             this.up_num_comboBox.Name = "up_num_comboBox";
-            this.up_num_comboBox.Size = new System.Drawing.Size(121, 32);
+            this.up_num_comboBox.Size = new System.Drawing.Size(245, 32);
             this.up_num_comboBox.TabIndex = 6;
             // 
             // textBox4
@@ -473,6 +473,7 @@
             this.vexit_button.TabIndex = 18;
             this.vexit_button.Text = "Exit";
             this.vexit_button.UseVisualStyleBackColor = false;
+            this.vexit_button.Click += new System.EventHandler(this.vexit_button_Click);
             // 
             // label3
             // 
@@ -504,6 +505,7 @@
             this.vclear_button.TabIndex = 15;
             this.vclear_button.Text = "Clear";
             this.vclear_button.UseVisualStyleBackColor = false;
+            this.vclear_button.Click += new System.EventHandler(this.vclear_button_Click);
             // 
             // groupBox5
             // 
@@ -526,7 +528,7 @@
             this.vminoutput_textBox.Location = new System.Drawing.Point(154, 78);
             this.vminoutput_textBox.Name = "vminoutput_textBox";
             this.vminoutput_textBox.ReadOnly = true;
-            this.vminoutput_textBox.Size = new System.Drawing.Size(303, 39);
+            this.vminoutput_textBox.Size = new System.Drawing.Size(285, 39);
             this.vminoutput_textBox.TabIndex = 12;
             // 
             // textBox11
@@ -562,7 +564,7 @@
             this.vmaxoutput_textBox.Location = new System.Drawing.Point(154, 31);
             this.vmaxoutput_textBox.Name = "vmaxoutput_textBox";
             this.vmaxoutput_textBox.ReadOnly = true;
-            this.vmaxoutput_textBox.Size = new System.Drawing.Size(303, 39);
+            this.vmaxoutput_textBox.Size = new System.Drawing.Size(285, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
             // 
             // vcal_button
@@ -576,6 +578,7 @@
             this.vcal_button.TabIndex = 13;
             this.vcal_button.Text = "Caculate";
             this.vcal_button.UseVisualStyleBackColor = false;
+            this.vcal_button.Click += new System.EventHandler(this.vcal_button_Click);
             // 
             // groupBox6
             // 
@@ -599,7 +602,7 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox9.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(83, 139);
+            this.textBox9.Location = new System.Drawing.Point(6, 139);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(189, 36);
@@ -612,7 +615,7 @@
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox8.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(83, 95);
+            this.textBox8.Location = new System.Drawing.Point(6, 95);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(189, 36);
@@ -637,9 +640,9 @@
             this.vup_comboBox.DataSource = this.input_bindingSource;
             this.vup_comboBox.DisplayMember = "Context";
             this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(278, 100);
+            this.vup_comboBox.Location = new System.Drawing.Point(201, 100);
             this.vup_comboBox.Name = "vup_comboBox";
-            this.vup_comboBox.Size = new System.Drawing.Size(153, 32);
+            this.vup_comboBox.Size = new System.Drawing.Size(230, 32);
             this.vup_comboBox.TabIndex = 7;
             // 
             // vdown_comboBox
@@ -647,9 +650,9 @@
             this.vdown_comboBox.DataSource = this.input_bindingSource;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(278, 144);
+            this.vdown_comboBox.Location = new System.Drawing.Point(201, 144);
             this.vdown_comboBox.Name = "vdown_comboBox";
-            this.vdown_comboBox.Size = new System.Drawing.Size(153, 32);
+            this.vdown_comboBox.Size = new System.Drawing.Size(230, 32);
             this.vdown_comboBox.TabIndex = 6;
             // 
             // vinput_exp_textBox

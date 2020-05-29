@@ -84,7 +84,7 @@ namespace DerivIntegForm
             {
                 string x = dinput_comboBox.Text;
                 string funExp = dinput_textBox.Text;
-                double precision = 0.00001 * Math.Pow(10, -dpre_trackBar.Value);
+                double precision = 0.001 * Math.Pow(10, -dpre_trackBar.Value);
                 Deriviation deriviation = new Deriviation(precision);
                 double result = deriviation.DerivCal(double.Parse(x), funExp);
                 doutput_textBox.Text = result.ToString("f10");
@@ -109,6 +109,57 @@ namespace DerivIntegForm
         }
 
         private void der_exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void vcal_button_Click(object sender, EventArgs e)
+        {
+            if (vup_comboBox.Text == "" || vdown_comboBox.Text == ""||vinput_exp_textBox.Text=="")
+            {
+                MessageBox.Show("函数输入/上界/下界 不可为空！");
+                return;
+            }
+            try
+            {
+                string up = vup_comboBox.Text;
+                string down = vdown_comboBox.Text;
+                string funExp = vinput_exp_textBox.Text;
+                double precision = 0.001 * Math.Pow(10, -v_trackBar.Value);
+                Extremum extremum = new Extremum(precision);
+                extremum.ExtremumCal(double.Parse(up),double.Parse(down),funExp,
+                    out double minVal,out double maxVal);
+                vminoutput_textBox.Text = minVal.ToString("f10");
+                vmaxoutput_textBox.Text = maxVal.ToString("f10");
+
+                log.Enqueue(new Log(minVal));
+                if (log.Count > 5)
+                    log.Dequeue();
+                log.Enqueue(new Log(maxVal));
+                if (log.Count > 5)
+                    log.Dequeue();
+
+                input_bindingSource.DataSource = log.ToList();
+                input_bindingSource.ResetBindings(false);
+                vup_comboBox.Text = up;
+                vdown_comboBox.Text = down;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        private void vclear_button_Click(object sender, EventArgs e)
+        {
+            vinput_exp_textBox.Text = "";
+            vup_comboBox.Text = "";
+            vdown_comboBox.Text = "";
+            vmaxoutput_textBox.Text = "";
+            vminoutput_textBox.Text = "";
+        }
+
+        private void vexit_button_Click(object sender, EventArgs e)
         {
             Close();
         }
