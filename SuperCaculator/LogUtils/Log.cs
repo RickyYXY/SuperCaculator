@@ -8,10 +8,14 @@ namespace LogUtils
 {
     public class Log
     {
-        public double Context { set; get; }
+        public string Context
+        {
+            get { return context.ToString("f20"); }
+        }
+        private double context;
         public Log(double x)
         {
-            Context = x;
+            context = x;
         }
     }
 }

@@ -41,7 +41,7 @@ namespace DerivIntegForm
                 for (double x = down + precision; x < up; x += precision)
                 {
                     double temp = x;
-                    Task<double> task = Task.Run(() => ThreadCal_S(temp));
+                    Task<double> task = Task.Run(() => ThreadCalSingle(temp));
                     taskList.Add(task);
                 }
             }
@@ -52,7 +52,7 @@ namespace DerivIntegForm
                 for (; x < up; x += interval)
                 {
                     double temp = x;
-                    Task<double> task = Task.Run(() => ThreadCal_M(temp));
+                    Task<double> task = Task.Run(() => ThreadCalMutiple(temp));
                     taskList.Add(task);
                 }
                 double sum = 0;
@@ -71,14 +71,14 @@ namespace DerivIntegForm
             return sign * result * precision / 2;
         }
 
-        private double ThreadCal_S(double x)
+        private double ThreadCalSingle(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             double temp = 2 * function.GetValue(x);
             return temp;
         }
 
-        private double ThreadCal_M(double x)
+        private double ThreadCalMutiple(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             double temp = 0;

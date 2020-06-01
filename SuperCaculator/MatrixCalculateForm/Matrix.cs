@@ -182,7 +182,6 @@ namespace MatrixCalculateForm
                 return false;
 
             // 分配内存
-            //同时会初始化为0
             elements = new double[nSize];
 
             return true;
@@ -490,7 +489,7 @@ namespace MatrixCalculateForm
         /**
          * 因为重写了Equals，因此必须重写GetHashCode
          * 
-         * @return int型，返回复数对象散列码
+         * @return int型
          */
         public override int GetHashCode()
         {
@@ -566,7 +565,7 @@ namespace MatrixCalculateForm
         public Matrix Multiply(double value)
         {
             // 构造目标矩阵
-            Matrix result = new Matrix(this);		// copy ourselves
+            Matrix result = new Matrix(this);		
 
             // 进行数乘
             for (int i = 0; i < numRows; ++i)
@@ -594,12 +593,7 @@ namespace MatrixCalculateForm
             // ruct the object we are going to return
             Matrix result = new Matrix(numRows, other.GetNumColumns());
 
-            // 矩阵乘法，即
-            //
-            // [A][B][C]   [G][H]     [A*G + B*I + C*K][A*H + B*J + C*L]
-            // [D][E][F] * [I][J] =   [D*G + E*I + F*K][D*H + E*J + F*L]
-            //             [K][L]
-            //
+            
             double value;
             for (int i = 0; i < result.GetNumRows(); ++i)
             {

@@ -39,12 +39,14 @@ namespace DerivIntergForm
             minVal = function.GetValue(down);
             if (concurr_num  >= (int)((up - down) / precision))
             {
-                for (double x = down + precision; x <= up; x += precision)
+                for (double x = down + precision; x < up; x += precision)
                 {
                     double temp = x;
-                    Task<MinMaxVal> task = Task.Run(() => ThreadCal_S(temp));
+                    Task<MinMaxVal> task = Task.Run(() => ThreadCalSingle(temp));
                     taskList.Add(task);
                 }
+                minVal = Math.Min(minVal, function.GetValue(up));
+                maxVal = Math.Max(maxVal, function.GetValue(up));
             }
             else
             {
@@ -53,16 +55,16 @@ namespace DerivIntergForm
                 for (; x < up; x += interval)
                 {
                     double temp = x;
-                    Task<MinMaxVal> task = Task.Run(() => ThreadCal_M(temp));
+                    Task<MinMaxVal> task = Task.Run(() => ThreadCalMutiple(temp));
                     taskList.Add(task);
                 }
-                minVal = Math.Min(minVal, function.GetValue(up));
-                maxVal = Math.Max(maxVal, function.GetValue(up));
                 for (x = (x - interval + precision); x < up; x += precision)
                 {
                     minVal = Math.Min(minVal, function.GetValue(x));
                     maxVal = Math.Max(maxVal, function.GetValue(x));
                 }
+                minVal = Math.Min(minVal, function.GetValue(up));
+                maxVal = Math.Max(maxVal, function.GetValue(up));
             }
 
             Task.WaitAll(taskList.ToArray());
@@ -75,7 +77,7 @@ namespace DerivIntergForm
             max = maxVal;
         }
 
-        private MinMaxVal ThreadCal_S(double x)
+        private MinMaxVal ThreadCalSingle(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             MinMaxVal temp = new MinMaxVal();
@@ -83,7 +85,7 @@ namespace DerivIntergForm
             temp.MinVal = temp.MaxVal;
             return temp;
         }
-        private MinMaxVal ThreadCal_M(double x)
+        private MinMaxVal ThreadCalMutiple(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             MinMaxVal temp = new MinMaxVal();

@@ -170,5 +170,10 @@ namespace MatrixCalculateForm
                 form.ShowDialog();
             }
         }
+
+        private void OneMatrixTabPage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
