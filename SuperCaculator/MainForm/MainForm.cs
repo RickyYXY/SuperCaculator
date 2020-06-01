@@ -23,7 +23,7 @@ namespace MainForm
         public MainForm()
         {
             InitializeComponent();
-            
+            treeView1.ExpandAll();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
