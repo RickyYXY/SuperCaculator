@@ -21,12 +21,14 @@ namespace DerivIntegForm
             InitializeComponent();
             log = new Queue<Log>();
             input_bindingSource.DataSource = log.ToList();
+            input_bindingSource2.DataSource = log.ToList();
         }
         public DIForm(Queue<Log>log)
         {
             InitializeComponent();
             this.log = log;
             input_bindingSource.DataSource = log.ToList();
+            input_bindingSource2.DataSource = log.ToList();
         }
 
         private void Cal_button_Click(object sender, EventArgs e)
@@ -49,7 +51,9 @@ namespace DerivIntegForm
                 if (log.Count > 5)
                     log.Dequeue();
                 input_bindingSource.DataSource = log.ToList();
+                input_bindingSource2.DataSource = log.ToList();
                 input_bindingSource.ResetBindings(false);
+                input_bindingSource2.ResetBindings(false);
                 up_num_comboBox.Text = up;
                 down_num_comboBox.Text = down;
             }
@@ -141,6 +145,8 @@ namespace DerivIntegForm
 
                 input_bindingSource.DataSource = log.ToList();
                 input_bindingSource.ResetBindings(false);
+                input_bindingSource2.DataSource = log.ToList();
+                input_bindingSource2.ResetBindings(false);
                 vup_comboBox.Text = up;
                 vdown_comboBox.Text = down;
             }

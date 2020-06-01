@@ -56,6 +56,7 @@
             this.Cal_button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.down_num_comboBox = new System.Windows.Forms.ComboBox();
+            this.input_bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.up_num_comboBox = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pre_trackBar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.v_trackBar)).BeginInit();
@@ -105,7 +107,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(1254, 657);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -122,7 +124,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 413);
+            this.tabPage1.Size = new System.Drawing.Size(1246, 620);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "微分计算";
             // 
@@ -395,13 +397,17 @@
             // 
             // down_num_comboBox
             // 
-            this.down_num_comboBox.DataSource = this.input_bindingSource;
+            this.down_num_comboBox.DataSource = this.input_bindingSource2;
             this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
             this.down_num_comboBox.Location = new System.Drawing.Point(61, 144);
             this.down_num_comboBox.Name = "down_num_comboBox";
             this.down_num_comboBox.Size = new System.Drawing.Size(245, 32);
             this.down_num_comboBox.TabIndex = 7;
+            // 
+            // input_bindingSource2
+            // 
+            this.input_bindingSource2.DataSource = typeof(LogUtils.Log);
             // 
             // up_num_comboBox
             // 
@@ -647,7 +653,7 @@
             // 
             // vdown_comboBox
             // 
-            this.vdown_comboBox.DataSource = this.input_bindingSource;
+            this.vdown_comboBox.DataSource = this.input_bindingSource2;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
             this.vdown_comboBox.Location = new System.Drawing.Point(201, 144);
@@ -667,7 +673,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1254, 657);
             this.Controls.Add(this.tabControl1);
             this.Name = "DIForm";
             this.Text = "函数运算";
@@ -687,6 +693,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -749,6 +756,7 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.BindingSource input_bindingSource2;
     }
 }
 
