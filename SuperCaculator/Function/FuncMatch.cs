@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Function
 {
-    class FuncMatch
+    public class FuncMatch
     {
         public static readonly string[] func_names = { "sin", "cos", "tan", "exp", "log" ,"ln"};
         
