@@ -159,9 +159,9 @@ namespace PaintForm
             g.DrawString("x", font, brush, Xstart + XLENGTH / 2, Ystart);
             g.DrawString("y", font, brush,
                 Xstart + XLENGTH + (int)(YLENGTH / sqrt2 / 2), Ystart - (int)(YLENGTH / sqrt2 / 2));
-            g.DrawString("z", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
-            g.DrawString(NumToString(minZ), font1, brush, Xstart, Ystart, sf);
-            g.DrawString(NumToString(maxZ), font1, brush, Xstart, Ystart - ZLENGTH, sf);
+            //g.DrawString("z", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
+            g.DrawString("min:"+NumToString(minZ), font1, brush, Xstart, Ystart, sf);
+            g.DrawString("max:"+NumToString(maxZ), font1, brush, Xstart, Ystart - ZLENGTH, sf);
         }
 
         private void Transform(int x, int y, int z, out int cx, out int cy)

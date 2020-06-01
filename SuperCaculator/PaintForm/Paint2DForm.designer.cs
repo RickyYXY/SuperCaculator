@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_save = new System.Windows.Forms.Button();
             this.label_func = new System.Windows.Forms.Label();
             this.button_clean = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.labelx = new System.Windows.Forms.Label();
             this.labely = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_save = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_paint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -69,90 +69,102 @@
             this.panel1.Size = new System.Drawing.Size(932, 250);
             this.panel1.TabIndex = 1;
             // 
+            // button_save
+            // 
+            this.button_save.BackColor = System.Drawing.Color.LightCyan;
+            this.button_save.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_save.Location = new System.Drawing.Point(580, 175);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(150, 55);
+            this.button_save.TabIndex = 15;
+            this.button_save.Text = "保存";
+            this.button_save.UseVisualStyleBackColor = false;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
             // label_func
             // 
             this.label_func.AutoSize = true;
-            this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_func.Location = new System.Drawing.Point(35, 20);
             this.label_func.Name = "label_func";
-            this.label_func.Size = new System.Drawing.Size(143, 52);
+            this.label_func.Size = new System.Drawing.Size(140, 44);
             this.label_func.TabIndex = 14;
             this.label_func.Text = "F(x) = ";
             // 
             // button_clean
             // 
             this.button_clean.BackColor = System.Drawing.Color.LightCyan;
-            this.button_clean.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_clean.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_clean.Location = new System.Drawing.Point(400, 175);
             this.button_clean.Name = "button_clean";
             this.button_clean.Size = new System.Drawing.Size(150, 55);
             this.button_clean.TabIndex = 12;
-            this.button_clean.Text = "Clean";
+            this.button_clean.Text = "清屏";
             this.button_clean.UseVisualStyleBackColor = false;
             this.button_clean.Click += new System.EventHandler(this.Button_clean_Click);
             // 
             // button_close
             // 
             this.button_close.BackColor = System.Drawing.Color.LightCyan;
-            this.button_close.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_close.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_close.Location = new System.Drawing.Point(760, 175);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(150, 55);
             this.button_close.TabIndex = 13;
-            this.button_close.Text = "Close";
+            this.button_close.Text = "关闭";
             this.button_close.UseVisualStyleBackColor = false;
             this.button_close.Click += new System.EventHandler(this.Button_close_Click);
             // 
             // button_draw
             // 
             this.button_draw.BackColor = System.Drawing.Color.LightCyan;
-            this.button_draw.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_draw.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_draw.Location = new System.Drawing.Point(220, 175);
             this.button_draw.Name = "button_draw";
             this.button_draw.Size = new System.Drawing.Size(150, 55);
             this.button_draw.TabIndex = 11;
-            this.button_draw.Text = "Draw";
+            this.button_draw.Text = "绘图";
             this.button_draw.UseVisualStyleBackColor = false;
             this.button_draw.Click += new System.EventHandler(this.Button_draw_Click);
             // 
             // button_color
             // 
             this.button_color.BackColor = System.Drawing.Color.LightCyan;
-            this.button_color.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_color.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_color.Location = new System.Drawing.Point(40, 175);
             this.button_color.Name = "button_color";
             this.button_color.Size = new System.Drawing.Size(150, 55);
             this.button_color.TabIndex = 10;
-            this.button_color.Text = "Color";
+            this.button_color.Text = "颜色";
             this.button_color.UseVisualStyleBackColor = false;
             this.button_color.Click += new System.EventHandler(this.Button_color_Click);
             // 
             // label_range
             // 
             this.label_range.AutoSize = true;
-            this.label_range.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_range.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_range.Location = new System.Drawing.Point(35, 90);
             this.label_range.Name = "label_range";
-            this.label_range.Size = new System.Drawing.Size(141, 52);
+            this.label_range.Size = new System.Drawing.Size(115, 44);
             this.label_range.TabIndex = 9;
-            this.label_range.Text = "Range:";
+            this.label_range.Text = "范围:";
             // 
             // textBox_max
             // 
-            this.textBox_max.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_max.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_max.Location = new System.Drawing.Point(570, 90);
             this.textBox_max.Name = "textBox_max";
-            this.textBox_max.Size = new System.Drawing.Size(225, 59);
+            this.textBox_max.Size = new System.Drawing.Size(225, 51);
             this.textBox_max.TabIndex = 8;
             this.textBox_max.Text = "1";
             this.textBox_max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_min
             // 
-            this.textBox_min.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.textBox_min.Location = new System.Drawing.Point(206, 90);
+            this.textBox_min.Font = new System.Drawing.Font("方正舒体", 25F);
+            this.textBox_min.Location = new System.Drawing.Point(205, 90);
             this.textBox_min.Name = "textBox_min";
-            this.textBox_min.Size = new System.Drawing.Size(225, 59);
+            this.textBox_min.Size = new System.Drawing.Size(225, 51);
             this.textBox_min.TabIndex = 7;
             this.textBox_min.Text = "-1";
             this.textBox_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -160,10 +172,10 @@
             // label_X
             // 
             this.label_X.AutoSize = true;
-            this.label_X.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_X.Location = new System.Drawing.Point(450, 90);
+            this.label_X.Font = new System.Drawing.Font("方正舒体", 25F);
+            this.label_X.Location = new System.Drawing.Point(435, 95);
             this.label_X.Name = "label_X";
-            this.label_X.Size = new System.Drawing.Size(103, 52);
+            this.label_X.Size = new System.Drawing.Size(130, 44);
             this.label_X.TabIndex = 6;
             this.label_X.Text = "< x <";
             // 
@@ -221,18 +233,6 @@
             this.panel2.Size = new System.Drawing.Size(932, 31);
             this.panel2.TabIndex = 4;
             // 
-            // button_save
-            // 
-            this.button_save.BackColor = System.Drawing.Color.LightCyan;
-            this.button_save.Font = new System.Drawing.Font("Ink Free", 20F);
-            this.button_save.Location = new System.Drawing.Point(580, 175);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(150, 55);
-            this.button_save.TabIndex = 15;
-            this.button_save.Text = "Save";
-            this.button_save.UseVisualStyleBackColor = false;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
-            // 
             // Paint2DForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -242,7 +242,7 @@
             this.Controls.Add(this.panel_paint);
             this.Controls.Add(this.panel1);
             this.Name = "Paint2DForm";
-            this.Text = "Paint2D";
+            this.Text = "二维绘图";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel_paint.ResumeLayout(false);

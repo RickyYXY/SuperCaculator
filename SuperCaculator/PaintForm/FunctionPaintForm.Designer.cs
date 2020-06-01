@@ -91,11 +91,11 @@
             this.button_cancel_2D.BackColor = System.Drawing.Color.LightCyan;
             this.button_cancel_2D.Font = new System.Drawing.Font("Ink Free", 20F);
             this.button_cancel_2D.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_cancel_2D.Location = new System.Drawing.Point(604, 150);
+            this.button_cancel_2D.Location = new System.Drawing.Point(600, 150);
             this.button_cancel_2D.Name = "button_cancel_2D";
             this.button_cancel_2D.Size = new System.Drawing.Size(150, 80);
             this.button_cancel_2D.TabIndex = 3;
-            this.button_cancel_2D.Text = "Cancel";
+            this.button_cancel_2D.Text = "取消";
             this.button_cancel_2D.UseVisualStyleBackColor = false;
             this.button_cancel_2D.Click += new System.EventHandler(this.Button_cancel_2D_Click);
             // 
@@ -105,11 +105,11 @@
             this.button_confirm_2D.BackColor = System.Drawing.Color.LightCyan;
             this.button_confirm_2D.Font = new System.Drawing.Font("Ink Free", 20F);
             this.button_confirm_2D.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_confirm_2D.Location = new System.Drawing.Point(604, 300);
+            this.button_confirm_2D.Location = new System.Drawing.Point(600, 300);
             this.button_confirm_2D.Name = "button_confirm_2D";
             this.button_confirm_2D.Size = new System.Drawing.Size(150, 80);
             this.button_confirm_2D.TabIndex = 2;
-            this.button_confirm_2D.Text = "Confirm";
+            this.button_confirm_2D.Text = "确定";
             this.button_confirm_2D.UseVisualStyleBackColor = false;
             this.button_confirm_2D.Click += new System.EventHandler(this.Button_confirm_2D_Click);
             // 
@@ -117,20 +117,20 @@
             // 
             this.textBox_exp_2D.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_exp_2D.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_exp_2D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_exp_2D.Location = new System.Drawing.Point(170, 40);
             this.textBox_exp_2D.Name = "textBox_exp_2D";
-            this.textBox_exp_2D.Size = new System.Drawing.Size(555, 59);
+            this.textBox_exp_2D.Size = new System.Drawing.Size(555, 51);
             this.textBox_exp_2D.TabIndex = 1;
             this.textBox_exp_2D.Text = "x+x*sin(x)+2";
             // 
             // label_func_2D
             // 
             this.label_func_2D.AutoSize = true;
-            this.label_func_2D.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func_2D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_func_2D.Location = new System.Drawing.Point(25, 40);
             this.label_func_2D.Name = "label_func_2D";
-            this.label_func_2D.Size = new System.Drawing.Size(143, 52);
+            this.label_func_2D.Size = new System.Drawing.Size(140, 44);
             this.label_func_2D.TabIndex = 0;
             this.label_func_2D.Text = "F(x) = ";
             // 
@@ -164,11 +164,11 @@
             this.button_cancel_3D.BackColor = System.Drawing.Color.LightCyan;
             this.button_cancel_3D.Font = new System.Drawing.Font("Ink Free", 20F);
             this.button_cancel_3D.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_cancel_3D.Location = new System.Drawing.Point(604, 150);
+            this.button_cancel_3D.Location = new System.Drawing.Point(600, 150);
             this.button_cancel_3D.Name = "button_cancel_3D";
             this.button_cancel_3D.Size = new System.Drawing.Size(150, 80);
             this.button_cancel_3D.TabIndex = 3;
-            this.button_cancel_3D.Text = "Cancel";
+            this.button_cancel_3D.Text = "取消";
             this.button_cancel_3D.UseVisualStyleBackColor = false;
             this.button_cancel_3D.Click += new System.EventHandler(this.Button_cancel_3D_Click);
             // 
@@ -178,11 +178,11 @@
             this.button_confirm_3D.BackColor = System.Drawing.Color.LightCyan;
             this.button_confirm_3D.Font = new System.Drawing.Font("Ink Free", 20F);
             this.button_confirm_3D.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_confirm_3D.Location = new System.Drawing.Point(604, 300);
+            this.button_confirm_3D.Location = new System.Drawing.Point(600, 300);
             this.button_confirm_3D.Name = "button_confirm_3D";
             this.button_confirm_3D.Size = new System.Drawing.Size(150, 80);
             this.button_confirm_3D.TabIndex = 2;
-            this.button_confirm_3D.Text = "Confirm";
+            this.button_confirm_3D.Text = "确定";
             this.button_confirm_3D.UseVisualStyleBackColor = false;
             this.button_confirm_3D.Click += new System.EventHandler(this.Button_confirm_3D_Click);
             // 
@@ -190,20 +190,20 @@
             // 
             this.textBox_exp_3D.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_exp_3D.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_exp_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_exp_3D.Location = new System.Drawing.Point(210, 40);
             this.textBox_exp_3D.Name = "textBox_exp_3D";
-            this.textBox_exp_3D.Size = new System.Drawing.Size(515, 59);
+            this.textBox_exp_3D.Size = new System.Drawing.Size(515, 51);
             this.textBox_exp_3D.TabIndex = 1;
             this.textBox_exp_3D.Text = "x*x*y*y";
             // 
             // label_func_3D
             // 
             this.label_func_3D.AutoSize = true;
-            this.label_func_3D.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_func_3D.Location = new System.Drawing.Point(25, 40);
             this.label_func_3D.Name = "label_func_3D";
-            this.label_func_3D.Size = new System.Drawing.Size(182, 52);
+            this.label_func_3D.Size = new System.Drawing.Size(181, 44);
             this.label_func_3D.TabIndex = 0;
             this.label_func_3D.Text = "F(x, y) = ";
             // 
@@ -214,7 +214,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "FunctionPaintForm";
-            this.Text = "FunctionPaint";
+            this.Text = "函数绘图";
             this.tabControl1.ResumeLayout(false);
             this.tabPage_2D.ResumeLayout(false);
             this.panel_2D.ResumeLayout(false);

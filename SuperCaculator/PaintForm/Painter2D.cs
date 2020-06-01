@@ -14,8 +14,9 @@ namespace PaintForm
         Pen pen;
         Func<double?, double?, double> Caculate;
 
-        int XLENGTH, YLENGTH, XSTART, YSTART;
-        double dx, dy, minX, maxX, maxY, minY;
+        private readonly int XLENGTH, YLENGTH, XSTART, YSTART;
+        double dx, dy;
+        double minX, maxX, maxY, minY;
         const int limit = 1024;
 
         public int Xstart { get => XSTART; }
@@ -48,7 +49,6 @@ namespace PaintForm
                 g.DrawCurve(pen, pts.ToArray());
             }
             DrawCoor();
-
         }
 
         private List<List<Point>> GetPoints()
@@ -75,7 +75,7 @@ namespace PaintForm
             }
             dy = maxY == minY ? 1 : (maxY - minY) / YLENGTH;
 
-            List <List<Point>> lines = new List<List<Point>>();
+            List<List<Point>> lines = new List<List<Point>>();
             List<Point> points = new List<Point>();
             for (int i = 0; i < XLENGTH; i++)
             {
@@ -100,7 +100,7 @@ namespace PaintForm
 
         private void DrawCoor()
         {
-            Font font = new Font("Ink Free", 15f);
+            Font font = new Font("方正舒体", 15f);
             Brush brush = Brushes.Black;
             Pen pen_coor = new Pen(Color.Gray);
             Pen blackpen = new Pen(brush);
@@ -108,24 +108,27 @@ namespace PaintForm
             pen_coor.DashPattern = dashValues;
             StringFormat sf = new StringFormat();
             sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
-
-            g.DrawLine(blackpen, XSTART, YSTART, XSTART, YSTART - (int)(YLENGTH * 1.2));
-            g.DrawLine(blackpen, XSTART, YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
-            g.DrawLine(blackpen, XSTART, YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
+            DrawPoint(XSTART, YSTART); 
+            DrawPoint(XSTART + XLENGTH, YSTART);
+            //g.DrawLine(blackpen, XSTART, YSTART, XSTART, YSTART - (int)(YLENGTH * 1.2));
+            g.DrawLine(blackpen, XSTART - (int)(XLENGTH * 0.05), YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
+            g.DrawLine(pen_coor, XSTART, YSTART, XSTART, YSTART - (int)((Caculate(minX, 0) - minY) / dy));
+            g.DrawLine(pen_coor, XSTART + XLENGTH, YSTART, XSTART + XLENGTH, YSTART - (int)((Caculate(maxX, 0) - minY) / dy));
+            //g.DrawLine(blackpen, XSTART, YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
             g.DrawString("x", font, brush, XSTART + (int)(XLENGTH * 1.2), YSTART);
-            g.DrawString("y", font, brush, XSTART, YSTART - (int)(YLENGTH * 1.2), sf);
             if (maxY >= 0 && minY < 0)
             {
                 int zero = YSTART + (int)(minY / dy);
-                g.DrawLine(pen_coor, XSTART, zero, XSTART + (int)(XLENGTH * 1.2), zero);
-                g.DrawString("0", font, brush, XSTART, zero, sf);
+                g.DrawLine(pen_coor, XSTART - (int)(XLENGTH * 0.05), zero, XSTART + (int)(XLENGTH * 1.2), zero);
+                g.DrawString("F(x)=0", font, brush, XSTART - (int)(XLENGTH * 0.05), zero, sf);
             }
             string sx, sy;
-            sx = NumToString(minX);
-            sy = NumToString(minY);
+            //sx = NumToString(minX);
+            //sy = NumToString(minY);
             //g.DrawString("(" + sy + " ," + sx + ")", font, brush, XSTART, YSTART, sf);
-            g.DrawString("Ymin: " + sy, font, brush, XSTART, YSTART, sf);
-            g.DrawString(maxX.ToString("#0.0"), font, brush, XSTART + XLENGTH, YSTART);
+            //g.DrawString("Ymin: " + sy, font, brush, XSTART, YSTART, sf);
+            g.DrawString(minX.ToString("#0.00"), font, brush, XSTART, YSTART);
+            g.DrawString(maxX.ToString("#0.00"), font, brush, XSTART + XLENGTH, YSTART);
         }
 
         private string NumToString(double num)
@@ -141,6 +144,20 @@ namespace PaintForm
                 str = num.ToString("#0.0");
             }
             return str;
+        }
+
+        private void DrawPoint(int X, int Y)
+        {
+            Point[] points = new Point[4];
+            points[0].X = X;
+            points[0].Y = Y - 2;
+            points[1].X = X + 2;
+            points[1].Y = Y;
+            points[2].X = X;
+            points[2].Y = Y + 2;
+            points[3].X = X - 2;
+            points[3].Y = Y;
+            g.DrawPolygon(Pens.Black, points);
         }
     }
 }
