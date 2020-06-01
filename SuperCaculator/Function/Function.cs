@@ -246,7 +246,7 @@ namespace Function
                 RPNExpression.Add(st.Pop());
         }
 
-        public double Factorial(double x)
+        static public double Factorial(double x)
         {
             double result = 1;
             while (x > 0)
