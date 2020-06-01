@@ -59,10 +59,9 @@
             this.panel1.Controls.Add(this.treeView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.panel1.Size = new System.Drawing.Size(1452, 548);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.panel1.Size = new System.Drawing.Size(1075, 693);
             this.panel1.TabIndex = 1;
             // 
             // panelChild
@@ -71,10 +70,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChild.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelChild.Location = new System.Drawing.Point(242, 10);
-            this.panelChild.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelChild.Location = new System.Drawing.Point(272, 12);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(1199, 527);
+            this.panelChild.Size = new System.Drawing.Size(790, 668);
             this.panelChild.TabIndex = 1;
             // 
             // treeView1
@@ -83,8 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView1.BackColor = System.Drawing.Color.AliceBlue;
             this.treeView1.Font = new System.Drawing.Font("仿宋", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.treeView1.Location = new System.Drawing.Point(12, 10);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.treeView1.Location = new System.Drawing.Point(13, 12);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "standard";
             treeNode1.Text = "标准";
@@ -109,17 +106,16 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode6,
             treeNode10});
-            this.treeView1.Size = new System.Drawing.Size(225, 528);
+            this.treeView1.Size = new System.Drawing.Size(253, 668);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MenuClick);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1452, 548);
+            this.ClientSize = new System.Drawing.Size(1075, 693);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "多功能计算器";
             this.Load += new System.EventHandler(this.MainForm_Load);
