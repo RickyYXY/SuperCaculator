@@ -19,7 +19,7 @@ namespace EquationsSolvingModule
         public int[,] power1; // = new int[2, 2] { { 2, 2 }, { 2, 2 } };
         public double[] constant1; // = new double[] { 1, 2 };
         public string warning1;
-        public bool IsCancelled = false;
+        public bool isCancelled = false;
 
         public DataInputForm()
         {
@@ -111,7 +111,7 @@ namespace EquationsSolvingModule
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            IsCancelled = true;
+            isCancelled = true;
             this.Close();
         }
     }

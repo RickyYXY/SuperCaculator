@@ -16,7 +16,7 @@ namespace EquationsSolvingModule
         public double[] monoCoefficient1; // 一元高次方程的系数集
         public int[] monoPower1;  // 一元高次方程的系数集
         public string warning1 = "";
-        public bool IsCancelled1 = false;
+        public bool isCancelled1 = false;
 
         public MonoHighPowerForm()
         {
@@ -79,7 +79,7 @@ namespace EquationsSolvingModule
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            IsCancelled1 = true;
+            isCancelled1 = true;
             this.Close();
         }
     }
