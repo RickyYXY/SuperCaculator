@@ -80,11 +80,12 @@
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView1.BackColor = System.Drawing.Color.AliceBlue;
+            this.treeView1.Font = new System.Drawing.Font("仿宋", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeView1.Location = new System.Drawing.Point(13, 12);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "standard";
             treeNode1.Text = "标准";
-            treeNode2.Name = "节点3";
+            treeNode2.Name = "DI";
             treeNode2.Text = "微分积分";
             treeNode3.Name = "节点4";
             treeNode3.Text = "解方程";

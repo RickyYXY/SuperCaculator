@@ -85,6 +85,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Deriv_Interg_Form\DerivIntegForm.csproj">
+      <Project>{ff50aee9-2bb2-4e91-a925-2ba3a90f1cff}</Project>
+      <Name>DerivIntegForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MatrixCalculateForm\MatrixCalculateForm.csproj">
+      <Project>{068ab8dc-8afa-4ed5-80af-bf3a6bb749b3}</Project>
+      <Name>MatrixCalculateForm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PaintForm\FunctionPaintForm.csproj">
       <Project>{f7c824af-0c98-4bd9-b9e3-35a59ae618a1}</Project>
       <Name>FunctionPaintForm</Name>

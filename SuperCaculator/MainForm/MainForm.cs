@@ -1,4 +1,6 @@
-﻿using PaintForm;
+﻿using DerivIntegForm;
+using MatrixCalculateForm;
+using PaintForm;
 using StandardCalculateForm;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,8 @@ namespace MainForm
     {
         StandardCalculat standardForm = new StandardCalculat();
         FunctionPaintForm paintForm = new FunctionPaintForm();
+        DIForm diForm = new DIForm();
+        MainMatrixForm matrixForm = new MainMatrixForm();
         public MainForm()
         {
             InitializeComponent();
@@ -56,6 +60,12 @@ namespace MainForm
                     case "painting":
                         ShowForm(paintForm);
                             break;
+                    case "DI":
+                        ShowForm(diForm);
+                        break;
+                    case "matrix":
+                        ShowForm(matrixForm);
+                        break;
                     default:
                         ShowForm(standardForm);
                         break;
