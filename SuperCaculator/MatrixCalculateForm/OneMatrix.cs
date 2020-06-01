@@ -24,7 +24,6 @@ namespace MatrixCalculateForm
             return Trans;
         }
         //矩阵求逆
-        //没有逆矩阵的情况在form中处理
         static public bool MatrixInverse(Matrix matrix)
         {
             int i, j, k, l, u, v;
@@ -150,7 +149,7 @@ namespace MatrixCalculateForm
             return true;
         }
         /**
-         * 求行列式值的全选主元高斯消去法
+         * 求行列式值
          * 
          * @return double型，行列式的值
          */
@@ -233,7 +232,7 @@ namespace MatrixCalculateForm
             return (det);
         }
         /**
-         * 求矩阵秩的全选主元高斯消去法
+         * 求矩阵秩
          * 
          * @return int型，矩阵的秩
          */
@@ -310,7 +309,7 @@ namespace MatrixCalculateForm
             return (k);
         }
         /**
-         * 求实对称矩阵特征值与特征向量的雅可比法
+         * 求矩阵特征值与特征向量
          * 
          * @param dblEigenValue - 一维数组，长度为矩阵的阶数，返回时存放特征值
          * @param mtxEigenVector - 返回时存放特征向量矩阵，其中第i列为与数组

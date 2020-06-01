@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EquationsSolvingModule
 {
-    class MonoHighPowEqua
+    public class MonoHighPowEqua
     {
         public double precision;
         public double xInit;
@@ -22,7 +22,7 @@ namespace EquationsSolvingModule
             this.coefficient = coe;
             this.power = pow;
         }
-        public double GenerateEqua(double x)//方程
+        public double GenerateEqua(double x)  // 将x带入方程左侧求值
         {
             double sum = 0.0;
 
@@ -37,7 +37,7 @@ namespace EquationsSolvingModule
             return sum;
         }
 
-        public double GenerateDeriv(double x)//导数
+        public double GenerateDeriv(double x) // 求导数
         {
             double sum = 0.0;
 
@@ -51,7 +51,7 @@ namespace EquationsSolvingModule
             return sum;
         }
 
-        public double Solve()
+        public double Solve()  // 迭代求解
         {
             double x0 = xInit;
             double xn;
@@ -65,7 +65,7 @@ namespace EquationsSolvingModule
             }
         }
 
-        public string MonoEquaToString()
+        public string MonoEquaToString()  // 将方程打印出来
         {
             string strEquation = "";
 

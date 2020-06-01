@@ -8,13 +8,13 @@ namespace Function
 {
     public class Function
     {
-        protected Stack<double> figures; //计算使用栈
+        //protected Stack<double> figures; //计算使用栈
         protected List<string> RPNExpression; //后缀表达式
 
         public Function(string exp)
         {
             RPNExpression = new List<string>();
-            figures = new Stack<double>();
+            //figures = new Stack<double>();
             try
             {
                 BuildRPN(exp);
@@ -31,6 +31,7 @@ namespace Function
 
         public virtual double GetValue(double? x = null, double? y = null)//计算二元函数值
         {
+            Stack<double> figures = new Stack<double>();
             foreach (string unit in RPNExpression)
             {
                 if (unit == "x")
@@ -96,7 +97,7 @@ namespace Function
             return ans;
         }
 
-        public void BuildRPN(string exp) //生成后缀表达式
+        private void BuildRPN(string exp) //生成后缀表达式
         {
             Stack<string> st = new Stack<string>();
 
