@@ -69,7 +69,7 @@
             this.tabPage_2D.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_2D.Size = new System.Drawing.Size(792, 410);
             this.tabPage_2D.TabIndex = 0;
-            this.tabPage_2D.Text = "2D";
+            this.tabPage_2D.Text = "一元函数";
             this.tabPage_2D.UseVisualStyleBackColor = true;
             // 
             // panel_2D
@@ -89,7 +89,7 @@
             // 
             this.button_cancel_2D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_cancel_2D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_cancel_2D.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_cancel_2D.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_cancel_2D.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_cancel_2D.Location = new System.Drawing.Point(600, 150);
             this.button_cancel_2D.Name = "button_cancel_2D";
@@ -103,7 +103,7 @@
             // 
             this.button_confirm_2D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_confirm_2D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_confirm_2D.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_confirm_2D.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_confirm_2D.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_confirm_2D.Location = new System.Drawing.Point(600, 300);
             this.button_confirm_2D.Name = "button_confirm_2D";
@@ -142,7 +142,7 @@
             this.tabPage_3D.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_3D.Size = new System.Drawing.Size(792, 410);
             this.tabPage_3D.TabIndex = 1;
-            this.tabPage_3D.Text = "3D";
+            this.tabPage_3D.Text = "二元函数";
             this.tabPage_3D.UseVisualStyleBackColor = true;
             // 
             // panel_3D
@@ -162,7 +162,7 @@
             // 
             this.button_cancel_3D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_cancel_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_cancel_3D.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_cancel_3D.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_cancel_3D.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_cancel_3D.Location = new System.Drawing.Point(600, 150);
             this.button_cancel_3D.Name = "button_cancel_3D";
@@ -176,7 +176,7 @@
             // 
             this.button_confirm_3D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_confirm_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_confirm_3D.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_confirm_3D.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_confirm_3D.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_confirm_3D.Location = new System.Drawing.Point(600, 300);
             this.button_confirm_3D.Name = "button_confirm_3D";
