@@ -197,10 +197,10 @@
             this.doutput_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.doutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.doutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doutput_textBox.Location = new System.Drawing.Point(3, 54);
+            this.doutput_textBox.Location = new System.Drawing.Point(8, 55);
             this.doutput_textBox.Name = "doutput_textBox";
             this.doutput_textBox.ReadOnly = true;
-            this.doutput_textBox.Size = new System.Drawing.Size(938, 39);
+            this.doutput_textBox.Size = new System.Drawing.Size(930, 39);
             this.doutput_textBox.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -230,6 +230,7 @@
             this.der_exit.TabIndex = 18;
             this.der_exit.Text = "退出";
             this.der_exit.UseVisualStyleBackColor = false;
+            this.der_exit.Click += new System.EventHandler(this.der_exit_Click);
             // 
             // der_clear_button
             // 
@@ -242,6 +243,7 @@
             this.der_clear_button.TabIndex = 15;
             this.der_clear_button.Text = "清除";
             this.der_clear_button.UseVisualStyleBackColor = false;
+            this.der_clear_button.Click += new System.EventHandler(this.der_clear_button_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -270,6 +272,7 @@
             this.der_cal_button.TabIndex = 18;
             this.der_cal_button.Text = "计算";
             this.der_cal_button.UseVisualStyleBackColor = false;
+            this.der_cal_button.Click += new System.EventHandler(this.der_cal_button_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -384,7 +387,7 @@
             this.dinput_comboBox.DisplayMember = "Context";
             this.dinput_comboBox.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinput_comboBox.FormattingEnabled = true;
-            this.dinput_comboBox.Location = new System.Drawing.Point(96, 145);
+            this.dinput_comboBox.Location = new System.Drawing.Point(96, 144);
             this.dinput_comboBox.Name = "dinput_comboBox";
             this.dinput_comboBox.Size = new System.Drawing.Size(744, 35);
             this.dinput_comboBox.TabIndex = 9;
@@ -614,7 +617,7 @@
             this.down_num_comboBox.DataSource = this.input_bindingSource2;
             this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
-            this.down_num_comboBox.Location = new System.Drawing.Point(3, 164);
+            this.down_num_comboBox.Location = new System.Drawing.Point(3, 159);
             this.down_num_comboBox.Name = "down_num_comboBox";
             this.down_num_comboBox.Size = new System.Drawing.Size(691, 32);
             this.down_num_comboBox.TabIndex = 7;
@@ -629,7 +632,7 @@
             this.up_num_comboBox.DataSource = this.input_bindingSource;
             this.up_num_comboBox.DisplayMember = "Context";
             this.up_num_comboBox.FormattingEnabled = true;
-            this.up_num_comboBox.Location = new System.Drawing.Point(3, 23);
+            this.up_num_comboBox.Location = new System.Drawing.Point(3, 19);
             this.up_num_comboBox.Name = "up_num_comboBox";
             this.up_num_comboBox.Size = new System.Drawing.Size(691, 32);
             this.up_num_comboBox.TabIndex = 6;
@@ -660,10 +663,10 @@
             this.result_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.result_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.result_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.result_textBox.Location = new System.Drawing.Point(3, 54);
+            this.result_textBox.Location = new System.Drawing.Point(8, 55);
             this.result_textBox.Name = "result_textBox";
             this.result_textBox.ReadOnly = true;
-            this.result_textBox.Size = new System.Drawing.Size(938, 39);
+            this.result_textBox.Size = new System.Drawing.Size(930, 39);
             this.result_textBox.TabIndex = 0;
             // 
             // tabPage3
@@ -866,7 +869,7 @@
             this.vdown_comboBox.DataSource = this.input_bindingSource2;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(142, 22);
+            this.vdown_comboBox.Location = new System.Drawing.Point(142, 17);
             this.vdown_comboBox.Name = "vdown_comboBox";
             this.vdown_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vdown_comboBox.TabIndex = 6;
@@ -904,7 +907,7 @@
             this.vup_comboBox.DataSource = this.input_bindingSource;
             this.vup_comboBox.DisplayMember = "Context";
             this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(142, 21);
+            this.vup_comboBox.Location = new System.Drawing.Point(142, 17);
             this.vup_comboBox.Name = "vup_comboBox";
             this.vup_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vup_comboBox.TabIndex = 7;
