@@ -47,14 +47,15 @@
             treeNode8,
             treeNode9});
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelChild = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.panelChild);
             this.panel1.Controls.Add(this.treeView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -63,27 +64,41 @@
             this.panel1.Size = new System.Drawing.Size(917, 658);
             this.panel1.TabIndex = 1;
             // 
+            // panelChild
+            // 
+            this.panelChild.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelChild.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelChild.Location = new System.Drawing.Point(272, 12);
+            this.panelChild.Name = "panelChild";
+            this.panelChild.Size = new System.Drawing.Size(632, 633);
+            this.panelChild.TabIndex = 1;
+            // 
             // treeView1
             // 
+            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.treeView1.BackColor = System.Drawing.Color.AliceBlue;
             this.treeView1.Location = new System.Drawing.Point(13, 12);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "节点2";
+            treeNode1.Name = "standard";
             treeNode1.Text = "标准";
             treeNode2.Name = "节点3";
             treeNode2.Text = "微分积分";
             treeNode3.Name = "节点4";
             treeNode3.Text = "解方程";
-            treeNode4.Name = "节点5";
+            treeNode4.Name = "matrix";
             treeNode4.Text = "矩阵";
-            treeNode5.Name = "节点9";
+            treeNode5.Name = "painting";
             treeNode5.Text = "函数绘图";
             treeNode6.Name = "节点0";
             treeNode6.Text = "计算器";
-            treeNode7.Name = "节点6";
+            treeNode7.Name = "date";
             treeNode7.Text = "日期";
-            treeNode8.Name = "节点8";
+            treeNode8.Name = "currency";
             treeNode8.Text = "货币";
-            treeNode9.Name = "节点7";
+            treeNode9.Name = "unit";
             treeNode9.Text = "单位";
             treeNode10.Name = "节点1";
             treeNode10.Text = "转换器";
@@ -92,13 +107,7 @@
             treeNode10});
             this.treeView1.Size = new System.Drawing.Size(253, 633);
             this.treeView1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(272, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(632, 633);
-            this.panel2.TabIndex = 1;
+            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MenuClick);
             // 
             // MainForm
             // 
@@ -116,7 +125,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelChild;
         private System.Windows.Forms.TreeView treeView1;
     }
 }

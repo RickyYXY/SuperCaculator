@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PaintForm;
+using StandardCalculateForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,54 @@ namespace MainForm
 {
     public partial class MainForm : Form
     {
+        StandardCalculat standardForm = new StandardCalculat();
+        FunctionPaintForm paintForm = new FunctionPaintForm();
         public MainForm()
         {
             InitializeComponent();
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            
+            ShowForm(standardForm);
+        }
 
+        public void ShowForm(Form form1)
+        {
+
+            this.panelChild.Controls.Clear();
+
+            form1.TopLevel = false;
+
+            form1.FormBorderStyle = FormBorderStyle.None;
+
+            form1.Dock = DockStyle.Fill;
+
+            form1.Parent = this.panelChild;
+
+            this.panelChild.Controls.Add(form1);
+
+            form1.Show();
+
+        }
+
+        private void MenuClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node.Parent!=null)
+            {
+                switch (e.Node.Name)
+                {
+                    case "painting":
+                        ShowForm(paintForm);
+                            break;
+                    default:
+                        ShowForm(standardForm);
+                        break;
+
+                }
+            }
         }
     }
 }
