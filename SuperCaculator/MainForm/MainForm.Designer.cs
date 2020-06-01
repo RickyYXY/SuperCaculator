@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(917, 658);
+            this.panel1.Size = new System.Drawing.Size(1075, 693);
             this.panel1.TabIndex = 1;
             // 
             // panelChild
@@ -72,7 +72,7 @@
             this.panelChild.BackColor = System.Drawing.Color.AliceBlue;
             this.panelChild.Location = new System.Drawing.Point(272, 12);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(632, 633);
+            this.panelChild.Size = new System.Drawing.Size(790, 668);
             this.panelChild.TabIndex = 1;
             // 
             // treeView1
@@ -106,7 +106,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode6,
             treeNode10});
-            this.treeView1.Size = new System.Drawing.Size(253, 633);
+            this.treeView1.Size = new System.Drawing.Size(253, 668);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MenuClick);
             // 
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 658);
+            this.ClientSize = new System.Drawing.Size(1075, 693);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
             this.Text = "多功能计算器";
