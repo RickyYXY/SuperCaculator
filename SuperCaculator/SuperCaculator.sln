@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixCalculateFormTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardCalculateForm", "StandardCalculateForm\StandardCalculateForm.csproj", "{993E55FD-3782-4DCA-9B11-09459234FEF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquationsSolvingModule", "..\..\..\大二下\软件构造基础\小组作业\EquationsSolvingModule\beifen\EquationsSolvingModule\EquationsSolvingModule\EquationsSolvingModule.csproj", "{2ED4A3C7-A006-407B-B860-6F20E44F6199}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{993E55FD-3782-4DCA-9B11-09459234FEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{993E55FD-3782-4DCA-9B11-09459234FEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{993E55FD-3782-4DCA-9B11-09459234FEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED4A3C7-A006-407B-B860-6F20E44F6199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED4A3C7-A006-407B-B860-6F20E44F6199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED4A3C7-A006-407B-B860-6F20E44F6199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED4A3C7-A006-407B-B860-6F20E44F6199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
