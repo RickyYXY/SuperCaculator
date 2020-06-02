@@ -102,10 +102,27 @@ namespace StandardCalculateForm
                 equation = equation.Substring(0, equation.Length - 1);
                 richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
             }
+            else if (equation.Last() == '.')
+            {
+                equation = equation.Substring(0, equation.Length - 1);
+                richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
+                isClickPoint = false;
+            }
             else if (HandleEquation.IsGeneralOp(equation.Last()))
             {
-
+                equation = equation.Substring(0, equation.Length - 1);
+                richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
+                string tail=HandleEquation.GetLastUnit(equation);
+                if (tail.Contains(".")) { isClickPoint = true; }
+                else { isClickPoint = false; }
             }
+            else
+            {
+                equation = HandleEquation.RemoveLastUnit(equation);
+                richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
+                isClickPoint = false;
+            }
+
 
         }
     }
