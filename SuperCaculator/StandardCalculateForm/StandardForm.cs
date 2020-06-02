@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace StandardCalculateForm
 {
+    
     public partial class StandardCalculat : Form
     {
+        string equation = "0";
         bool isShift=false;
         public StandardCalculat()
         {
@@ -25,29 +27,38 @@ namespace StandardCalculateForm
         {
             if (richTxtEquation.Text == "0")
             {
-                richTxtEquation.Text = ((Button)sender).Text;
+                richTxtEquation.Text =equation= ((Button)sender).Text;               
             }
             else
             {
                 richTxtEquation.Text += ((Button)sender).Text;
+                equation+= ((Button)sender).Text;
             }
         }
         public void ClickGeneralOp(object sender, EventArgs e)
         {
             richTxtEquation.Text += ((Button)sender).Text;
+            if(((Button)sender).Text=="×")
+            {
+                equation += "*";
+            }
+            else if (((Button)sender).Text == "÷")
+            {
+                equation += "/";
+            }
         }
 
         
         private void btnClean_Click(object sender, EventArgs e)
         {
-            richTxtEquation.Text = "0";
+            equation=richTxtEquation.Text = "0";
         }        
        
 
         private void btnAnswer_Click(object sender, EventArgs e)
         {
-            Function.Function func = new Function.Function(richTxtEquation.Text);
-            richTxtEquation.Text=func.GetValue().ToString();
+            Function.Function func = new Function.Function(equation);
+            equation=richTxtEquation.Text=func.GetValue().ToString();
         }
 
         private void btnShift_Click(object sender, EventArgs e)
