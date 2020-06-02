@@ -16,6 +16,7 @@ namespace StandardCalculateForm
     {
         string equation = "0";
         bool isShift=false;
+        bool isClickPoint = false;
         public StandardCalculat()
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace StandardCalculateForm
         public void ClickGeneralOp(object sender, EventArgs e)
         {
             richTxtEquation.Text += ((Button)sender).Text;
+            isClickPoint = false;
             if(((Button)sender).Text=="×")
             {
                 equation += "*";
@@ -80,6 +82,26 @@ namespace StandardCalculateForm
                 btnLog.Text = "log";
                 btnLn.Text = "ln";
             }
+        }
+
+        private void btnPoint_Click(object sender, EventArgs e)
+        {
+            if (!isClickPoint&&(richTxtEquation.Text.Last()>=48) && (richTxtEquation.Text.Last() <= 57))
+            {
+                equation += ".";
+                richTxtEquation.Text += ".";
+                isClickPoint = true;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (equation.Last() >= 48 && equation.Last() <= 57)
+            {
+                equation = equation.Substring(0, equation.Length - 1);
+                richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
+            }
+
         }
     }
 }
