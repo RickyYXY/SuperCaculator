@@ -101,6 +101,10 @@ namespace StandardCalculateForm
                 equation = equation.Substring(0, equation.Length - 1);
                 richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
             }
+            //else if (HandleEquation.IsGeneralOp(equation.Last()))
+            //{
+
+           // }
 
         }
     }

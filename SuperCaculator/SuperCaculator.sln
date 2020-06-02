@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquationsSolvingModule", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractUnit", "ExtractUnit\ExtractUnit.csproj", "{979D2950-29BF-4CF6-8027-2B0497D5D6A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleEqua", "HandleEqua\HandleEqua.csproj", "{4123FA5E-3CAC-416B-9668-BD4CE077AA4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{979D2950-29BF-4CF6-8027-2B0497D5D6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979D2950-29BF-4CF6-8027-2B0497D5D6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979D2950-29BF-4CF6-8027-2B0497D5D6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4123FA5E-3CAC-416B-9668-BD4CE077AA4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4123FA5E-3CAC-416B-9668-BD4CE077AA4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4123FA5E-3CAC-416B-9668-BD4CE077AA4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4123FA5E-3CAC-416B-9668-BD4CE077AA4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
