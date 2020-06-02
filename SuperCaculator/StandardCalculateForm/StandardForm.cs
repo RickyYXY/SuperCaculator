@@ -39,6 +39,7 @@ namespace StandardCalculateForm
         }
         public void ClickGeneralOp(object sender, EventArgs e)
         {
+            if (HandleEquation.IsGeneralOp(equation.Last())) { return; }
             richTxtEquation.Text += ((Button)sender).Text;
             isClickPoint = false;
             if(((Button)sender).Text=="×")
@@ -124,6 +125,14 @@ namespace StandardCalculateForm
             }
 
 
+        }
+
+        private void Function_Click(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);
+            equation = HandleEquation.RemoveLastUnit(equation) + ((ToolStripMenuItem)sender).Text + "(" + tail + ")";
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((ToolStripMenuItem)sender).Text + "(" + tail2 + ")";
         }
     }
 }

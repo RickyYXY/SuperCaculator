@@ -22,63 +22,37 @@ namespace HandleEqua
         public static string GetLastUnit(string equation)
         {
             if (equation == "") return "";
-            int startLocation = 0;
+            if (equation.Length == 1) return equation;
 
-            if (IsGeneralOp(equation.Last()))
+            int startLocation = 0;
+            
+            for (int i = equation.Length-1; i >=0; i--)
             {
-                for (int i = equation.Length - 1; i > 0; i--)
+                if (IsGeneralOp(equation[i])&&i!=equation.Length-1)
                 {
-                    if (IsGeneralOp(equation[i]))
-                    {
-                        startLocation = i + 1;
-                        continue;
-                    }
+                    startLocation = i + 1;
+                    break;
                 }
-                return equation.Substring(startLocation, equation.Length - startLocation - 1);
             }
-            else
-            {
-                for (int i = equation.Length - 1; i > 0; i--)
-                {
-                    if (IsGeneralOp(equation[i]))
-                    {
-                        startLocation = i + 1;
-                        continue;
-                    }
-                }
-                return equation.Substring(startLocation, equation.Length - startLocation);
-            }
+            return equation.Substring(startLocation, equation.Length - startLocation);            
         }
 
         public static string RemoveLastUnit(string equation)
         {
             if (equation == "") return "";
-            int subLength = 0;
+            if (equation.Length == 1) return "";
 
-            if (IsGeneralOp(equation.Last()))
+            int subLength = 0;
+           
+            for (int i = equation.Length-1 ; i >=0; i--)
             {
-                for (int i = equation.Length - 1; i > 0; i--)
+                if (IsGeneralOp(equation[i])&&i!=equation.Length-1)
                 {
-                    if (IsGeneralOp(equation[i]))
-                    {
-                        subLength = i;
-                        continue;
-                    }
+                    subLength = i+1;
+                    break;
                 }
-                return equation.Substring(0, subLength);
             }
-            else
-            {
-                for (int i = equation.Length - 1; i > 0; i--)
-                {
-                    if (IsGeneralOp(equation[i]))
-                    {
-                        subLength = i;
-                        continue;
-                    }
-                }
-                return equation.Substring(subLength, subLength);
-            }
+            return equation.Substring(0, subLength);            
         }
     }
 }
