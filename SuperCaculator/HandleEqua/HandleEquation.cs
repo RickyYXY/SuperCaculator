@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HandleEqua
 {
-    class HandleEquation
+    public class HandleEquation
     {
         public static bool IsGeneralOp(char operation)
         {
