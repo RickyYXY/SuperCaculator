@@ -26,7 +26,8 @@ namespace PaintForm
         //int XLENGTH, YLENGTH;
         //int Xstart, Ystart;
         //double dx, dy;
-        double minX, maxX;
+        public double minX { get; set; }
+        public double maxX { get; set; }
         //double maxValue, minValue;
         bool ShowXY = false;
 
@@ -41,6 +42,8 @@ namespace PaintForm
             //float[] dashValues = { 5, 2 };
             //pen_coor.DashPattern = dashValues;
             pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height);
+            textBox_min.DataBindings.Add("Text", this, "minX");
+            textBox_max.DataBindings.Add("Text", this, "maxX");
         }
 
         private void Button_color_Click(object sender, EventArgs e)
@@ -56,16 +59,16 @@ namespace PaintForm
 
         private void Button_draw_Click(object sender, EventArgs e)
         {
-            try
-            {
-                minX = double.Parse(textBox_min.Text);
-                maxX = double.Parse(textBox_max.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
+            //try
+            //{
+            //    minX = double.Parse(textBox_min.Text);
+            //    maxX = double.Parse(textBox_max.Text);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //    return;
+            //}
             if (maxX <= minX)
             {
                 MessageBox.Show("数值输入不合法。");

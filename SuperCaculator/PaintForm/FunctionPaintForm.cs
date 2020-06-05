@@ -50,16 +50,5 @@ namespace PaintForm
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void Button_cancel_2D_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void Button_cancel_3D_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
     }
 }

@@ -31,13 +31,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_2D = new System.Windows.Forms.TabPage();
             this.panel_2D = new System.Windows.Forms.Panel();
-            this.button_cancel_2D = new System.Windows.Forms.Button();
             this.button_confirm_2D = new System.Windows.Forms.Button();
             this.textBox_exp_2D = new System.Windows.Forms.TextBox();
             this.label_func_2D = new System.Windows.Forms.Label();
             this.tabPage_3D = new System.Windows.Forms.TabPage();
             this.panel_3D = new System.Windows.Forms.Panel();
-            this.button_cancel_3D = new System.Windows.Forms.Button();
             this.button_confirm_3D = new System.Windows.Forms.Button();
             this.textBox_exp_3D = new System.Windows.Forms.TextBox();
             this.label_func_3D = new System.Windows.Forms.Label();
@@ -75,7 +73,6 @@
             // panel_2D
             // 
             this.panel_2D.BackColor = System.Drawing.Color.MintCream;
-            this.panel_2D.Controls.Add(this.button_cancel_2D);
             this.panel_2D.Controls.Add(this.button_confirm_2D);
             this.panel_2D.Controls.Add(this.textBox_exp_2D);
             this.panel_2D.Controls.Add(this.label_func_2D);
@@ -84,20 +81,6 @@
             this.panel_2D.Name = "panel_2D";
             this.panel_2D.Size = new System.Drawing.Size(786, 404);
             this.panel_2D.TabIndex = 1;
-            // 
-            // button_cancel_2D
-            // 
-            this.button_cancel_2D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_cancel_2D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_cancel_2D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_cancel_2D.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_cancel_2D.Location = new System.Drawing.Point(600, 150);
-            this.button_cancel_2D.Name = "button_cancel_2D";
-            this.button_cancel_2D.Size = new System.Drawing.Size(150, 80);
-            this.button_cancel_2D.TabIndex = 3;
-            this.button_cancel_2D.Text = "取消";
-            this.button_cancel_2D.UseVisualStyleBackColor = false;
-            this.button_cancel_2D.Click += new System.EventHandler(this.Button_cancel_2D_Click);
             // 
             // button_confirm_2D
             // 
@@ -148,7 +131,6 @@
             // panel_3D
             // 
             this.panel_3D.BackColor = System.Drawing.Color.MintCream;
-            this.panel_3D.Controls.Add(this.button_cancel_3D);
             this.panel_3D.Controls.Add(this.button_confirm_3D);
             this.panel_3D.Controls.Add(this.textBox_exp_3D);
             this.panel_3D.Controls.Add(this.label_func_3D);
@@ -157,20 +139,6 @@
             this.panel_3D.Name = "panel_3D";
             this.panel_3D.Size = new System.Drawing.Size(786, 404);
             this.panel_3D.TabIndex = 2;
-            // 
-            // button_cancel_3D
-            // 
-            this.button_cancel_3D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_cancel_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_cancel_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_cancel_3D.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_cancel_3D.Location = new System.Drawing.Point(600, 150);
-            this.button_cancel_3D.Name = "button_cancel_3D";
-            this.button_cancel_3D.Size = new System.Drawing.Size(150, 80);
-            this.button_cancel_3D.TabIndex = 3;
-            this.button_cancel_3D.Text = "取消";
-            this.button_cancel_3D.UseVisualStyleBackColor = false;
-            this.button_cancel_3D.Click += new System.EventHandler(this.Button_cancel_3D_Click);
             // 
             // button_confirm_3D
             // 
@@ -232,12 +200,10 @@
         private System.Windows.Forms.TabPage tabPage_2D;
         private System.Windows.Forms.TabPage tabPage_3D;
         private System.Windows.Forms.Panel panel_3D;
-        private System.Windows.Forms.Button button_cancel_3D;
         private System.Windows.Forms.Button button_confirm_3D;
         private System.Windows.Forms.TextBox textBox_exp_3D;
         private System.Windows.Forms.Label label_func_3D;
         private System.Windows.Forms.Panel panel_2D;
-        private System.Windows.Forms.Button button_cancel_2D;
         private System.Windows.Forms.Button button_confirm_2D;
         private System.Windows.Forms.TextBox textBox_exp_2D;
         private System.Windows.Forms.Label label_func_2D;

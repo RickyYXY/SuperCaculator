@@ -156,8 +156,8 @@ namespace PaintForm
             Font font = new Font("Ink Free", 20f);
             Font font1 = new Font("Ink Free", 15f);
             sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
-            g.DrawString("x", font, brush, Xstart + XLENGTH / 2, Ystart);
-            g.DrawString("y", font, brush,
+            g.DrawString("x:[" + minX.ToString("#0.0") + ", " + maxX.ToString("#0.0") + "]", font, brush, Xstart + XLENGTH / 2, Ystart);
+            g.DrawString("y:[" + minY.ToString("#0.0") + ", " + maxY.ToString("#0.0") + "]", font, brush,
                 Xstart + XLENGTH + (int)(YLENGTH / sqrt2 / 2), Ystart - (int)(YLENGTH / sqrt2 / 2));
             //g.DrawString("z", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
             g.DrawString("min:"+NumToString(minZ), font1, brush, Xstart, Ystart, sf);

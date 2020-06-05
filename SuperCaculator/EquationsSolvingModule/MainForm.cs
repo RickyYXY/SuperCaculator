@@ -154,9 +154,14 @@ namespace EquationsSolvingModule
             {
                 try
                 {
-                    resultValue = monoEqua.Solve();
-                    txtWarn.Text = "求解成功！";
-                    txtResult.Text = "X = " + resultValue.ToString();
+                    monoEqua.Solve();
+
+                    if (monoEqua.isMaxIterated == true)
+                        txtWarn.Text = "达到最大迭代次数！";
+                    else
+                        txtWarn.Text = "求解成功！";
+
+                    txtResult.Text = "X = " + monoEqua.xFinal.ToString();
                 }
                 catch(Exception)
                 {
