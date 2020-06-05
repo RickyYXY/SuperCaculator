@@ -71,6 +71,7 @@
             // 
             // button_save
             // 
+            this.button_save.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_save.BackColor = System.Drawing.Color.LightCyan;
             this.button_save.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_save.Location = new System.Drawing.Point(580, 175);
@@ -83,6 +84,7 @@
             // 
             // label_func
             // 
+            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_func.AutoSize = true;
             this.label_func.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_func.Location = new System.Drawing.Point(35, 20);
@@ -93,6 +95,7 @@
             // 
             // button_clean
             // 
+            this.button_clean.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_clean.BackColor = System.Drawing.Color.LightCyan;
             this.button_clean.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_clean.Location = new System.Drawing.Point(400, 175);
@@ -105,6 +108,7 @@
             // 
             // button_close
             // 
+            this.button_close.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_close.BackColor = System.Drawing.Color.LightCyan;
             this.button_close.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_close.Location = new System.Drawing.Point(760, 175);
@@ -117,6 +121,7 @@
             // 
             // button_draw
             // 
+            this.button_draw.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_draw.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_draw.Location = new System.Drawing.Point(220, 175);
@@ -129,6 +134,7 @@
             // 
             // button_color
             // 
+            this.button_color.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_color.BackColor = System.Drawing.Color.LightCyan;
             this.button_color.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_color.Location = new System.Drawing.Point(40, 175);
@@ -141,6 +147,7 @@
             // 
             // label_range
             // 
+            this.label_range.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_range.AutoSize = true;
             this.label_range.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_range.Location = new System.Drawing.Point(35, 90);
@@ -151,6 +158,7 @@
             // 
             // textBox_max
             // 
+            this.textBox_max.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_max.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_max.Location = new System.Drawing.Point(570, 90);
             this.textBox_max.Name = "textBox_max";
@@ -161,6 +169,7 @@
             // 
             // textBox_min
             // 
+            this.textBox_min.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox_min.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_min.Location = new System.Drawing.Point(205, 90);
             this.textBox_min.Name = "textBox_min";
@@ -171,6 +180,7 @@
             // 
             // label_X
             // 
+            this.label_X.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_X.AutoSize = true;
             this.label_X.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_X.Location = new System.Drawing.Point(435, 95);
