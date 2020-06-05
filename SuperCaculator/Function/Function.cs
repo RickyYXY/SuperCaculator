@@ -296,6 +296,31 @@ namespace Function
             return Math.Log(base.GetValue(x, y), log_base);
         }
     }
+    class Csc_function : Function
+    {
+        public Csc_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return 1 / Math.Sin(base.GetValue(x, y));
+        }
+    }
+
+    class Sec_function : Function
+    {
+        public Sec_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return 1 / Math.Cos(base.GetValue(x, y));
+        }
+    }
+    class Cot_function : Function
+    {
+        public Cot_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return 1 / Math.Tan(base.GetValue(x, y));
+        }
+    }
 
     class FunctionException : Exception
     {
