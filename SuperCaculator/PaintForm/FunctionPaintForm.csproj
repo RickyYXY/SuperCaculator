@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunctionPaintForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionPaintForm1.Designer.cs">
+      <DependentUpon>FunctionPaintForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunctionPaintForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Painter3D.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FunctionPaintForm1.resx">
+      <DependentUpon>FunctionPaintForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FunctionPaintForm.resx">
       <DependentUpon>FunctionPaintForm.cs</DependentUpon>
     </EmbeddedResource>

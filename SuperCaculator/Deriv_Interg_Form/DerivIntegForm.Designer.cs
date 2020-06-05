@@ -53,6 +53,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.Clear_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.pre_trackBar = new System.Windows.Forms.TrackBar();
@@ -95,7 +96,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.vminoutput_textBox = new System.Windows.Forms.TextBox();
             this.vmaxoutput_textBox = new System.Windows.Forms.TextBox();
-            this.Clear_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -210,7 +210,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(311, 132);
             this.tableLayoutPanel2.TabIndex = 20;
             // 
@@ -369,7 +369,7 @@
             this.dinput_comboBox.DisplayMember = "Context";
             this.dinput_comboBox.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinput_comboBox.FormattingEnabled = true;
-            this.dinput_comboBox.Location = new System.Drawing.Point(96, 145);
+            this.dinput_comboBox.Location = new System.Drawing.Point(96, 144);
             this.dinput_comboBox.Name = "dinput_comboBox";
             this.dinput_comboBox.Size = new System.Drawing.Size(744, 35);
             this.dinput_comboBox.TabIndex = 9;
@@ -427,9 +427,22 @@
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(311, 132);
             this.tableLayoutPanel11.TabIndex = 13;
+            // 
+            // Clear_button
+            // 
+            this.Clear_button.BackColor = System.Drawing.Color.LightCyan;
+            this.Clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Clear_button.Location = new System.Drawing.Point(3, 3);
+            this.Clear_button.Name = "Clear_button";
+            this.Clear_button.Size = new System.Drawing.Size(305, 126);
+            this.Clear_button.TabIndex = 8;
+            this.Clear_button.Text = "清除";
+            this.Clear_button.UseVisualStyleBackColor = false;
+            this.Clear_button.Click += new System.EventHandler(this.Clear_button_Click);
             // 
             // tableLayoutPanel9
             // 
@@ -572,7 +585,7 @@
             this.down_num_comboBox.DataSource = this.input_bindingSource2;
             this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
-            this.down_num_comboBox.Location = new System.Drawing.Point(3, 164);
+            this.down_num_comboBox.Location = new System.Drawing.Point(3, 159);
             this.down_num_comboBox.Name = "down_num_comboBox";
             this.down_num_comboBox.Size = new System.Drawing.Size(691, 32);
             this.down_num_comboBox.TabIndex = 7;
@@ -587,7 +600,7 @@
             this.up_num_comboBox.DataSource = this.input_bindingSource;
             this.up_num_comboBox.DisplayMember = "Context";
             this.up_num_comboBox.FormattingEnabled = true;
-            this.up_num_comboBox.Location = new System.Drawing.Point(3, 23);
+            this.up_num_comboBox.Location = new System.Drawing.Point(3, 19);
             this.up_num_comboBox.Name = "up_num_comboBox";
             this.up_num_comboBox.Size = new System.Drawing.Size(691, 32);
             this.up_num_comboBox.TabIndex = 6;
@@ -665,7 +678,7 @@
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(311, 132);
             this.tableLayoutPanel13.TabIndex = 13;
             // 
@@ -810,7 +823,7 @@
             this.vdown_comboBox.DataSource = this.input_bindingSource2;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(142, 22);
+            this.vdown_comboBox.Location = new System.Drawing.Point(142, 17);
             this.vdown_comboBox.Name = "vdown_comboBox";
             this.vdown_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vdown_comboBox.TabIndex = 6;
@@ -848,7 +861,7 @@
             this.vup_comboBox.DataSource = this.input_bindingSource;
             this.vup_comboBox.DisplayMember = "Context";
             this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(142, 21);
+            this.vup_comboBox.Location = new System.Drawing.Point(142, 17);
             this.vup_comboBox.Name = "vup_comboBox";
             this.vup_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vup_comboBox.TabIndex = 7;
@@ -964,19 +977,6 @@
             this.vmaxoutput_textBox.ReadOnly = true;
             this.vmaxoutput_textBox.Size = new System.Drawing.Size(792, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
-            // 
-            // Clear_button
-            // 
-            this.Clear_button.BackColor = System.Drawing.Color.LightCyan;
-            this.Clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Clear_button.Location = new System.Drawing.Point(3, 3);
-            this.Clear_button.Name = "Clear_button";
-            this.Clear_button.Size = new System.Drawing.Size(305, 126);
-            this.Clear_button.TabIndex = 8;
-            this.Clear_button.Text = "清除";
-            this.Clear_button.UseVisualStyleBackColor = false;
-            this.Clear_button.Click += new System.EventHandler(this.Clear_button_Click);
             // 
             // DIForm
             // 
