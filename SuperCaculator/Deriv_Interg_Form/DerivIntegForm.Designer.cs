@@ -96,6 +96,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.vminoutput_textBox = new System.Windows.Forms.TextBox();
             this.vmaxoutput_textBox = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label_help_info = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -132,6 +134,7 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -139,6 +142,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -978,6 +982,27 @@
             this.vmaxoutput_textBox.Size = new System.Drawing.Size(792, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.MintCream;
+            this.tabPage4.Controls.Add(this.label_help_info);
+            this.tabPage4.Location = new System.Drawing.Point(4, 33);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1273, 398);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "帮助";
+            // 
+            // label_help_info
+            // 
+            this.label_help_info.AutoSize = true;
+            this.label_help_info.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_help_info.Location = new System.Drawing.Point(3, 3);
+            this.label_help_info.Name = "label_help_info";
+            this.label_help_info.Size = new System.Drawing.Size(530, 75);
+            this.label_help_info.TabIndex = 0;
+            this.label_help_info.Text = "注意事项：\r\n1.精度越大，积分、极值计算所花费的时间越长。\r\n2.所有函数请标准化输入，函数后面请加括号。";
+            // 
             // DIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1038,6 +1063,8 @@
             this.groupBox8.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel20.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1110,6 +1137,8 @@
         private System.Windows.Forms.ComboBox dinput_comboBox;
         private System.Windows.Forms.TextBox dinput_textBox;
         private System.Windows.Forms.Button Clear_button;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label_help_info;
     }
 }
 
