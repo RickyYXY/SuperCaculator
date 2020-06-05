@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.cboUnoNum = new System.Windows.Forms.ComboBox();
@@ -40,10 +41,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnStart = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtWarn = new System.Windows.Forms.TextBox();
             this.lblWarn = new System.Windows.Forms.Label();
+            this.txtWarn = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +66,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(625, 76);
             this.panel1.TabIndex = 0;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStart.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStart.Location = new System.Drawing.Point(318, 19);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(92, 30);
+            this.btnStart.TabIndex = 6;
+            this.btnStart.Text = "开始求解";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnQuit
             // 
@@ -187,7 +200,7 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblResult.Location = new System.Drawing.Point(16, 8);
+            this.lblResult.Location = new System.Drawing.Point(-3, 8);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(88, 17);
             this.lblResult.TabIndex = 3;
@@ -205,19 +218,6 @@
             this.panel4.Size = new System.Drawing.Size(624, 307);
             this.panel4.TabIndex = 3;
             // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStart.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStart.Location = new System.Drawing.Point(318, 19);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(92, 30);
-            this.btnStart.TabIndex = 6;
-            this.btnStart.Text = "开始求解";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -230,6 +230,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(624, 103);
             this.panel5.TabIndex = 4;
+            // 
+            // lblWarn
+            // 
+            this.lblWarn.AutoSize = true;
+            this.lblWarn.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblWarn.Location = new System.Drawing.Point(12, 15);
+            this.lblWarn.Name = "lblWarn";
+            this.lblWarn.Size = new System.Drawing.Size(88, 17);
+            this.lblWarn.TabIndex = 3;
+            this.lblWarn.Text = "提示信息：";
             // 
             // txtWarn
             // 
@@ -244,16 +254,6 @@
             this.txtWarn.ReadOnly = true;
             this.txtWarn.Size = new System.Drawing.Size(598, 47);
             this.txtWarn.TabIndex = 0;
-            // 
-            // lblWarn
-            // 
-            this.lblWarn.AutoSize = true;
-            this.lblWarn.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblWarn.Location = new System.Drawing.Point(12, 15);
-            this.lblWarn.Name = "lblWarn";
-            this.lblWarn.Size = new System.Drawing.Size(88, 17);
-            this.lblWarn.TabIndex = 3;
-            this.lblWarn.Text = "提示信息：";
             // 
             // MainForm
             // 
