@@ -96,6 +96,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.vminoutput_textBox = new System.Windows.Forms.TextBox();
             this.vmaxoutput_textBox = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label_help_info = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -132,6 +134,7 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -139,6 +142,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -309,9 +313,9 @@
             // tableLayoutPanel21
             // 
             this.tableLayoutPanel21.ColumnCount = 3;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel21.Controls.Add(this.label6, 2, 0);
             this.tableLayoutPanel21.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel21.Controls.Add(this.label4, 0, 0);
@@ -331,9 +335,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Cambria", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(846, 0);
+            this.label6.Location = new System.Drawing.Point(841, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 108);
+            this.label6.Size = new System.Drawing.Size(94, 108);
             this.label6.TabIndex = 13;
             this.label6.Text = "/dx";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,7 +349,7 @@
             this.label5.Font = new System.Drawing.Font("Cambria", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 108);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 109);
+            this.label5.Size = new System.Drawing.Size(94, 109);
             this.label5.TabIndex = 12;
             this.label5.Text = "x=";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -357,7 +361,7 @@
             this.label4.Font = new System.Drawing.Font("Cambria", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 108);
+            this.label4.Size = new System.Drawing.Size(94, 108);
             this.label4.TabIndex = 1;
             this.label4.Text = "d";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -369,9 +373,9 @@
             this.dinput_comboBox.DisplayMember = "Context";
             this.dinput_comboBox.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinput_comboBox.FormattingEnabled = true;
-            this.dinput_comboBox.Location = new System.Drawing.Point(96, 144);
+            this.dinput_comboBox.Location = new System.Drawing.Point(103, 144);
             this.dinput_comboBox.Name = "dinput_comboBox";
-            this.dinput_comboBox.Size = new System.Drawing.Size(744, 35);
+            this.dinput_comboBox.Size = new System.Drawing.Size(732, 35);
             this.dinput_comboBox.TabIndex = 9;
             // 
             // input_bindingSource
@@ -382,9 +386,9 @@
             // 
             this.dinput_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dinput_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinput_textBox.Location = new System.Drawing.Point(96, 32);
+            this.dinput_textBox.Location = new System.Drawing.Point(103, 32);
             this.dinput_textBox.Name = "dinput_textBox";
-            this.dinput_textBox.Size = new System.Drawing.Size(744, 43);
+            this.dinput_textBox.Size = new System.Drawing.Size(732, 43);
             this.dinput_textBox.TabIndex = 4;
             // 
             // tabPage2
@@ -526,8 +530,8 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tableLayoutPanel7.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 0);
@@ -544,9 +548,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Cambria", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(846, 0);
+            this.label7.Location = new System.Drawing.Point(859, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 217);
+            this.label7.Size = new System.Drawing.Size(76, 217);
             this.label7.TabIndex = 14;
             this.label7.Text = "dx";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -557,7 +561,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 211);
+            this.pictureBox1.Size = new System.Drawing.Size(122, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -570,13 +574,13 @@
             this.tableLayoutPanel8.Controls.Add(this.up_num_comboBox, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.exp_textBox, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(143, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(131, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(697, 211);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(722, 211);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // down_num_comboBox
@@ -585,9 +589,9 @@
             this.down_num_comboBox.DataSource = this.input_bindingSource2;
             this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
-            this.down_num_comboBox.Location = new System.Drawing.Point(3, 159);
+            this.down_num_comboBox.Location = new System.Drawing.Point(3, 164);
             this.down_num_comboBox.Name = "down_num_comboBox";
-            this.down_num_comboBox.Size = new System.Drawing.Size(691, 32);
+            this.down_num_comboBox.Size = new System.Drawing.Size(716, 32);
             this.down_num_comboBox.TabIndex = 7;
             // 
             // input_bindingSource2
@@ -600,9 +604,9 @@
             this.up_num_comboBox.DataSource = this.input_bindingSource;
             this.up_num_comboBox.DisplayMember = "Context";
             this.up_num_comboBox.FormattingEnabled = true;
-            this.up_num_comboBox.Location = new System.Drawing.Point(3, 19);
+            this.up_num_comboBox.Location = new System.Drawing.Point(3, 23);
             this.up_num_comboBox.Name = "up_num_comboBox";
-            this.up_num_comboBox.Size = new System.Drawing.Size(691, 32);
+            this.up_num_comboBox.Size = new System.Drawing.Size(716, 32);
             this.up_num_comboBox.TabIndex = 6;
             // 
             // exp_textBox
@@ -611,7 +615,7 @@
             this.exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exp_textBox.Location = new System.Drawing.Point(3, 83);
             this.exp_textBox.Name = "exp_textBox";
-            this.exp_textBox.Size = new System.Drawing.Size(691, 43);
+            this.exp_textBox.Size = new System.Drawing.Size(716, 43);
             this.exp_textBox.TabIndex = 4;
             // 
             // groupBox2
@@ -823,7 +827,7 @@
             this.vdown_comboBox.DataSource = this.input_bindingSource2;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(142, 17);
+            this.vdown_comboBox.Location = new System.Drawing.Point(142, 22);
             this.vdown_comboBox.Name = "vdown_comboBox";
             this.vdown_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vdown_comboBox.TabIndex = 6;
@@ -861,7 +865,7 @@
             this.vup_comboBox.DataSource = this.input_bindingSource;
             this.vup_comboBox.DisplayMember = "Context";
             this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(142, 17);
+            this.vup_comboBox.Location = new System.Drawing.Point(142, 21);
             this.vup_comboBox.Name = "vup_comboBox";
             this.vup_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vup_comboBox.TabIndex = 7;
@@ -978,6 +982,27 @@
             this.vmaxoutput_textBox.Size = new System.Drawing.Size(792, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.MintCream;
+            this.tabPage4.Controls.Add(this.label_help_info);
+            this.tabPage4.Location = new System.Drawing.Point(4, 33);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1273, 398);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "帮助";
+            // 
+            // label_help_info
+            // 
+            this.label_help_info.AutoSize = true;
+            this.label_help_info.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_help_info.Location = new System.Drawing.Point(3, 3);
+            this.label_help_info.Name = "label_help_info";
+            this.label_help_info.Size = new System.Drawing.Size(530, 75);
+            this.label_help_info.TabIndex = 0;
+            this.label_help_info.Text = "注意事项：\r\n1.精度越大，积分、极值计算所花费的时间越长。\r\n2.所有函数请标准化输入，函数后面请加括号。";
+            // 
             // DIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1038,6 +1063,8 @@
             this.groupBox8.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel20.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1110,6 +1137,8 @@
         private System.Windows.Forms.ComboBox dinput_comboBox;
         private System.Windows.Forms.TextBox dinput_textBox;
         private System.Windows.Forms.Button Clear_button;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label_help_info;
     }
 }
 
