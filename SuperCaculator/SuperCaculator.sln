@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardCalculateForm", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleEqua", "HandleEqua\HandleEqua.csproj", "{4123FA5E-3CAC-416B-9668-BD4CE077AA4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquationsSolvingModule", "..\..\..\大二下\软件构造基础\小组作业\EquationsSolvingModule\beifen\EquationsSolvingModule\EquationsSolvingModule\EquationsSolvingModule.csproj", "{2ED4A3C7-A006-407B-B860-6F20E44F6199}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquationsSolvingModule", "EquationsSolvingModule\EquationsSolvingModule.csproj", "{2ED4A3C7-A006-407B-B860-6F20E44F6199}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
