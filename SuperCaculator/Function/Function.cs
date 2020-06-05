@@ -113,9 +113,7 @@ namespace Function
                         continue;
                     }
                     while (st.Count != 0 && st.Peek() == "!")
-                    {
                         RPNExpression.Add(st.Pop());
-                    }
                     RPNExpression.Add("0");//将x!转化为x!0
                     st.Push(temp);
                 }
@@ -127,9 +125,7 @@ namespace Function
                         continue;
                     }
                     while (st.Count != 0 && (st.Peek() == "^" || st.Peek() == "!"))
-                    {
                         RPNExpression.Add(st.Pop());
-                    }
                     st.Push(temp);
                 }
                 else if (temp == "*" || temp == "/")
@@ -141,45 +137,32 @@ namespace Function
                     }
                     while (st.Count != 0 && (st.Peek() == "!" || st.Peek() == "^" ||
                         st.Peek() == "*" || st.Peek() == "/"))
-                    {
                         RPNExpression.Add(st.Pop());
-                    }
                     st.Push(temp);
                 }
                 else if (temp == "+" || temp == "-")
                 {
                     if (temp == "-" && (i == 0 || exp[i - 1] == '('))
-                    {
                         RPNExpression.Add("0"); //将-x转化为0-x
-                    }
                     if (st.Count == 0)
                     {
                         st.Push(temp);
                         continue;
                     }
                     while (st.Count != 0 && st.Peek() != "(")
-                    {
                         RPNExpression.Add(st.Pop());
-                    }
                     st.Push(temp);
                 }
                 else if (temp == "(")
-                {
                     st.Push(temp);
-                }
                 else if (temp == ")")
                 {
                     while (st.Peek() != "(")
-                    {
                         RPNExpression.Add(st.Pop());
-                    }
                     st.Pop();
                 }
                 else if (temp == "x" || temp == "y")
-                {
-
                     RPNExpression.Add(temp);
-                }
                 else if (exp[i] <= '9' && exp[i] >= '0')
                 {
                     int j = i;
@@ -207,9 +190,7 @@ namespace Function
                                     j++;
                             }
                             else //其余函数正常处理
-                            {
                                 j = i + reg.Length;
-                            }
                             //j对应： e.g. sin()中(后一位的下标号
                             if (exp[j] != '(')
                                 throw new FunctionException("函数后必须含有括弧!", 2);
