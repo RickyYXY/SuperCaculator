@@ -8,8 +8,11 @@ namespace EquationsSolvingModule
 {
     public class MonoHighPowEqua
     {
-        public double precision;
-        public double xInit;
+        public double precision;  // 精度
+        private int theMaxIterativeTime = 10 ^ 5; // 最大迭代次数
+        public bool isMaxIterated = false; // 是否达到最大迭代数
+        public double xInit;  // 解的初始值
+        public double xFinal; // 迭代结果
         public double[] coefficient;
         public int[] power;
 
@@ -51,16 +54,27 @@ namespace EquationsSolvingModule
             return sum;
         }
 
-        public double Solve()  // 迭代求解
+        public void Solve()  // 迭代求解
         {
             double x0 = xInit;
             double xn;
 
-            while (true)
+            for (int i = 0; i <= theMaxIterativeTime; i++)
             {
                 xn = x0 - GenerateEqua(x0) / GenerateDeriv(x0);
+
                 if (Math.Abs(xn - x0) < precision)
-                    return xn;
+                {
+                    xFinal = xn;
+                    return;
+                }
+                else if (i == theMaxIterativeTime)
+                {
+                    isMaxIterated = true;
+                    xFinal = xn;
+                    return;
+                }
+
                 x0 = xn;
             }
         }

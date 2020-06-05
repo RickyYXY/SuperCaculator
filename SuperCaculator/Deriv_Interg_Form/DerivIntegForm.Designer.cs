@@ -36,7 +36,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.doutput_textBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.der_exit = new System.Windows.Forms.Button();
             this.der_clear_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.der_cal_button = new System.Windows.Forms.Button();
@@ -54,8 +53,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.Clear_button = new System.Windows.Forms.Button();
-            this.exit_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.pre_trackBar = new System.Windows.Forms.TrackBar();
@@ -75,7 +72,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.vexit_button = new System.Windows.Forms.Button();
             this.vclear_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -99,6 +95,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.vminoutput_textBox = new System.Windows.Forms.TextBox();
             this.vmaxoutput_textBox = new System.Windows.Forms.TextBox();
+            this.Clear_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -207,30 +204,15 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.der_exit, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.der_clear_button, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(953, 257);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(311, 132);
             this.tableLayoutPanel2.TabIndex = 20;
-            // 
-            // der_exit
-            // 
-            this.der_exit.BackColor = System.Drawing.Color.LightCyan;
-            this.der_exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.der_exit.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.der_exit.Location = new System.Drawing.Point(3, 69);
-            this.der_exit.Name = "der_exit";
-            this.der_exit.Size = new System.Drawing.Size(305, 60);
-            this.der_exit.TabIndex = 18;
-            this.der_exit.Text = "退出";
-            this.der_exit.UseVisualStyleBackColor = false;
-            this.der_exit.Click += new System.EventHandler(this.der_exit_Click);
             // 
             // der_clear_button
             // 
@@ -239,7 +221,7 @@
             this.der_clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.der_clear_button.Location = new System.Drawing.Point(3, 3);
             this.der_clear_button.Name = "der_clear_button";
-            this.der_clear_button.Size = new System.Drawing.Size(305, 60);
+            this.der_clear_button.Size = new System.Drawing.Size(305, 126);
             this.der_clear_button.TabIndex = 15;
             this.der_clear_button.Text = "清除";
             this.der_clear_button.UseVisualStyleBackColor = false;
@@ -387,7 +369,7 @@
             this.dinput_comboBox.DisplayMember = "Context";
             this.dinput_comboBox.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinput_comboBox.FormattingEnabled = true;
-            this.dinput_comboBox.Location = new System.Drawing.Point(96, 144);
+            this.dinput_comboBox.Location = new System.Drawing.Point(96, 145);
             this.dinput_comboBox.Name = "dinput_comboBox";
             this.dinput_comboBox.Size = new System.Drawing.Size(744, 35);
             this.dinput_comboBox.TabIndex = 9;
@@ -438,43 +420,16 @@
             // tableLayoutPanel11
             // 
             this.tableLayoutPanel11.ColumnCount = 1;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.Controls.Add(this.Clear_button, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.exit_button, 0, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(953, 257);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 2;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(311, 132);
             this.tableLayoutPanel11.TabIndex = 13;
-            // 
-            // Clear_button
-            // 
-            this.Clear_button.BackColor = System.Drawing.Color.LightCyan;
-            this.Clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Clear_button.Location = new System.Drawing.Point(3, 3);
-            this.Clear_button.Name = "Clear_button";
-            this.Clear_button.Size = new System.Drawing.Size(305, 60);
-            this.Clear_button.TabIndex = 8;
-            this.Clear_button.Text = "清除";
-            this.Clear_button.UseVisualStyleBackColor = false;
-            this.Clear_button.Click += new System.EventHandler(this.Clear_button_Click);
-            // 
-            // exit_button
-            // 
-            this.exit_button.BackColor = System.Drawing.Color.LightCyan;
-            this.exit_button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.exit_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.exit_button.Location = new System.Drawing.Point(3, 69);
-            this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(305, 60);
-            this.exit_button.TabIndex = 11;
-            this.exit_button.Text = "退出";
-            this.exit_button.UseVisualStyleBackColor = false;
-            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // tableLayoutPanel9
             // 
@@ -617,7 +572,7 @@
             this.down_num_comboBox.DataSource = this.input_bindingSource2;
             this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
-            this.down_num_comboBox.Location = new System.Drawing.Point(3, 159);
+            this.down_num_comboBox.Location = new System.Drawing.Point(3, 164);
             this.down_num_comboBox.Name = "down_num_comboBox";
             this.down_num_comboBox.Size = new System.Drawing.Size(691, 32);
             this.down_num_comboBox.TabIndex = 7;
@@ -632,7 +587,7 @@
             this.up_num_comboBox.DataSource = this.input_bindingSource;
             this.up_num_comboBox.DisplayMember = "Context";
             this.up_num_comboBox.FormattingEnabled = true;
-            this.up_num_comboBox.Location = new System.Drawing.Point(3, 19);
+            this.up_num_comboBox.Location = new System.Drawing.Point(3, 23);
             this.up_num_comboBox.Name = "up_num_comboBox";
             this.up_num_comboBox.Size = new System.Drawing.Size(691, 32);
             this.up_num_comboBox.TabIndex = 6;
@@ -703,30 +658,16 @@
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 1;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Controls.Add(this.vexit_button, 0, 1);
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.Controls.Add(this.vclear_button, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(953, 257);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
-            this.tableLayoutPanel13.RowCount = 2;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(311, 132);
             this.tableLayoutPanel13.TabIndex = 13;
-            // 
-            // vexit_button
-            // 
-            this.vexit_button.BackColor = System.Drawing.Color.LightCyan;
-            this.vexit_button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vexit_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vexit_button.Location = new System.Drawing.Point(3, 69);
-            this.vexit_button.Name = "vexit_button";
-            this.vexit_button.Size = new System.Drawing.Size(305, 60);
-            this.vexit_button.TabIndex = 18;
-            this.vexit_button.Text = "退出";
-            this.vexit_button.UseVisualStyleBackColor = false;
-            this.vexit_button.Click += new System.EventHandler(this.vexit_button_Click);
             // 
             // vclear_button
             // 
@@ -735,7 +676,7 @@
             this.vclear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.vclear_button.Location = new System.Drawing.Point(3, 3);
             this.vclear_button.Name = "vclear_button";
-            this.vclear_button.Size = new System.Drawing.Size(305, 60);
+            this.vclear_button.Size = new System.Drawing.Size(305, 126);
             this.vclear_button.TabIndex = 15;
             this.vclear_button.Text = "清除";
             this.vclear_button.UseVisualStyleBackColor = false;
@@ -869,7 +810,7 @@
             this.vdown_comboBox.DataSource = this.input_bindingSource2;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(142, 17);
+            this.vdown_comboBox.Location = new System.Drawing.Point(142, 22);
             this.vdown_comboBox.Name = "vdown_comboBox";
             this.vdown_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vdown_comboBox.TabIndex = 6;
@@ -907,7 +848,7 @@
             this.vup_comboBox.DataSource = this.input_bindingSource;
             this.vup_comboBox.DisplayMember = "Context";
             this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(142, 17);
+            this.vup_comboBox.Location = new System.Drawing.Point(142, 21);
             this.vup_comboBox.Name = "vup_comboBox";
             this.vup_comboBox.Size = new System.Drawing.Size(787, 32);
             this.vup_comboBox.TabIndex = 7;
@@ -1024,6 +965,19 @@
             this.vmaxoutput_textBox.Size = new System.Drawing.Size(792, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
             // 
+            // Clear_button
+            // 
+            this.Clear_button.BackColor = System.Drawing.Color.LightCyan;
+            this.Clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Clear_button.Location = new System.Drawing.Point(3, 3);
+            this.Clear_button.Name = "Clear_button";
+            this.Clear_button.Size = new System.Drawing.Size(305, 126);
+            this.Clear_button.TabIndex = 8;
+            this.Clear_button.Text = "清除";
+            this.Clear_button.UseVisualStyleBackColor = false;
+            this.Clear_button.Click += new System.EventHandler(this.Clear_button_Click);
+            // 
             // DIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1099,13 +1053,10 @@
         private System.Windows.Forms.TextBox exp_textBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button Cal_button;
-        private System.Windows.Forms.Button Clear_button;
         private System.Windows.Forms.TextBox result_textBox;
         private System.Windows.Forms.ComboBox down_num_comboBox;
         private System.Windows.Forms.ComboBox up_num_comboBox;
-        private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.BindingSource input_bindingSource;
-        private System.Windows.Forms.Button vexit_button;
         private System.Windows.Forms.Button vclear_button;
         private System.Windows.Forms.TextBox vmaxoutput_textBox;
         private System.Windows.Forms.Button vcal_button;
@@ -1145,7 +1096,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox doutput_textBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button der_exit;
         private System.Windows.Forms.Button der_clear_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button der_cal_button;
@@ -1159,6 +1109,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox dinput_comboBox;
         private System.Windows.Forms.TextBox dinput_textBox;
+        private System.Windows.Forms.Button Clear_button;
     }
 }
 

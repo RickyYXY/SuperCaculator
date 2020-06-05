@@ -8,7 +8,7 @@ namespace Function
 {
     public class FuncMatch
     {
-        public static readonly string[] func_names = { "sin", "cos", "tan", "exp", "log" ,"ln"};
+        public static readonly string[] func_names = { "sin", "cos", "tan", "exp", "log" ,"ln","csc","sec","cot"};
         
         public static double MatchFuncCal(string input, double? x,double? y)
         {
@@ -48,6 +48,15 @@ namespace Function
                             exp = temp.Substring(j + 1, temp.Length - j - 2);
                             Log_function log_Function = new Log_function(exp, newbase);
                             return log_Function.GetValue(x,y);
+                        case "csc":
+                            Csc_function csc_Function = new Csc_function(exp);
+                            return csc_Function.GetValue(x, y);
+                        case "sec":
+                            Sec_function sec_Function = new Sec_function(exp);
+                            return sec_Function.GetValue(x, y);
+                        case "cot":
+                            Cot_function cot_Function = new Cot_function(exp);
+                            return cot_Function.GetValue(x, y);
                     }
                 }
             }

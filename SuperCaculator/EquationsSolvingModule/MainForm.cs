@@ -14,8 +14,8 @@ namespace EquationsSolvingModule
     {
         public int unknowNum;  // 未知数的个数
         public int equationNum; // 方程的个数
-        public int maxIterativeTime = 100; // 最大迭代次数
-        public double precision = 0.001;  // 精度
+        public int maxIterativeTime = 10^5; // 最大迭代次数
+        public double precision = 10e-6;  // 精度
         public double[] startValue;  // 初值矩阵
         public double[] endValue;  // 计算结果
         public NonlinearEquations equations = new NonlinearEquations();  // 非线性方程组
@@ -154,9 +154,14 @@ namespace EquationsSolvingModule
             {
                 try
                 {
-                    resultValue = monoEqua.Solve();
-                    txtWarn.Text = "求解成功！";
-                    txtResult.Text = "X = " + resultValue.ToString();
+                    monoEqua.Solve();
+
+                    if (monoEqua.isMaxIterated == true)
+                        txtWarn.Text = "达到最大迭代次数！";
+                    else
+                        txtWarn.Text = "求解成功！";
+
+                    txtResult.Text = "X = " + monoEqua.xFinal.ToString();
                 }
                 catch(Exception)
                 {
