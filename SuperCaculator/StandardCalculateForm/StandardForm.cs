@@ -134,5 +134,47 @@ namespace StandardCalculateForm
             string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
             richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((ToolStripMenuItem)sender).Text + "(" + tail2 + ")";
         }
+
+        private void ClickFFunction(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);            
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            switch (((ToolStripMenuItem)sender).Name)
+            {
+                case "toolStripMenuItemAbs":
+                    equation = HandleEquation.RemoveLastUnit(equation) + "|" + tail + "|";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "|" + tail2 + "|";
+                    break;
+                case "toolStripMenuItemFloor":
+                    equation = HandleEquation.RemoveLastUnit(equation) + "⌊" + tail + "⌋";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "⌊" + tail2 + "⌋";
+                    break;
+                case "toolStripMenuItemCeil":
+                    equation = HandleEquation.RemoveLastUnit(equation) + "⌈" + tail + "⌉";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "⌈" + tail2 + "⌉";
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+
+        private void ClickRand(object sender, EventArgs e)
+        {
+            Random rd = new Random();
+            int randInt = rd.Next(100,9999);
+            double randDouble = randInt / 10000.0;
+            string randString = randDouble.ToString();
+            if (HandleEquation.IsGeneralOp(equation.Last()))
+            {
+                equation += randString;
+                richTxtEquation.Text += randString;
+            }
+            else
+            {
+                equation = HandleEquation.RemoveLastUnit(equation) + randString;
+                richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + randString;
+            }
+        }
     }
 }
