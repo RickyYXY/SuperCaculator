@@ -425,6 +425,7 @@
             this.btnNega.TabIndex = 20;
             this.btnNega.Text = "+/-";
             this.btnNega.UseVisualStyleBackColor = false;
+            this.btnNega.Click += new System.EventHandler(this.btnNega_Click);
             // 
             // btn0
             // 
@@ -579,6 +580,7 @@
             this.btnPi.TabIndex = 31;
             this.btnPi.Text = "π";
             this.btnPi.UseVisualStyleBackColor = false;
+            this.btnPi.Click += new System.EventHandler(this.Constant_Click);
             // 
             // btnE
             // 
@@ -594,6 +596,7 @@
             this.btnE.TabIndex = 32;
             this.btnE.Text = "e";
             this.btnE.UseVisualStyleBackColor = false;
+            this.btnE.Click += new System.EventHandler(this.Constant_Click);
             // 
             // btnClean
             // 

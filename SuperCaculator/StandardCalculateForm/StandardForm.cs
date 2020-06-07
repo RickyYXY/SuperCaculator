@@ -50,6 +50,10 @@ namespace StandardCalculateForm
             {
                 equation += "/";
             }
+            else
+            {
+                equation += ((Button)sender).Text;
+            }
         }
 
         
@@ -174,6 +178,57 @@ namespace StandardCalculateForm
             {
                 equation = HandleEquation.RemoveLastUnit(equation) + randString;
                 richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + randString;
+            }
+        }
+
+        private void btnNega_Click(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            string removedTail = HandleEquation.RemoveLastUnit(equation);
+            string removedTail2 = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
+            if (removedTail.Length == 0)
+            {
+                equation = "-" + tail;
+                richTxtEquation.Text = "-" + tail2;
+            }
+            else if (removedTail.Last() == '-')
+            {
+                if (removedTail.Length == 1)
+                {
+                    equation =  tail;
+                    richTxtEquation.Text = tail2;
+                }
+                else
+                {
+                    equation = removedTail.Substring(0, removedTail.Length - 1) + "+" + tail;
+                    richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "+" + tail2;
+                }
+            }
+            else if(removedTail.Last() == '+')
+            {
+                equation = removedTail.Substring(0, removedTail.Length - 1) + "-" + tail;
+                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "-" + tail2;
+            }
+            else
+            {
+                equation = removedTail.Substring(0, removedTail.Length - 1) + "(-" + tail+")";
+                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "(-" + tail2+")";
+
+            }
+        }
+
+        private void Constant_Click(object sender, EventArgs e)
+        {
+            if (HandleEquation.IsGeneralOp(equation.Last()))
+            {
+                equation += ((Button)sender).Text;
+                richTxtEquation.Text += ((Button)sender).Text;
+            }
+            else
+            {
+                equation = HandleEquation.RemoveLastUnit(equation) + ((Button)sender).Text;
+                richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text;
             }
         }
     }
