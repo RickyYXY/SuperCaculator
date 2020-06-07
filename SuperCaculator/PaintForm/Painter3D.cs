@@ -14,13 +14,14 @@ namespace PaintForm
         private Pen pen;
         Func<double?, double?, double> Caculate;
 
-        double minX, maxX, minY, maxY, minZ, maxZ, rate;
+        double minX, maxX, minY, maxY, minZ, maxZ;
+        readonly int rate;
         int XLENGTH, YLENGTH, ZLENGTH, Xstart, Ystart;
 
         const double sqrt2 = 1.4142135623730950488016887242;
 
         public Painter3D(PictureBox pb, Graphics g, Pen pen, Func<double?, double?, double> Caculate,
-            double minX, double maxX, double minY, double maxY, double rate)
+            double minX, double maxX, double minY, double maxY, int rate)
         {
             //g = pb.CreateGraphics();
             this.g = g;
@@ -49,10 +50,29 @@ namespace PaintForm
         public void Draw()
         {
             DrawBox();
-            double[,] values = GetValues();
+            double[,] values;
+            try
+            {
+                values = GetValues();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return;
+            }
             DrawCoor();
             double dz = (maxZ - minZ) / ZLENGTH;
-            int XL = (int)(XLENGTH / rate);
+            int XL = (int)((XLENGTH - 1) / rate) + 1;
+            if (dz == 0)
+            {
+                for (int i = 0; i < XL; i++)
+                {
+                    g.DrawLine(pen, Xstart + rate * i, Ystart - ZLENGTH / 2, Xstart + rate * i + (int)(YLENGTH / sqrt2), Ystart - ZLENGTH / 2 - (int)(YLENGTH / sqrt2));
+                }
+                g.DrawLine(pen, Xstart, Ystart - ZLENGTH / 2, Xstart + XLENGTH, Ystart - ZLENGTH / 2);
+                g.DrawLine(pen, Xstart + (int)(YLENGTH / sqrt2), Ystart - ZLENGTH / 2 - (int)(YLENGTH / sqrt2), Xstart + (int)(YLENGTH / sqrt2) + XLENGTH, Ystart - ZLENGTH / 2 - (int)(YLENGTH / sqrt2));
+                return;
+            }
             int[,] x = new int[XL, YLENGTH];
             int[,] y = new int[XL, YLENGTH];
             for (int i = 0; i < XL; i++)
@@ -96,7 +116,7 @@ namespace PaintForm
 
         private double[,] GetValues()
         {
-            int XL = (int)(XLENGTH / rate);
+            int XL = (int)((XLENGTH - 1) / rate) + 1;
             double[,] values = new double[XL, YLENGTH];
             double dx = (maxX - minX) / XLENGTH * rate;
             double dy = (maxY - minY) / YLENGTH;
@@ -107,7 +127,12 @@ namespace PaintForm
                 double tempx = minX + dx * i;
                 for (int j = 0; j < YLENGTH; j++)
                 {
-                    values[i, j] = Caculate(tempx, minY + dy * j);
+                    double result = Caculate(tempx, minY + dy * j);
+                    if (double.IsNaN(result)||double.IsInfinity(result)||double.IsNegativeInfinity(result))
+                    {
+                        throw new Exception("数值无意义。");
+                    }
+                    values[i, j] = result;
                     if (maxZ < values[i, j])
                     {
                         maxZ = values[i, j];
@@ -153,15 +178,22 @@ namespace PaintForm
         {
             Brush brush = Brushes.Black;
             StringFormat sf = new StringFormat();
-            Font font = new Font("Ink Free", 20f);
-            Font font1 = new Font("Ink Free", 15f);
+            Font font = new Font("方正舒体", 20f);
+            Font font1 = new Font("方正舒体", 15f);
             sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
-            g.DrawString("x: " + minX.ToString("#0.0") + " ~ " + maxX.ToString("#0.0"), font, brush, Xstart + XLENGTH / 2, Ystart);
+            string info = "x: " + minX.ToString("#0.0") + " ~ " + maxX.ToString("#0.0");
+            g.DrawString(info, font, brush, Xstart + XLENGTH / 2 - info.Length * 7, Ystart);
             g.DrawString("y: " + minY.ToString("#0.0") + " ~ " + maxY.ToString("#0.0"), font, brush,
                 Xstart + XLENGTH + (int)(YLENGTH / sqrt2 / 2), Ystart - (int)(YLENGTH / sqrt2 / 2));
             //g.DrawString("z", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
-            g.DrawString("min:"+NumToString(minZ), font1, brush, Xstart, Ystart, sf);
-            g.DrawString("max:"+NumToString(maxZ), font1, brush, Xstart, Ystart - ZLENGTH, sf);
+            if(minZ == maxZ)
+            {
+                g.DrawString("F(x, y) = "+ NumToString(minZ), font1, brush, Xstart, Ystart - ZLENGTH / 2, sf);
+                return;
+            }
+            g.DrawString("min: " + NumToString(minZ), font1, brush, Xstart, Ystart, sf);
+            g.DrawString("max: " + NumToString(maxZ), font1, brush, Xstart, Ystart - ZLENGTH, sf);
+            g.DrawString("(F(x, y", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
         }
 
         private void Transform(int x, int y, int z, out int cx, out int cy)

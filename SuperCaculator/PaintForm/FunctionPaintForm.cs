@@ -15,7 +15,7 @@ namespace PaintForm
     {
         private Pen pen_2D, pen_3D;
         private bool ShowXY;
-        private double rate;
+        private int rate;
 
         private Painter2D painter2D;
 
@@ -97,7 +97,7 @@ namespace PaintForm
             }
             if (Max_2D <= Min_2D)
             {
-                MessageBox.Show("数值输入不合法。");
+                MessageBox.Show("定义域输入不合法。");
                 return;
             }
             Bitmap bitmap = new Bitmap(pictureBox_2D.Width, pictureBox_2D.Height);
