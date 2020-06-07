@@ -102,7 +102,12 @@ namespace StandardCalculateForm
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (equation.Last() >= 48 && equation.Last() <= 57)
+            if (equation.Length == 1)
+            {
+                equation = "0";
+                richTxtEquation.Text = "0";
+            }
+            else if (equation.Last() >= 48 && equation.Last() <= 57)
             {
                 equation = equation.Substring(0, equation.Length - 1);
                 richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
@@ -127,8 +132,6 @@ namespace StandardCalculateForm
                 richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
                 isClickPoint = false;
             }
-
-
         }
 
         private void Function_Click(object sender, EventArgs e)
