@@ -89,6 +89,10 @@
       <Project>{ff50aee9-2bb2-4e91-a925-2ba3a90f1cff}</Project>
       <Name>DerivIntegForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EquationsSolvingModule\EquationsSolvingModule.csproj">
+      <Project>{2ed4a3c7-a006-407b-b860-6f20e44f6199}</Project>
+      <Name>EquationsSolvingModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MatrixCalculateForm\MatrixCalculateForm.csproj">
       <Project>{068ab8dc-8afa-4ed5-80af-bf3a6bb749b3}</Project>
       <Name>MatrixCalculateForm</Name>
