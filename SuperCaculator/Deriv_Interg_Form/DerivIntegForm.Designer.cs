@@ -165,6 +165,7 @@
             // 
             // tableLayoutPanel5
             // 
+            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -186,9 +187,9 @@
             this.groupBox3.Controls.Add(this.doutput_textBox);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 257);
+            this.groupBox3.Location = new System.Drawing.Point(6, 257);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(944, 132);
+            this.groupBox3.Size = new System.Drawing.Size(937, 129);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "输出栏";
@@ -198,10 +199,10 @@
             this.doutput_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.doutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.doutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doutput_textBox.Location = new System.Drawing.Point(8, 55);
+            this.doutput_textBox.Location = new System.Drawing.Point(8, 54);
             this.doutput_textBox.Name = "doutput_textBox";
             this.doutput_textBox.ReadOnly = true;
-            this.doutput_textBox.Size = new System.Drawing.Size(930, 39);
+            this.doutput_textBox.Size = new System.Drawing.Size(923, 39);
             this.doutput_textBox.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -210,12 +211,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.der_clear_button, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(953, 257);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(952, 257);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(311, 132);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(309, 129);
             this.tableLayoutPanel2.TabIndex = 20;
             // 
             // der_clear_button
@@ -223,9 +224,10 @@
             this.der_clear_button.BackColor = System.Drawing.Color.LightCyan;
             this.der_clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.der_clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.der_clear_button.Location = new System.Drawing.Point(3, 3);
+            this.der_clear_button.Location = new System.Drawing.Point(0, 0);
+            this.der_clear_button.Margin = new System.Windows.Forms.Padding(0);
             this.der_clear_button.Name = "der_clear_button";
-            this.der_clear_button.Size = new System.Drawing.Size(305, 126);
+            this.der_clear_button.Size = new System.Drawing.Size(309, 129);
             this.der_clear_button.TabIndex = 15;
             this.der_clear_button.Text = "清除";
             this.der_clear_button.UseVisualStyleBackColor = false;
@@ -239,11 +241,11 @@
             this.tableLayoutPanel3.Controls.Add(this.der_cal_button, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(953, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(952, 6);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(311, 248);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(309, 242);
             this.tableLayoutPanel3.TabIndex = 21;
             // 
             // der_cal_button
@@ -252,9 +254,10 @@
             this.der_cal_button.BackColor = System.Drawing.Color.LightCyan;
             this.der_cal_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.der_cal_button.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.der_cal_button.Location = new System.Drawing.Point(3, 3);
+            this.der_cal_button.Location = new System.Drawing.Point(0, 0);
+            this.der_cal_button.Margin = new System.Windows.Forms.Padding(0);
             this.der_cal_button.Name = "der_cal_button";
-            this.der_cal_button.Size = new System.Drawing.Size(196, 242);
+            this.der_cal_button.Size = new System.Drawing.Size(200, 242);
             this.der_cal_button.TabIndex = 18;
             this.der_cal_button.Text = "计算";
             this.der_cal_button.UseVisualStyleBackColor = false;
@@ -267,23 +270,24 @@
             this.tableLayoutPanel4.Controls.Add(this.dpre_trackBar, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(205, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(203, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(103, 242);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(103, 236);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // dpre_trackBar
             // 
             this.dpre_trackBar.BackColor = System.Drawing.Color.LightBlue;
             this.dpre_trackBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dpre_trackBar.Location = new System.Drawing.Point(3, 63);
+            this.dpre_trackBar.Location = new System.Drawing.Point(0, 59);
+            this.dpre_trackBar.Margin = new System.Windows.Forms.Padding(0);
             this.dpre_trackBar.Maximum = 4;
             this.dpre_trackBar.Name = "dpre_trackBar";
             this.dpre_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.dpre_trackBar.Size = new System.Drawing.Size(97, 176);
+            this.dpre_trackBar.Size = new System.Drawing.Size(103, 177);
             this.dpre_trackBar.TabIndex = 21;
             this.dpre_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -292,7 +296,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 60);
+            this.label2.Size = new System.Drawing.Size(97, 59);
             this.label2.TabIndex = 20;
             this.label2.Text = "精度";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,9 +307,9 @@
             this.groupBox4.Controls.Add(this.tableLayoutPanel21);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(3, 3);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(944, 248);
+            this.groupBox4.Size = new System.Drawing.Size(937, 242);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "输入栏";
@@ -327,7 +331,7 @@
             this.tableLayoutPanel21.RowCount = 2;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(938, 217);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(931, 211);
             this.tableLayoutPanel21.TabIndex = 10;
             // 
             // label6
@@ -335,9 +339,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Cambria", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(841, 0);
+            this.label6.Location = new System.Drawing.Point(834, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 108);
+            this.label6.Size = new System.Drawing.Size(94, 105);
             this.label6.TabIndex = 13;
             this.label6.Text = "/dx";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,9 +351,9 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Cambria", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 108);
+            this.label5.Location = new System.Drawing.Point(3, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 109);
+            this.label5.Size = new System.Drawing.Size(94, 106);
             this.label5.TabIndex = 12;
             this.label5.Text = "x=";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -361,7 +365,7 @@
             this.label4.Font = new System.Drawing.Font("Cambria", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 108);
+            this.label4.Size = new System.Drawing.Size(94, 105);
             this.label4.TabIndex = 1;
             this.label4.Text = "d";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -373,9 +377,9 @@
             this.dinput_comboBox.DisplayMember = "Context";
             this.dinput_comboBox.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinput_comboBox.FormattingEnabled = true;
-            this.dinput_comboBox.Location = new System.Drawing.Point(103, 144);
+            this.dinput_comboBox.Location = new System.Drawing.Point(103, 140);
             this.dinput_comboBox.Name = "dinput_comboBox";
-            this.dinput_comboBox.Size = new System.Drawing.Size(732, 35);
+            this.dinput_comboBox.Size = new System.Drawing.Size(725, 35);
             this.dinput_comboBox.TabIndex = 9;
             // 
             // input_bindingSource
@@ -386,9 +390,9 @@
             // 
             this.dinput_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dinput_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinput_textBox.Location = new System.Drawing.Point(103, 32);
+            this.dinput_textBox.Location = new System.Drawing.Point(103, 31);
             this.dinput_textBox.Name = "dinput_textBox";
-            this.dinput_textBox.Size = new System.Drawing.Size(732, 43);
+            this.dinput_textBox.Size = new System.Drawing.Size(725, 43);
             this.dinput_textBox.TabIndex = 4;
             // 
             // tabPage2
@@ -405,6 +409,7 @@
             // 
             // tableLayoutPanel6
             // 
+            this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -427,12 +432,12 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.Controls.Add(this.Clear_button, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(953, 257);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(952, 257);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(311, 132);
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(309, 129);
             this.tableLayoutPanel11.TabIndex = 13;
             // 
             // Clear_button
@@ -440,9 +445,10 @@
             this.Clear_button.BackColor = System.Drawing.Color.LightCyan;
             this.Clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Clear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Clear_button.Location = new System.Drawing.Point(3, 3);
+            this.Clear_button.Location = new System.Drawing.Point(0, 0);
+            this.Clear_button.Margin = new System.Windows.Forms.Padding(0);
             this.Clear_button.Name = "Clear_button";
-            this.Clear_button.Size = new System.Drawing.Size(305, 126);
+            this.Clear_button.Size = new System.Drawing.Size(309, 129);
             this.Clear_button.TabIndex = 8;
             this.Clear_button.Text = "清除";
             this.Clear_button.UseVisualStyleBackColor = false;
@@ -456,11 +462,11 @@
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.Cal_button, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(953, 3);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(952, 6);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(311, 248);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(309, 242);
             this.tableLayoutPanel9.TabIndex = 13;
             // 
             // tableLayoutPanel10
@@ -470,23 +476,24 @@
             this.tableLayoutPanel10.Controls.Add(this.pre_trackBar, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(205, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(203, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(103, 242);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(103, 236);
             this.tableLayoutPanel10.TabIndex = 7;
             // 
             // pre_trackBar
             // 
             this.pre_trackBar.BackColor = System.Drawing.Color.LightBlue;
             this.pre_trackBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pre_trackBar.Location = new System.Drawing.Point(3, 63);
+            this.pre_trackBar.Location = new System.Drawing.Point(0, 59);
+            this.pre_trackBar.Margin = new System.Windows.Forms.Padding(0);
             this.pre_trackBar.Maximum = 4;
             this.pre_trackBar.Name = "pre_trackBar";
             this.pre_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.pre_trackBar.Size = new System.Drawing.Size(97, 176);
+            this.pre_trackBar.Size = new System.Drawing.Size(103, 177);
             this.pre_trackBar.TabIndex = 21;
             this.pre_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -495,7 +502,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 60);
+            this.label8.Size = new System.Drawing.Size(97, 59);
             this.label8.TabIndex = 20;
             this.label8.Text = "精度";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -506,9 +513,10 @@
             this.Cal_button.BackColor = System.Drawing.Color.LightCyan;
             this.Cal_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cal_button.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Cal_button.Location = new System.Drawing.Point(3, 3);
+            this.Cal_button.Location = new System.Drawing.Point(0, 0);
+            this.Cal_button.Margin = new System.Windows.Forms.Padding(0);
             this.Cal_button.Name = "Cal_button";
-            this.Cal_button.Size = new System.Drawing.Size(196, 242);
+            this.Cal_button.Size = new System.Drawing.Size(200, 242);
             this.Cal_button.TabIndex = 6;
             this.Cal_button.Text = "计算";
             this.Cal_button.UseVisualStyleBackColor = false;
@@ -519,9 +527,9 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel7);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(944, 248);
+            this.groupBox1.Size = new System.Drawing.Size(937, 242);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "输入栏";
@@ -531,7 +539,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel7.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 0);
@@ -540,7 +548,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(938, 217);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(931, 211);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // label7
@@ -548,9 +556,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Cambria", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(859, 0);
+            this.label7.Location = new System.Drawing.Point(850, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 217);
+            this.label7.Size = new System.Drawing.Size(78, 211);
             this.label7.TabIndex = 14;
             this.label7.Text = "dx";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -561,7 +569,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 211);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 205);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -574,13 +582,13 @@
             this.tableLayoutPanel8.Controls.Add(this.up_num_comboBox, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.exp_textBox, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(131, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(130, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(722, 211);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(714, 205);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // down_num_comboBox
@@ -589,9 +597,9 @@
             this.down_num_comboBox.DataSource = this.input_bindingSource2;
             this.down_num_comboBox.DisplayMember = "Context";
             this.down_num_comboBox.FormattingEnabled = true;
-            this.down_num_comboBox.Location = new System.Drawing.Point(3, 164);
+            this.down_num_comboBox.Location = new System.Drawing.Point(3, 159);
             this.down_num_comboBox.Name = "down_num_comboBox";
-            this.down_num_comboBox.Size = new System.Drawing.Size(716, 32);
+            this.down_num_comboBox.Size = new System.Drawing.Size(708, 32);
             this.down_num_comboBox.TabIndex = 7;
             // 
             // input_bindingSource2
@@ -604,18 +612,18 @@
             this.up_num_comboBox.DataSource = this.input_bindingSource;
             this.up_num_comboBox.DisplayMember = "Context";
             this.up_num_comboBox.FormattingEnabled = true;
-            this.up_num_comboBox.Location = new System.Drawing.Point(3, 23);
+            this.up_num_comboBox.Location = new System.Drawing.Point(3, 22);
             this.up_num_comboBox.Name = "up_num_comboBox";
-            this.up_num_comboBox.Size = new System.Drawing.Size(716, 32);
+            this.up_num_comboBox.Size = new System.Drawing.Size(708, 32);
             this.up_num_comboBox.TabIndex = 6;
             // 
             // exp_textBox
             // 
             this.exp_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exp_textBox.Location = new System.Drawing.Point(3, 83);
+            this.exp_textBox.Location = new System.Drawing.Point(3, 80);
             this.exp_textBox.Name = "exp_textBox";
-            this.exp_textBox.Size = new System.Drawing.Size(716, 43);
+            this.exp_textBox.Size = new System.Drawing.Size(708, 43);
             this.exp_textBox.TabIndex = 4;
             // 
             // groupBox2
@@ -623,9 +631,9 @@
             this.groupBox2.Controls.Add(this.result_textBox);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 257);
+            this.groupBox2.Location = new System.Drawing.Point(6, 257);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(944, 132);
+            this.groupBox2.Size = new System.Drawing.Size(937, 129);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "输出栏";
@@ -635,10 +643,10 @@
             this.result_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.result_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.result_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.result_textBox.Location = new System.Drawing.Point(8, 55);
+            this.result_textBox.Location = new System.Drawing.Point(8, 54);
             this.result_textBox.Name = "result_textBox";
             this.result_textBox.ReadOnly = true;
-            this.result_textBox.Size = new System.Drawing.Size(930, 39);
+            this.result_textBox.Size = new System.Drawing.Size(923, 39);
             this.result_textBox.TabIndex = 0;
             // 
             // tabPage3
@@ -656,6 +664,7 @@
             // 
             // tableLayoutPanel12
             // 
+            this.tableLayoutPanel12.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -678,12 +687,12 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.Controls.Add(this.vclear_button, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(953, 257);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(952, 257);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(311, 132);
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(309, 129);
             this.tableLayoutPanel13.TabIndex = 13;
             // 
             // vclear_button
@@ -691,9 +700,10 @@
             this.vclear_button.BackColor = System.Drawing.Color.LightCyan;
             this.vclear_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vclear_button.Font = new System.Drawing.Font("方正舒体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vclear_button.Location = new System.Drawing.Point(3, 3);
+            this.vclear_button.Location = new System.Drawing.Point(0, 0);
+            this.vclear_button.Margin = new System.Windows.Forms.Padding(0);
             this.vclear_button.Name = "vclear_button";
-            this.vclear_button.Size = new System.Drawing.Size(305, 126);
+            this.vclear_button.Size = new System.Drawing.Size(309, 129);
             this.vclear_button.TabIndex = 15;
             this.vclear_button.Text = "清除";
             this.vclear_button.UseVisualStyleBackColor = false;
@@ -707,11 +717,11 @@
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel15, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.vcal_button, 0, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(953, 3);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(952, 6);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(311, 248);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(309, 242);
             this.tableLayoutPanel14.TabIndex = 13;
             // 
             // tableLayoutPanel15
@@ -721,23 +731,24 @@
             this.tableLayoutPanel15.Controls.Add(this.v_trackBar, 0, 1);
             this.tableLayoutPanel15.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(205, 3);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(203, 3);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 2;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(103, 242);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(103, 236);
             this.tableLayoutPanel15.TabIndex = 7;
             // 
             // v_trackBar
             // 
             this.v_trackBar.BackColor = System.Drawing.Color.LightBlue;
             this.v_trackBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.v_trackBar.Location = new System.Drawing.Point(3, 63);
+            this.v_trackBar.Location = new System.Drawing.Point(0, 59);
+            this.v_trackBar.Margin = new System.Windows.Forms.Padding(0);
             this.v_trackBar.Maximum = 4;
             this.v_trackBar.Name = "v_trackBar";
             this.v_trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.v_trackBar.Size = new System.Drawing.Size(97, 176);
+            this.v_trackBar.Size = new System.Drawing.Size(103, 177);
             this.v_trackBar.TabIndex = 21;
             this.v_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -746,7 +757,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 60);
+            this.label1.Size = new System.Drawing.Size(97, 59);
             this.label1.TabIndex = 20;
             this.label1.Text = "精度";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -757,9 +768,10 @@
             this.vcal_button.BackColor = System.Drawing.Color.LightCyan;
             this.vcal_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vcal_button.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vcal_button.Location = new System.Drawing.Point(3, 3);
+            this.vcal_button.Location = new System.Drawing.Point(0, 0);
+            this.vcal_button.Margin = new System.Windows.Forms.Padding(0);
             this.vcal_button.Name = "vcal_button";
-            this.vcal_button.Size = new System.Drawing.Size(196, 242);
+            this.vcal_button.Size = new System.Drawing.Size(200, 242);
             this.vcal_button.TabIndex = 13;
             this.vcal_button.Text = "计算";
             this.vcal_button.UseVisualStyleBackColor = false;
@@ -770,9 +782,9 @@
             this.groupBox7.Controls.Add(this.tableLayoutPanel17);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox7.Location = new System.Drawing.Point(3, 3);
+            this.groupBox7.Location = new System.Drawing.Point(6, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(944, 248);
+            this.groupBox7.Size = new System.Drawing.Size(937, 242);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "输入栏";
@@ -791,7 +803,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(938, 217);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(931, 211);
             this.tableLayoutPanel17.TabIndex = 3;
             // 
             // tableLayoutPanel19
@@ -802,11 +814,11 @@
             this.tableLayoutPanel19.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.vdown_comboBox, 1, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 147);
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 143);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(932, 67);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(925, 65);
             this.tableLayoutPanel19.TabIndex = 22;
             // 
             // label10
@@ -816,7 +828,7 @@
             this.label10.Font = new System.Drawing.Font("方正舒体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 67);
+            this.label10.Size = new System.Drawing.Size(132, 65);
             this.label10.TabIndex = 9;
             this.label10.Text = "下界";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -827,9 +839,9 @@
             this.vdown_comboBox.DataSource = this.input_bindingSource2;
             this.vdown_comboBox.DisplayMember = "Context";
             this.vdown_comboBox.FormattingEnabled = true;
-            this.vdown_comboBox.Location = new System.Drawing.Point(142, 22);
+            this.vdown_comboBox.Location = new System.Drawing.Point(141, 21);
             this.vdown_comboBox.Name = "vdown_comboBox";
-            this.vdown_comboBox.Size = new System.Drawing.Size(787, 32);
+            this.vdown_comboBox.Size = new System.Drawing.Size(781, 32);
             this.vdown_comboBox.TabIndex = 6;
             // 
             // tableLayoutPanel18
@@ -840,11 +852,11 @@
             this.tableLayoutPanel18.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.vup_comboBox, 1, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 75);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 73);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(932, 66);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(925, 64);
             this.tableLayoutPanel18.TabIndex = 21;
             // 
             // label9
@@ -854,7 +866,7 @@
             this.label9.Font = new System.Drawing.Font("方正舒体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 66);
+            this.label9.Size = new System.Drawing.Size(132, 64);
             this.label9.TabIndex = 8;
             this.label9.Text = "上界";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -865,9 +877,9 @@
             this.vup_comboBox.DataSource = this.input_bindingSource;
             this.vup_comboBox.DisplayMember = "Context";
             this.vup_comboBox.FormattingEnabled = true;
-            this.vup_comboBox.Location = new System.Drawing.Point(142, 21);
+            this.vup_comboBox.Location = new System.Drawing.Point(141, 20);
             this.vup_comboBox.Name = "vup_comboBox";
-            this.vup_comboBox.Size = new System.Drawing.Size(787, 32);
+            this.vup_comboBox.Size = new System.Drawing.Size(781, 32);
             this.vup_comboBox.TabIndex = 7;
             // 
             // tableLayoutPanel16
@@ -882,16 +894,16 @@
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(932, 66);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(925, 64);
             this.tableLayoutPanel16.TabIndex = 20;
             // 
             // vinput_exp_textBox
             // 
             this.vinput_exp_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.vinput_exp_textBox.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vinput_exp_textBox.Location = new System.Drawing.Point(142, 11);
+            this.vinput_exp_textBox.Location = new System.Drawing.Point(141, 10);
             this.vinput_exp_textBox.Name = "vinput_exp_textBox";
-            this.vinput_exp_textBox.Size = new System.Drawing.Size(787, 43);
+            this.vinput_exp_textBox.Size = new System.Drawing.Size(781, 43);
             this.vinput_exp_textBox.TabIndex = 4;
             // 
             // label3
@@ -901,7 +913,7 @@
             this.label3.Font = new System.Drawing.Font("方正舒体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 66);
+            this.label3.Size = new System.Drawing.Size(132, 64);
             this.label3.TabIndex = 5;
             this.label3.Text = "函数输入";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -911,9 +923,9 @@
             this.groupBox8.Controls.Add(this.tableLayoutPanel20);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Font = new System.Drawing.Font("方正舒体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox8.Location = new System.Drawing.Point(3, 257);
+            this.groupBox8.Location = new System.Drawing.Point(6, 257);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(944, 132);
+            this.groupBox8.Size = new System.Drawing.Size(937, 129);
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "输出栏";
@@ -933,7 +945,7 @@
             this.tableLayoutPanel20.RowCount = 2;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(938, 101);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(931, 98);
             this.tableLayoutPanel20.TabIndex = 0;
             // 
             // label12
@@ -941,9 +953,9 @@
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("方正舒体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(3, 50);
+            this.label12.Location = new System.Drawing.Point(3, 49);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 51);
+            this.label12.Size = new System.Drawing.Size(133, 49);
             this.label12.TabIndex = 14;
             this.label12.Text = "最小值";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -955,7 +967,7 @@
             this.label11.Font = new System.Drawing.Font("方正舒体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 50);
+            this.label11.Size = new System.Drawing.Size(133, 49);
             this.label11.TabIndex = 13;
             this.label11.Text = "最大值";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -965,10 +977,10 @@
             this.vminoutput_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.vminoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.vminoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vminoutput_textBox.Location = new System.Drawing.Point(143, 56);
+            this.vminoutput_textBox.Location = new System.Drawing.Point(142, 54);
             this.vminoutput_textBox.Name = "vminoutput_textBox";
             this.vminoutput_textBox.ReadOnly = true;
-            this.vminoutput_textBox.Size = new System.Drawing.Size(792, 39);
+            this.vminoutput_textBox.Size = new System.Drawing.Size(786, 39);
             this.vminoutput_textBox.TabIndex = 12;
             // 
             // vmaxoutput_textBox
@@ -976,10 +988,10 @@
             this.vmaxoutput_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.vmaxoutput_textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.vmaxoutput_textBox.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.vmaxoutput_textBox.Location = new System.Drawing.Point(143, 5);
+            this.vmaxoutput_textBox.Location = new System.Drawing.Point(142, 5);
             this.vmaxoutput_textBox.Name = "vmaxoutput_textBox";
             this.vmaxoutput_textBox.ReadOnly = true;
-            this.vmaxoutput_textBox.Size = new System.Drawing.Size(792, 39);
+            this.vmaxoutput_textBox.Size = new System.Drawing.Size(786, 39);
             this.vmaxoutput_textBox.TabIndex = 0;
             // 
             // tabPage4
@@ -1122,8 +1134,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox doutput_textBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button der_clear_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button der_cal_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -1139,6 +1149,8 @@
         private System.Windows.Forms.Button Clear_button;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label_help_info;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button der_clear_button;
     }
 }
 

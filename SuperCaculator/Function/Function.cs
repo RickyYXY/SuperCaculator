@@ -44,6 +44,10 @@ namespace Function
                         throw new FunctionException("计算不支持y作为自变量！", 8);
                     else
                         figures.Push(y.Value);
+                else if (unit == "e")
+                    figures.Push(Math.E);
+                else if (unit == "pi")
+                    figures.Push(Math.PI);
                 else if (double.TryParse(unit, out double result))
                     figures.Push(result);
                 else if (unit == "+" || unit == "-" || unit == "*"
@@ -93,7 +97,6 @@ namespace Function
                 }
             }
             double ans = figures.Pop();
-            figures.Clear();
             return ans;
         }
 
@@ -172,6 +175,13 @@ namespace Function
                     RPNExpression.Add(temp);
                     i = j - 1;
                 }
+                else if (temp == "e" && (i == exp.Length - 1 || exp[i + 1] != 'x')) //添加常数e
+                    RPNExpression.Add(temp);
+                else if (temp == "p" && i < exp.Length - 1 && exp[i + 1] == 'i') //添加常数pi
+                {
+                    RPNExpression.Add("pi");
+                    i++;
+                }    
                 else
                 {
                     bool flag2 = false;
@@ -321,7 +331,30 @@ namespace Function
             return 1 / Math.Tan(base.GetValue(x, y));
         }
     }
-
+    class Abs_function : Function //绝对值
+    {
+        public Abs_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Abs(base.GetValue(x, y));
+        }
+    }
+    class Ceil_function : Function //向上取整
+    {
+        public Ceil_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Ceiling(base.GetValue(x, y));
+        }
+    }
+    class Floor_function : Function //向下取整
+    {
+        public Floor_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Floor(base.GetValue(x, y));
+        }
+    }
     class FunctionException : Exception
     {
         public int Code { set; get; }
