@@ -3,6 +3,7 @@ using MatrixCalculateForm;
 using PaintForm;
 using StandardCalculateForm;
 using System;
+using EquationsSolvingModule;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,8 @@ namespace MainForm
         FunctionPaintForm paintForm = new FunctionPaintForm();
         DIForm diForm = new DIForm();
         MainMatrixForm matrixForm = new MainMatrixForm();
+        EquationsSolvingModule.MainForm solveEquForm=new EquationsSolvingModule.MainForm();
+
         public MainForm()
         {
             InitializeComponent();
@@ -66,6 +69,10 @@ namespace MainForm
                     case "matrix":
                         ShowForm(matrixForm);
                         break;
+                    case "solveEquation":
+                        ShowForm(solveEquForm);
+                        break;
+
                     default:
                         ShowForm(standardForm);
                         break;

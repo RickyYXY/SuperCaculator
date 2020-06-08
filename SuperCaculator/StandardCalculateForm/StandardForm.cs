@@ -50,6 +50,10 @@ namespace StandardCalculateForm
             {
                 equation += "/";
             }
+            else
+            {
+                equation += ((Button)sender).Text;
+            }
         }
 
         
@@ -98,7 +102,12 @@ namespace StandardCalculateForm
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (equation.Last() >= 48 && equation.Last() <= 57)
+            if (equation.Length == 1)
+            {
+                equation = "0";
+                richTxtEquation.Text = "0";
+            }
+            else if (equation.Last() >= 48 && equation.Last() <= 57)
             {
                 equation = equation.Substring(0, equation.Length - 1);
                 richTxtEquation.Text = richTxtEquation.Text.Substring(0, richTxtEquation.Text.Length - 1);
@@ -123,8 +132,6 @@ namespace StandardCalculateForm
                 richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
                 isClickPoint = false;
             }
-
-
         }
 
         private void Function_Click(object sender, EventArgs e)
@@ -133,6 +140,108 @@ namespace StandardCalculateForm
             equation = HandleEquation.RemoveLastUnit(equation) + ((ToolStripMenuItem)sender).Text + "(" + tail + ")";
             string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
             richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((ToolStripMenuItem)sender).Text + "(" + tail2 + ")";
+        }
+
+        private void ClickFFunction(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);            
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            switch (((ToolStripMenuItem)sender).Name)
+            {
+                case "toolStripMenuItemAbs":
+                    equation = HandleEquation.RemoveLastUnit(equation) + "|" + tail + "|";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "|" + tail2 + "|";
+                    break;
+                case "toolStripMenuItemFloor":
+                    equation = HandleEquation.RemoveLastUnit(equation) + "⌊" + tail + "⌋";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "⌊" + tail2 + "⌋";
+                    break;
+                case "toolStripMenuItemCeil":
+                    equation = HandleEquation.RemoveLastUnit(equation) + "⌈" + tail + "⌉";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "⌈" + tail2 + "⌉";
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+
+        private void ClickRand(object sender, EventArgs e)
+        {
+            Random rd = new Random();
+            int randInt = rd.Next(100,9999);
+            double randDouble = randInt / 10000.0;
+            string randString = randDouble.ToString();
+            if (HandleEquation.IsGeneralOp(equation.Last()))
+            {
+                equation += randString;
+                richTxtEquation.Text += randString;
+            }
+            else
+            {
+                equation = HandleEquation.RemoveLastUnit(equation) + randString;
+                richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + randString;
+            }
+        }
+
+        private void btnNega_Click(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            string removedTail = HandleEquation.RemoveLastUnit(equation);
+            string removedTail2 = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
+            if (removedTail.Length == 0)
+            {
+                equation = "-" + tail;
+                richTxtEquation.Text = "-" + tail2;
+            }
+            else if (removedTail.Last() == '-')
+            {
+                if (removedTail.Length == 1)
+                {
+                    equation =  tail;
+                    richTxtEquation.Text = tail2;
+                }
+                else
+                {
+                    equation = removedTail.Substring(0, removedTail.Length - 1) + "+" + tail;
+                    richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "+" + tail2;
+                }
+            }
+            else if(removedTail.Last() == '+')
+            {
+                equation = removedTail.Substring(0, removedTail.Length - 1) + "-" + tail;
+                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "-" + tail2;
+            }
+            else
+            {
+                equation = removedTail.Substring(0, removedTail.Length - 1) + "(-" + tail+")";
+                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "(-" + tail2+")";
+
+            }
+        }
+
+        private void Constant_Click(object sender, EventArgs e)
+        {
+            if (HandleEquation.IsGeneralOp(equation.Last()))
+            {
+                equation += ((Button)sender).Text;
+                richTxtEquation.Text += ((Button)sender).Text;
+            }
+            else
+            {
+                equation = HandleEquation.RemoveLastUnit(equation) + ((Button)sender).Text;
+                richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text;
+            }
+        }
+
+        private void btnFac_Click(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);
+            equation = HandleEquation.RemoveLastUnit(equation) +  "(" + tail + ")!";
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "(" + tail2 + ")!";
+
         }
     }
 }

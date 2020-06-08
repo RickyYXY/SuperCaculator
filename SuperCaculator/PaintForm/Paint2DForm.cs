@@ -13,13 +13,14 @@ namespace PaintForm
 {
     public partial class Paint2DForm : Form
     {
-        private Pen mypen;
+        private readonly Pen mypen;
+
         //private Pen pen_coordinate;
         //private Pen pen_coor;
         //Font font = new Font("Ink Free", 15f);
         //public delegate double CaculateHandler(double? x, double? y = 0);
         //public event CaculateHandler Caculate;
-        Func<double?, double?, double> Caculate;
+        readonly Func<double?, double?, double> Caculate;
         Painter2D painter;
 
         //private const double limit = 1024;
@@ -113,7 +114,7 @@ namespace PaintForm
             Close();
         }
 
-        private void button_save_Click(object sender, EventArgs e)
+        private void Button_save_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog save = new SaveFileDialog())
             {

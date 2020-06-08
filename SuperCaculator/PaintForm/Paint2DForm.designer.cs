@@ -80,7 +80,7 @@
             this.button_save.TabIndex = 15;
             this.button_save.Text = "保存";
             this.button_save.UseVisualStyleBackColor = false;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.button_save.Click += new System.EventHandler(this.Button_save_Click);
             // 
             // label_func
             // 

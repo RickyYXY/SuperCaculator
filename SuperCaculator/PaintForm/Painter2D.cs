@@ -33,10 +33,14 @@ namespace PaintForm
             this.Caculate = Caculate;
             this.minX = minX;
             this.maxX = maxX;
-            XLENGTH = (int)(pb.Width * 0.65);
-            YLENGTH = (int)(pb.Height * 0.65);
+            //XLENGTH = (int)(pb.Width * 0.65);
+            //YLENGTH = (int)(pb.Height * 0.65);
+            XLENGTH = (int)(pb.Width * 0.75);
+            YLENGTH = (int)(pb.Height * 0.75);
+            //XSTART = (int)(pb.Width * 0.15);
+            //YSTART = (int)(pb.Height * 0.85);
             XSTART = (int)(pb.Width * 0.15);
-            YSTART = (int)(pb.Height * 0.85);
+            YSTART = (int)(pb.Height * 0.9);
             dx = (maxX - minX) / XLENGTH;
         }
 
@@ -101,36 +105,49 @@ namespace PaintForm
 
         private void DrawCoor()
         {
-            Font font = new Font("方正舒体", 15f);
+            Font font1 = new Font("方正舒体", 15f);
+            Font font = new Font("方正舒体", 20f);
             Brush brush = Brushes.Black;
             Pen pen_coor = new Pen(Color.Gray);
-            Pen blackpen = new Pen(brush);
+            //Pen blackpen = new Pen(brush);
             float[] dashValues = { 5, 2 };
             pen_coor.DashPattern = dashValues;
-            StringFormat sf = new StringFormat();
-            sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
-            DrawPoint(XSTART, YSTART); 
-            DrawPoint(XSTART + XLENGTH, YSTART);
+            StringFormat sf = new StringFormat
+            {
+                FormatFlags = StringFormatFlags.DirectionRightToLeft
+            };
+            //DrawPoint(XSTART, YSTART); 
+            //DrawPoint(XSTART + XLENGTH, YSTART);
             //g.DrawLine(blackpen, XSTART, YSTART, XSTART, YSTART - (int)(YLENGTH * 1.2));
-            g.DrawLine(blackpen, XSTART - (int)(XLENGTH * 0.05), YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
+            //g.DrawLine(blackpen, XSTART - (int)(XLENGTH * 0.05), YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
+            g.DrawLine(pen_coor, XSTART, YSTART, XSTART + XLENGTH, YSTART);
             g.DrawLine(pen_coor, XSTART, YSTART, XSTART, YSTART - (int)((Caculate(minX, 0) - minY) / dy));
             g.DrawLine(pen_coor, XSTART + XLENGTH, YSTART, XSTART + XLENGTH, YSTART - (int)((Caculate(maxX, 0) - minY) / dy));
+            g.DrawLine(pen_coor, XSTART + XLENGTH, YSTART, XSTART + XLENGTH, YSTART - YLENGTH);
+            g.DrawLine(pen_coor, XSTART, YSTART, XSTART, YSTART - YLENGTH);
+            g.DrawLine(pen_coor, XSTART, YSTART - YLENGTH, XSTART + XLENGTH, YSTART - YLENGTH);
             //g.DrawLine(blackpen, XSTART, YSTART, XSTART + (int)(XLENGTH * 1.2), YSTART);
-            g.DrawString("F(x)=" + minY.ToString("#0.00"), font, brush, XSTART + (int)(XLENGTH * 1.1), YSTART);
-            g.DrawString("x", font, brush, XSTART + (int)(XLENGTH / 2), YSTART);
+            //g.DrawString("F(x)=" + minY.ToString("#0.00"), font, brush, XSTART + (int)(XLENGTH * 1.1), YSTART);
+            string info = "x: " + minX.ToString("#0.0") + " ~ " + maxX.ToString("#0.0");
+            g.DrawString(info, font, brush, XSTART + XLENGTH / 2 - info.Length * 7, YSTART);
+            g.DrawString("(F(x", font, brush, XSTART, YSTART - YLENGTH / 2, sf);
+            g.DrawString("min: " + minY.ToString("#0.0"), font1, brush, XSTART, YSTART, sf);
+            g.DrawString("max: " + maxY.ToString("#0.0"), font1, brush, XSTART, YSTART - YLENGTH, sf);
             if (maxY >= 0 && minY < 0)
             {
                 int zero = YSTART + (int)(minY / dy);
-                g.DrawLine(pen_coor, XSTART - (int)(XLENGTH * 0.05), zero, XSTART + (int)(XLENGTH * 1.2), zero);
-                g.DrawString("F(x)=0", font, brush, XSTART - (int)(XLENGTH * 0.05), zero, sf);
+                //g.DrawLine(pen_coor, XSTART - (int)(XLENGTH * 0.05), zero, XSTART + (int)(XLENGTH * 1.2), zero);
+                g.DrawLine(pen_coor, XSTART, zero, XSTART + XLENGTH, zero);
+                g.DrawString("F(x) = 0", font1, brush, XSTART + XLENGTH, zero/*, sf*/);
+                DrawPoint(Xstart + XLENGTH, zero);
             }
             //string sx, sy;
             //sx = NumToString(minX);
             //sy = NumToString(minY);
             //g.DrawString("(" + sy + " ," + sx + ")", font, brush, XSTART, YSTART, sf);
             //g.DrawString("Ymin: " + sy, font, brush, XSTART, YSTART, sf);
-            g.DrawString(minX.ToString("#0.00"), font, brush, XSTART, YSTART);
-            g.DrawString(maxX.ToString("#0.00"), font, brush, XSTART + XLENGTH, YSTART);
+            //g.DrawString(minX.ToString("#0.00"), font, brush, XSTART, YSTART);
+            //g.DrawString(maxX.ToString("#0.00"), font, brush, XSTART + XLENGTH, YSTART);
         }
 
         private string NumToString(double num)

@@ -160,7 +160,7 @@
             this.labely.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labely.AutoSize = true;
             this.labely.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labely.Location = new System.Drawing.Point(200, 0);
+            this.labely.Location = new System.Drawing.Point(250, 0);
             this.labely.Name = "labely";
             this.labely.Size = new System.Drawing.Size(37, 31);
             this.labely.TabIndex = 1;
@@ -712,7 +712,7 @@
             this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.tabControl);
             this.Name = "FunctionPaintForm";
-            this.Text = "FunctionPaintForm1";
+            this.Text = "函数绘图";
             this.tabControl.ResumeLayout(false);
             this.tabPage_2D.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2D)).EndInit();

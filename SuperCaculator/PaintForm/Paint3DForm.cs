@@ -14,8 +14,8 @@ namespace PaintForm
 {
     public partial class Paint3DForm : Form
     {
-        Func<double?, double?, double> Caculate;
-        Pen mypen;
+        readonly Func<double?, double?, double> Caculate;
+        readonly Pen mypen;
         public double minX { get; set; }
         public double maxX { get; set; }
         public double minY { get; set; }
@@ -23,7 +23,7 @@ namespace PaintForm
         //int XLENGTH, YLENGTH, ZLENGTH;
         //int Xstart, Ystart;
         //private const double sqrt2 = 1.4142135623730950488016887242;
-        private double rate;
+        private int rate;
 
         public Paint3DForm(string exp, Func<double?, double?, double> Caculate)
         {
