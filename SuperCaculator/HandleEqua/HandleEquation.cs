@@ -25,16 +25,35 @@ namespace HandleEqua
             if (equation.Length == 1) return equation;
 
             int startLocation = 0;
+            int bktCount = 0;
             
             for (int i = equation.Length-1; i >=0; i--)
             {
-                if (IsGeneralOp(equation[i])&&i!=equation.Length-1)
+                if (equation[i] == ')')
+                {
+                    bktCount++;
+                }
+                if (equation[i] == '(')
+                {
+                    bktCount--;
+                }
+                if (IsGeneralOp(equation[i])&&i!=equation.Length-1&&bktCount==0)
                 {
                     startLocation = i + 1;
                     break;
                 }
             }
-            return equation.Substring(startLocation, equation.Length - startLocation);            
+
+            string result= equation.Substring(startLocation, equation.Length - startLocation);
+            if (result[0] == '(' && result.Last() == ')')
+            {
+                result = result.Substring(1, result.Length - 2);
+            }
+            if (result.Length== 0)
+            {
+                result = "0";
+            }
+            return result;            
         }
 
         public static string RemoveLastUnit(string equation)
@@ -43,10 +62,19 @@ namespace HandleEqua
             if (equation.Length == 1) return "";
 
             int subLength = 0;
-           
+            int bktCount = 0;
+
             for (int i = equation.Length-1 ; i >=0; i--)
             {
-                if (IsGeneralOp(equation[i])&&i!=equation.Length-1)
+                if (equation[i] == ')')
+                {
+                    bktCount++;
+                }
+                if (equation[i] == '(')
+                {
+                    bktCount--;
+                }
+                if (IsGeneralOp(equation[i])&&i!=equation.Length-1 && bktCount == 0)
                 {
                     subLength = i+1;
                     break;

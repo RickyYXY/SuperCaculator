@@ -171,7 +171,7 @@
             this.btnLeftBkt.TabIndex = 4;
             this.btnLeftBkt.Text = "(";
             this.btnLeftBkt.UseVisualStyleBackColor = false;
-            this.btnLeftBkt.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnLeftBkt.Click += new System.EventHandler(this.ClickLeftBkt);
             // 
             // btnRightBkt
             // 
@@ -187,7 +187,7 @@
             this.btnRightBkt.TabIndex = 5;
             this.btnRightBkt.Text = ")";
             this.btnRightBkt.UseVisualStyleBackColor = false;
-            this.btnRightBkt.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnRightBkt.Click += new System.EventHandler(this.ClickRightBkt);
             // 
             // btnFac
             // 
