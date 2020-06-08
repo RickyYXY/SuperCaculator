@@ -49,17 +49,18 @@ namespace PaintForm
 
         public void Draw()
         {
+            //double[,] values;
+            //try
+            //{
+            //    values = GetValues();
+            //}
+            //catch(Exception e)
+            //{
+            //    MessageBox.Show(e.Message);
+            //    return;
+            //}
+            double[,] values = GetValues();
             DrawBox();
-            double[,] values;
-            try
-            {
-                values = GetValues();
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.Message);
-                return;
-            }
             DrawCoor();
             double dz = (maxZ - minZ) / ZLENGTH;
             int XL = (int)((XLENGTH - 1) / rate) + 1;
