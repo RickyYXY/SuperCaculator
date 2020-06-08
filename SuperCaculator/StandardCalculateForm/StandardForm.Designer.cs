@@ -171,7 +171,7 @@
             this.btnLeftBkt.TabIndex = 4;
             this.btnLeftBkt.Text = "(";
             this.btnLeftBkt.UseVisualStyleBackColor = false;
-            this.btnLeftBkt.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnLeftBkt.Click += new System.EventHandler(this.ClickLeftBkt);
             // 
             // btnRightBkt
             // 
@@ -187,7 +187,7 @@
             this.btnRightBkt.TabIndex = 5;
             this.btnRightBkt.Text = ")";
             this.btnRightBkt.UseVisualStyleBackColor = false;
-            this.btnRightBkt.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnRightBkt.Click += new System.EventHandler(this.ClickRightBkt);
             // 
             // btnFac
             // 
@@ -203,6 +203,7 @@
             this.btnFac.TabIndex = 6;
             this.btnFac.Text = "n!";
             this.btnFac.UseVisualStyleBackColor = false;
+            this.btnFac.Click += new System.EventHandler(this.btnFac_Click);
             // 
             // btnDiv
             // 
@@ -681,7 +682,7 @@
             // 
             this.toolStripMenuItemAbs.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemAbs.Name = "toolStripMenuItemAbs";
-            this.toolStripMenuItemAbs.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemAbs.Size = new System.Drawing.Size(197, 38);
             this.toolStripMenuItemAbs.Text = "| x |";
             this.toolStripMenuItemAbs.Click += new System.EventHandler(this.ClickFFunction);
             // 
@@ -689,7 +690,7 @@
             // 
             this.toolStripMenuItemFloor.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemFloor.Name = "toolStripMenuItemFloor";
-            this.toolStripMenuItemFloor.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemFloor.Size = new System.Drawing.Size(197, 38);
             this.toolStripMenuItemFloor.Text = "⌊x⌋";
             this.toolStripMenuItemFloor.Click += new System.EventHandler(this.ClickFFunction);
             // 
@@ -697,7 +698,7 @@
             // 
             this.toolStripMenuItemCeil.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemCeil.Name = "toolStripMenuItemCeil";
-            this.toolStripMenuItemCeil.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemCeil.Size = new System.Drawing.Size(197, 38);
             this.toolStripMenuItemCeil.Text = "⌈x⌉";
             this.toolStripMenuItemCeil.Click += new System.EventHandler(this.ClickFFunction);
             // 
@@ -705,7 +706,7 @@
             // 
             this.toolStripMenuItemRand.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemRand.Name = "toolStripMenuItemRand";
-            this.toolStripMenuItemRand.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemRand.Size = new System.Drawing.Size(197, 38);
             this.toolStripMenuItemRand.Text = "rand";
             this.toolStripMenuItemRand.Click += new System.EventHandler(this.ClickRand);
             // 
@@ -713,14 +714,14 @@
             // 
             this.toolStripMenuItemDms.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemDms.Name = "toolStripMenuItemDms";
-            this.toolStripMenuItemDms.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemDms.Size = new System.Drawing.Size(197, 38);
             this.toolStripMenuItemDms.Text = "→dms";
             // 
             // toolStripMenuItemDeg
             // 
             this.toolStripMenuItemDeg.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemDeg.Name = "toolStripMenuItemDeg";
-            this.toolStripMenuItemDeg.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemDeg.Size = new System.Drawing.Size(197, 38);
             this.toolStripMenuItemDeg.Text = "←deg";
             // 
             // toolStripMenuItem1
