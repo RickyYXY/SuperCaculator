@@ -331,7 +331,30 @@ namespace Function
             return 1 / Math.Tan(base.GetValue(x, y));
         }
     }
-
+    class Abs_function : Function //绝对值
+    {
+        public Abs_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Abs(base.GetValue(x, y));
+        }
+    }
+    class Ceil_function : Function //向上取整
+    {
+        public Ceil_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Ceiling(base.GetValue(x, y));
+        }
+    }
+    class Floor_function : Function //向下取整
+    {
+        public Floor_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Floor(base.GetValue(x, y));
+        }
+    }
     class FunctionException : Exception
     {
         public int Code { set; get; }

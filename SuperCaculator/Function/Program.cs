@@ -13,7 +13,7 @@ namespace Function
         {
             string exp = "sin(sin(x)*x^3)/45";
             string exp2 = "sin(x)*x^3";
-            string exp3 = "e+1+e";
+            string exp3 = "abs(-1)+ceil(0.5)-floor(0.5)";
             Function f = new Function(exp3);
             for (double x = 1; x < 100; x += 1)
             {
