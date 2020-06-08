@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionPaintForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_2D = new System.Windows.Forms.TabPage();
             this.pictureBox_2D = new System.Windows.Forms.PictureBox();
@@ -74,6 +75,9 @@
             this.label_Y_3D = new System.Windows.Forms.Label();
             this.textBox_minY_3D = new System.Windows.Forms.TextBox();
             this.label_X_3D = new System.Windows.Forms.Label();
+            this.tabPage_help = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage_2D.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2D)).BeginInit();
@@ -94,12 +98,15 @@
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tabPage_help.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPage_2D);
             this.tabControl.Controls.Add(this.tabPage_3D);
+            this.tabControl.Controls.Add(this.tabPage_help);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("方正舒体", 15F);
             this.tabControl.Location = new System.Drawing.Point(0, 0);
@@ -705,6 +712,41 @@
             this.label_X_3D.Text = "< x <";
             this.label_X_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage_help
+            // 
+            this.tabPage_help.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage_help.Controls.Add(this.tableLayoutPanel11);
+            this.tabPage_help.Location = new System.Drawing.Point(4, 36);
+            this.tabPage_help.Name = "tabPage_help";
+            this.tabPage_help.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_help.Size = new System.Drawing.Size(974, 713);
+            this.tabPage_help.TabIndex = 2;
+            this.tabPage_help.Text = "注意事项";
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(968, 707);
+            this.tableLayoutPanel11.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("方正舒体", 18F);
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(962, 707);
+            this.label1.TabIndex = 0;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
             // FunctionPaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -740,6 +782,9 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tabPage_help.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -792,5 +837,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label_range_3D;
+        private System.Windows.Forms.TabPage tabPage_help;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label label1;
     }
 }

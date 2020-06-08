@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>说明：
+1. 图像显示函数的局部，具体范围为定义域与值域围成的矩形（一元函数）/长方体（二元函数）。
+2. 自变量变化方向：x（一元、二元函数）自左向右增大，y（二元函数）自左下向右上增大。
+2. 函数图像会标明自变量的定义域，以及值域的上下限。
+3. 不支持值域达到正负无穷的函数。
+4. 若一元函数的值域包含0，则会在图像中标明F(x) = 0的直线。
+5. 一元函数绘图界面左下角标明了鼠标所在位置的点(x, y)的坐标。
+6. 二元函数绘图界面的密度指图像线条的密集程度，密度大小自左向右增大。</value>
+  </data>
 </root>
