@@ -234,5 +234,14 @@ namespace StandardCalculateForm
                 richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text;
             }
         }
+
+        private void btnFac_Click(object sender, EventArgs e)
+        {
+            string tail = HandleEquation.GetLastUnit(equation);
+            equation = HandleEquation.RemoveLastUnit(equation) +  "(" + tail + ")!";
+            string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+            richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "(" + tail2 + ")!";
+
+        }
     }
 }

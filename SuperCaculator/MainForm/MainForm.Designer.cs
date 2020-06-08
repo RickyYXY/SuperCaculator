@@ -62,7 +62,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.panel1.Size = new System.Drawing.Size(1924, 645);
+            this.panel1.Size = new System.Drawing.Size(956, 510);
             this.panel1.TabIndex = 1;
             // 
             // panelChild
@@ -71,10 +71,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChild.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelChild.Location = new System.Drawing.Point(332, 13);
+            this.panelChild.Location = new System.Drawing.Point(256, 13);
             this.panelChild.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(1575, 620);
+            this.panelChild.Size = new System.Drawing.Size(683, 485);
             this.panelChild.TabIndex = 1;
             // 
             // treeView1
@@ -109,7 +109,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode6,
             treeNode10});
-            this.treeView1.Size = new System.Drawing.Size(308, 618);
+            this.treeView1.Size = new System.Drawing.Size(231, 483);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MenuClick);
             // 
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 645);
+            this.ClientSize = new System.Drawing.Size(956, 510);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("方正舒体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
