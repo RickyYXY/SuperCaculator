@@ -67,8 +67,6 @@
             this.toolStripMenuItemFloor = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemCeil = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemRand = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemDms = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemDeg = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSin = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemCos = new System.Windows.Forms.ToolStripMenuItem();
@@ -681,9 +679,7 @@
             this.toolStripMenuItemAbs,
             this.toolStripMenuItemFloor,
             this.toolStripMenuItemCeil,
-            this.toolStripMenuItemRand,
-            this.toolStripMenuItemDms,
-            this.toolStripMenuItemDeg});
+            this.toolStripMenuItemRand});
             this.toolStripMenuItem2.Font = new System.Drawing.Font("方正舒体", 14F);
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(97, 43);
@@ -720,20 +716,6 @@
             this.toolStripMenuItemRand.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemRand.Text = "rand";
             this.toolStripMenuItemRand.Click += new System.EventHandler(this.ClickRand);
-            // 
-            // toolStripMenuItemDms
-            // 
-            this.toolStripMenuItemDms.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemDms.Name = "toolStripMenuItemDms";
-            this.toolStripMenuItemDms.Size = new System.Drawing.Size(270, 38);
-            this.toolStripMenuItemDms.Text = "→dms";
-            // 
-            // toolStripMenuItemDeg
-            // 
-            this.toolStripMenuItemDeg.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemDeg.Name = "toolStripMenuItemDeg";
-            this.toolStripMenuItemDeg.Size = new System.Drawing.Size(270, 38);
-            this.toolStripMenuItemDeg.Text = "←deg";
             // 
             // toolStripMenuItem1
             // 
@@ -999,8 +981,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFloor;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCeil;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRand;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDms;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDeg;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSec;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCsc;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;

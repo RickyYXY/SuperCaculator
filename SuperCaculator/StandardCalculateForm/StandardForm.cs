@@ -137,6 +137,12 @@ namespace StandardCalculateForm
                 richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
                 isClickPoint = false;
             }
+
+            if (equation == ""||richTxtEquation.Text=="")
+            {
+                equation = "0";
+                richTxtEquation.Text = "0";
+            }
         }
 
         private void Function_Click(object sender, EventArgs e)
