@@ -150,15 +150,15 @@ namespace StandardCalculateForm
             switch (((ToolStripMenuItem)sender).Name)
             {
                 case "toolStripMenuItemAbs":
-                    equation = HandleEquation.RemoveLastUnit(equation) + "|" + tail + "|";
+                    equation = HandleEquation.RemoveLastUnit(equation) + "abs(" + tail + ")";
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "|" + tail2 + "|";
                     break;
                 case "toolStripMenuItemFloor":
-                    equation = HandleEquation.RemoveLastUnit(equation) + "⌊" + tail + "⌋";
+                    equation = HandleEquation.RemoveLastUnit(equation) + "floor(" + tail + ")";
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "⌊" + tail2 + "⌋";
                     break;
                 case "toolStripMenuItemCeil":
-                    equation = HandleEquation.RemoveLastUnit(equation) + "⌈" + tail + "⌉";
+                    equation = HandleEquation.RemoveLastUnit(equation) + "ceil(" + tail + ")";
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "⌈" + tail2 + "⌉";
                     break;
                 default:
@@ -226,12 +226,26 @@ namespace StandardCalculateForm
         {
             if (HandleEquation.IsGeneralOp(equation.Last()))
             {
-                equation += ((Button)sender).Text;
+                if (((Button)sender).Text == "e")
+                {
+                    equation += "e";
+                }
+                else
+                {
+                    equation += "pi";
+                }                
                 richTxtEquation.Text += ((Button)sender).Text;
             }
             else
             {
-                equation = HandleEquation.RemoveLastUnit(equation) + ((Button)sender).Text;
+                if (((Button)sender).Text == "e")
+                {
+                    equation = HandleEquation.RemoveLastUnit(equation) + "e";
+                }
+                else
+                {
+                    equation = HandleEquation.RemoveLastUnit(equation) + "pi";
+                }               
                 richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text;
             }
         }
