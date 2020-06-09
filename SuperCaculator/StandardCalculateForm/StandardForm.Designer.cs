@@ -175,7 +175,7 @@
             this.btnLeftBkt.TabIndex = 4;
             this.btnLeftBkt.Text = "(";
             this.btnLeftBkt.UseVisualStyleBackColor = false;
-            this.btnLeftBkt.Click += new System.EventHandler(this.ClickLeftBkt);
+            this.btnLeftBkt.Click += new System.EventHandler(this.LeftBkt_Click);
             // 
             // btnRightBkt
             // 
@@ -191,7 +191,7 @@
             this.btnRightBkt.TabIndex = 5;
             this.btnRightBkt.Text = ")";
             this.btnRightBkt.UseVisualStyleBackColor = false;
-            this.btnRightBkt.Click += new System.EventHandler(this.ClickRightBkt);
+            this.btnRightBkt.Click += new System.EventHandler(this.RightBkt_Click);
             // 
             // btnFac
             // 
@@ -223,7 +223,7 @@
             this.btnDiv.TabIndex = 7;
             this.btnDiv.Text = "÷";
             this.btnDiv.UseVisualStyleBackColor = false;
-            this.btnDiv.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnDiv.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btn7
             // 
@@ -238,7 +238,7 @@
             this.btn7.TabIndex = 8;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
-            this.btn7.Click += new System.EventHandler(this.ClickDigit);
+            this.btn7.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn8
             // 
@@ -254,7 +254,7 @@
             this.btn8.TabIndex = 9;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
-            this.btn8.Click += new System.EventHandler(this.ClickDigit);
+            this.btn8.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn9
             // 
@@ -270,7 +270,7 @@
             this.btn9.TabIndex = 10;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
-            this.btn9.Click += new System.EventHandler(this.ClickDigit);
+            this.btn9.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnMult
             // 
@@ -286,7 +286,7 @@
             this.btnMult.TabIndex = 11;
             this.btnMult.Text = "×";
             this.btnMult.UseVisualStyleBackColor = false;
-            this.btnMult.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnMult.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btn4
             // 
@@ -302,7 +302,7 @@
             this.btn4.TabIndex = 12;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
-            this.btn4.Click += new System.EventHandler(this.ClickDigit);
+            this.btn4.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn5
             // 
@@ -318,7 +318,7 @@
             this.btn5.TabIndex = 13;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
-            this.btn5.Click += new System.EventHandler(this.ClickDigit);
+            this.btn5.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn6
             // 
@@ -334,7 +334,7 @@
             this.btn6.TabIndex = 14;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
-            this.btn6.Click += new System.EventHandler(this.ClickDigit);
+            this.btn6.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnSub
             // 
@@ -350,7 +350,7 @@
             this.btnSub.TabIndex = 15;
             this.btnSub.Text = "-";
             this.btnSub.UseVisualStyleBackColor = false;
-            this.btnSub.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnSub.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btn1
             // 
@@ -366,7 +366,7 @@
             this.btn1.TabIndex = 16;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.ClickDigit);
+            this.btn1.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn2
             // 
@@ -382,7 +382,7 @@
             this.btn2.TabIndex = 17;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
-            this.btn2.Click += new System.EventHandler(this.ClickDigit);
+            this.btn2.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn3
             // 
@@ -398,7 +398,7 @@
             this.btn3.TabIndex = 18;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
-            this.btn3.Click += new System.EventHandler(this.ClickDigit);
+            this.btn3.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnAdd
             // 
@@ -414,7 +414,7 @@
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnAdd.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btnNega
             // 
@@ -446,7 +446,7 @@
             this.btn0.TabIndex = 21;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
-            this.btn0.Click += new System.EventHandler(this.ClickDigit);
+            this.btn0.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnPoint
             // 
@@ -691,7 +691,7 @@
             this.toolStripMenuItemAbs.Name = "toolStripMenuItemAbs";
             this.toolStripMenuItemAbs.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemAbs.Text = "| x |";
-            this.toolStripMenuItemAbs.Click += new System.EventHandler(this.ClickFFunction);
+            this.toolStripMenuItemAbs.Click += new System.EventHandler(this.FFunction_Click);
             // 
             // toolStripMenuItemFloor
             // 
@@ -699,7 +699,7 @@
             this.toolStripMenuItemFloor.Name = "toolStripMenuItemFloor";
             this.toolStripMenuItemFloor.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemFloor.Text = "⌊x⌋";
-            this.toolStripMenuItemFloor.Click += new System.EventHandler(this.ClickFFunction);
+            this.toolStripMenuItemFloor.Click += new System.EventHandler(this.FFunction_Click);
             // 
             // toolStripMenuItemCeil
             // 
@@ -707,7 +707,7 @@
             this.toolStripMenuItemCeil.Name = "toolStripMenuItemCeil";
             this.toolStripMenuItemCeil.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemCeil.Text = "⌈x⌉";
-            this.toolStripMenuItemCeil.Click += new System.EventHandler(this.ClickFFunction);
+            this.toolStripMenuItemCeil.Click += new System.EventHandler(this.FFunction_Click);
             // 
             // toolStripMenuItemRand
             // 
@@ -715,7 +715,7 @@
             this.toolStripMenuItemRand.Name = "toolStripMenuItemRand";
             this.toolStripMenuItemRand.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemRand.Text = "rand";
-            this.toolStripMenuItemRand.Click += new System.EventHandler(this.ClickRand);
+            this.toolStripMenuItemRand.Click += new System.EventHandler(this.Rand_Click);
             // 
             // toolStripMenuItem1
             // 

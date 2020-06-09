@@ -19,7 +19,7 @@ namespace StandardCalculateForm
         }
 
 
-        public void ClickDigit(object sender, EventArgs e)
+        public void Digit_Click(object sender, EventArgs e)
         {
             if (richTxtEquation.Text == "0")
             {
@@ -35,7 +35,7 @@ namespace StandardCalculateForm
                 equation += ((Button)sender).Text;
             }
         }
-        public void ClickGeneralOp(object sender, EventArgs e)
+        public void GeneralOp_Click(object sender, EventArgs e)
         {
             if (HandleEquation.IsGeneralOp(equation.Last())) { return; }
             richTxtEquation.Text += ((Button)sender).Text;
@@ -146,7 +146,7 @@ namespace StandardCalculateForm
             richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((ToolStripMenuItem)sender).Text + "(" + tail2 + ")";
         }
 
-        private void ClickFFunction(object sender, EventArgs e)
+        private void FFunction_Click(object sender, EventArgs e)
         {
             string tail = HandleEquation.GetLastUnit(equation);
             string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
@@ -170,7 +170,7 @@ namespace StandardCalculateForm
 
         }
 
-        private void ClickRand(object sender, EventArgs e)
+        private void Rand_Click(object sender, EventArgs e)
         {
             Random rd = new Random();
             int randInt = rd.Next(100, 9999);
@@ -262,7 +262,7 @@ namespace StandardCalculateForm
 
         }
 
-        private void ClickLeftBkt(object sender, EventArgs e)
+        private void LeftBkt_Click(object sender, EventArgs e)
         {
             if (richTxtEquation.Text == "0")
             {
@@ -281,7 +281,7 @@ namespace StandardCalculateForm
             }
         }
 
-        private void ClickRightBkt(object sender, EventArgs e)
+        private void RightBkt_Click(object sender, EventArgs e)
         {
             if (bktAmount <= 0)
             {
