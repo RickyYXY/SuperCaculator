@@ -32,6 +32,10 @@ namespace StandardCalculateForm
             {
                 richTxtEquation.Text = equation = ((Button)sender).Text;
             }
+            else if (richTxtEquation.Text.Last() == ')')
+            {
+                return;
+            }
             else
             {
                 richTxtEquation.Text += ((Button)sender).Text;
@@ -86,7 +90,7 @@ namespace StandardCalculateForm
                 btnCube.Text = "x³";
                 btnSqr.Text = "x²";
                 btnPower.Text = "^";
-                btnLog.Text = "log";
+                btnLog.Text = "lg";
                 btnLn.Text = "ln";
             }
         }
@@ -295,6 +299,58 @@ namespace StandardCalculateForm
                 richTxtEquation.Text += ((Button)sender).Text;
                 equation += ((Button)sender).Text;
                 bktAmount--;
+            }
+        }
+
+        private void ShiftManaged_Click(object sender, EventArgs e)
+        {
+            switch (((Button)sender).Text){
+                case "x³":
+                    equation += "^3";
+                    richTxtEquation.Text += "^3";
+                    break;
+                case "x²":
+                    equation += "^2";
+                    richTxtEquation.Text += "^2";
+                    break;
+                case "^":
+                    equation += "^";
+                    richTxtEquation.Text += "^";
+                    break;
+                case "lg":
+                case "ln":
+                    string tail = HandleEquation.GetLastUnit(equation);
+                    equation = HandleEquation.RemoveLastUnit(equation) + ((Button)sender).Text + "(" + tail + ")";
+                    string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text + "(" + tail2 + ")";                   
+                    break;
+                case "²√x":
+                    equation += "^(1/2)";
+                    string tail3 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "²√(" + tail3 + ")";
+                    break;
+                case "³√x":
+                    equation += "^(1/3)";
+                    string tail4 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "³√(" + tail4 + ")";
+                    break;
+                case "1/x":
+                    string tail5 = HandleEquation.GetLastUnit(equation);
+                    equation = HandleEquation.RemoveLastUnit(equation) +  "1/(" + tail5 + ")";
+                    string tail6 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text)+ "1/(" + tail6 + ")";
+                    break;
+                case "log y(x)":
+                    break;
+                case "e^x":
+                    string tail7 = HandleEquation.GetLastUnit(equation);
+                    equation = HandleEquation.RemoveLastUnit(equation) + "e^(" + tail7 + ")";
+                    string tail8 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "e^(" + tail8 + ")";
+                    break;
+                default:
+                    break;
+
             }
         }
     }

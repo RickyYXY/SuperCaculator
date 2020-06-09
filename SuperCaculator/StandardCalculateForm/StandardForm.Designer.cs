@@ -496,6 +496,7 @@
             this.btnLn.TabIndex = 24;
             this.btnLn.Text = "ln";
             this.btnLn.UseVisualStyleBackColor = false;
+            this.btnLn.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnLog
             // 
@@ -509,8 +510,9 @@
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(142, 81);
             this.btnLog.TabIndex = 25;
-            this.btnLog.Text = "log";
+            this.btnLog.Text = "lg";
             this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnPower
             // 
@@ -526,6 +528,7 @@
             this.btnPower.TabIndex = 26;
             this.btnPower.Text = "^";
             this.btnPower.UseVisualStyleBackColor = false;
+            this.btnPower.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnSqr
             // 
@@ -541,6 +544,7 @@
             this.btnSqr.TabIndex = 27;
             this.btnSqr.Text = "x²";
             this.btnSqr.UseVisualStyleBackColor = false;
+            this.btnSqr.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnCube
             // 
@@ -556,6 +560,7 @@
             this.btnCube.TabIndex = 28;
             this.btnCube.Text = "x³";
             this.btnCube.UseVisualStyleBackColor = false;
+            this.btnCube.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnShift
             // 
