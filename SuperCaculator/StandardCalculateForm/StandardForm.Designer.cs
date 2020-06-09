@@ -85,6 +85,12 @@
             this.toolStripMenuItemArccot = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCosh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemTanh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCsch = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSech = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCoth = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -682,7 +688,7 @@
             // 
             this.toolStripMenuItemAbs.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemAbs.Name = "toolStripMenuItemAbs";
-            this.toolStripMenuItemAbs.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemAbs.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemAbs.Text = "| x |";
             this.toolStripMenuItemAbs.Click += new System.EventHandler(this.ClickFFunction);
             // 
@@ -690,7 +696,7 @@
             // 
             this.toolStripMenuItemFloor.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemFloor.Name = "toolStripMenuItemFloor";
-            this.toolStripMenuItemFloor.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemFloor.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemFloor.Text = "⌊x⌋";
             this.toolStripMenuItemFloor.Click += new System.EventHandler(this.ClickFFunction);
             // 
@@ -698,7 +704,7 @@
             // 
             this.toolStripMenuItemCeil.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemCeil.Name = "toolStripMenuItemCeil";
-            this.toolStripMenuItemCeil.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemCeil.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemCeil.Text = "⌈x⌉";
             this.toolStripMenuItemCeil.Click += new System.EventHandler(this.ClickFFunction);
             // 
@@ -706,7 +712,7 @@
             // 
             this.toolStripMenuItemRand.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemRand.Name = "toolStripMenuItemRand";
-            this.toolStripMenuItemRand.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemRand.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemRand.Text = "rand";
             this.toolStripMenuItemRand.Click += new System.EventHandler(this.ClickRand);
             // 
@@ -714,14 +720,14 @@
             // 
             this.toolStripMenuItemDms.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemDms.Name = "toolStripMenuItemDms";
-            this.toolStripMenuItemDms.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemDms.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemDms.Text = "→dms";
             // 
             // toolStripMenuItemDeg
             // 
             this.toolStripMenuItemDeg.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemDeg.Name = "toolStripMenuItemDeg";
-            this.toolStripMenuItemDeg.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemDeg.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemDeg.Text = "←deg";
             // 
             // toolStripMenuItem1
@@ -744,7 +750,7 @@
             // 
             this.toolStripMenuItemSin.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemSin.Name = "toolStripMenuItemSin";
-            this.toolStripMenuItemSin.Size = new System.Drawing.Size(159, 38);
+            this.toolStripMenuItemSin.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemSin.Text = "sin";
             this.toolStripMenuItemSin.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -752,7 +758,7 @@
             // 
             this.toolStripMenuItemCos.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemCos.Name = "toolStripMenuItemCos";
-            this.toolStripMenuItemCos.Size = new System.Drawing.Size(159, 38);
+            this.toolStripMenuItemCos.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemCos.Text = "cos";
             this.toolStripMenuItemCos.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -760,7 +766,7 @@
             // 
             this.toolStripMenuItemTan.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemTan.Name = "toolStripMenuItemTan";
-            this.toolStripMenuItemTan.Size = new System.Drawing.Size(159, 38);
+            this.toolStripMenuItemTan.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemTan.Text = "tan";
             this.toolStripMenuItemTan.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -768,7 +774,7 @@
             // 
             this.toolStripMenuItemCsc.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemCsc.Name = "toolStripMenuItemCsc";
-            this.toolStripMenuItemCsc.Size = new System.Drawing.Size(159, 38);
+            this.toolStripMenuItemCsc.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemCsc.Text = "csc";
             this.toolStripMenuItemCsc.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -776,7 +782,7 @@
             // 
             this.toolStripMenuItemSec.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemSec.Name = "toolStripMenuItemSec";
-            this.toolStripMenuItemSec.Size = new System.Drawing.Size(159, 38);
+            this.toolStripMenuItemSec.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemSec.Text = "sec";
             this.toolStripMenuItemSec.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -784,7 +790,7 @@
             // 
             this.toolStripMenuItemCot.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemCot.Name = "toolStripMenuItemCot";
-            this.toolStripMenuItemCot.Size = new System.Drawing.Size(159, 38);
+            this.toolStripMenuItemCot.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemCot.Text = "cot";
             this.toolStripMenuItemCot.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -806,7 +812,7 @@
             // 
             this.toolStripMenuItemArcsin.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArcsin.Name = "toolStripMenuItemArcsin";
-            this.toolStripMenuItemArcsin.Size = new System.Drawing.Size(200, 38);
+            this.toolStripMenuItemArcsin.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArcsin.Text = "arcsin";
             this.toolStripMenuItemArcsin.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -814,7 +820,7 @@
             // 
             this.toolStripMenuItemArccos.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArccos.Name = "toolStripMenuItemArccos";
-            this.toolStripMenuItemArccos.Size = new System.Drawing.Size(200, 38);
+            this.toolStripMenuItemArccos.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArccos.Text = "arccos";
             this.toolStripMenuItemArccos.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -822,7 +828,7 @@
             // 
             this.toolStripMenuItemArctan.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArctan.Name = "toolStripMenuItemArctan";
-            this.toolStripMenuItemArctan.Size = new System.Drawing.Size(200, 38);
+            this.toolStripMenuItemArctan.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArctan.Text = "arctan";
             this.toolStripMenuItemArctan.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -830,7 +836,7 @@
             // 
             this.toolStripMenuItemArccsc.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArccsc.Name = "toolStripMenuItemArccsc";
-            this.toolStripMenuItemArccsc.Size = new System.Drawing.Size(200, 38);
+            this.toolStripMenuItemArccsc.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArccsc.Text = "arccsc";
             this.toolStripMenuItemArccsc.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -838,7 +844,7 @@
             // 
             this.toolStripMenuItemArcsec.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArcsec.Name = "toolStripMenuItemArcsec";
-            this.toolStripMenuItemArcsec.Size = new System.Drawing.Size(200, 38);
+            this.toolStripMenuItemArcsec.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArcsec.Text = "arcsec";
             this.toolStripMenuItemArcsec.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -846,13 +852,20 @@
             // 
             this.toolStripMenuItemArccot.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArccot.Name = "toolStripMenuItemArccot";
-            this.toolStripMenuItemArccot.Size = new System.Drawing.Size(200, 38);
+            this.toolStripMenuItemArccot.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArccot.Text = "arccot";
             this.toolStripMenuItemArccot.Click += new System.EventHandler(this.Function_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemSinh,
+            this.toolStripMenuItemCosh,
+            this.toolStripMenuItemTanh,
+            this.toolStripMenuItemCsch,
+            this.toolStripMenuItemSech,
+            this.toolStripMenuItemCoth});
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(141, 43);
             this.toolStripMenuItem4.Text = "双曲函数";
@@ -863,6 +876,54 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(169, 43);
             this.toolStripMenuItem5.Text = "反双曲函数";
+            // 
+            // toolStripMenuItemSinh
+            // 
+            this.toolStripMenuItemSinh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemSinh.Name = "toolStripMenuItemSinh";
+            this.toolStripMenuItemSinh.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemSinh.Text = "sinh";
+            this.toolStripMenuItemSinh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemCosh
+            // 
+            this.toolStripMenuItemCosh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemCosh.Name = "toolStripMenuItemCosh";
+            this.toolStripMenuItemCosh.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemCosh.Text = "cosh";
+            this.toolStripMenuItemCosh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemTanh
+            // 
+            this.toolStripMenuItemTanh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemTanh.Name = "toolStripMenuItemTanh";
+            this.toolStripMenuItemTanh.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemTanh.Text = "tanh";
+            this.toolStripMenuItemTanh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemCsch
+            // 
+            this.toolStripMenuItemCsch.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemCsch.Name = "toolStripMenuItemCsch";
+            this.toolStripMenuItemCsch.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemCsch.Text = "csch";
+            this.toolStripMenuItemCsch.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemSech
+            // 
+            this.toolStripMenuItemSech.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemSech.Name = "toolStripMenuItemSech";
+            this.toolStripMenuItemSech.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemSech.Text = "sech";
+            this.toolStripMenuItemSech.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemCoth
+            // 
+            this.toolStripMenuItemCoth.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemCoth.Name = "toolStripMenuItemCoth";
+            this.toolStripMenuItemCoth.Size = new System.Drawing.Size(270, 38);
+            this.toolStripMenuItemCoth.Text = "coth";
+            this.toolStripMenuItemCoth.Click += new System.EventHandler(this.Function_Click);
             // 
             // StandardCalculat
             // 
@@ -946,6 +1007,12 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArccsc;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArctan;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArccot;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSinh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCosh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTanh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCsch;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSech;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoth;
     }
 }
 
