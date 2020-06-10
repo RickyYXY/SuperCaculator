@@ -12,8 +12,8 @@ namespace StandardCalculateForm
         bool isShift = false;
         bool isClickPoint = false;
         int bktAmount = 0;
-        SetLogBase setBaseForm = new SetLogBase();
-        string logBase;
+        Log someLog = new Log();
+        SetLogBase setBaseForm = new SetLogBase(new Log());
         
         public StandardCalculat()
         {
@@ -358,20 +358,27 @@ namespace StandardCalculateForm
                     break;
                 default:
                     string tail9 = HandleEquation.GetLastUnit(equation);
-                    equation = HandleEquation.RemoveLastUnit(equation) + "log"+logBase+"(" + tail9 + ")";
+                    equation = HandleEquation.RemoveLastUnit(equation) + "log"+someLog.LogBase+"(" + tail9 + ")";
                     string tail10 = HandleEquation.GetLastUnit(richTxtEquation.Text);
-                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "log " + logBase +  "(" + tail10 + ")";
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "log " + someLog.LogBase +  "(" + tail10 + ")";
                     break;
             }
         }
 
       
-
         private void MouseRight_Click(object sender, MouseEventArgs e)
         {
             if (((Button)sender).Text != "lg" && e.Button == MouseButtons.Right)
             {
-                setBaseForm.Show();
+                if (((Button)sender).Text == "log y(x)")
+                {
+                    someLog.LogBase = "";
+                }
+                if (setBaseForm.ShowDialog() == DialogResult.OK)
+                {
+                    someLog = setBaseForm.Somelog;
+                    btnLog.Text = "log " + someLog.LogBase + "(x)";
+                }                              
             }
         }
     }

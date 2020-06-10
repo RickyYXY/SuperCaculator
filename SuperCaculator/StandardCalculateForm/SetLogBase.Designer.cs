@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
+            this.bindingSourceLogbase = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLogbase)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -60,12 +63,17 @@
             // txtNum
             // 
             this.txtNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNum.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceLogbase, "LogBase", true));
             this.txtNum.Font = new System.Drawing.Font("方正舒体", 14F);
             this.txtNum.Location = new System.Drawing.Point(262, 80);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(189, 37);
             this.txtNum.TabIndex = 2;
             this.txtNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberInput);
+            // 
+            // bindingSourceLogbase
+            // 
+            this.bindingSourceLogbase.DataSource = typeof(StandardCalculateForm.Log);
             // 
             // SetLogBase
             // 
@@ -78,6 +86,7 @@
             this.Controls.Add(this.button1);
             this.Name = "SetLogBase";
             this.Text = "设置底数";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLogbase)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +97,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.BindingSource bindingSourceLogbase;
     }
 }

@@ -12,13 +12,15 @@ namespace StandardCalculateForm
 {
     public partial class SetLogBase : Form
     {
+        public Log Somelog { get; set; }
         public SetLogBase()
         {
             InitializeComponent();
         }
 
-        public SetLogBase(string number) : this(){
-            txtNum.Text = number;
+        public SetLogBase(Log log) : this(){
+            Somelog = log;
+            bindingSourceLogbase.DataSource = log;
         }
 
         private void NumberInput(object sender, KeyPressEventArgs e)
