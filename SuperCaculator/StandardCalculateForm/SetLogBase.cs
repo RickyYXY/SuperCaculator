@@ -16,6 +16,7 @@ namespace StandardCalculateForm
         public SetLogBase()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
         }
 
         public SetLogBase(Log log) : this(){
