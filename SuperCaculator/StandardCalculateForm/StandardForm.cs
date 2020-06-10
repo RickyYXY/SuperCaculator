@@ -5,13 +5,16 @@ using System.Windows.Forms;
 
 namespace StandardCalculateForm
 {
-
+    
     public partial class StandardCalculat : Form
     {
         string equation = "0";
         bool isShift = false;
         bool isClickPoint = false;
         int bktAmount = 0;
+        SetLogBase setBaseForm = new SetLogBase();
+        string logBase;
+        
         public StandardCalculat()
         {
             InitializeComponent();
@@ -343,18 +346,32 @@ namespace StandardCalculateForm
                     equation = HandleEquation.RemoveLastUnit(equation) +  "1/(" + tail5 + ")";
                     string tail6 = HandleEquation.GetLastUnit(richTxtEquation.Text);
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text)+ "1/(" + tail6 + ")";
-                    break;
-                case "log y(x)":
-                    break;
+                    break;               
                 case "e^x":
                     string tail7 = HandleEquation.GetLastUnit(equation);
                     equation = HandleEquation.RemoveLastUnit(equation) + "e^(" + tail7 + ")";
                     string tail8 = HandleEquation.GetLastUnit(richTxtEquation.Text);
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "e^(" + tail8 + ")";
                     break;
-                default:
+                case "log y(x)":
+                    MessageBox.Show("请先右键此按钮设置底数。");
                     break;
+                default:
+                    string tail9 = HandleEquation.GetLastUnit(equation);
+                    equation = HandleEquation.RemoveLastUnit(equation) + "log"+logBase+"(" + tail9 + ")";
+                    string tail10 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "log " + logBase +  "(" + tail10 + ")";
+                    break;
+            }
+        }
 
+      
+
+        private void MouseRight_Click(object sender, MouseEventArgs e)
+        {
+            if (((Button)sender).Text != "lg" && e.Button == MouseButtons.Right)
+            {
+                setBaseForm.Show();
             }
         }
     }

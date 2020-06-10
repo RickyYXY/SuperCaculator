@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SetLogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLogBase.Designer.cs">
+      <DependentUpon>SetLogBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="StandardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SetLogBase.resx">
+      <DependentUpon>SetLogBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StandardForm.resx">
       <DependentUpon>StandardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +75,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\SomeLog.datasource" />
+    <None Include="Properties\DataSources\StandardCalculat.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
