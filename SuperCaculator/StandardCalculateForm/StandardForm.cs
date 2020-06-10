@@ -317,9 +317,14 @@ namespace StandardCalculateForm
                     richTxtEquation.Text += "^";
                     break;
                 case "lg":
-                case "ln":
                     string tail = HandleEquation.GetLastUnit(equation);
-                    equation = HandleEquation.RemoveLastUnit(equation) + ((Button)sender).Text + "(" + tail + ")";
+                    equation = HandleEquation.RemoveLastUnit(equation) + "log10(" + tail + ")";
+                    string tail0 = HandleEquation.GetLastUnit(richTxtEquation.Text);
+                    richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text + "(" + tail0 + ")";
+                    break;
+                case "ln":
+                    string tail1 = HandleEquation.GetLastUnit(equation);
+                    equation = HandleEquation.RemoveLastUnit(equation) + ((Button)sender).Text + "(" + tail1 + ")";
                     string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + ((Button)sender).Text + "(" + tail2 + ")";                   
                     break;
