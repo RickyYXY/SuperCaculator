@@ -67,6 +67,15 @@ namespace Function
                         case "floor":
                             Floor_function floor_Function = new Floor_function(exp);
                             return floor_Function.GetValue(x, y);
+                        case "arcsin":
+                            Asin_function asin_Function = new Asin_function(exp);
+                            return asin_Function.GetValue(x, y);
+                        case "arccos":
+                            Asin_function acos_Function = new Asin_function(exp);
+                            return acos_Function.GetValue(x, y);
+                        case "arctan":
+                            Asin_function atan_Function = new Asin_function(exp);
+                            return atan_Function.GetValue(x, y);
                     }
                 }
             }

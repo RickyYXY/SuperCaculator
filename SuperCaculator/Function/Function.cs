@@ -355,6 +355,31 @@ namespace Function
             return Math.Floor(base.GetValue(x, y));
         }
     }
+
+    class Asin_function : Function //向下取整
+    {
+        public Asin_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Asin(base.GetValue(x, y));
+        }
+    }
+    class Acos_function : Function //向下取整
+    {
+        public Acos_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Acos(base.GetValue(x, y));
+        }
+    }
+    class Atan_function : Function //向下取整
+    {
+        public Atan_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Atan(base.GetValue(x, y));
+        }
+    }
     class FunctionException : Exception
     {
         public int Code { set; get; }
