@@ -9,7 +9,8 @@ namespace Function
     public class FuncMatch
     {
         public static readonly string[] func_names = 
-            { "sin", "cos", "tan", "exp", "log" ,"ln","csc","sec","cot","abs","ceil","floor"};
+            { "sin", "cos", "tan", "exp", "log" ,"ln","csc","sec","cot","abs","ceil","floor",
+        "arcsin","arccos","arctan","arccsc","arcsec","arccot"};
         
         public static double MatchFuncCal(string input, double? x,double? y)
         {
@@ -71,11 +72,20 @@ namespace Function
                             Asin_function asin_Function = new Asin_function(exp);
                             return asin_Function.GetValue(x, y);
                         case "arccos":
-                            Asin_function acos_Function = new Asin_function(exp);
+                            Acos_function acos_Function = new Acos_function(exp);
                             return acos_Function.GetValue(x, y);
                         case "arctan":
-                            Asin_function atan_Function = new Asin_function(exp);
+                            Atan_function atan_Function = new Atan_function(exp);
                             return atan_Function.GetValue(x, y);
+                        case "arccsc":
+                            Acsc_function acsc_Function = new Acsc_function(exp);
+                            return acsc_Function.GetValue(x, y);
+                        case "arcsec":
+                            Asec_function asec_Function = new Asec_function(exp);
+                            return asec_Function.GetValue(x, y);
+                        case "arccot":
+                            Acot_function acot_Function = new Acot_function(exp);
+                            return acot_Function.GetValue(x, y);
                     }
                 }
             }

@@ -181,7 +181,7 @@ namespace Function
                 {
                     RPNExpression.Add("pi");
                     i++;
-                }    
+                }
                 else
                 {
                     bool flag2 = false;
@@ -378,6 +378,34 @@ namespace Function
         public override double GetValue(double? x, double? y)
         {
             return Math.Atan(base.GetValue(x, y));
+        }
+    }
+    class Acsc_function : Function //向下取整
+    {
+        public Acsc_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Asin(1 / base.GetValue(x, y));
+        }
+    }
+    class Asec_function : Function //向下取整
+    {
+        public Asec_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Acos(1 / base.GetValue(x, y));
+        }
+    }
+    class Acot_function : Function //向下取整
+    {
+        public Acot_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            double temp = base.GetValue(x, y);
+            if (temp > 0)
+                return Math.Atan(1 / temp);
+            else
+                return Math.Atan(1 / temp) + Math.PI;
         }
     }
     class FunctionException : Exception
