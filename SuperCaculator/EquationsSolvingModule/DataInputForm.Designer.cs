@@ -42,11 +42,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,9 +93,12 @@
             // 
             // lblWarn
             // 
+            this.lblWarn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWarn.AutoSize = true;
             this.lblWarn.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblWarn.Location = new System.Drawing.Point(8, 290);
+            this.lblWarn.Location = new System.Drawing.Point(3, 10);
             this.lblWarn.Name = "lblWarn";
             this.lblWarn.Size = new System.Drawing.Size(204, 17);
             this.lblWarn.TabIndex = 4;
@@ -104,17 +109,17 @@
             this.txtPower.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPower.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPower.Location = new System.Drawing.Point(6, 20);
+            this.txtPower.Location = new System.Drawing.Point(3, 27);
             this.txtPower.Multiline = true;
             this.txtPower.Name = "txtPower";
-            this.txtPower.Size = new System.Drawing.Size(234, 244);
+            this.txtPower.Size = new System.Drawing.Size(264, 244);
             this.txtPower.TabIndex = 3;
             // 
             // lblInputPow
             // 
             this.lblInputPow.AutoSize = true;
             this.lblInputPow.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblInputPow.Location = new System.Drawing.Point(3, 0);
+            this.lblInputPow.Location = new System.Drawing.Point(3, 7);
             this.lblInputPow.Name = "lblInputPow";
             this.lblInputPow.Size = new System.Drawing.Size(152, 17);
             this.lblInputPow.TabIndex = 2;
@@ -124,7 +129,7 @@
             // 
             this.lblInCoe.AutoSize = true;
             this.lblInCoe.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblInCoe.Location = new System.Drawing.Point(3, 0);
+            this.lblInCoe.Location = new System.Drawing.Point(3, 7);
             this.lblInCoe.Name = "lblInCoe";
             this.lblInCoe.Size = new System.Drawing.Size(152, 17);
             this.lblInCoe.TabIndex = 0;
@@ -136,10 +141,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCoe.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCoe.Location = new System.Drawing.Point(6, 20);
+            this.txtCoe.Location = new System.Drawing.Point(6, 27);
             this.txtCoe.Multiline = true;
             this.txtCoe.Name = "txtCoe";
-            this.txtCoe.Size = new System.Drawing.Size(235, 244);
+            this.txtCoe.Size = new System.Drawing.Size(253, 244);
             this.txtCoe.TabIndex = 1;
             // 
             // btnConfirm
@@ -170,13 +175,14 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.lblInCoe);
             this.panel2.Controls.Add(this.txtCoe);
-            this.panel2.Location = new System.Drawing.Point(11, 11);
+            this.panel2.Location = new System.Drawing.Point(11, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 267);
+            this.panel2.Size = new System.Drawing.Size(262, 274);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -185,19 +191,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.lblInputPow);
             this.panel3.Controls.Add(this.txtPower);
-            this.panel3.Location = new System.Drawing.Point(283, 11);
+            this.panel3.Location = new System.Drawing.Point(276, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(243, 267);
+            this.panel3.Size = new System.Drawing.Size(274, 274);
             this.panel3.TabIndex = 6;
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.lblWarn);
             this.panel4.Location = new System.Drawing.Point(1, 67);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(557, 323);
@@ -205,8 +212,7 @@
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.btnCancel);
@@ -215,6 +221,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(556, 62);
             this.panel5.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.lblWarn);
+            this.panel6.Location = new System.Drawing.Point(11, 280);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(539, 36);
+            this.panel6.TabIndex = 7;
             // 
             // DataInputForm
             // 
@@ -235,8 +251,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +274,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

@@ -67,8 +67,6 @@
             this.toolStripMenuItemFloor = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemCeil = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemRand = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemDms = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemDeg = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSin = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemCos = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +82,19 @@
             this.toolStripMenuItemArcsec = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemArccot = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCosh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemTanh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCsch = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSech = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCoth = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemArsinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemArcosh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemArtanh = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemArcsch = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemArsech = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemArcoth = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -171,7 +181,7 @@
             this.btnLeftBkt.TabIndex = 4;
             this.btnLeftBkt.Text = "(";
             this.btnLeftBkt.UseVisualStyleBackColor = false;
-            this.btnLeftBkt.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnLeftBkt.Click += new System.EventHandler(this.LeftBkt_Click);
             // 
             // btnRightBkt
             // 
@@ -187,7 +197,7 @@
             this.btnRightBkt.TabIndex = 5;
             this.btnRightBkt.Text = ")";
             this.btnRightBkt.UseVisualStyleBackColor = false;
-            this.btnRightBkt.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnRightBkt.Click += new System.EventHandler(this.RightBkt_Click);
             // 
             // btnFac
             // 
@@ -219,7 +229,7 @@
             this.btnDiv.TabIndex = 7;
             this.btnDiv.Text = "÷";
             this.btnDiv.UseVisualStyleBackColor = false;
-            this.btnDiv.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnDiv.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btn7
             // 
@@ -234,7 +244,7 @@
             this.btn7.TabIndex = 8;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
-            this.btn7.Click += new System.EventHandler(this.ClickDigit);
+            this.btn7.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn8
             // 
@@ -250,7 +260,7 @@
             this.btn8.TabIndex = 9;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
-            this.btn8.Click += new System.EventHandler(this.ClickDigit);
+            this.btn8.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn9
             // 
@@ -266,7 +276,7 @@
             this.btn9.TabIndex = 10;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
-            this.btn9.Click += new System.EventHandler(this.ClickDigit);
+            this.btn9.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnMult
             // 
@@ -282,7 +292,7 @@
             this.btnMult.TabIndex = 11;
             this.btnMult.Text = "×";
             this.btnMult.UseVisualStyleBackColor = false;
-            this.btnMult.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnMult.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btn4
             // 
@@ -298,7 +308,7 @@
             this.btn4.TabIndex = 12;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
-            this.btn4.Click += new System.EventHandler(this.ClickDigit);
+            this.btn4.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn5
             // 
@@ -314,7 +324,7 @@
             this.btn5.TabIndex = 13;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
-            this.btn5.Click += new System.EventHandler(this.ClickDigit);
+            this.btn5.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn6
             // 
@@ -330,7 +340,7 @@
             this.btn6.TabIndex = 14;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
-            this.btn6.Click += new System.EventHandler(this.ClickDigit);
+            this.btn6.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnSub
             // 
@@ -346,7 +356,7 @@
             this.btnSub.TabIndex = 15;
             this.btnSub.Text = "-";
             this.btnSub.UseVisualStyleBackColor = false;
-            this.btnSub.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnSub.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btn1
             // 
@@ -362,7 +372,7 @@
             this.btn1.TabIndex = 16;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.ClickDigit);
+            this.btn1.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn2
             // 
@@ -378,7 +388,7 @@
             this.btn2.TabIndex = 17;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
-            this.btn2.Click += new System.EventHandler(this.ClickDigit);
+            this.btn2.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btn3
             // 
@@ -394,7 +404,7 @@
             this.btn3.TabIndex = 18;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
-            this.btn3.Click += new System.EventHandler(this.ClickDigit);
+            this.btn3.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnAdd
             // 
@@ -410,7 +420,7 @@
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.ClickGeneralOp);
+            this.btnAdd.Click += new System.EventHandler(this.GeneralOp_Click);
             // 
             // btnNega
             // 
@@ -442,7 +452,7 @@
             this.btn0.TabIndex = 21;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
-            this.btn0.Click += new System.EventHandler(this.ClickDigit);
+            this.btn0.Click += new System.EventHandler(this.Digit_Click);
             // 
             // btnPoint
             // 
@@ -490,6 +500,7 @@
             this.btnLn.TabIndex = 24;
             this.btnLn.Text = "ln";
             this.btnLn.UseVisualStyleBackColor = false;
+            this.btnLn.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnLog
             // 
@@ -503,8 +514,10 @@
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(142, 81);
             this.btnLog.TabIndex = 25;
-            this.btnLog.Text = "log";
+            this.btnLog.Text = "lg";
             this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.ShiftManaged_Click);
+            this.btnLog.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseRight_Click);
             // 
             // btnPower
             // 
@@ -520,6 +533,7 @@
             this.btnPower.TabIndex = 26;
             this.btnPower.Text = "^";
             this.btnPower.UseVisualStyleBackColor = false;
+            this.btnPower.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnSqr
             // 
@@ -535,6 +549,7 @@
             this.btnSqr.TabIndex = 27;
             this.btnSqr.Text = "x²";
             this.btnSqr.UseVisualStyleBackColor = false;
+            this.btnSqr.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnCube
             // 
@@ -550,6 +565,7 @@
             this.btnCube.TabIndex = 28;
             this.btnCube.Text = "x³";
             this.btnCube.UseVisualStyleBackColor = false;
+            this.btnCube.Click += new System.EventHandler(this.ShiftManaged_Click);
             // 
             // btnShift
             // 
@@ -670,9 +686,7 @@
             this.toolStripMenuItemAbs,
             this.toolStripMenuItemFloor,
             this.toolStripMenuItemCeil,
-            this.toolStripMenuItemRand,
-            this.toolStripMenuItemDms,
-            this.toolStripMenuItemDeg});
+            this.toolStripMenuItemRand});
             this.toolStripMenuItem2.Font = new System.Drawing.Font("方正舒体", 14F);
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(97, 43);
@@ -682,47 +696,33 @@
             // 
             this.toolStripMenuItemAbs.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemAbs.Name = "toolStripMenuItemAbs";
-            this.toolStripMenuItemAbs.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemAbs.Size = new System.Drawing.Size(175, 38);
             this.toolStripMenuItemAbs.Text = "| x |";
-            this.toolStripMenuItemAbs.Click += new System.EventHandler(this.ClickFFunction);
+            this.toolStripMenuItemAbs.Click += new System.EventHandler(this.FFunction_Click);
             // 
             // toolStripMenuItemFloor
             // 
             this.toolStripMenuItemFloor.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemFloor.Name = "toolStripMenuItemFloor";
-            this.toolStripMenuItemFloor.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemFloor.Size = new System.Drawing.Size(175, 38);
             this.toolStripMenuItemFloor.Text = "⌊x⌋";
-            this.toolStripMenuItemFloor.Click += new System.EventHandler(this.ClickFFunction);
+            this.toolStripMenuItemFloor.Click += new System.EventHandler(this.FFunction_Click);
             // 
             // toolStripMenuItemCeil
             // 
             this.toolStripMenuItemCeil.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemCeil.Name = "toolStripMenuItemCeil";
-            this.toolStripMenuItemCeil.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemCeil.Size = new System.Drawing.Size(175, 38);
             this.toolStripMenuItemCeil.Text = "⌈x⌉";
-            this.toolStripMenuItemCeil.Click += new System.EventHandler(this.ClickFFunction);
+            this.toolStripMenuItemCeil.Click += new System.EventHandler(this.FFunction_Click);
             // 
             // toolStripMenuItemRand
             // 
             this.toolStripMenuItemRand.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemRand.Name = "toolStripMenuItemRand";
-            this.toolStripMenuItemRand.Size = new System.Drawing.Size(197, 38);
+            this.toolStripMenuItemRand.Size = new System.Drawing.Size(175, 38);
             this.toolStripMenuItemRand.Text = "rand";
-            this.toolStripMenuItemRand.Click += new System.EventHandler(this.ClickRand);
-            // 
-            // toolStripMenuItemDms
-            // 
-            this.toolStripMenuItemDms.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemDms.Name = "toolStripMenuItemDms";
-            this.toolStripMenuItemDms.Size = new System.Drawing.Size(197, 38);
-            this.toolStripMenuItemDms.Text = "→dms";
-            // 
-            // toolStripMenuItemDeg
-            // 
-            this.toolStripMenuItemDeg.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemDeg.Name = "toolStripMenuItemDeg";
-            this.toolStripMenuItemDeg.Size = new System.Drawing.Size(197, 38);
-            this.toolStripMenuItemDeg.Text = "←deg";
+            this.toolStripMenuItemRand.Click += new System.EventHandler(this.Rand_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -853,16 +853,126 @@
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemSinh,
+            this.toolStripMenuItemCosh,
+            this.toolStripMenuItemTanh,
+            this.toolStripMenuItemCsch,
+            this.toolStripMenuItemSech,
+            this.toolStripMenuItemCoth});
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(141, 43);
             this.toolStripMenuItem4.Text = "双曲函数";
             // 
+            // toolStripMenuItemSinh
+            // 
+            this.toolStripMenuItemSinh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemSinh.Name = "toolStripMenuItemSinh";
+            this.toolStripMenuItemSinh.Size = new System.Drawing.Size(174, 38);
+            this.toolStripMenuItemSinh.Text = "sinh";
+            this.toolStripMenuItemSinh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemCosh
+            // 
+            this.toolStripMenuItemCosh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemCosh.Name = "toolStripMenuItemCosh";
+            this.toolStripMenuItemCosh.Size = new System.Drawing.Size(174, 38);
+            this.toolStripMenuItemCosh.Text = "cosh";
+            this.toolStripMenuItemCosh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemTanh
+            // 
+            this.toolStripMenuItemTanh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemTanh.Name = "toolStripMenuItemTanh";
+            this.toolStripMenuItemTanh.Size = new System.Drawing.Size(174, 38);
+            this.toolStripMenuItemTanh.Text = "tanh";
+            this.toolStripMenuItemTanh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemCsch
+            // 
+            this.toolStripMenuItemCsch.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemCsch.Name = "toolStripMenuItemCsch";
+            this.toolStripMenuItemCsch.Size = new System.Drawing.Size(174, 38);
+            this.toolStripMenuItemCsch.Text = "csch";
+            this.toolStripMenuItemCsch.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemSech
+            // 
+            this.toolStripMenuItemSech.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemSech.Name = "toolStripMenuItemSech";
+            this.toolStripMenuItemSech.Size = new System.Drawing.Size(174, 38);
+            this.toolStripMenuItemSech.Text = "sech";
+            this.toolStripMenuItemSech.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemCoth
+            // 
+            this.toolStripMenuItemCoth.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemCoth.Name = "toolStripMenuItemCoth";
+            this.toolStripMenuItemCoth.Size = new System.Drawing.Size(174, 38);
+            this.toolStripMenuItemCoth.Text = "coth";
+            this.toolStripMenuItemCoth.Click += new System.EventHandler(this.Function_Click);
+            // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemArsinh,
+            this.toolStripMenuItemArcosh,
+            this.toolStripMenuItemArtanh,
+            this.toolStripMenuItemArcsch,
+            this.toolStripMenuItemArsech,
+            this.toolStripMenuItemArcoth});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(169, 43);
             this.toolStripMenuItem5.Text = "反双曲函数";
+            // 
+            // toolStripMenuItemArsinh
+            // 
+            this.toolStripMenuItemArsinh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemArsinh.Name = "toolStripMenuItemArsinh";
+            this.toolStripMenuItemArsinh.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArsinh.Text = "arsinh";
+            this.toolStripMenuItemArsinh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemArcosh
+            // 
+            this.toolStripMenuItemArcosh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemArcosh.Name = "toolStripMenuItemArcosh";
+            this.toolStripMenuItemArcosh.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArcosh.Text = "arcosh";
+            this.toolStripMenuItemArcosh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemArtanh
+            // 
+            this.toolStripMenuItemArtanh.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemArtanh.Name = "toolStripMenuItemArtanh";
+            this.toolStripMenuItemArtanh.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArtanh.Text = "artanh";
+            this.toolStripMenuItemArtanh.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemArcsch
+            // 
+            this.toolStripMenuItemArcsch.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemArcsch.Name = "toolStripMenuItemArcsch";
+            this.toolStripMenuItemArcsch.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArcsch.Text = "arcsch";
+            this.toolStripMenuItemArcsch.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemArsech
+            // 
+            this.toolStripMenuItemArsech.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemArsech.Name = "toolStripMenuItemArsech";
+            this.toolStripMenuItemArsech.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArsech.Text = "arsech";
+            this.toolStripMenuItemArsech.Click += new System.EventHandler(this.Function_Click);
+            // 
+            // toolStripMenuItemArcoth
+            // 
+            this.toolStripMenuItemArcoth.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStripMenuItemArcoth.Name = "toolStripMenuItemArcoth";
+            this.toolStripMenuItemArcoth.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArcoth.Text = "arcoth";
+            this.toolStripMenuItemArcoth.Click += new System.EventHandler(this.Function_Click);
             // 
             // StandardCalculat
             // 
@@ -933,8 +1043,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFloor;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCeil;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRand;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDms;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDeg;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSec;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCsc;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
@@ -946,6 +1054,18 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArccsc;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArctan;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArccot;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSinh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCosh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTanh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCsch;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSech;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoth;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArsinh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcosh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArtanh;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcsch;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArsech;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcoth;
     }
 }
 

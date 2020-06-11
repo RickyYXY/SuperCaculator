@@ -142,14 +142,15 @@ namespace EquationsSolvingModule
 
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnStart_Click(object sender, EventArgs e)
         {
             txtResult.Text = "";
+            if (txtPrint.Text == string.Empty)
+            {
+                txtWarn.Text = "错误！未进行任何输入！";
+                return;
+            }
+
             if (unknowNum == 1)
             {
                 try

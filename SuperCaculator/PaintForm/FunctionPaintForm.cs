@@ -196,12 +196,13 @@ namespace PaintForm
                 try
                 {
                     painter.Draw();
-                    pictureBox_3D.Image = bitmap;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    return;
                 }
+                pictureBox_3D.Image = bitmap;
             }
         }
 

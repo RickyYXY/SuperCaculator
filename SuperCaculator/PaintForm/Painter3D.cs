@@ -49,17 +49,18 @@ namespace PaintForm
 
         public void Draw()
         {
+            //double[,] values;
+            //try
+            //{
+            //    values = GetValues();
+            //}
+            //catch(Exception e)
+            //{
+            //    MessageBox.Show(e.Message);
+            //    return;
+            //}
+            double[,] values = GetValues();
             DrawBox();
-            double[,] values;
-            try
-            {
-                values = GetValues();
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.Message);
-                return;
-            }
             DrawCoor();
             double dz = (maxZ - minZ) / ZLENGTH;
             int XL = (int)((XLENGTH - 1) / rate) + 1;
@@ -191,8 +192,8 @@ namespace PaintForm
                 g.DrawString("F(x, y) = "+ NumToString(minZ), font1, brush, Xstart, Ystart - ZLENGTH / 2, sf);
                 return;
             }
-            g.DrawString("min: " + NumToString(minZ), font1, brush, Xstart, Ystart, sf);
-            g.DrawString("max: " + NumToString(maxZ), font1, brush, Xstart, Ystart - ZLENGTH, sf);
+            g.DrawString("min: " + minZ.ToString("#0.0"), font1, brush, Xstart, Ystart, sf);
+            g.DrawString("max: " + maxZ.ToString("#0.0"), font1, brush, Xstart, Ystart - ZLENGTH, sf);
             g.DrawString("(F(x, y", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
         }
 
