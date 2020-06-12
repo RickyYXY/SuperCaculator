@@ -62,10 +62,6 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_exp_3D = new System.Windows.Forms.TextBox();
             this.label_func_3D = new System.Windows.Forms.Label();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_save_3D = new System.Windows.Forms.Button();
-            this.button_color_3D = new System.Windows.Forms.Button();
-            this.button_clear_3D = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label_range_3D = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -78,6 +74,11 @@
             this.tabPage_help = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelFx = new System.Windows.Forms.Label();
+            this.button_clear_3D = new System.Windows.Forms.Button();
+            this.button_color_3D = new System.Windows.Forms.Button();
+            this.button_save_3D = new System.Windows.Forms.Button();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl.SuspendLayout();
             this.tabPage_2D.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2D)).BeginInit();
@@ -95,11 +96,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabPage_help.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -135,7 +136,7 @@
             this.pictureBox_2D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_2D.Location = new System.Drawing.Point(3, 203);
             this.pictureBox_2D.Name = "pictureBox_2D";
-            this.pictureBox_2D.Size = new System.Drawing.Size(968, 476);
+            this.pictureBox_2D.Size = new System.Drawing.Size(968, 480);
             this.pictureBox_2D.TabIndex = 6;
             this.pictureBox_2D.TabStop = false;
             this.pictureBox_2D.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_2D_MouseMove);
@@ -143,35 +144,40 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Bisque;
+            this.panel2.Controls.Add(this.labelFx);
             this.panel2.Controls.Add(this.labelx);
             this.panel2.Controls.Add(this.labely);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 679);
+            this.panel2.Location = new System.Drawing.Point(3, 683);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(968, 31);
+            this.panel2.Size = new System.Drawing.Size(968, 27);
             this.panel2.TabIndex = 5;
             // 
             // labelx
             // 
-            this.labelx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelx.AutoSize = true;
-            this.labelx.Font = new System.Drawing.Font("Ink Free", 15F);
+            this.labelx.Font = new System.Drawing.Font("方正舒体", 15F);
             this.labelx.Location = new System.Drawing.Point(0, 0);
             this.labelx.Name = "labelx";
-            this.labelx.Size = new System.Drawing.Size(29, 31);
+            this.labelx.Size = new System.Drawing.Size(32, 27);
             this.labelx.TabIndex = 0;
             this.labelx.Text = "x:";
+            this.labelx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labely
             // 
-            this.labely.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labely.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labely.AutoSize = true;
-            this.labely.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labely.Font = new System.Drawing.Font("方正舒体", 15F);
             this.labely.Location = new System.Drawing.Point(250, 0);
             this.labely.Name = "labely";
-            this.labely.Size = new System.Drawing.Size(37, 31);
+            this.labely.Size = new System.Drawing.Size(37, 27);
             this.labely.TabIndex = 1;
             this.labely.Text = "y: ";
+            this.labely.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -340,7 +346,6 @@
             this.textBox_max_2D.Name = "textBox_max_2D";
             this.textBox_max_2D.Size = new System.Drawing.Size(225, 51);
             this.textBox_max_2D.TabIndex = 17;
-            this.textBox_max_2D.Text = "1";
             this.textBox_max_2D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_range_2D
@@ -363,7 +368,6 @@
             this.textBox_min_2D.Name = "textBox_min_2D";
             this.textBox_min_2D.Size = new System.Drawing.Size(225, 51);
             this.textBox_min_2D.TabIndex = 16;
-            this.textBox_min_2D.Text = "-1";
             this.textBox_min_2D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_X_2D
@@ -423,12 +427,12 @@
             this.tableLayoutPanel7.Controls.Add(this.button_draw_3D, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(721, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(747, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(244, 269);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(218, 269);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // button_draw_3D
@@ -438,7 +442,7 @@
             this.button_draw_3D.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_draw_3D.Location = new System.Drawing.Point(3, 63);
             this.button_draw_3D.Name = "button_draw_3D";
-            this.button_draw_3D.Size = new System.Drawing.Size(238, 203);
+            this.button_draw_3D.Size = new System.Drawing.Size(212, 203);
             this.button_draw_3D.TabIndex = 12;
             this.button_draw_3D.Text = "绘图";
             this.button_draw_3D.UseVisualStyleBackColor = false;
@@ -456,7 +460,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(238, 54);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(212, 54);
             this.tableLayoutPanel8.TabIndex = 13;
             // 
             // trackBar
@@ -466,7 +470,7 @@
             this.trackBar.Location = new System.Drawing.Point(123, 3);
             this.trackBar.Name = "trackBar";
             this.trackBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar.Size = new System.Drawing.Size(112, 48);
+            this.trackBar.Size = new System.Drawing.Size(86, 48);
             this.trackBar.TabIndex = 19;
             this.trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.trackBar.Value = 8;
@@ -498,7 +502,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(712, 269);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(738, 269);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // tableLayoutPanel10
@@ -513,7 +517,7 @@
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(706, 59);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(732, 59);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // textBox_exp_3D
@@ -522,7 +526,7 @@
             this.textBox_exp_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_exp_3D.Location = new System.Drawing.Point(203, 3);
             this.textBox_exp_3D.Name = "textBox_exp_3D";
-            this.textBox_exp_3D.Size = new System.Drawing.Size(500, 51);
+            this.textBox_exp_3D.Size = new System.Drawing.Size(526, 51);
             this.textBox_exp_3D.TabIndex = 16;
             this.textBox_exp_3D.Text = "x*x*y*y";
             // 
@@ -538,62 +542,6 @@
             this.label_func_3D.Text = "F(x, y) =";
             this.label_func_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 3;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel15.Controls.Add(this.button_save_3D, 2, 0);
-            this.tableLayoutPanel15.Controls.Add(this.button_color_3D, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.button_clear_3D, 1, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 193);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 1;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(706, 73);
-            this.tableLayoutPanel15.TabIndex = 2;
-            // 
-            // button_save_3D
-            // 
-            this.button_save_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_save_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_save_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_save_3D.Location = new System.Drawing.Point(473, 3);
-            this.button_save_3D.Name = "button_save_3D";
-            this.button_save_3D.Size = new System.Drawing.Size(230, 67);
-            this.button_save_3D.TabIndex = 28;
-            this.button_save_3D.Text = "保存";
-            this.button_save_3D.UseVisualStyleBackColor = false;
-            this.button_save_3D.Click += new System.EventHandler(this.Button_save_3D_Click);
-            // 
-            // button_color_3D
-            // 
-            this.button_color_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_color_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_color_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_color_3D.Location = new System.Drawing.Point(3, 3);
-            this.button_color_3D.Name = "button_color_3D";
-            this.button_color_3D.Size = new System.Drawing.Size(229, 67);
-            this.button_color_3D.TabIndex = 21;
-            this.button_color_3D.Text = "颜色";
-            this.button_color_3D.UseVisualStyleBackColor = false;
-            this.button_color_3D.Click += new System.EventHandler(this.Button_color_3D_Click);
-            // 
-            // button_clear_3D
-            // 
-            this.button_clear_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_clear_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_clear_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_clear_3D.Location = new System.Drawing.Point(238, 3);
-            this.button_clear_3D.Name = "button_clear_3D";
-            this.button_clear_3D.Size = new System.Drawing.Size(229, 67);
-            this.button_clear_3D.TabIndex = 23;
-            this.button_clear_3D.Text = "清屏";
-            this.button_clear_3D.UseVisualStyleBackColor = false;
-            this.button_clear_3D.Click += new System.EventHandler(this.Button_clean_3D_Click);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -606,7 +554,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(706, 119);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(732, 119);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // label_range_3D
@@ -640,18 +588,17 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(503, 113);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(529, 113);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // textBox_maxY_3D
             // 
             this.textBox_maxY_3D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_maxY_3D.Font = new System.Drawing.Font("方正舒体", 25F);
-            this.textBox_maxY_3D.Location = new System.Drawing.Point(329, 59);
+            this.textBox_maxY_3D.Location = new System.Drawing.Point(342, 59);
             this.textBox_maxY_3D.Name = "textBox_maxY_3D";
-            this.textBox_maxY_3D.Size = new System.Drawing.Size(171, 51);
+            this.textBox_maxY_3D.Size = new System.Drawing.Size(184, 51);
             this.textBox_maxY_3D.TabIndex = 23;
-            this.textBox_maxY_3D.Text = "1";
             this.textBox_maxY_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_minX_3D
@@ -660,20 +607,18 @@
             this.textBox_minX_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_minX_3D.Location = new System.Drawing.Point(3, 3);
             this.textBox_minX_3D.Name = "textBox_minX_3D";
-            this.textBox_minX_3D.Size = new System.Drawing.Size(170, 51);
+            this.textBox_minX_3D.Size = new System.Drawing.Size(183, 51);
             this.textBox_minX_3D.TabIndex = 19;
-            this.textBox_minX_3D.Text = "-1";
             this.textBox_minX_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_maxX_3D
             // 
             this.textBox_maxX_3D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_maxX_3D.Font = new System.Drawing.Font("方正舒体", 25F);
-            this.textBox_maxX_3D.Location = new System.Drawing.Point(329, 3);
+            this.textBox_maxX_3D.Location = new System.Drawing.Point(342, 3);
             this.textBox_maxX_3D.Name = "textBox_maxX_3D";
-            this.textBox_maxX_3D.Size = new System.Drawing.Size(171, 51);
+            this.textBox_maxX_3D.Size = new System.Drawing.Size(184, 51);
             this.textBox_maxX_3D.TabIndex = 20;
-            this.textBox_maxX_3D.Text = "1";
             this.textBox_maxX_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_Y_3D
@@ -681,7 +626,7 @@
             this.label_Y_3D.AutoSize = true;
             this.label_Y_3D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_Y_3D.Font = new System.Drawing.Font("方正舒体", 25F);
-            this.label_Y_3D.Location = new System.Drawing.Point(179, 56);
+            this.label_Y_3D.Location = new System.Drawing.Point(192, 56);
             this.label_Y_3D.Name = "label_Y_3D";
             this.label_Y_3D.Size = new System.Drawing.Size(144, 57);
             this.label_Y_3D.TabIndex = 21;
@@ -694,9 +639,8 @@
             this.textBox_minY_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_minY_3D.Location = new System.Drawing.Point(3, 59);
             this.textBox_minY_3D.Name = "textBox_minY_3D";
-            this.textBox_minY_3D.Size = new System.Drawing.Size(170, 51);
+            this.textBox_minY_3D.Size = new System.Drawing.Size(183, 51);
             this.textBox_minY_3D.TabIndex = 22;
-            this.textBox_minY_3D.Text = "-1";
             this.textBox_minY_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_X_3D
@@ -704,7 +648,7 @@
             this.label_X_3D.AutoSize = true;
             this.label_X_3D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_X_3D.Font = new System.Drawing.Font("方正舒体", 25F);
-            this.label_X_3D.Location = new System.Drawing.Point(179, 3);
+            this.label_X_3D.Location = new System.Drawing.Point(192, 3);
             this.label_X_3D.Margin = new System.Windows.Forms.Padding(3);
             this.label_X_3D.Name = "label_X_3D";
             this.label_X_3D.Size = new System.Drawing.Size(144, 50);
@@ -747,6 +691,73 @@
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
+            // labelFx
+            // 
+            this.labelFx.AutoSize = true;
+            this.labelFx.Font = new System.Drawing.Font("方正舒体", 15F);
+            this.labelFx.Location = new System.Drawing.Point(500, 0);
+            this.labelFx.Name = "labelFx";
+            this.labelFx.Size = new System.Drawing.Size(83, 27);
+            this.labelFx.TabIndex = 2;
+            this.labelFx.Text = "F(x) = ";
+            this.labelFx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button_clear_3D
+            // 
+            this.button_clear_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_clear_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_clear_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_clear_3D.Location = new System.Drawing.Point(247, 3);
+            this.button_clear_3D.Name = "button_clear_3D";
+            this.button_clear_3D.Size = new System.Drawing.Size(238, 67);
+            this.button_clear_3D.TabIndex = 23;
+            this.button_clear_3D.Text = "清屏";
+            this.button_clear_3D.UseVisualStyleBackColor = false;
+            this.button_clear_3D.Click += new System.EventHandler(this.Button_clean_3D_Click);
+            // 
+            // button_color_3D
+            // 
+            this.button_color_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_color_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_color_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_color_3D.Location = new System.Drawing.Point(3, 3);
+            this.button_color_3D.Name = "button_color_3D";
+            this.button_color_3D.Size = new System.Drawing.Size(238, 67);
+            this.button_color_3D.TabIndex = 21;
+            this.button_color_3D.Text = "颜色";
+            this.button_color_3D.UseVisualStyleBackColor = false;
+            this.button_color_3D.Click += new System.EventHandler(this.Button_color_3D_Click);
+            // 
+            // button_save_3D
+            // 
+            this.button_save_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_save_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_save_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_save_3D.Location = new System.Drawing.Point(491, 3);
+            this.button_save_3D.Name = "button_save_3D";
+            this.button_save_3D.Size = new System.Drawing.Size(238, 67);
+            this.button_save_3D.TabIndex = 28;
+            this.button_save_3D.Text = "保存";
+            this.button_save_3D.UseVisualStyleBackColor = false;
+            this.button_save_3D.Click += new System.EventHandler(this.Button_save_3D_Click);
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 3;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel15.Controls.Add(this.button_save_3D, 2, 0);
+            this.tableLayoutPanel15.Controls.Add(this.button_color_3D, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.button_clear_3D, 1, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 193);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(732, 73);
+            this.tableLayoutPanel15.TabIndex = 2;
+            // 
             // FunctionPaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -777,7 +788,6 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
-            this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -785,6 +795,7 @@
             this.tabPage_help.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -827,10 +838,6 @@
         private System.Windows.Forms.Label label_Y_3D;
         private System.Windows.Forms.TextBox textBox_minY_3D;
         private System.Windows.Forms.Label label_X_3D;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.Button button_save_3D;
-        private System.Windows.Forms.Button button_color_3D;
-        private System.Windows.Forms.Button button_clear_3D;
         private System.Windows.Forms.PictureBox pictureBox_3D;
         private System.Windows.Forms.PictureBox pictureBox_2D;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -840,5 +847,10 @@
         private System.Windows.Forms.TabPage tabPage_help;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelFx;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button button_save_3D;
+        private System.Windows.Forms.Button button_color_3D;
+        private System.Windows.Forms.Button button_clear_3D;
     }
 }

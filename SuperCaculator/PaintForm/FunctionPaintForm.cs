@@ -26,6 +26,10 @@ namespace PaintForm
         public double MinY_3D { get; set; }
         public double MaxY_3D { get; set; }
 
+
+        Func<double?, double?, double> Caculate2D;
+        Func<double?, double?, double> Caculate3D;
+
         public FunctionPaintForm()
         {
             InitializeComponent();
@@ -65,6 +69,7 @@ namespace PaintForm
             ShowXY = false;
             labelx.Text = "X: ";
             labely.Text = "Y: ";
+            labelFx.Text = "F(x) = ";
         }
 
         private void Button_save_2D_Click(object sender, EventArgs e)
@@ -84,11 +89,10 @@ namespace PaintForm
         private void Button_draw_2D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_2D.Text;
-            Func<double?, double?, double> Caculate;
             try
             {
                 Function.Function func = new Function.Function(exp);
-                Caculate = func.GetValue;
+                Caculate2D = func.GetValue;
             }
             catch (Exception ex)
             {
@@ -103,7 +107,7 @@ namespace PaintForm
             Bitmap bitmap = new Bitmap(pictureBox_2D.Width, pictureBox_2D.Height);
             using (Graphics g = Graphics.FromImage(bitmap))
             {
-                painter2D = new Painter2D(pictureBox_2D, g, pen_2D, Caculate, Min_2D, Max_2D);
+                painter2D = new Painter2D(pictureBox_2D, g, pen_2D, Caculate2D, Min_2D, Max_2D);
                 try
                 {
                     painter2D.Draw();
@@ -127,11 +131,20 @@ namespace PaintForm
                 y = (painter2D.Ystart - y) * painter2D.Dy + painter2D.MinValue;
                 labelx.Text = "X: " + x.ToString("#0.000");
                 labely.Text = "Y: " + y.ToString("#0.000");
+                if (x < Min_2D || x > Max_2D)
+                {
+                    labelFx.Text = "F(x)超出定义域范围";
+                }
+                else
+                {
+                    labelFx.Text = "F(x) = " + Caculate2D(x, 0).ToString("#0.000");
+                }
             }
             else
             {
                 labelx.Text = "X: ";
                 labely.Text = "Y: ";
+                labelFx.Text = "F(x) = ";
             }
         }
 
