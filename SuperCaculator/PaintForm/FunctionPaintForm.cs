@@ -14,7 +14,7 @@ namespace PaintForm
     public partial class FunctionPaintForm : Form
     {
         private Pen pen_2D, pen_3D;
-        private bool ShowXY_2D, ShowXY_3D;
+        private bool ShowXY_2D;
         private int rate;
 
         private Painter2D painter2D;
