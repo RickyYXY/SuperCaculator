@@ -131,8 +131,8 @@ namespace PaintForm
             string info = "x: " + minX.ToString("#0.0") + " ~ " + maxX.ToString("#0.0");
             g.DrawString(info, font, brush, XSTART + XLENGTH / 2 - info.Length * 7, YSTART);
             g.DrawString("(F(x", font, brush, XSTART, YSTART - YLENGTH / 2, sf);
-            g.DrawString("min: " + minY.ToString("#0.0"), font1, brush, XSTART, YSTART, sf);
-            g.DrawString("max: " + maxY.ToString("#0.0"), font1, brush, XSTART, YSTART - YLENGTH, sf);
+            g.DrawString("min: " + minY.ToString("#0.00"), font1, brush, XSTART, YSTART, sf);
+            g.DrawString("max: " + maxY.ToString("#0.00"), font1, brush, XSTART, YSTART - YLENGTH, sf);
             if (maxY >= 0 && minY < 0)
             {
                 int zero = YSTART + (int)(minY / dy);

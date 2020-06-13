@@ -192,8 +192,8 @@ namespace PaintForm
                 g.DrawString("F(x, y) = "+ NumToString(minZ), font1, brush, Xstart, Ystart - ZLENGTH / 2, sf);
                 return;
             }
-            g.DrawString("min: " + minZ.ToString("#0.0"), font1, brush, Xstart, Ystart, sf);
-            g.DrawString("max: " + maxZ.ToString("#0.0"), font1, brush, Xstart, Ystart - ZLENGTH, sf);
+            g.DrawString("min: " + minZ.ToString("#0.00"), font1, brush, Xstart, Ystart, sf);
+            g.DrawString("max: " + maxZ.ToString("#0.00"), font1, brush, Xstart, Ystart - ZLENGTH, sf);
             g.DrawString("(F(x, y", font, brush, Xstart, Ystart - ZLENGTH / 2, sf);
         }
 
