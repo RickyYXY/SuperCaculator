@@ -11,7 +11,8 @@ namespace Function
         public static readonly string[] func_names = 
             { "sin", "cos", "tan", "exp", "log" ,"ln","csc","sec","cot","abs","ceil","floor",
             "arcsin","arccos","arctan","arccsc","arcsec","arccot",
-            "sinh","cosh","tanh","csch","sech","coth"};
+            "sinh","cosh","tanh","csch","sech","coth",
+            "arsinh","arcosh","artanh"};
         
         public static double MatchFuncCal(string input, double? x,double? y)
         {
@@ -105,6 +106,15 @@ namespace Function
                         case "coth":
                             Coth_function coth_Function = new Coth_function(exp);
                             return coth_Function.GetValue(x, y);
+                        case "arsinh":
+                            Asinh_function asinh_Function = new Asinh_function(exp);
+                            return asinh_Function.GetValue(x, y);
+                        case "arcosh":
+                            Acosh_function acosh_Function = new Acosh_function(exp);
+                            return acosh_Function.GetValue(x, y);
+                        case "artanh":
+                            Atanh_function atanh_Function = new Atanh_function(exp);
+                            return atanh_Function.GetValue(x, y);
 
                     }
                 }
