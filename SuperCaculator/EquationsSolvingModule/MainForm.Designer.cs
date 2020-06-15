@@ -41,17 +41,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblWarn = new System.Windows.Forms.Label();
             this.txtWarn = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,11 +127,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrint.BackColor = System.Drawing.Color.AliceBlue;
             this.txtPrint.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPrint.Location = new System.Drawing.Point(3, 3);
+            this.txtPrint.Location = new System.Drawing.Point(9, 38);
             this.txtPrint.Multiline = true;
             this.txtPrint.Name = "txtPrint";
             this.txtPrint.ReadOnly = true;
-            this.txtPrint.Size = new System.Drawing.Size(312, 257);
+            this.txtPrint.Size = new System.Drawing.Size(310, 257);
             this.txtPrint.TabIndex = 0;
             // 
             // lblfangchengzu
@@ -143,7 +140,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblfangchengzu.AutoSize = true;
             this.lblfangchengzu.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblfangchengzu.Location = new System.Drawing.Point(6, 10);
+            this.lblfangchengzu.Location = new System.Drawing.Point(6, 9);
             this.lblfangchengzu.Name = "lblfangchengzu";
             this.lblfangchengzu.Size = new System.Drawing.Size(112, 17);
             this.lblfangchengzu.TabIndex = 2;
@@ -151,15 +148,16 @@
             // 
             // txtResult
             // 
-            this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResult.BackColor = System.Drawing.Color.AliceBlue;
             this.txtResult.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtResult.Location = new System.Drawing.Point(3, 3);
+            this.txtResult.Location = new System.Drawing.Point(3, 39);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(324, 256);
+            this.txtResult.Size = new System.Drawing.Size(318, 256);
             this.txtResult.TabIndex = 0;
             // 
             // lblResult
@@ -168,7 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblResult.Location = new System.Drawing.Point(3, 10);
+            this.lblResult.Location = new System.Drawing.Point(3, 9);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(88, 17);
             this.lblResult.TabIndex = 3;
@@ -180,10 +178,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.splitContainer1);
             this.panel4.Location = new System.Drawing.Point(-2, 69);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(661, 312);
@@ -222,48 +217,27 @@
             this.txtWarn.Multiline = true;
             this.txtWarn.Name = "txtWarn";
             this.txtWarn.ReadOnly = true;
-            this.txtWarn.Size = new System.Drawing.Size(642, 47);
+            this.txtWarn.Size = new System.Drawing.Size(638, 47);
             this.txtWarn.TabIndex = 0;
             // 
-            // panel2
+            // splitContainer1
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.txtPrint);
-            this.panel2.Location = new System.Drawing.Point(6, 42);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 263);
-            this.panel2.TabIndex = 1;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // panel3
+            // splitContainer1.Panel1
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.txtResult);
-            this.panel3.Location = new System.Drawing.Point(324, 42);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 262);
-            this.panel3.TabIndex = 2;
+            this.splitContainer1.Panel1.Controls.Add(this.txtPrint);
+            this.splitContainer1.Panel1.Controls.Add(this.lblfangchengzu);
             // 
-            // panel6
+            // splitContainer1.Panel2
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.lblResult);
-            this.panel6.Location = new System.Drawing.Point(324, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(329, 39);
-            this.panel6.TabIndex = 3;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.lblfangchengzu);
-            this.panel7.Location = new System.Drawing.Point(6, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(316, 39);
-            this.panel7.TabIndex = 4;
+            this.splitContainer1.Panel2.Controls.Add(this.lblResult);
+            this.splitContainer1.Panel2.Controls.Add(this.txtResult);
+            this.splitContainer1.Size = new System.Drawing.Size(657, 308);
+            this.splitContainer1.SplitterDistance = 322;
+            this.splitContainer1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -282,14 +256,12 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -309,10 +281,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblWarn;
         private System.Windows.Forms.TextBox txtWarn;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
 

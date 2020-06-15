@@ -38,17 +38,18 @@
             this.txtCoe = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,10 +107,11 @@
             // 
             // txtPower
             // 
-            this.txtPower.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtPower.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPower.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPower.Location = new System.Drawing.Point(3, 27);
+            this.txtPower.Location = new System.Drawing.Point(3, 26);
             this.txtPower.Multiline = true;
             this.txtPower.Name = "txtPower";
             this.txtPower.Size = new System.Drawing.Size(264, 244);
@@ -119,7 +121,7 @@
             // 
             this.lblInputPow.AutoSize = true;
             this.lblInputPow.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblInputPow.Location = new System.Drawing.Point(3, 7);
+            this.lblInputPow.Location = new System.Drawing.Point(3, 6);
             this.lblInputPow.Name = "lblInputPow";
             this.lblInputPow.Size = new System.Drawing.Size(152, 17);
             this.lblInputPow.TabIndex = 2;
@@ -129,7 +131,7 @@
             // 
             this.lblInCoe.AutoSize = true;
             this.lblInCoe.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblInCoe.Location = new System.Drawing.Point(3, 7);
+            this.lblInCoe.Location = new System.Drawing.Point(3, 6);
             this.lblInCoe.Name = "lblInCoe";
             this.lblInCoe.Size = new System.Drawing.Size(152, 17);
             this.lblInCoe.TabIndex = 0;
@@ -141,10 +143,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCoe.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCoe.Location = new System.Drawing.Point(6, 27);
+            this.txtCoe.Location = new System.Drawing.Point(3, 26);
             this.txtCoe.Multiline = true;
             this.txtCoe.Name = "txtCoe";
-            this.txtCoe.Size = new System.Drawing.Size(253, 244);
+            this.txtCoe.Size = new System.Drawing.Size(257, 244);
             this.txtCoe.TabIndex = 1;
             // 
             // btnConfirm
@@ -173,42 +175,28 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.lblInCoe);
-            this.panel2.Controls.Add(this.txtCoe);
-            this.panel2.Location = new System.Drawing.Point(11, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 274);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.lblInputPow);
-            this.panel3.Controls.Add(this.txtPower);
-            this.panel3.Location = new System.Drawing.Point(276, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 274);
-            this.panel3.TabIndex = 6;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.splitContainer1);
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.panel2);
             this.panel4.Location = new System.Drawing.Point(1, 67);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(557, 323);
             this.panel4.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.lblWarn);
+            this.panel6.Location = new System.Drawing.Point(11, 280);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(539, 36);
+            this.panel6.TabIndex = 7;
             // 
             // panel5
             // 
@@ -222,15 +210,26 @@
             this.panel5.Size = new System.Drawing.Size(556, 62);
             this.panel5.TabIndex = 8;
             // 
-            // panel6
+            // splitContainer1
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.lblWarn);
-            this.panel6.Location = new System.Drawing.Point(11, 280);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(539, 36);
-            this.panel6.TabIndex = 7;
+            this.splitContainer1.Location = new System.Drawing.Point(11, 7);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblInCoe);
+            this.splitContainer1.Panel1.Controls.Add(this.txtCoe);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblInputPow);
+            this.splitContainer1.Panel2.Controls.Add(this.txtPower);
+            this.splitContainer1.Size = new System.Drawing.Size(538, 273);
+            this.splitContainer1.SplitterDistance = 263;
+            this.splitContainer1.TabIndex = 8;
             // 
             // DataInputForm
             // 
@@ -246,14 +245,16 @@
             this.Load += new System.EventHandler(this.DataInputForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -270,10 +271,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblfangchengNum;
         private System.Windows.Forms.ComboBox cboEquNum;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
