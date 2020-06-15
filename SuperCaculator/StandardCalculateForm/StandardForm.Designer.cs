@@ -102,10 +102,12 @@
             // 
             // richTxtEquation
             // 
+            this.richTxtEquation.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.richTxtEquation.Dock = System.Windows.Forms.DockStyle.Top;
             this.richTxtEquation.Font = new System.Drawing.Font("Ink Free", 20F);
             this.richTxtEquation.Location = new System.Drawing.Point(0, 0);
             this.richTxtEquation.Name = "richTxtEquation";
+            this.richTxtEquation.ReadOnly = true;
             this.richTxtEquation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.richTxtEquation.Size = new System.Drawing.Size(767, 96);
             this.richTxtEquation.TabIndex = 0;
