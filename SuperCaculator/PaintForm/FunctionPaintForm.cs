@@ -43,7 +43,6 @@ namespace PaintForm
             pen_2D = new Pen(Color.Black);
             pen_3D = new Pen(Color.Black);
             ShowXY_2D = false;
-            ShowXY_3D = false;
             pictureBox_2D.Image = new Bitmap(pictureBox_2D.Width, pictureBox_2D.Height);
             pictureBox_3D.Image = new Bitmap(pictureBox_3D.Width, pictureBox_3D.Height);
             rate = 11 - trackBar.Value;
@@ -169,7 +168,6 @@ namespace PaintForm
                 g.Clear(Color.White);
                 pictureBox_3D.Image = bitmap;
             }
-            ShowXY_3D = false;
         }
 
         private void Button_save_3D_Click(object sender, EventArgs e)
@@ -219,7 +217,6 @@ namespace PaintForm
                 }
                 pictureBox_3D.Image = bitmap;
             }
-            ShowXY_3D = true;
         }
 
         private void TrackBar_Scroll(object sender, EventArgs e)
