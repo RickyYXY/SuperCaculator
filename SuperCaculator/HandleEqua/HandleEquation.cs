@@ -57,6 +57,9 @@ namespace HandleEqua
 
             int startLocation = 0;
             int bktCount = 0;
+            int absCount = 0;
+            int ceilCount = 0;
+            int floorCount = 0;
             
             for (int i = equation.Length-1; i >=0; i--)
             {
@@ -68,7 +71,44 @@ namespace HandleEqua
                 {
                     bktCount--;
                 }
-                if (IsGeneralOp(equation[i])&&i!=equation.Length-1&&bktCount==0)
+                if (equation[i] == '⌊')
+                {
+                    floorCount++;
+                }
+                if (equation[i] == '⌋')
+                {
+                    floorCount--;
+                }
+                if (equation[i] == '⌈')
+                {
+                    ceilCount++;
+                }
+                if (equation[i] == '⌉')
+                {
+                    ceilCount--;
+                }
+                if (equation[i] == '|')
+                {
+                    if (i == 0)
+                    {
+                        absCount--;
+                    }
+                    else if (char.IsNumber(equation[i - 1]))
+                    {
+                        absCount++;
+                    }
+                    else
+                    {
+                        absCount--;
+                    }
+                }
+                
+                if (IsGeneralOp(equation[i])
+                    && i!=equation.Length-1
+                    && bktCount==0
+                    && ceilCount==0
+                    && floorCount==0
+                    && absCount==0)
                 {
                     startLocation = i + 1;
                     break;
@@ -93,7 +133,7 @@ namespace HandleEqua
             if (equation.Length == 1) return "";
 
             int subLength = 0;
-            int bktCount = 0;
+            int bktCount=0,ceilCount=0,floorCount=0,absCount = 0;
 
             for (int i = equation.Length-1 ; i >=0; i--)
             {
@@ -105,7 +145,43 @@ namespace HandleEqua
                 {
                     bktCount--;
                 }
-                if (IsGeneralOp(equation[i])&&i!=equation.Length-1 && bktCount == 0)
+                if (equation[i] == '⌊')
+                {
+                    floorCount++;
+                }
+                if (equation[i] == '⌋')
+                {
+                    floorCount--;
+                }
+                if (equation[i] == '⌈')
+                {
+                    ceilCount++;
+                }
+                if (equation[i] == '⌉')
+                {
+                    ceilCount--;
+                }
+                if (equation[i] == '|')
+                {
+                    if (i == 0)
+                    {
+                        absCount--;
+                    }
+                    else if (char.IsNumber(equation[i - 1]))
+                    {
+                        absCount++;
+                    }
+                    else
+                    {
+                        absCount--;
+                    }
+                }
+                if (IsGeneralOp(equation[i])
+                    &&i!=equation.Length-1 
+                    && bktCount == 0 
+                    && ceilCount == 0
+                    && floorCount == 0
+                    && absCount == 0)
                 {
                     subLength = i+1;
                     break;
