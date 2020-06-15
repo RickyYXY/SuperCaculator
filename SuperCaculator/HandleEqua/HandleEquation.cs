@@ -19,6 +19,20 @@ namespace HandleEqua
             else return false;
         }
 
+        public static string RemoveFrontZero(string number)
+        {
+            int i=0;
+            while ( i < number.Length)
+            {
+                if (number[i] != '0')
+                {
+                    break;
+                }
+                i++;
+            }
+            return number.Substring(i, number.Length-1);
+        }
+
         public static string GetLastUnit(string equation)
         {
             if (equation == "") return "";

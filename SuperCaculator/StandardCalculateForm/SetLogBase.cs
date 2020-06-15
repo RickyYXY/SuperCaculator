@@ -26,6 +26,10 @@ namespace StandardCalculateForm
 
         private void NumberInput(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == '0' && txtNum.Text.Length < 1)
+            {
+                e.Handled=true;
+            }
             if (!char.IsNumber(e.KeyChar)&&e.KeyChar!=(char)8)
             {
                 e.Handled = true;

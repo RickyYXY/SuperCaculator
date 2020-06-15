@@ -376,6 +376,7 @@ namespace StandardCalculateForm
                 }
                 if (setBaseForm.ShowDialog() == DialogResult.OK)
                 {
+                    setBaseForm.Somelog.LogBase = HandleEquation.RemoveFrontZero(setBaseForm.Somelog.LogBase);
                     someLog = setBaseForm.Somelog;
                     if (string.IsNullOrEmpty(someLog.LogBase))
                     {
