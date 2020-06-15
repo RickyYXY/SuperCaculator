@@ -20,6 +20,22 @@ namespace HandleEqua
             else return false;
         }
 
+        public static bool IsLeftOp(char operation)
+        {
+            if (operation == '('
+                || operation == '⌊'
+                || operation == '⌈') return true;
+            else return false;
+        }
+
+        public static bool IsRightOp(char operation)
+        {
+            if (operation == ')'
+                || operation == '⌋'
+                || operation == '⌉') return true;
+            else return false;
+        }
+
         public static string ChangeToNega(string tail)
         {
             if (tail.Length < 2)
@@ -167,17 +183,23 @@ namespace HandleEqua
                     {
                         absCount--;
                     }
-                    else if ( IsGeneralOp(equation[i - 1]))  //左边的绝对值符
+                    else if (i == equation.Length - 1 ) //算式最后一个符号为绝对值符时，必然是右边的绝对值符
+                    {
+                        absCount++;
+                    }
+                    else if ( IsGeneralOp(equation[i - 1])|| char.IsNumber(equation[i + 1])
+                        ||IsLeftOp(equation[i + 1]) || IsLeftOp(equation[i - 1]))  //左边的绝对值符
                     {
                         absCount--;
                     }
-                    else if (i == equation.Length - 1 || char.IsNumber(equation[i - 1]))
+                    else if ( char.IsNumber(equation[i - 1])|| IsGeneralOp(equation[i + 1]) 
+                        || IsRightOp(equation[i + 1]) || IsRightOp(equation[i - 1]))
                     {
                         absCount++;
                     }                    
                     else
                     {
-
+                        absCount++;//还需要添加其他判断
                     }
                 }
                 if (IsGeneralOp(equation[i])

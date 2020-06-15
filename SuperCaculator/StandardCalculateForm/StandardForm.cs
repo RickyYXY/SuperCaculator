@@ -156,6 +156,7 @@ namespace StandardCalculateForm
             switch (((ToolStripMenuItem)sender).Name)
             {
                 case "toolStripMenuItemAbs":
+                    if (tail2[0] == '|') break;     //已经添加过绝对值符，不再添加
                     equation = HandleEquation.RemoveLastUnit(equation) + "abs(" + tail + ")";
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "|" + tail2 + "|";
                     break;
