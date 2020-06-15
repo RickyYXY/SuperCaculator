@@ -197,34 +197,20 @@ namespace StandardCalculateForm
             string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
             string removedTail = HandleEquation.RemoveLastUnit(equation);
             string removedTail2 = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
-            if (removedTail.Length == 0)
+            if (removedTail.Length == 0)   //输入是一个正数
             {
                 equation = "-" + tail;
                 richTxtEquation.Text = "-" + tail2;
             }
-            else if (removedTail.Last() == '-')
+            else if (removedTail.Last() == '-'&& removedTail.Length == 1)
+            {                              //输入是一个负数                
+                equation = tail;
+                richTxtEquation.Text = tail2;
+            }            
+            else    
             {
-                if (removedTail.Length == 1)
-                {
-                    equation = tail;
-                    richTxtEquation.Text = tail2;
-                }
-                else
-                {
-                    equation = removedTail.Substring(0, removedTail.Length - 1) + "+" + tail;
-                    richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "+" + tail2;
-                }
-            }
-            else if (removedTail.Last() == '+')
-            {
-                equation = removedTail.Substring(0, removedTail.Length - 1) + "-" + tail;
-                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "-" + tail2;
-            }
-            else
-            {
-                equation = removedTail.Substring(0, removedTail.Length - 1) + "(-" + tail + ")";
-                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "(-" + tail2 + ")";
-
+                equation = removedTail + HandleEquation.ChangeToNega(tail);
+                richTxtEquation.Text = removedTail2 + HandleEquation.ChangeToNega(tail2);
             }
         }
 

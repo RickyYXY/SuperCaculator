@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace HandleEqua
@@ -17,6 +18,22 @@ namespace HandleEqua
                 || operation == '*'
                 || operation == '/') return true;
             else return false;
+        }
+
+        public static string ChangeToNega(string tail)
+        {
+            if (tail.Length < 2)
+            {
+                return "(-" + tail + ")";
+            }
+            else if (tail[0] == '-' )
+            {
+                return tail.Substring(1, tail.Length - 1);
+            }
+            else
+            {
+                return "(-" + tail + ")";
+            }
         }
 
         public static string RemoveFrontZero(string number)
