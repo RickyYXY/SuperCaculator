@@ -355,7 +355,7 @@ namespace Function
             return Math.Floor(base.GetValue(x, y));
         }
     }
-
+    //反三角函数
     class Asin_function : Function //向下取整
     {
         public Asin_function(string exp) : base(exp) { }
@@ -408,6 +408,92 @@ namespace Function
                 return Math.Atan(1 / temp) + Math.PI;
         }
     }
+    //双曲函数
+    class Sinh_function:Function
+    {
+        public Sinh_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) / 2;
+        }
+    }
+    class Cosh_function : Function
+    {
+        public Cosh_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E)) / 2;
+        }
+    }
+    class Tanh_function : Function
+    {
+        public Tanh_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) 
+                / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+        }
+    }
+    class Csch_function : Function
+    {
+        public Csch_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return 2 / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+        }
+    }
+    class Sech_function : Function
+    {
+        public Sech_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return 2 / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+        }
+    }
+    class Coth_function : Function
+    {
+        public Coth_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E))
+                / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+        }
+    }
+    //反双曲函数
+    class Asinh_function:Function
+    {
+        public Asinh_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return Math.Log(temp + Math.Sqrt(Math.Pow(temp, 2) + 1), Math.E);
+        }
+    }
+    class Acosh_function : Function
+    {
+        public Acosh_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return Math.Log(temp + Math.Sqrt(Math.Pow(temp, 2) - 1), Math.E);
+        }
+    }
+    class Atanh_function : Function
+    {
+        public Atanh_function(string exp) : base(exp) { }
+        public override double GetValue(double? x = null, double? y = null)
+        {
+            double temp = base.GetValue(x, y);
+            return Math.Log(Math.Sqrt((1 + temp) / (1 - temp)), Math.E);
+        }
+    }
+    //异常
     class FunctionException : Exception
     {
         public int Code { set; get; }

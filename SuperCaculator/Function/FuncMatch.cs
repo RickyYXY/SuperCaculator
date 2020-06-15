@@ -10,7 +10,9 @@ namespace Function
     {
         public static readonly string[] func_names = 
             { "sin", "cos", "tan", "exp", "log" ,"ln","csc","sec","cot","abs","ceil","floor",
-        "arcsin","arccos","arctan","arccsc","arcsec","arccot"};
+            "arcsin","arccos","arctan","arccsc","arcsec","arccot",
+            "sinh","cosh","tanh","csch","sech","coth",
+            "arsinh","arcosh","artanh"};
         
         public static double MatchFuncCal(string input, double? x,double? y)
         {
@@ -86,6 +88,34 @@ namespace Function
                         case "arccot":
                             Acot_function acot_Function = new Acot_function(exp);
                             return acot_Function.GetValue(x, y);
+                        case "sinh":
+                            Sinh_function sinh_Function = new Sinh_function(exp);
+                            return sinh_Function.GetValue(x, y);
+                        case "cosh":
+                            Cosh_function cosh_Function = new Cosh_function(exp);
+                            return cosh_Function.GetValue(x, y);
+                        case "tanh":
+                            Tanh_function tanh_Function = new Tanh_function(exp);
+                            return tanh_Function.GetValue(x, y);
+                        case "csch":
+                            Csch_function csch_Function = new Csch_function(exp);
+                            return csch_Function.GetValue(x, y);
+                        case "sech":
+                            Sech_function sech_Function = new Sech_function(exp);
+                            return sech_Function.GetValue(x, y);
+                        case "coth":
+                            Coth_function coth_Function = new Coth_function(exp);
+                            return coth_Function.GetValue(x, y);
+                        case "arsinh":
+                            Asinh_function asinh_Function = new Asinh_function(exp);
+                            return asinh_Function.GetValue(x, y);
+                        case "arcosh":
+                            Acosh_function acosh_Function = new Acosh_function(exp);
+                            return acosh_Function.GetValue(x, y);
+                        case "artanh":
+                            Atanh_function atanh_Function = new Atanh_function(exp);
+                            return atanh_Function.GetValue(x, y);
+
                     }
                 }
             }
