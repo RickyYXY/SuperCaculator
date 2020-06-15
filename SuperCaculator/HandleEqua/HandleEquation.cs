@@ -163,17 +163,21 @@ namespace HandleEqua
                 }
                 if (equation[i] == '|')
                 {
-                    if (i == 0)
+                    if (i == 0)  //左边的绝对值符
                     {
                         absCount--;
                     }
-                    else if (char.IsNumber(equation[i - 1]))
+                    else if ( IsGeneralOp(equation[i - 1]))  //左边的绝对值符
+                    {
+                        absCount--;
+                    }
+                    else if (i == equation.Length - 1 || char.IsNumber(equation[i - 1]))
                     {
                         absCount++;
-                    }
+                    }                    
                     else
                     {
-                        absCount--;
+
                     }
                 }
                 if (IsGeneralOp(equation[i])
