@@ -377,7 +377,15 @@ namespace StandardCalculateForm
                 if (setBaseForm.ShowDialog() == DialogResult.OK)
                 {
                     someLog = setBaseForm.Somelog;
-                    btnLog.Text = "log " + someLog.LogBase + "(x)";
+                    if (string.IsNullOrEmpty(someLog.LogBase))
+                    {
+                        btnLog.Text = "log y(x)";
+                    }
+                    else
+                    {
+                        btnLog.Text = "log " + someLog.LogBase + "(x)";
+                    }
+                    
                 }                              
             }
         }
