@@ -179,8 +179,8 @@ namespace PaintForm
         {
             Brush brush = Brushes.Black;
             StringFormat sf = new StringFormat();
-            Font font = new Font("方正舒体", 20f);
-            Font font1 = new Font("方正舒体", 15f);
+            Font font = new Font("Cambria", 20f);
+            Font font1 = new Font("Cambria", 15f);
             sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
             string info = "x: " + minX.ToString("#0.0") + " ~ " + maxX.ToString("#0.0");
             g.DrawString(info, font, brush, Xstart + XLENGTH / 2 - info.Length * 7, Ystart);

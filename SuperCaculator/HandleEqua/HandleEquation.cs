@@ -63,7 +63,7 @@ namespace HandleEqua
                 }
                 i++;
             }
-            return number.Substring(i, number.Length-1);
+            return number.Substring(i, number.Length-i);
         }
 
         public static string GetLastUnit(string equation)
@@ -199,7 +199,7 @@ namespace HandleEqua
                     }                    
                     else
                     {
-                        absCount++;//还需要添加其他判断
+                        absCount++;   
                     }
                 }
                 if (IsGeneralOp(equation[i])
