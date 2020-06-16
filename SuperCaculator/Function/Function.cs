@@ -287,6 +287,14 @@ namespace Function
             return Math.Log(base.GetValue(x, y), Math.E);
         }
     }
+    class Lg_function : Function
+    {
+        public Lg_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Log(base.GetValue(x, y), 10);
+        }
+    }
 
     class Exp_function : Function
     {
