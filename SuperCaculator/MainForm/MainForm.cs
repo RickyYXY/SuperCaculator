@@ -79,5 +79,18 @@ namespace MainForm
                 }
             }
         }
+
+        private void MainForm_ResizeEnd(object sender, EventArgs e)
+        {
+            if (Width <= 800)
+            {
+                Width = 800;
+            }
+
+            if (Height <= 500)
+            {
+                Height = 500;
+            }
+        }
     }
 }
