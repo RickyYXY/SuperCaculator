@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("标准");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("微分积分");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("解方程");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("矩阵");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("函数绘图");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("计算器", new System.Windows.Forms.TreeNode[] {
-            treeNode28,
-            treeNode29,
-            treeNode30,
-            treeNode31,
-            treeNode32});
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("日期计算");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("单位换算");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("转换器", new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode35});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("标准计算");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("微分积分");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("解方程");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("矩阵运算");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("函数绘图");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("计算器", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("日期计算");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("单位换算");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("转换器", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChild = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -84,27 +84,27 @@
             this.treeView1.Location = new System.Drawing.Point(17, 13);
             this.treeView1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.treeView1.Name = "treeView1";
-            treeNode28.Name = "standard";
-            treeNode28.Text = "标准";
-            treeNode29.Name = "DI";
-            treeNode29.Text = "微分积分";
-            treeNode30.Name = "solveEquation";
-            treeNode30.Text = "解方程";
-            treeNode31.Name = "matrix";
-            treeNode31.Text = "矩阵";
-            treeNode32.Name = "painting";
-            treeNode32.Text = "函数绘图";
-            treeNode33.Name = "节点0";
-            treeNode33.Text = "计算器";
-            treeNode34.Name = "date";
-            treeNode34.Text = "日期计算";
-            treeNode35.Name = "unit";
-            treeNode35.Text = "单位换算";
-            treeNode36.Name = "节点1";
-            treeNode36.Text = "转换器";
+            treeNode1.Name = "standard";
+            treeNode1.Text = "标准计算";
+            treeNode2.Name = "DI";
+            treeNode2.Text = "微分积分";
+            treeNode3.Name = "solveEquation";
+            treeNode3.Text = "解方程";
+            treeNode4.Name = "matrix";
+            treeNode4.Text = "矩阵运算";
+            treeNode5.Name = "painting";
+            treeNode5.Text = "函数绘图";
+            treeNode6.Name = "节点0";
+            treeNode6.Text = "计算器";
+            treeNode7.Name = "date";
+            treeNode7.Text = "日期计算";
+            treeNode8.Name = "unit";
+            treeNode8.Text = "单位换算";
+            treeNode9.Name = "节点1";
+            treeNode9.Text = "转换器";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode33,
-            treeNode36});
+            treeNode6,
+            treeNode9});
             this.treeView1.Size = new System.Drawing.Size(231, 483);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MenuClick);
