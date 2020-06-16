@@ -85,6 +85,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DateCalculation\DateCalculation.csproj">
+      <Project>{07f22849-3457-4ca9-a8d9-8f506ccb9c07}</Project>
+      <Name>DateCalculation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Deriv_Interg_Form\DerivIntegForm.csproj">
       <Project>{ff50aee9-2bb2-4e91-a925-2ba3a90f1cff}</Project>
       <Name>DerivIntegForm</Name>

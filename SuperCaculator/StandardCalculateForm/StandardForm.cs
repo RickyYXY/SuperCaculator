@@ -66,8 +66,14 @@ namespace StandardCalculateForm
 
         private void btnAnswer_Click(object sender, EventArgs e)
         {
-            Function.Function func = new Function.Function(equation);
-            equation = richTxtEquation.Text = func.GetValue().ToString();
+            if (HandleEquation.IsGeneralOp(equation.Last()))
+            {
+                MessageBox.Show("请在算式最后输入参与计算的数字！");      
+            }
+            else {
+                Function.Function func = new Function.Function(equation);
+                equation = richTxtEquation.Text = func.GetValue().ToString();
+            }
         }
 
         private void btnShift_Click(object sender, EventArgs e)
@@ -156,6 +162,7 @@ namespace StandardCalculateForm
             switch (((ToolStripMenuItem)sender).Name)
             {
                 case "toolStripMenuItemAbs":
+                    if (tail2[0] == '|') break;     //已经添加过绝对值符，不再添加
                     equation = HandleEquation.RemoveLastUnit(equation) + "abs(" + tail + ")";
                     richTxtEquation.Text = HandleEquation.RemoveLastUnit(richTxtEquation.Text) + "|" + tail2 + "|";
                     break;
@@ -197,34 +204,20 @@ namespace StandardCalculateForm
             string tail2 = HandleEquation.GetLastUnit(richTxtEquation.Text);
             string removedTail = HandleEquation.RemoveLastUnit(equation);
             string removedTail2 = HandleEquation.RemoveLastUnit(richTxtEquation.Text);
-            if (removedTail.Length == 0)
+            if (removedTail.Length == 0)   //输入是一个正数
             {
                 equation = "-" + tail;
                 richTxtEquation.Text = "-" + tail2;
             }
-            else if (removedTail.Last() == '-')
+            else if (removedTail.Last() == '-'&& removedTail.Length == 1)
+            {                              //输入是一个负数                
+                equation = tail;
+                richTxtEquation.Text = tail2;
+            }            
+            else    
             {
-                if (removedTail.Length == 1)
-                {
-                    equation = tail;
-                    richTxtEquation.Text = tail2;
-                }
-                else
-                {
-                    equation = removedTail.Substring(0, removedTail.Length - 1) + "+" + tail;
-                    richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "+" + tail2;
-                }
-            }
-            else if (removedTail.Last() == '+')
-            {
-                equation = removedTail.Substring(0, removedTail.Length - 1) + "-" + tail;
-                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "-" + tail2;
-            }
-            else
-            {
-                equation = removedTail.Substring(0, removedTail.Length - 1) + "(-" + tail + ")";
-                richTxtEquation.Text = removedTail2.Substring(0, removedTail2.Length - 1) + "(-" + tail2 + ")";
-
+                equation = removedTail + HandleEquation.ChangeToNega(tail);
+                richTxtEquation.Text = removedTail2 + HandleEquation.ChangeToNega(tail2);
             }
         }
 
@@ -376,8 +369,17 @@ namespace StandardCalculateForm
                 }
                 if (setBaseForm.ShowDialog() == DialogResult.OK)
                 {
+                    setBaseForm.Somelog.LogBase = HandleEquation.RemoveFrontZero(setBaseForm.Somelog.LogBase);
                     someLog = setBaseForm.Somelog;
-                    btnLog.Text = "log " + someLog.LogBase + "(x)";
+                    if (string.IsNullOrEmpty(someLog.LogBase))
+                    {
+                        btnLog.Text = "log y(x)";
+                    }
+                    else
+                    {
+                        btnLog.Text = "log " + someLog.LogBase + "(x)";
+                    }
+                    
                 }                              
             }
         }

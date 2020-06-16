@@ -92,9 +92,6 @@
             this.toolStripMenuItemArsinh = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemArcosh = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemArtanh = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemArcsch = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemArsech = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemArcoth = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -102,10 +99,12 @@
             // 
             // richTxtEquation
             // 
+            this.richTxtEquation.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.richTxtEquation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.richTxtEquation.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.richTxtEquation.Font = new System.Drawing.Font("Cambria", 20F);
             this.richTxtEquation.Location = new System.Drawing.Point(0, 0);
             this.richTxtEquation.Name = "richTxtEquation";
+            this.richTxtEquation.ReadOnly = true;
             this.richTxtEquation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.richTxtEquation.Size = new System.Drawing.Size(767, 96);
             this.richTxtEquation.TabIndex = 0;
@@ -174,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLeftBkt.AutoSize = true;
             this.btnLeftBkt.BackColor = System.Drawing.Color.LightCyan;
-            this.btnLeftBkt.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnLeftBkt.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnLeftBkt.Location = new System.Drawing.Point(151, 90);
             this.btnLeftBkt.Name = "btnLeftBkt";
             this.btnLeftBkt.Size = new System.Drawing.Size(142, 81);
@@ -190,7 +189,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRightBkt.AutoSize = true;
             this.btnRightBkt.BackColor = System.Drawing.Color.LightCyan;
-            this.btnRightBkt.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnRightBkt.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnRightBkt.Location = new System.Drawing.Point(299, 90);
             this.btnRightBkt.Name = "btnRightBkt";
             this.btnRightBkt.Size = new System.Drawing.Size(142, 81);
@@ -206,7 +205,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFac.AutoSize = true;
             this.btnFac.BackColor = System.Drawing.Color.LightCyan;
-            this.btnFac.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnFac.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnFac.Location = new System.Drawing.Point(447, 90);
             this.btnFac.Name = "btnFac";
             this.btnFac.Size = new System.Drawing.Size(142, 81);
@@ -222,7 +221,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDiv.AutoSize = true;
             this.btnDiv.BackColor = System.Drawing.Color.LightCyan;
-            this.btnDiv.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnDiv.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnDiv.Location = new System.Drawing.Point(595, 90);
             this.btnDiv.Name = "btnDiv";
             this.btnDiv.Size = new System.Drawing.Size(145, 81);
@@ -237,7 +236,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn7.BackColor = System.Drawing.Color.Azure;
-            this.btn7.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn7.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn7.Location = new System.Drawing.Point(151, 177);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(142, 81);
@@ -253,7 +252,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn8.AutoSize = true;
             this.btn8.BackColor = System.Drawing.Color.Azure;
-            this.btn8.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn8.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn8.Location = new System.Drawing.Point(299, 177);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(142, 81);
@@ -269,7 +268,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn9.AutoSize = true;
             this.btn9.BackColor = System.Drawing.Color.Azure;
-            this.btn9.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn9.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn9.Location = new System.Drawing.Point(447, 177);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(142, 81);
@@ -285,7 +284,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMult.AutoSize = true;
             this.btnMult.BackColor = System.Drawing.Color.LightCyan;
-            this.btnMult.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnMult.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnMult.Location = new System.Drawing.Point(595, 177);
             this.btnMult.Name = "btnMult";
             this.btnMult.Size = new System.Drawing.Size(145, 81);
@@ -301,7 +300,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn4.AutoSize = true;
             this.btn4.BackColor = System.Drawing.Color.Azure;
-            this.btn4.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn4.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn4.Location = new System.Drawing.Point(151, 264);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(142, 81);
@@ -317,7 +316,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn5.AutoSize = true;
             this.btn5.BackColor = System.Drawing.Color.Azure;
-            this.btn5.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn5.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn5.Location = new System.Drawing.Point(299, 264);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(142, 81);
@@ -333,7 +332,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn6.AutoSize = true;
             this.btn6.BackColor = System.Drawing.Color.Azure;
-            this.btn6.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn6.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn6.Location = new System.Drawing.Point(447, 264);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(142, 81);
@@ -349,7 +348,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSub.AutoSize = true;
             this.btnSub.BackColor = System.Drawing.Color.LightCyan;
-            this.btnSub.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSub.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnSub.Location = new System.Drawing.Point(595, 264);
             this.btnSub.Name = "btnSub";
             this.btnSub.Size = new System.Drawing.Size(145, 81);
@@ -365,7 +364,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn1.AutoSize = true;
             this.btn1.BackColor = System.Drawing.Color.Azure;
-            this.btn1.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn1.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn1.Location = new System.Drawing.Point(151, 351);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(142, 81);
@@ -381,7 +380,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn2.AutoSize = true;
             this.btn2.BackColor = System.Drawing.Color.Azure;
-            this.btn2.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn2.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn2.Location = new System.Drawing.Point(299, 351);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(142, 81);
@@ -397,7 +396,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn3.AutoSize = true;
             this.btn3.BackColor = System.Drawing.Color.Azure;
-            this.btn3.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn3.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn3.Location = new System.Drawing.Point(447, 351);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(142, 81);
@@ -413,7 +412,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.AutoSize = true;
             this.btnAdd.BackColor = System.Drawing.Color.LightCyan;
-            this.btnAdd.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Location = new System.Drawing.Point(595, 351);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(145, 81);
@@ -429,7 +428,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNega.AutoSize = true;
             this.btnNega.BackColor = System.Drawing.Color.Azure;
-            this.btnNega.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnNega.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnNega.Location = new System.Drawing.Point(151, 438);
             this.btnNega.Name = "btnNega";
             this.btnNega.Size = new System.Drawing.Size(142, 85);
@@ -445,7 +444,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn0.AutoSize = true;
             this.btn0.BackColor = System.Drawing.Color.Azure;
-            this.btn0.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btn0.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btn0.Location = new System.Drawing.Point(299, 438);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(142, 85);
@@ -461,7 +460,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPoint.AutoSize = true;
             this.btnPoint.BackColor = System.Drawing.Color.Azure;
-            this.btnPoint.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnPoint.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnPoint.Location = new System.Drawing.Point(447, 438);
             this.btnPoint.Name = "btnPoint";
             this.btnPoint.Size = new System.Drawing.Size(142, 85);
@@ -477,7 +476,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnswer.AutoSize = true;
             this.btnAnswer.BackColor = System.Drawing.Color.Cyan;
-            this.btnAnswer.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAnswer.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnAnswer.Location = new System.Drawing.Point(595, 438);
             this.btnAnswer.Name = "btnAnswer";
             this.btnAnswer.Size = new System.Drawing.Size(145, 85);
@@ -493,7 +492,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLn.AutoSize = true;
             this.btnLn.BackColor = System.Drawing.Color.LightCyan;
-            this.btnLn.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnLn.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnLn.Location = new System.Drawing.Point(3, 438);
             this.btnLn.Name = "btnLn";
             this.btnLn.Size = new System.Drawing.Size(142, 85);
@@ -509,7 +508,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLog.AutoSize = true;
             this.btnLog.BackColor = System.Drawing.Color.LightCyan;
-            this.btnLog.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnLog.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnLog.Location = new System.Drawing.Point(3, 351);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(142, 81);
@@ -526,7 +525,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPower.AutoSize = true;
             this.btnPower.BackColor = System.Drawing.Color.LightCyan;
-            this.btnPower.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnPower.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnPower.Location = new System.Drawing.Point(3, 264);
             this.btnPower.Name = "btnPower";
             this.btnPower.Size = new System.Drawing.Size(142, 81);
@@ -542,7 +541,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSqr.AutoSize = true;
             this.btnSqr.BackColor = System.Drawing.Color.LightCyan;
-            this.btnSqr.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSqr.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnSqr.Location = new System.Drawing.Point(3, 177);
             this.btnSqr.Name = "btnSqr";
             this.btnSqr.Size = new System.Drawing.Size(142, 81);
@@ -558,7 +557,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCube.AutoSize = true;
             this.btnCube.BackColor = System.Drawing.Color.LightCyan;
-            this.btnCube.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCube.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnCube.Location = new System.Drawing.Point(3, 90);
             this.btnCube.Name = "btnCube";
             this.btnCube.Size = new System.Drawing.Size(142, 81);
@@ -574,7 +573,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShift.AutoSize = true;
             this.btnShift.BackColor = System.Drawing.Color.LightCyan;
-            this.btnShift.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnShift.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnShift.Location = new System.Drawing.Point(3, 3);
             this.btnShift.Name = "btnShift";
             this.btnShift.Size = new System.Drawing.Size(142, 81);
@@ -590,7 +589,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPi.AutoSize = true;
             this.btnPi.BackColor = System.Drawing.Color.LightCyan;
-            this.btnPi.Font = new System.Drawing.Font("Minion Pro", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPi.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnPi.Location = new System.Drawing.Point(151, 3);
             this.btnPi.Name = "btnPi";
             this.btnPi.Size = new System.Drawing.Size(142, 81);
@@ -606,7 +605,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnE.AutoSize = true;
             this.btnE.BackColor = System.Drawing.Color.LightCyan;
-            this.btnE.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnE.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnE.Location = new System.Drawing.Point(299, 3);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(142, 81);
@@ -622,7 +621,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClean.AutoSize = true;
             this.btnClean.BackColor = System.Drawing.Color.LightCyan;
-            this.btnClean.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnClean.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnClean.Location = new System.Drawing.Point(447, 3);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(142, 81);
@@ -638,7 +637,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.AutoSize = true;
             this.btnDelete.BackColor = System.Drawing.Color.LightCyan;
-            this.btnDelete.Font = new System.Drawing.Font("Ink Free", 14F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Location = new System.Drawing.Point(595, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(145, 81);
@@ -918,10 +917,7 @@
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemArsinh,
             this.toolStripMenuItemArcosh,
-            this.toolStripMenuItemArtanh,
-            this.toolStripMenuItemArcsch,
-            this.toolStripMenuItemArsech,
-            this.toolStripMenuItemArcoth});
+            this.toolStripMenuItemArtanh});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(169, 43);
             this.toolStripMenuItem5.Text = "反双曲函数";
@@ -949,30 +945,6 @@
             this.toolStripMenuItemArtanh.Size = new System.Drawing.Size(201, 38);
             this.toolStripMenuItemArtanh.Text = "artanh";
             this.toolStripMenuItemArtanh.Click += new System.EventHandler(this.Function_Click);
-            // 
-            // toolStripMenuItemArcsch
-            // 
-            this.toolStripMenuItemArcsch.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemArcsch.Name = "toolStripMenuItemArcsch";
-            this.toolStripMenuItemArcsch.Size = new System.Drawing.Size(201, 38);
-            this.toolStripMenuItemArcsch.Text = "arcsch";
-            this.toolStripMenuItemArcsch.Click += new System.EventHandler(this.Function_Click);
-            // 
-            // toolStripMenuItemArsech
-            // 
-            this.toolStripMenuItemArsech.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemArsech.Name = "toolStripMenuItemArsech";
-            this.toolStripMenuItemArsech.Size = new System.Drawing.Size(201, 38);
-            this.toolStripMenuItemArsech.Text = "arsech";
-            this.toolStripMenuItemArsech.Click += new System.EventHandler(this.Function_Click);
-            // 
-            // toolStripMenuItemArcoth
-            // 
-            this.toolStripMenuItemArcoth.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemArcoth.Name = "toolStripMenuItemArcoth";
-            this.toolStripMenuItemArcoth.Size = new System.Drawing.Size(201, 38);
-            this.toolStripMenuItemArcoth.Text = "arcoth";
-            this.toolStripMenuItemArcoth.Click += new System.EventHandler(this.Function_Click);
             // 
             // StandardCalculat
             // 
@@ -1063,9 +1035,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArsinh;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcosh;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArtanh;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcsch;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArsech;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcoth;
     }
 }
 
