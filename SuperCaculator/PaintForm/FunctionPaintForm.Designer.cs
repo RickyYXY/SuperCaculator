@@ -586,7 +586,7 @@
             // 
             this.textBox_minX_3D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_minX_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.textBox_minX_3D.Location = new System.Drawing.Point(3, 64);
+            this.textBox_minX_3D.Location = new System.Drawing.Point(3, 3);
             this.textBox_minX_3D.Name = "textBox_minX_3D";
             this.textBox_minX_3D.Size = new System.Drawing.Size(213, 56);
             this.textBox_minX_3D.TabIndex = 10;
@@ -618,7 +618,7 @@
             // 
             this.textBox_minY_3D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_minY_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.textBox_minY_3D.Location = new System.Drawing.Point(3, 3);
+            this.textBox_minY_3D.Location = new System.Drawing.Point(3, 64);
             this.textBox_minY_3D.Name = "textBox_minY_3D";
             this.textBox_minY_3D.Size = new System.Drawing.Size(213, 56);
             this.textBox_minY_3D.TabIndex = 12;
@@ -710,12 +710,12 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.textBox_minY_3D, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.textBox_maxY_3D, 2, 1);
             this.tableLayoutPanel10.Controls.Add(this.label_Y_3D, 1, 1);
-            this.tableLayoutPanel10.Controls.Add(this.textBox_minY_3D, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label_X_3D, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox_minX_3D, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.textBox_maxX_3D, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.textBox_minX_3D, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(200, 3);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
