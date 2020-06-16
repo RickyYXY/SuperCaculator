@@ -92,9 +92,6 @@
             this.toolStripMenuItemArsinh = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemArcosh = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemArtanh = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemArcsch = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemArsech = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemArcoth = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -920,10 +917,7 @@
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemArsinh,
             this.toolStripMenuItemArcosh,
-            this.toolStripMenuItemArtanh,
-            this.toolStripMenuItemArcsch,
-            this.toolStripMenuItemArsech,
-            this.toolStripMenuItemArcoth});
+            this.toolStripMenuItemArtanh});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(169, 43);
             this.toolStripMenuItem5.Text = "反双曲函数";
@@ -932,7 +926,7 @@
             // 
             this.toolStripMenuItemArsinh.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArsinh.Name = "toolStripMenuItemArsinh";
-            this.toolStripMenuItemArsinh.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArsinh.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArsinh.Text = "arsinh";
             this.toolStripMenuItemArsinh.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -940,7 +934,7 @@
             // 
             this.toolStripMenuItemArcosh.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArcosh.Name = "toolStripMenuItemArcosh";
-            this.toolStripMenuItemArcosh.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArcosh.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArcosh.Text = "arcosh";
             this.toolStripMenuItemArcosh.Click += new System.EventHandler(this.Function_Click);
             // 
@@ -948,33 +942,9 @@
             // 
             this.toolStripMenuItemArtanh.BackColor = System.Drawing.Color.LightCyan;
             this.toolStripMenuItemArtanh.Name = "toolStripMenuItemArtanh";
-            this.toolStripMenuItemArtanh.Size = new System.Drawing.Size(201, 38);
+            this.toolStripMenuItemArtanh.Size = new System.Drawing.Size(270, 38);
             this.toolStripMenuItemArtanh.Text = "artanh";
             this.toolStripMenuItemArtanh.Click += new System.EventHandler(this.Function_Click);
-            // 
-            // toolStripMenuItemArcsch
-            // 
-            this.toolStripMenuItemArcsch.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemArcsch.Name = "toolStripMenuItemArcsch";
-            this.toolStripMenuItemArcsch.Size = new System.Drawing.Size(201, 38);
-            this.toolStripMenuItemArcsch.Text = "arcsch";
-            this.toolStripMenuItemArcsch.Click += new System.EventHandler(this.Function_Click);
-            // 
-            // toolStripMenuItemArsech
-            // 
-            this.toolStripMenuItemArsech.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemArsech.Name = "toolStripMenuItemArsech";
-            this.toolStripMenuItemArsech.Size = new System.Drawing.Size(201, 38);
-            this.toolStripMenuItemArsech.Text = "arsech";
-            this.toolStripMenuItemArsech.Click += new System.EventHandler(this.Function_Click);
-            // 
-            // toolStripMenuItemArcoth
-            // 
-            this.toolStripMenuItemArcoth.BackColor = System.Drawing.Color.LightCyan;
-            this.toolStripMenuItemArcoth.Name = "toolStripMenuItemArcoth";
-            this.toolStripMenuItemArcoth.Size = new System.Drawing.Size(201, 38);
-            this.toolStripMenuItemArcoth.Text = "arcoth";
-            this.toolStripMenuItemArcoth.Click += new System.EventHandler(this.Function_Click);
             // 
             // StandardCalculat
             // 
@@ -1065,9 +1035,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArsinh;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcosh;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArtanh;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcsch;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArsech;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemArcoth;
     }
 }
 
