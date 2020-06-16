@@ -199,7 +199,7 @@ namespace HandleEqua
                     }                    
                     else
                     {
-                        absCount++;//还需要添加其他判断
+                        absCount++;   
                     }
                 }
                 if (IsGeneralOp(equation[i])

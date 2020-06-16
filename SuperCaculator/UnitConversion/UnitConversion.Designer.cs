@@ -105,9 +105,10 @@
             "数据",
             "压力",
             "角度"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Location = new System.Drawing.Point(3, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 35);
+            this.comboBox1.Size = new System.Drawing.Size(157, 41);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
@@ -115,9 +116,10 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 171);
+            this.button1.Location = new System.Drawing.Point(3, 204);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 36);
+            this.button1.Size = new System.Drawing.Size(101, 43);
             this.button1.TabIndex = 1;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
@@ -126,9 +128,10 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(98, 171);
+            this.button2.Location = new System.Drawing.Point(110, 204);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 36);
+            this.button2.Size = new System.Drawing.Size(101, 43);
             this.button2.TabIndex = 2;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
@@ -137,9 +140,10 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(193, 171);
+            this.button3.Location = new System.Drawing.Point(217, 204);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 36);
+            this.button3.Size = new System.Drawing.Size(101, 43);
             this.button3.TabIndex = 3;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
@@ -148,9 +152,10 @@
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 129);
+            this.button4.Location = new System.Drawing.Point(3, 154);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 36);
+            this.button4.Size = new System.Drawing.Size(101, 42);
             this.button4.TabIndex = 4;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
@@ -159,9 +164,10 @@
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(98, 129);
+            this.button5.Location = new System.Drawing.Point(110, 154);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 36);
+            this.button5.Size = new System.Drawing.Size(101, 42);
             this.button5.TabIndex = 5;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
@@ -170,9 +176,10 @@
             // button6
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(193, 129);
+            this.button6.Location = new System.Drawing.Point(217, 154);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 36);
+            this.button6.Size = new System.Drawing.Size(101, 42);
             this.button6.TabIndex = 6;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
@@ -181,9 +188,10 @@
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Location = new System.Drawing.Point(3, 87);
+            this.button7.Location = new System.Drawing.Point(3, 104);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(89, 36);
+            this.button7.Size = new System.Drawing.Size(101, 42);
             this.button7.TabIndex = 7;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
@@ -192,9 +200,10 @@
             // button8
             // 
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Location = new System.Drawing.Point(98, 87);
+            this.button8.Location = new System.Drawing.Point(110, 104);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(89, 36);
+            this.button8.Size = new System.Drawing.Size(101, 42);
             this.button8.TabIndex = 8;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
@@ -203,9 +212,10 @@
             // button9
             // 
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(193, 87);
+            this.button9.Location = new System.Drawing.Point(217, 104);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(89, 36);
+            this.button9.Size = new System.Drawing.Size(101, 42);
             this.button9.TabIndex = 9;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
@@ -214,9 +224,10 @@
             // button0
             // 
             this.button0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button0.Location = new System.Drawing.Point(288, 87);
+            this.button0.Location = new System.Drawing.Point(324, 104);
+            this.button0.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(90, 36);
+            this.button0.Size = new System.Drawing.Size(102, 42);
             this.button0.TabIndex = 10;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
@@ -225,9 +236,10 @@
             // buttonpoint
             // 
             this.buttonpoint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonpoint.Location = new System.Drawing.Point(288, 129);
+            this.buttonpoint.Location = new System.Drawing.Point(324, 154);
+            this.buttonpoint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonpoint.Name = "buttonpoint";
-            this.buttonpoint.Size = new System.Drawing.Size(90, 36);
+            this.buttonpoint.Size = new System.Drawing.Size(102, 42);
             this.buttonpoint.TabIndex = 11;
             this.buttonpoint.Text = ".";
             this.buttonpoint.UseVisualStyleBackColor = true;
@@ -236,9 +248,10 @@
             // buttonreset
             // 
             this.buttonreset.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonreset.Location = new System.Drawing.Point(288, 3);
+            this.buttonreset.Location = new System.Drawing.Point(324, 4);
+            this.buttonreset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonreset.Name = "buttonreset";
-            this.buttonreset.Size = new System.Drawing.Size(90, 36);
+            this.buttonreset.Size = new System.Drawing.Size(102, 42);
             this.buttonreset.TabIndex = 13;
             this.buttonreset.Text = "<-";
             this.buttonreset.UseVisualStyleBackColor = true;
@@ -249,9 +262,10 @@
             this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(148, 3);
+            this.comboBox2.Location = new System.Drawing.Point(166, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(176, 38);
+            this.comboBox2.Size = new System.Drawing.Size(199, 44);
             this.comboBox2.TabIndex = 15;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
@@ -259,9 +273,10 @@
             // buttonCE
             // 
             this.buttonCE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCE.Location = new System.Drawing.Point(288, 45);
+            this.buttonCE.Location = new System.Drawing.Point(324, 54);
+            this.buttonCE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCE.Name = "buttonCE";
-            this.buttonCE.Size = new System.Drawing.Size(90, 36);
+            this.buttonCE.Size = new System.Drawing.Size(102, 42);
             this.buttonCE.TabIndex = 17;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = true;
@@ -273,10 +288,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(20, 64);
+            this.textBox1.Location = new System.Drawing.Point(22, 77);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.MaxLength = 4;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 38);
+            this.textBox1.Size = new System.Drawing.Size(367, 44);
             this.textBox1.TabIndex = 18;
             this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -291,17 +307,18 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(16, 128);
+            this.label1.Location = new System.Drawing.Point(18, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
+            this.label1.Size = new System.Drawing.Size(0, 28);
             this.label1.TabIndex = 19;
             // 
             // buttonA
             // 
             this.buttonA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonA.Location = new System.Drawing.Point(3, 45);
+            this.buttonA.Location = new System.Drawing.Point(3, 54);
+            this.buttonA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonA.Name = "buttonA";
-            this.buttonA.Size = new System.Drawing.Size(89, 36);
+            this.buttonA.Size = new System.Drawing.Size(101, 42);
             this.buttonA.TabIndex = 20;
             this.buttonA.Text = "A";
             this.buttonA.UseVisualStyleBackColor = true;
@@ -310,9 +327,10 @@
             // buttonB
             // 
             this.buttonB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonB.Location = new System.Drawing.Point(98, 45);
+            this.buttonB.Location = new System.Drawing.Point(110, 54);
+            this.buttonB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonB.Name = "buttonB";
-            this.buttonB.Size = new System.Drawing.Size(89, 36);
+            this.buttonB.Size = new System.Drawing.Size(101, 42);
             this.buttonB.TabIndex = 21;
             this.buttonB.Text = "B";
             this.buttonB.UseVisualStyleBackColor = true;
@@ -321,9 +339,10 @@
             // buttonC
             // 
             this.buttonC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonC.Location = new System.Drawing.Point(193, 45);
+            this.buttonC.Location = new System.Drawing.Point(217, 54);
+            this.buttonC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonC.Name = "buttonC";
-            this.buttonC.Size = new System.Drawing.Size(89, 36);
+            this.buttonC.Size = new System.Drawing.Size(101, 42);
             this.buttonC.TabIndex = 22;
             this.buttonC.Text = "C";
             this.buttonC.UseVisualStyleBackColor = true;
@@ -332,9 +351,10 @@
             // buttonD
             // 
             this.buttonD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonD.Location = new System.Drawing.Point(3, 3);
+            this.buttonD.Location = new System.Drawing.Point(3, 4);
+            this.buttonD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonD.Name = "buttonD";
-            this.buttonD.Size = new System.Drawing.Size(89, 36);
+            this.buttonD.Size = new System.Drawing.Size(101, 42);
             this.buttonD.TabIndex = 23;
             this.buttonD.Text = "D";
             this.buttonD.UseVisualStyleBackColor = true;
@@ -343,9 +363,10 @@
             // buttonE
             // 
             this.buttonE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonE.Location = new System.Drawing.Point(98, 3);
+            this.buttonE.Location = new System.Drawing.Point(110, 4);
+            this.buttonE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonE.Name = "buttonE";
-            this.buttonE.Size = new System.Drawing.Size(89, 36);
+            this.buttonE.Size = new System.Drawing.Size(101, 42);
             this.buttonE.TabIndex = 24;
             this.buttonE.Text = "E";
             this.buttonE.UseVisualStyleBackColor = true;
@@ -354,9 +375,10 @@
             // buttonF
             // 
             this.buttonF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonF.Location = new System.Drawing.Point(193, 3);
+            this.buttonF.Location = new System.Drawing.Point(217, 4);
+            this.buttonF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonF.Name = "buttonF";
-            this.buttonF.Size = new System.Drawing.Size(89, 36);
+            this.buttonF.Size = new System.Drawing.Size(101, 42);
             this.buttonF.TabIndex = 25;
             this.buttonF.Text = "F";
             this.buttonF.UseVisualStyleBackColor = true;
@@ -365,18 +387,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 105);
+            this.label2.Location = new System.Drawing.Point(19, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 15);
+            this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 26;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonnegative
             // 
             this.buttonnegative.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonnegative.Location = new System.Drawing.Point(288, 171);
+            this.buttonnegative.Location = new System.Drawing.Point(324, 204);
+            this.buttonnegative.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonnegative.Name = "buttonnegative";
-            this.buttonnegative.Size = new System.Drawing.Size(90, 36);
+            this.buttonnegative.Size = new System.Drawing.Size(102, 43);
             this.buttonnegative.TabIndex = 27;
             this.buttonnegative.Text = "+/-";
             this.buttonnegative.UseVisualStyleBackColor = true;
@@ -387,10 +410,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Location = new System.Drawing.Point(3, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(381, 323);
+            this.tabControl1.Size = new System.Drawing.Size(429, 387);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage1
@@ -399,10 +423,11 @@
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(373, 294);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Size = new System.Drawing.Size(421, 355);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "单位";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -418,20 +443,22 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
             this.tableLayoutPanel3.Controls.Add(this.comboBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.comboBox2, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 16);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(22, 19);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(327, 63);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(368, 75);
             this.tableLayoutPanel3.TabIndex = 27;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(373, 294);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage3.Size = new System.Drawing.Size(421, 356);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "货币";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -443,12 +470,13 @@
             this.tableLayoutPanel4.Controls.Add(this.groupBox2, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(367, 288);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(415, 348);
             this.tableLayoutPanel4.TabIndex = 30;
             // 
             // groupBox2
@@ -461,9 +489,11 @@
             this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 147);
+            this.groupBox2.Location = new System.Drawing.Point(3, 178);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(361, 138);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(409, 166);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "外币->人民币";
@@ -471,9 +501,10 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox7.Location = new System.Drawing.Point(3, 26);
+            this.textBox7.Location = new System.Drawing.Point(3, 31);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(175, 30);
+            this.textBox7.Size = new System.Drawing.Size(196, 35);
             this.textBox7.TabIndex = 12;
             this.textBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox7_MouseClick);
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
@@ -489,9 +520,10 @@
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("楷体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button11.Location = new System.Drawing.Point(243, 107);
+            this.button11.Location = new System.Drawing.Point(273, 128);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(112, 31);
+            this.button11.Size = new System.Drawing.Size(129, 37);
             this.button11.TabIndex = 32;
             this.button11.Text = "汇率详情";
             this.button11.UseVisualStyleBackColor = false;
@@ -501,9 +533,9 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("宋体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(0, 59);
+            this.label17.Location = new System.Drawing.Point(0, 71);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 14);
+            this.label17.Size = new System.Drawing.Size(64, 16);
             this.label17.TabIndex = 32;
             this.label17.Text = "label17";
             // 
@@ -512,9 +544,9 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(6, 79);
+            this.label14.Location = new System.Drawing.Point(7, 95);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 20);
+            this.label14.Size = new System.Drawing.Size(34, 24);
             this.label14.TabIndex = 16;
             this.label14.Text = "14";
             // 
@@ -524,9 +556,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(216, 79);
+            this.label15.Location = new System.Drawing.Point(243, 95);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 20);
+            this.label15.Size = new System.Drawing.Size(82, 24);
             this.label15.TabIndex = 15;
             this.label15.Text = "人民币";
             // 
@@ -560,9 +592,10 @@
             "巴西雷亚尔",
             "韩元",
             "南非林特"});
-            this.comboBox4.Location = new System.Drawing.Point(196, 26);
+            this.comboBox4.Location = new System.Drawing.Point(220, 31);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(159, 31);
+            this.comboBox4.Size = new System.Drawing.Size(181, 36);
             this.comboBox4.TabIndex = 13;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             this.comboBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox4_KeyPress);
@@ -577,9 +610,11 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 138);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(409, 166);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "人民币->外币";
@@ -589,9 +624,10 @@
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox6.Location = new System.Drawing.Point(3, 24);
+            this.textBox6.Location = new System.Drawing.Point(3, 29);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 30);
+            this.textBox6.Size = new System.Drawing.Size(200, 35);
             this.textBox6.TabIndex = 5;
             this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
@@ -606,9 +642,10 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("楷体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(243, 104);
+            this.button10.Location = new System.Drawing.Point(273, 125);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(112, 29);
+            this.button10.Size = new System.Drawing.Size(129, 35);
             this.button10.TabIndex = 9;
             this.button10.Text = "汇率详情";
             this.button10.UseVisualStyleBackColor = false;
@@ -618,9 +655,9 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("宋体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.Location = new System.Drawing.Point(3, 57);
+            this.label16.Location = new System.Drawing.Point(3, 68);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 14);
+            this.label16.Size = new System.Drawing.Size(64, 16);
             this.label16.TabIndex = 31;
             this.label16.Text = "label16";
             // 
@@ -631,9 +668,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(216, 27);
+            this.label12.Location = new System.Drawing.Point(243, 32);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 20);
+            this.label12.Size = new System.Drawing.Size(82, 24);
             this.label12.TabIndex = 10;
             this.label12.Text = "人民币";
             // 
@@ -667,9 +704,10 @@
             "巴西雷亚尔",
             "韩元",
             "南非林特"});
-            this.comboBox3.Location = new System.Drawing.Point(196, 71);
+            this.comboBox3.Location = new System.Drawing.Point(220, 85);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 28);
+            this.comboBox3.Size = new System.Drawing.Size(181, 32);
             this.comboBox3.TabIndex = 6;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
@@ -679,9 +717,9 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(6, 79);
+            this.label13.Location = new System.Drawing.Point(7, 95);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 20);
+            this.label13.Size = new System.Drawing.Size(34, 24);
             this.label13.TabIndex = 11;
             this.label13.Text = "13";
             // 
@@ -713,7 +751,8 @@
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.buttonnegative, 3, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 332);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 399);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -721,7 +760,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(381, 210);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 251);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
             // tableLayoutPanel2
@@ -732,19 +771,21 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.52134F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.47865F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(387, 545);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(435, 654);
             this.tableLayoutPanel2.TabIndex = 27;
             // 
             // UnitConversion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 545);
+            this.ClientSize = new System.Drawing.Size(435, 654);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UnitConversion";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
