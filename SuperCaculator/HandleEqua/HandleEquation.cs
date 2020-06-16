@@ -63,7 +63,7 @@ namespace HandleEqua
                 }
                 i++;
             }
-            return number.Substring(i, number.Length-1);
+            return number.Substring(i, number.Length-i);
         }
 
         public static string GetLastUnit(string equation)
