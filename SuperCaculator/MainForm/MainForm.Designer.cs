@@ -31,7 +31,7 @@
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("标准计算");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("微分积分");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("解方程");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("矩阵");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("矩阵运算");
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("函数绘图");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("计算器", new System.Windows.Forms.TreeNode[] {
             treeNode1,
@@ -91,7 +91,7 @@
             treeNode3.Name = "solveEquation";
             treeNode3.Text = "解方程";
             treeNode4.Name = "matrix";
-            treeNode4.Text = "矩阵";
+            treeNode4.Text = "矩阵运算";
             treeNode5.Name = "painting";
             treeNode5.Text = "函数绘图";
             treeNode6.Name = "节点0";
