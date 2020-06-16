@@ -418,7 +418,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) / 2;
+            return (Math.Exp(temp) - Math.Exp(-temp)) / 2;
         }
     }
     class Cosh_function : Function
@@ -427,7 +427,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E)) / 2;
+            return (Math.Exp(temp) + Math.Exp(-temp)) / 2;
         }
     }
     class Tanh_function : Function
@@ -436,8 +436,8 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) 
-                / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+            return (Math.Exp(temp) - Math.Exp(-temp))
+                / (Math.Exp(temp) + Math.Exp(-temp));
         }
     }
     class Csch_function : Function
@@ -446,7 +446,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return 2 / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+            return 2 / (Math.Exp(temp) - Math.Exp(-temp));
         }
     }
     class Sech_function : Function
@@ -455,7 +455,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return 2 / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+            return 2 / (Math.Exp(temp) + Math.Exp(-temp));
         }
     }
     class Coth_function : Function
@@ -464,12 +464,13 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E))
-                / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+            return (Math.Exp(temp) + Math.Exp(-temp))
+                / (Math.Exp(temp) - Math.Exp(-temp));
         }
     }
+
     //反双曲函数
-    class Asinh_function:Function
+    class Asinh_function :Function
     {
         public Asinh_function(string exp) : base(exp) { }
         public override double GetValue(double? x = null, double? y = null)
