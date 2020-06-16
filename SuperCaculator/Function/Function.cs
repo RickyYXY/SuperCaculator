@@ -187,7 +187,10 @@ namespace Function
                     bool flag2 = false;
                     foreach (string reg in FuncMatch.func_names)
                     {
-                        int ind = exp.IndexOf(reg, i); //确认exp中含有reg函数
+                        string s = reg;
+                        if (s != "log")
+                            s += "(";
+                        int ind = exp.IndexOf(s, i); //确认exp中含有reg函数
                         if (ind == i)
                         {
                             int j;
