@@ -187,7 +187,10 @@ namespace Function
                     bool flag2 = false;
                     foreach (string reg in FuncMatch.func_names)
                     {
-                        int ind = exp.IndexOf(reg, i); //确认exp中含有reg函数
+                        string s = reg;
+                        if (s != "log")
+                            s += "(";
+                        int ind = exp.IndexOf(s, i); //确认exp中含有reg函数
                         if (ind == i)
                         {
                             int j;
@@ -282,6 +285,14 @@ namespace Function
         public override double GetValue(double? x, double? y)
         {
             return Math.Log(base.GetValue(x, y), Math.E);
+        }
+    }
+    class Lg_function : Function
+    {
+        public Lg_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Log(base.GetValue(x, y), 10);
         }
     }
 
@@ -415,7 +426,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) / 2;
+            return (Math.Exp(temp) - Math.Exp(-temp)) / 2;
         }
     }
     class Cosh_function : Function
@@ -424,7 +435,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E)) / 2;
+            return (Math.Exp(temp) + Math.Exp(-temp)) / 2;
         }
     }
     class Tanh_function : Function
@@ -433,8 +444,8 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) 
-                / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+            return (Math.Exp(temp) - Math.Exp(-temp))
+                / (Math.Exp(temp) + Math.Exp(-temp));
         }
     }
     class Csch_function : Function
@@ -443,7 +454,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return 2 / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+            return 2 / (Math.Exp(temp) - Math.Exp(-temp));
         }
     }
     class Sech_function : Function
@@ -452,7 +463,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return 2 / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+            return 2 / (Math.Exp(temp) + Math.Exp(-temp));
         }
     }
     class Coth_function : Function
@@ -461,12 +472,13 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E))
-                / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+            return (Math.Exp(temp) + Math.Exp(-temp))
+                / (Math.Exp(temp) - Math.Exp(-temp));
         }
     }
+
     //反双曲函数
-    class Asinh_function:Function
+    class Asinh_function :Function
     {
         public Asinh_function(string exp) : base(exp) { }
         public override double GetValue(double? x = null, double? y = null)

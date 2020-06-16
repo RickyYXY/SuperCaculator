@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("标准");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("标准计算");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("微分积分");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("解方程");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("矩阵");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("矩阵运算");
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("函数绘图");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("计算器", new System.Windows.Forms.TreeNode[] {
             treeNode1,
@@ -85,13 +85,13 @@
             this.treeView1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "standard";
-            treeNode1.Text = "标准";
+            treeNode1.Text = "标准计算";
             treeNode2.Name = "DI";
             treeNode2.Text = "微分积分";
             treeNode3.Name = "solveEquation";
             treeNode3.Text = "解方程";
             treeNode4.Name = "matrix";
-            treeNode4.Text = "矩阵";
+            treeNode4.Text = "矩阵运算";
             treeNode5.Name = "painting";
             treeNode5.Text = "函数绘图";
             treeNode6.Name = "节点0";
@@ -120,6 +120,7 @@
             this.Name = "MainForm";
             this.Text = "多功能计算器";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

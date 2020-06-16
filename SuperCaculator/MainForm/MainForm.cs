@@ -4,6 +4,7 @@ using PaintForm;
 using StandardCalculateForm;
 using System;
 using System.Windows.Forms;
+using DateCalculation;
 
 namespace MainForm
 {
@@ -14,6 +15,7 @@ namespace MainForm
         DIForm diForm = new DIForm();
         MainMatrixForm matrixForm = new MainMatrixForm();
         EquationsSolvingModule.MainForm solveEquForm=new EquationsSolvingModule.MainForm();
+        DateCalculation.DateCalculation dateForm = new DateCalculation.DateCalculation();
 
         public MainForm()
         {
@@ -64,12 +66,30 @@ namespace MainForm
                     case "solveEquation":
                         ShowForm(solveEquForm);
                         break;
-
+                    case "date":
+                        ShowForm(dateForm);
+                        break;
+                    case "unit":
+                        ShowForm(standardForm);   //需要修改为单位换算窗口
+                        break;
                     default:
                         ShowForm(standardForm);
                         break;
 
                 }
+            }
+        }
+
+        private void MainForm_ResizeEnd(object sender, EventArgs e)
+        {
+            if (Width <= 800)
+            {
+                Width = 800;
+            }
+
+            if (Height <= 500)
+            {
+                Height = 500;
             }
         }
     }
