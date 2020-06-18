@@ -32,69 +32,76 @@ namespace Function
         public virtual double GetValue(double? x = null, double? y = null)//计算二元函数值
         {
             Stack<double> figures = new Stack<double>();
-            foreach (string unit in RPNExpression)
+            try
             {
-                if (unit == "x")
-                    if (x == null)
-                        throw new FunctionException("计算不支持x作为自变量！", 7);
-                    else
-                        figures.Push(x.Value);
-                else if (unit == "y")
-                    if (y == null)
-                        throw new FunctionException("计算不支持y作为自变量！", 8);
-                    else
-                        figures.Push(y.Value);
-                else if (unit == "e")
-                    figures.Push(Math.E);
-                else if (unit == "pi")
-                    figures.Push(Math.PI);
-                else if (double.TryParse(unit, out double result))
-                    figures.Push(result);
-                else if (unit == "+" || unit == "-" || unit == "*"
-                    || unit == "/" || unit == "^" || unit == "!")
+                foreach (string unit in RPNExpression)
                 {
-                    double n1, n2;
-                    switch (unit)
+                    if (unit == "x")
+                        if (x == null)
+                            throw new FunctionException("计算不支持x作为自变量！", 7);
+                        else
+                            figures.Push(x.Value);
+                    else if (unit == "y")
+                        if (y == null)
+                            throw new FunctionException("计算不支持y作为自变量！", 8);
+                        else
+                            figures.Push(y.Value);
+                    else if (unit == "e")
+                        figures.Push(Math.E);
+                    else if (unit == "pi")
+                        figures.Push(Math.PI);
+                    else if (double.TryParse(unit, out double result))
+                        figures.Push(result);
+                    else if (unit == "+" || unit == "-" || unit == "*"
+                        || unit == "/" || unit == "^" || unit == "!")
                     {
-                        case "+":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 + n1);
-                            break;
-                        case "-":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 - n1);
-                            break;
-                        case "*":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 * n1);
-                            break;
-                        case "/":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 / n1);
-                            break;
-                        case "^":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(Math.Pow(n2, n1));
-                            break;
-                        case "!":
-                            n1 = figures.Pop(); //0弹出
-                            n2 = figures.Pop();
-                            figures.Push(Factorial(n2));
-                            break;
-                        default:
-                            break;
+                        double n1, n2;
+                        switch (unit)
+                        {
+                            case "+":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 + n1);
+                                break;
+                            case "-":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 - n1);
+                                break;
+                            case "*":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 * n1);
+                                break;
+                            case "/":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 / n1);
+                                break;
+                            case "^":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(Math.Pow(n2, n1));
+                                break;
+                            case "!":
+                                n1 = figures.Pop(); //0弹出
+                                n2 = figures.Pop();
+                                figures.Push(Factorial(n2));
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        double func_result = FuncMatch.MatchFuncCal(unit, x, y);
+                        figures.Push(func_result);
                     }
                 }
-                else
-                {
-                    double func_result = FuncMatch.MatchFuncCal(unit, x, y);
-                    figures.Push(func_result);
-                }
+            }
+            catch (InvalidOperationException)
+            {
+                throw new FunctionException("输入算式中存在非法部分，请检查！", 10);
             }
             double ans = figures.Pop();
             return ans;
@@ -103,7 +110,6 @@ namespace Function
         private void BuildRPN(string exp) //生成后缀表达式
         {
             Stack<string> st = new Stack<string>();
-
             for (int i = 0; i < exp.Length; i++)
             {
                 string temp = exp[i].ToString();
@@ -238,7 +244,7 @@ namespace Function
                 }
             }
             while (st.Count > 0)
-                RPNExpression.Add(st.Pop());
+                RPNExpression.Add(st.Pop());           
         }
 
         static public double Factorial(double x)
