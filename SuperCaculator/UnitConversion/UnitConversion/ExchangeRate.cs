@@ -20,5 +20,10 @@ namespace UnitConversion
             label4.Text = date;
             label8.Text = time;
         }
+
+        private void ExchangeRate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
