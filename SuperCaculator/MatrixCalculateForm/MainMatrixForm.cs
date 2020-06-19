@@ -155,10 +155,14 @@ namespace MatrixCalculateForm
             //matrixE.Init(0, 0);
             MatrixETextBox.Text = "";
             double temp = OneMatrix.ComputeDetGauss(matrixD);
+            if(Math.Abs(temp)<0.000000001)
+            {
+                temp = 0;
+            }
             double[] result = new double[1] { temp };
             matrixE.Init(1, 1);
             matrixE.SetData(result);
-            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
+            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 15;
             MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
             Matrix.WriteMatrix(MatrixETextBox, matrixE);
         }
@@ -240,6 +244,8 @@ namespace MatrixCalculateForm
 
         }
 
+        Matrix matrixSave = new Matrix();
+
         //保存按钮
         private void button2_Click(object sender, EventArgs e)
         {
@@ -254,8 +260,9 @@ namespace MatrixCalculateForm
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                matrixE.WriteMatrixToFile(localFilePath, matrixE);
-                MessageBox.Show(sfd.FileName.ToString());
+                matrixSave.ReadAndCheckMatrix(MatrixETextBox);
+                Matrix.WriteMatrixToFile(localFilePath, matrixSave);
+                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
             }
             else
             {
@@ -264,6 +271,7 @@ namespace MatrixCalculateForm
             }
         }
 
+        Matrix twomatrixsave = new Matrix();
         private void button3_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -277,8 +285,9 @@ namespace MatrixCalculateForm
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                matrixE.WriteMatrixToFile(localFilePath, matrixE);
-                MessageBox.Show(sfd.FileName.ToString());
+                twomatrixsave.ReadAndCheckMatrix(MatrixCtextBox);
+                Matrix.WriteMatrixToFile(localFilePath, twomatrixsave);
+                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
             }
             else
             {
@@ -300,8 +309,8 @@ namespace MatrixCalculateForm
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                matrixEvj1.WriteMatrixToFile(localFilePath, matrixE);
-                MessageBox.Show(sfd.FileName.ToString());
+                Matrix.WriteMatrixToFile(localFilePath, matrixEvj1);
+                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
             }
             else
             {
@@ -334,6 +343,52 @@ namespace MatrixCalculateForm
         private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MatrixEvj1Save_Click_1(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            //设置对话框标题
+            sfd.Title = "保存导出矩阵";
+            //设置默认文件名
+            sfd.FileName = "Matrix.txt";
+            //保存对话框是否记忆上次打开的目录 
+            sfd.RestoreDirectory = true;
+            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                Matrix.WriteMatrixToFile(localFilePath, matrixEvj1);
+                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+            }
+            else
+            {
+                MessageBox.Show("取消保存");
+                return;
+            }
+        }
+
+        private void MatrixEvj2Save_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            //设置对话框标题
+            sfd.Title = "保存导出矩阵";
+            //设置默认文件名
+            sfd.FileName = "Matrix.txt";
+            //保存对话框是否记忆上次打开的目录 
+            sfd.RestoreDirectory = true;
+            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                Matrix.WriteMatrixToFile(localFilePath, matrixEvj2);
+                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+            }
+            else
+            {
+                MessageBox.Show("取消保存");
+                return;
+            }
         }
     }
 }

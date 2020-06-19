@@ -614,6 +614,74 @@ namespace MatrixCalculateForm
         //从TextBox读取数据
         public bool ReadAndCheckMatrix(TextBox textBox)
         {
+            //numRows = textBox.Lines.Length;
+            //numColumns = 0;
+            //try
+            //{
+            //    foreach (var x in textBox.Lines[0])
+            //    {
+            //        if (x != '\n' && x != ' ' && x != '-')
+            //        {
+            //            numColumns++;
+            //        }
+            //    }
+            //    for (int i = 0; i < numRows; i++)
+            //    {
+            //        int test = 0;
+            //        foreach (var x in textBox.Lines[0])
+            //        {
+            //            if (x != '\n' && x != ' ' && x != '-')
+            //            {
+            //                test++;
+            //            }
+            //        }
+            //        if (test != numRows)
+            //        {
+            //            return false;
+            //        }
+            //    }
+            //    double[,] arr = new double[numRows, numColumns];
+            //    for (int i = 0; i < numRows; i++)
+            //    {
+            //        int j = 0;
+            //        int flag = 0; //表明这个数是不是负数
+            //        foreach (var x in textBox.Lines[i])
+            //        {
+            //            if (x != '\n' && x != ' ' && x != '-')
+            //            {
+            //                if (flag == 0)
+            //                {
+            //                    arr[i, j] = double.Parse(x.ToString());
+            //                    j++;
+            //                }
+            //                else
+            //                {
+            //                    arr[i, j] = (-1) * double.Parse(x.ToString());
+            //                    j++;
+            //                    flag = 0;
+            //                }
+            //            }
+            //            if (x == '-')
+            //            {
+            //                flag = 1;
+            //            }
+            //        }
+            //    }
+            //    Init(numRows, numColumns);
+            //    for (int i = 0; i < numRows; i++)
+            //    {
+            //        for (int j = 0; j < numColumns; j++)
+            //        {
+            //            SetElement(i, j, arr[i, j]);
+            //        }
+            //    }
+            //    return true;
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("输入字符串格式有误! 请重新输入");
+            //}
+            //return false;
             string[] arr = new string[textBox.Lines.Length];
             for (int i = 0; i < textBox.Lines.Length; i++)
             {
@@ -635,7 +703,7 @@ namespace MatrixCalculateForm
                     }
                     for (int j = 0; j < numColumns; j++)
                     {
-                        SetElement(i, j, Convert.ToInt32(temp[j]));
+                        SetElement(i, j, double.Parse(temp[j]));
                     }
                 }
             }
@@ -653,14 +721,21 @@ namespace MatrixCalculateForm
                 for (int j = 0; j < matrix.Columns; j++)
                 {
                     textBox.Text += matrix[i, j].ToString();
-                    textBox.Text += " ";
+                    if(j != matrix .Columns - 1)
+                    {
+                        textBox.Text += " ";
+                    }
                 }
-                textBox.Text += "\r\n";
+                if(i != matrix.Rows - 1)
+                {
+                    textBox.Text += "\r\n";
+                }
+                
             }
             return true;
         }
         //将矩阵写入文件
-        public bool WriteMatrixToFile(String path, Matrix matrix)
+        static public bool WriteMatrixToFile(String path, Matrix matrix)
         {
             FileStream fs = new FileStream(path, FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);

@@ -439,6 +439,7 @@
             this.MatrixEvj2Save.TabIndex = 9;
             this.MatrixEvj2Save.Text = "保存矩阵特征向量";
             this.MatrixEvj2Save.UseVisualStyleBackColor = false;
+            this.MatrixEvj2Save.Click += new System.EventHandler(this.MatrixEvj2Save_Click);
             // 
             // MatrixEvj1Save
             // 
@@ -453,6 +454,7 @@
             this.MatrixEvj1Save.TabIndex = 8;
             this.MatrixEvj1Save.Text = "保存矩阵特征值";
             this.MatrixEvj1Save.UseVisualStyleBackColor = false;
+            this.MatrixEvj1Save.Click += new System.EventHandler(this.MatrixEvj1Save_Click_1);
             // 
             // label8
             // 
@@ -705,10 +707,10 @@
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage4.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 28);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(776, 362);
+            this.tabPage4.Size = new System.Drawing.Size(776, 356);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "结果";
             // 
@@ -729,7 +731,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.243697F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.7563F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(763, 349);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(763, 343);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // MatrixCtextBox
@@ -737,10 +739,10 @@
             this.MatrixCtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MatrixCtextBox.Location = new System.Drawing.Point(3, 35);
+            this.MatrixCtextBox.Location = new System.Drawing.Point(3, 34);
             this.MatrixCtextBox.Multiline = true;
             this.MatrixCtextBox.Name = "MatrixCtextBox";
-            this.MatrixCtextBox.Size = new System.Drawing.Size(695, 311);
+            this.MatrixCtextBox.Size = new System.Drawing.Size(695, 306);
             this.MatrixCtextBox.TabIndex = 5;
             // 
             // button3
@@ -750,9 +752,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.LightCyan;
             this.button3.Font = new System.Drawing.Font("方正舒体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(704, 35);
+            this.button3.Location = new System.Drawing.Point(704, 34);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 311);
+            this.button3.Size = new System.Drawing.Size(56, 306);
             this.button3.TabIndex = 10;
             this.button3.Text = "保存";
             this.button3.UseVisualStyleBackColor = false;
@@ -765,7 +767,7 @@
             this.label3.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(315, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 32);
+            this.label3.Size = new System.Drawing.Size(71, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "结果";
             // 
