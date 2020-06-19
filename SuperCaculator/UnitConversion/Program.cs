@@ -16,7 +16,7 @@ namespace UnitConversion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UnitConversion());
+            Application.Run(new Form1());
         }
     }
 }
