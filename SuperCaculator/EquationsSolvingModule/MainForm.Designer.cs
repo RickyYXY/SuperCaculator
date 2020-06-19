@@ -72,12 +72,7 @@
             this.btnStart.BackColor = System.Drawing.Color.LightCyan;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStart.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-<<<<<<< HEAD
-            this.btnStart.Location = new System.Drawing.Point(343, 24);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.btnStart.Location = new System.Drawing.Point(294, 19);
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(123, 38);
             this.btnStart.TabIndex = 6;
@@ -93,11 +88,7 @@
             this.btnConfirm.Location = new System.Drawing.Point(261, 24);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirm.Name = "btnConfirm";
-<<<<<<< HEAD
             this.btnConfirm.Size = new System.Drawing.Size(73, 38);
-=======
-            this.btnConfirm.Size = new System.Drawing.Size(92, 30);
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Text = "确定";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -116,16 +107,10 @@
             "3",
             "4",
             "5"});
-<<<<<<< HEAD
-            this.cboUnoNum.Location = new System.Drawing.Point(136, 30);
-            this.cboUnoNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cboUnoNum.Name = "cboUnoNum";
-            this.cboUnoNum.Size = new System.Drawing.Size(92, 23);
-=======
+
             this.cboUnoNum.Location = new System.Drawing.Point(102, 21);
             this.cboUnoNum.Name = "cboUnoNum";
             this.cboUnoNum.Size = new System.Drawing.Size(70, 27);
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.cboUnoNum.TabIndex = 2;
             // 
             // lblyuanNum
@@ -144,16 +129,9 @@
             this.txtPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
-            this.txtPrint.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtPrint.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPrint.Location = new System.Drawing.Point(12, 48);
-            this.txtPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.txtPrint.BackColor = System.Drawing.SystemColors.Window;
             this.txtPrint.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrint.Location = new System.Drawing.Point(9, 38);
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.txtPrint.Multiline = true;
             this.txtPrint.Name = "txtPrint";
             this.txtPrint.ReadOnly = true;
@@ -178,16 +156,6 @@
             this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
-            this.txtResult.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtResult.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtResult.Location = new System.Drawing.Point(4, 49);
-            this.txtResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtResult.Multiline = true;
-            this.txtResult.Name = "txtResult";
-            this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(424, 319);
-=======
             this.txtResult.BackColor = System.Drawing.SystemColors.Window;
             this.txtResult.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResult.Location = new System.Drawing.Point(3, 38);
@@ -195,7 +163,6 @@
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(318, 257);
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.txtResult.TabIndex = 0;
             // 
             // lblResult
@@ -226,41 +193,23 @@
             // 
             // splitContainer1
             // 
-<<<<<<< HEAD
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.splitContainer1.BackColor = System.Drawing.Color.MintCream;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-<<<<<<< HEAD
-=======
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.MintCream;
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.splitContainer1.Panel1.Controls.Add(this.txtPrint);
             this.splitContainer1.Panel1.Controls.Add(this.lblfangchengzu);
             // 
             // splitContainer1.Panel2
             // 
-<<<<<<< HEAD
-            this.splitContainer1.Panel2.Controls.Add(this.lblResult);
-            this.splitContainer1.Panel2.Controls.Add(this.txtResult);
-            this.splitContainer1.Size = new System.Drawing.Size(876, 385);
-            this.splitContainer1.SplitterDistance = 429;
-            this.splitContainer1.SplitterWidth = 5;
-=======
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.MintCream;
             this.splitContainer1.Panel2.Controls.Add(this.lblResult);
             this.splitContainer1.Panel2.Controls.Add(this.txtResult);
             this.splitContainer1.Size = new System.Drawing.Size(657, 308);
             this.splitContainer1.SplitterDistance = 322;
->>>>>>> fc8f6f9be99f5942de054c0245f9bc5c5679fa36
             this.splitContainer1.TabIndex = 0;
             // 
             // panel5
