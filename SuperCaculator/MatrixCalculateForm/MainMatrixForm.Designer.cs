@@ -517,6 +517,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Font = new System.Drawing.Font("方正舒体", 13.8F);
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -527,10 +528,10 @@
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage3.Controls.Add(this.tableLayoutPanel7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(776, 362);
+            this.tabPage3.Size = new System.Drawing.Size(776, 356);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "计算";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -549,7 +550,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(767, 353);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(767, 347);
             this.tableLayoutPanel7.TabIndex = 12;
             // 
             // tableLayoutPanel8
@@ -571,7 +572,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(102, 347);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(102, 341);
             this.tableLayoutPanel8.TabIndex = 13;
             // 
             // buttonClear
@@ -581,7 +582,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClear.BackColor = System.Drawing.Color.LightCyan;
             this.buttonClear.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonClear.Location = new System.Drawing.Point(3, 281);
+            this.buttonClear.Location = new System.Drawing.Point(3, 275);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(96, 63);
             this.buttonClear.TabIndex = 9;
@@ -598,7 +599,7 @@
             this.buttonAdd.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonAdd.Location = new System.Drawing.Point(3, 3);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(96, 84);
+            this.buttonAdd.Size = new System.Drawing.Size(96, 81);
             this.buttonAdd.TabIndex = 7;
             this.buttonAdd.Text = "矩阵相加";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -611,7 +612,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSub.BackColor = System.Drawing.Color.LightCyan;
             this.buttonSub.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonSub.Location = new System.Drawing.Point(3, 183);
+            this.buttonSub.Location = new System.Drawing.Point(3, 177);
             this.buttonSub.Name = "buttonSub";
             this.buttonSub.Size = new System.Drawing.Size(96, 92);
             this.buttonSub.TabIndex = 8;
@@ -626,9 +627,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.LightCyan;
             this.button1.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(3, 93);
+            this.button1.Location = new System.Drawing.Point(3, 90);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 84);
+            this.button1.Size = new System.Drawing.Size(96, 81);
             this.button1.TabIndex = 6;
             this.button1.Text = "矩阵相乘";
             this.button1.UseVisualStyleBackColor = false;
@@ -652,7 +653,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.756233F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.24377F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(653, 347);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(653, 341);
             this.tableLayoutPanel5.TabIndex = 11;
             // 
             // label1
@@ -686,7 +687,7 @@
             this.MatrixBtextBox.Location = new System.Drawing.Point(329, 29);
             this.MatrixBtextBox.Multiline = true;
             this.MatrixBtextBox.Name = "MatrixBtextBox";
-            this.MatrixBtextBox.Size = new System.Drawing.Size(321, 315);
+            this.MatrixBtextBox.Size = new System.Drawing.Size(321, 309);
             this.MatrixBtextBox.TabIndex = 3;
             // 
             // MatrixAtextBox
@@ -697,7 +698,7 @@
             this.MatrixAtextBox.Location = new System.Drawing.Point(3, 29);
             this.MatrixAtextBox.Multiline = true;
             this.MatrixAtextBox.Name = "MatrixAtextBox";
-            this.MatrixAtextBox.Size = new System.Drawing.Size(320, 315);
+            this.MatrixAtextBox.Size = new System.Drawing.Size(320, 309);
             this.MatrixAtextBox.TabIndex = 1;
             // 
             // tabPage4
