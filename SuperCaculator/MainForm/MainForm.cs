@@ -5,6 +5,7 @@ using StandardCalculateForm;
 using System;
 using System.Windows.Forms;
 using DateCalculation;
+using UnitConversion;
 
 namespace MainForm
 {
@@ -16,6 +17,7 @@ namespace MainForm
         MainMatrixForm matrixForm = new MainMatrixForm();
         EquationsSolvingModule.MainForm solveEquForm=new EquationsSolvingModule.MainForm();
         DateCalculation.DateCalculation dateForm = new DateCalculation.DateCalculation();
+        ConversionForm conversionForm = new ConversionForm();
 
         public MainForm()
         {
@@ -70,7 +72,7 @@ namespace MainForm
                         ShowForm(dateForm);
                         break;
                     case "unit":
-                        ShowForm(standardForm);   //需要修改为单位换算窗口
+                        ShowForm(conversionForm);   //需要修改为单位换算窗口
                         break;
                     default:
                         ShowForm(standardForm);
