@@ -12,8 +12,8 @@ namespace DateCalculation
 {
     public partial class Calendar : Form
     {
-        Form1 form;
-        public Calendar(Form1 form1)
+        DateCalculation form;
+        public Calendar(DateCalculation form1)
         {
             InitializeComponent();
             form = form1;
