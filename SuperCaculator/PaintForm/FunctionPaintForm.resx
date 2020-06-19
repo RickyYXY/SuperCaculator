@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label_help.Text" xml:space="preserve">
+  <data name="textBox_help.Text" xml:space="preserve">
     <value>说明：
 1. 图像显示函数的局部，具体范围为定义域与值域围成的矩形（一元函数）/长方体（二元函数）。
 2. 自变量变化方向：x（一元、二元函数）自左向右增大，y（二元函数）自左下向右上增大。
@@ -133,7 +133,6 @@
 三角函数：sin  cos  tan  csc  sec  cot
 反三角函数：arcsin  arccos  arctan  arccsc  arcsec  arccot
 双曲函数：sinh  cosh  tanh  csch  sech  coth
-反双曲函数：arsinh  arcosh  artanh
-</value>
+反双曲函数：arsinh  arcosh  artanh</value>
   </data>
 </root>
