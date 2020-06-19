@@ -78,7 +78,7 @@
             this.textBox_exp_3D = new System.Windows.Forms.TextBox();
             this.tabPage_help = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_help = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage_2D.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2D)).BeginInit();
@@ -210,7 +210,7 @@
             // 
             this.button_draw_2D.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw_2D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_draw_2D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_draw_2D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.button_draw_2D.Location = new System.Drawing.Point(777, 3);
             this.button_draw_2D.Name = "button_draw_2D";
             this.button_draw_2D.Size = new System.Drawing.Size(188, 204);
@@ -450,7 +450,7 @@
             // 
             this.button_draw_3D.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_draw_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_draw_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.button_draw_3D.Location = new System.Drawing.Point(3, 63);
             this.button_draw_3D.Name = "button_draw_3D";
             this.button_draw_3D.Size = new System.Drawing.Size(182, 203);
@@ -735,9 +735,10 @@
             // 
             // tableLayoutPanel11
             // 
+            this.tableLayoutPanel11.AutoScroll = true;
             this.tableLayoutPanel11.ColumnCount = 1;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.textBox_help, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -746,16 +747,19 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(968, 707);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
-            // label1
+            // textBox_help
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("方正舒体", 18F);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(962, 707);
-            this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.textBox_help.BackColor = System.Drawing.Color.MintCream;
+            this.textBox_help.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_help.Font = new System.Drawing.Font("方正舒体", 18F);
+            this.textBox_help.Location = new System.Drawing.Point(3, 3);
+            this.textBox_help.Multiline = true;
+            this.textBox_help.Name = "textBox_help";
+            this.textBox_help.ReadOnly = true;
+            this.textBox_help.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_help.Size = new System.Drawing.Size(962, 701);
+            this.textBox_help.TabIndex = 0;
+            this.textBox_help.Text = resources.GetString("textBox_help.Text");
             // 
             // FunctionPaintForm
             // 
@@ -839,8 +843,6 @@
         private System.Windows.Forms.PictureBox pictureBox_2D;
         private System.Windows.Forms.Label label_range_3D;
         private System.Windows.Forms.TabPage tabPage_help;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelFx;
         private System.Windows.Forms.Button button_save_3D;
         private System.Windows.Forms.Button button_color_3D;
@@ -851,5 +853,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox textBox_exp_2D;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.TextBox textBox_help;
     }
 }

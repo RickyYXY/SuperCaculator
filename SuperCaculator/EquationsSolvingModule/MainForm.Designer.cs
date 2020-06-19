@@ -70,10 +70,11 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.LightCyan;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStart.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStart.Location = new System.Drawing.Point(294, 19);
+            this.btnStart.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStart.Location = new System.Drawing.Point(272, 19);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(92, 30);
+            this.btnStart.Size = new System.Drawing.Size(94, 30);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "开始求解";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -83,10 +84,10 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.LightCyan;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfirm.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnConfirm.Location = new System.Drawing.Point(196, 19);
+            this.btnConfirm.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnConfirm.Location = new System.Drawing.Point(212, 19);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(92, 30);
+            this.btnConfirm.Size = new System.Drawing.Size(55, 30);
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Text = "确定";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -105,18 +106,19 @@
             "3",
             "4",
             "5"});
-            this.cboUnoNum.Location = new System.Drawing.Point(102, 21);
+            this.cboUnoNum.Location = new System.Drawing.Point(118, 22);
+            this.cboUnoNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboUnoNum.Name = "cboUnoNum";
-            this.cboUnoNum.Size = new System.Drawing.Size(70, 27);
+            this.cboUnoNum.Size = new System.Drawing.Size(73, 27);
             this.cboUnoNum.TabIndex = 2;
             // 
             // lblyuanNum
             // 
             this.lblyuanNum.AutoSize = true;
-            this.lblyuanNum.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblyuanNum.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblyuanNum.Location = new System.Drawing.Point(3, 24);
             this.lblyuanNum.Name = "lblyuanNum";
-            this.lblyuanNum.Size = new System.Drawing.Size(104, 17);
+            this.lblyuanNum.Size = new System.Drawing.Size(123, 20);
             this.lblyuanNum.TabIndex = 0;
             this.lblyuanNum.Text = "未知元个数：";
             // 
@@ -127,11 +129,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrint.BackColor = System.Drawing.SystemColors.Window;
             this.txtPrint.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrint.Location = new System.Drawing.Point(9, 38);
+            this.txtPrint.Location = new System.Drawing.Point(7, 42);
+            this.txtPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrint.Multiline = true;
             this.txtPrint.Name = "txtPrint";
             this.txtPrint.ReadOnly = true;
-            this.txtPrint.Size = new System.Drawing.Size(310, 257);
+            this.txtPrint.Size = new System.Drawing.Size(313, 256);
             this.txtPrint.TabIndex = 0;
             // 
             // lblfangchengzu
@@ -139,10 +142,10 @@
             this.lblfangchengzu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblfangchengzu.AutoSize = true;
-            this.lblfangchengzu.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblfangchengzu.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblfangchengzu.Location = new System.Drawing.Point(6, 9);
             this.lblfangchengzu.Name = "lblfangchengzu";
-            this.lblfangchengzu.Size = new System.Drawing.Size(112, 17);
+            this.lblfangchengzu.Size = new System.Drawing.Size(133, 20);
             this.lblfangchengzu.TabIndex = 2;
             this.lblfangchengzu.Text = "求解方程(组)：";
             // 
@@ -153,11 +156,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResult.BackColor = System.Drawing.SystemColors.Window;
             this.txtResult.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResult.Location = new System.Drawing.Point(3, 38);
+            this.txtResult.Location = new System.Drawing.Point(2, 42);
+            this.txtResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(318, 257);
+            this.txtResult.Size = new System.Drawing.Size(324, 256);
             this.txtResult.TabIndex = 0;
             // 
             // lblResult
@@ -165,10 +169,10 @@
             this.lblResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblResult.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblResult.Location = new System.Drawing.Point(3, 9);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(88, 17);
+            this.lblResult.Size = new System.Drawing.Size(104, 20);
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "求解结果：";
             // 
@@ -189,11 +193,11 @@
             this.splitContainer1.BackColor = System.Drawing.Color.MintCream;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.MintCream;
             this.splitContainer1.Panel1.Controls.Add(this.txtPrint);
             this.splitContainer1.Panel1.Controls.Add(this.lblfangchengzu);
             // 
@@ -204,6 +208,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtResult);
             this.splitContainer1.Size = new System.Drawing.Size(657, 308);
             this.splitContainer1.SplitterDistance = 322;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel5
@@ -222,10 +227,10 @@
             // lblWarn
             // 
             this.lblWarn.AutoSize = true;
-            this.lblWarn.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblWarn.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblWarn.Location = new System.Drawing.Point(9, 10);
             this.lblWarn.Name = "lblWarn";
-            this.lblWarn.Size = new System.Drawing.Size(88, 17);
+            this.lblWarn.Size = new System.Drawing.Size(104, 20);
             this.lblWarn.TabIndex = 3;
             this.lblWarn.Text = "提示信息：";
             // 

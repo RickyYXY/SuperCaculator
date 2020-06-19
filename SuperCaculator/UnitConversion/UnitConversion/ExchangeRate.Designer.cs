@@ -136,14 +136,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "币种";
             // 
-            // DetailForm
+            // ExchangeRate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(436, 265);
             this.Controls.Add(this.panel1);
-            this.Name = "DetailForm";
-            this.Text = "DetailForm";
+            this.Name = "ExchangeRate";
+            this.Text = "汇率详情";
+            this.Load += new System.EventHandler(this.ExchangeRate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
