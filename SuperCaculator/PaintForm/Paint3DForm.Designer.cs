@@ -98,28 +98,31 @@
             // 
             // button_save
             // 
+            this.button_save.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_save.BackColor = System.Drawing.Color.LightCyan;
-            this.button_save.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_save.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_save.Location = new System.Drawing.Point(580, 235);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(150, 55);
             this.button_save.TabIndex = 20;
-            this.button_save.Text = "Save";
+            this.button_save.Text = "保存";
             this.button_save.UseVisualStyleBackColor = false;
             this.button_save.Click += new System.EventHandler(this.Button_save_Click);
             // 
             // label_rate
             // 
+            this.label_rate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_rate.AutoSize = true;
-            this.label_rate.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.label_rate.Font = new System.Drawing.Font("方正舒体", 20F);
             this.label_rate.Location = new System.Drawing.Point(918, 85);
             this.label_rate.Name = "label_rate";
-            this.label_rate.Size = new System.Drawing.Size(97, 42);
+            this.label_rate.Size = new System.Drawing.Size(92, 36);
             this.label_rate.TabIndex = 19;
-            this.label_rate.Text = "Rate:";
+            this.label_rate.Text = "密度:";
             // 
             // trackBar
             // 
+            this.trackBar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trackBar.BackColor = System.Drawing.Color.LightBlue;
             this.trackBar.Location = new System.Drawing.Point(938, 130);
             this.trackBar.Name = "trackBar";
@@ -133,129 +136,141 @@
             // 
             // textBox_maxY
             // 
-            this.textBox_maxY.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_maxY.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox_maxY.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_maxY.Location = new System.Drawing.Point(595, 160);
             this.textBox_maxY.Name = "textBox_maxY";
-            this.textBox_maxY.Size = new System.Drawing.Size(250, 59);
+            this.textBox_maxY.Size = new System.Drawing.Size(250, 51);
             this.textBox_maxY.TabIndex = 17;
             this.textBox_maxY.Text = "1";
             this.textBox_maxY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_minY
             // 
-            this.textBox_minY.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_minY.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox_minY.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_minY.Location = new System.Drawing.Point(205, 160);
             this.textBox_minY.Name = "textBox_minY";
-            this.textBox_minY.Size = new System.Drawing.Size(250, 59);
+            this.textBox_minY.Size = new System.Drawing.Size(250, 51);
             this.textBox_minY.TabIndex = 16;
             this.textBox_minY.Text = "-1";
             this.textBox_minY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_Y
             // 
+            this.label_Y.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_Y.AutoSize = true;
-            this.label_Y.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_Y.Location = new System.Drawing.Point(475, 160);
+            this.label_Y.Font = new System.Drawing.Font("方正舒体", 25F);
+            this.label_Y.Location = new System.Drawing.Point(460, 165);
             this.label_Y.Name = "label_Y";
-            this.label_Y.Size = new System.Drawing.Size(105, 52);
+            this.label_Y.Size = new System.Drawing.Size(129, 44);
             this.label_Y.TabIndex = 15;
             this.label_Y.Text = "< y <";
             // 
             // label_func
             // 
+            this.label_func.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_func.AutoSize = true;
-            this.label_func.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_func.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_func.Location = new System.Drawing.Point(35, 20);
             this.label_func.Name = "label_func";
-            this.label_func.Size = new System.Drawing.Size(182, 52);
+            this.label_func.Size = new System.Drawing.Size(181, 44);
             this.label_func.TabIndex = 14;
             this.label_func.Text = "F(x, y) = ";
             // 
             // button_clean
             // 
+            this.button_clean.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_clean.BackColor = System.Drawing.Color.LightCyan;
-            this.button_clean.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_clean.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_clean.Location = new System.Drawing.Point(400, 235);
             this.button_clean.Name = "button_clean";
             this.button_clean.Size = new System.Drawing.Size(150, 55);
             this.button_clean.TabIndex = 12;
-            this.button_clean.Text = "Clean";
+            this.button_clean.Text = "清屏";
             this.button_clean.UseVisualStyleBackColor = false;
             this.button_clean.Click += new System.EventHandler(this.Button_clean_Click);
             // 
             // button_close
             // 
+            this.button_close.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_close.BackColor = System.Drawing.Color.LightCyan;
-            this.button_close.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_close.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_close.Location = new System.Drawing.Point(760, 235);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(150, 55);
             this.button_close.TabIndex = 13;
-            this.button_close.Text = "Close";
+            this.button_close.Text = "关闭";
             this.button_close.UseVisualStyleBackColor = false;
             this.button_close.Click += new System.EventHandler(this.Button_close_Click);
             // 
             // button_draw
             // 
+            this.button_draw.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_draw.BackColor = System.Drawing.Color.LightCyan;
-            this.button_draw.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_draw.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_draw.Location = new System.Drawing.Point(220, 235);
             this.button_draw.Name = "button_draw";
             this.button_draw.Size = new System.Drawing.Size(150, 55);
             this.button_draw.TabIndex = 11;
-            this.button_draw.Text = "Draw";
+            this.button_draw.Text = "绘图";
             this.button_draw.UseVisualStyleBackColor = false;
             this.button_draw.Click += new System.EventHandler(this.Button_draw_Click);
             // 
             // button_color
             // 
+            this.button_color.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_color.BackColor = System.Drawing.Color.LightCyan;
-            this.button_color.Font = new System.Drawing.Font("Ink Free", 20F);
+            this.button_color.Font = new System.Drawing.Font("方正舒体", 20F);
             this.button_color.Location = new System.Drawing.Point(40, 235);
             this.button_color.Name = "button_color";
             this.button_color.Size = new System.Drawing.Size(150, 55);
             this.button_color.TabIndex = 10;
-            this.button_color.Text = "Color";
+            this.button_color.Text = "颜色";
             this.button_color.UseVisualStyleBackColor = false;
             this.button_color.Click += new System.EventHandler(this.Button_color_Click);
             // 
             // label_range
             // 
+            this.label_range.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_range.AutoSize = true;
-            this.label_range.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.label_range.Font = new System.Drawing.Font("方正舒体", 25F);
             this.label_range.Location = new System.Drawing.Point(35, 125);
             this.label_range.Name = "label_range";
-            this.label_range.Size = new System.Drawing.Size(141, 52);
+            this.label_range.Size = new System.Drawing.Size(115, 44);
             this.label_range.TabIndex = 9;
-            this.label_range.Text = "Range:";
+            this.label_range.Text = "范围:";
             // 
             // textBox_maxX
             // 
-            this.textBox_maxX.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_maxX.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox_maxX.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_maxX.Location = new System.Drawing.Point(595, 90);
             this.textBox_maxX.Name = "textBox_maxX";
-            this.textBox_maxX.Size = new System.Drawing.Size(250, 59);
+            this.textBox_maxX.Size = new System.Drawing.Size(250, 51);
             this.textBox_maxX.TabIndex = 8;
             this.textBox_maxX.Text = "1";
             this.textBox_maxX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_minX
             // 
-            this.textBox_minX.Font = new System.Drawing.Font("Ink Free", 25F);
+            this.textBox_minX.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox_minX.Font = new System.Drawing.Font("方正舒体", 25F);
             this.textBox_minX.Location = new System.Drawing.Point(205, 90);
             this.textBox_minX.Name = "textBox_minX";
-            this.textBox_minX.Size = new System.Drawing.Size(250, 59);
+            this.textBox_minX.Size = new System.Drawing.Size(250, 51);
             this.textBox_minX.TabIndex = 7;
             this.textBox_minX.Text = "-1";
             this.textBox_minX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_X
             // 
+            this.label_X.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_X.AutoSize = true;
-            this.label_X.Font = new System.Drawing.Font("Ink Free", 25F);
-            this.label_X.Location = new System.Drawing.Point(475, 90);
+            this.label_X.Font = new System.Drawing.Font("方正舒体", 25F);
+            this.label_X.Location = new System.Drawing.Point(460, 95);
             this.label_X.Name = "label_X";
-            this.label_X.Size = new System.Drawing.Size(103, 52);
+            this.label_X.Size = new System.Drawing.Size(130, 44);
             this.label_X.TabIndex = 6;
             this.label_X.Text = "< x <";
             // 
@@ -267,7 +282,7 @@
             this.Controls.Add(this.panel_paint);
             this.Controls.Add(this.panel1);
             this.Name = "Paint3DForm";
-            this.Text = "Paint3D";
+            this.Text = "三维绘图";
             this.panel_paint.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panel1.ResumeLayout(false);

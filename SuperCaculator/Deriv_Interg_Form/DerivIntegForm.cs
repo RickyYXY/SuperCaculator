@@ -46,7 +46,7 @@ namespace DerivIntegForm
                 double result = integral.IntegCal(double.Parse(up_num_comboBox.Text),
                     double.Parse(down_num_comboBox.Text),
                     exp_textBox.Text);
-                result_textBox.Text = result.ToString("f10");
+                result_textBox.Text = result.ToString("f20");
                 log.Enqueue(new Log(result));
                 if (log.Count > 5)
                     log.Dequeue();
@@ -91,12 +91,14 @@ namespace DerivIntegForm
                 double precision = 0.001 * Math.Pow(10, -dpre_trackBar.Value);
                 Deriviation deriviation = new Deriviation(precision);
                 double result = deriviation.DerivCal(double.Parse(x), funExp);
-                doutput_textBox.Text = result.ToString("f10");
+                doutput_textBox.Text = result.ToString("f20");
                 log.Enqueue(new Log(result));
                 if (log.Count > 5)
                     log.Dequeue();
                 input_bindingSource.DataSource = log.ToList();
                 input_bindingSource.ResetBindings(false);
+                input_bindingSource2.DataSource = log.ToList();
+                input_bindingSource2.ResetBindings(false);
                 dinput_comboBox.Text = x;
             }
             catch(Exception error)
@@ -133,8 +135,8 @@ namespace DerivIntegForm
                 Extremum extremum = new Extremum(precision);
                 extremum.ExtremumCal(double.Parse(up),double.Parse(down),funExp,
                     out double minVal,out double maxVal);
-                vminoutput_textBox.Text = minVal.ToString("f10");
-                vmaxoutput_textBox.Text = maxVal.ToString("f10");
+                vminoutput_textBox.Text = minVal.ToString("f20");
+                vmaxoutput_textBox.Text = maxVal.ToString("f20");
 
                 log.Enqueue(new Log(minVal));
                 if (log.Count > 5)

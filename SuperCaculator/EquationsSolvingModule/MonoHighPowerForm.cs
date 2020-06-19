@@ -15,8 +15,9 @@ namespace EquationsSolvingModule
         public double xInit1; // 初始值
         public double[] monoCoefficient1; // 一元高次方程的系数集
         public int[] monoPower1;  // 一元高次方程的系数集
-        public string warning1 = "";
-        public bool IsCancelled1 = false;
+        public int itemNum; // 项的个数
+        public string warning1;
+        public bool isCancelled1 = false;
 
         public MonoHighPowerForm()
         {
@@ -26,6 +27,7 @@ namespace EquationsSolvingModule
         private void MonoHighPowerForm_Load(object sender, EventArgs e)
         {
             MainForm f1 = (MainForm)this.Owner;
+            warning1 = "";
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -54,13 +56,16 @@ namespace EquationsSolvingModule
                 string[] arrTempC = new string[] { };
                 for (int i = 0; i < txtCoe.Lines.Length; i++)
                     arrTempC = txtCoe.Lines[i].Split(',');
-                monoCoefficient1 = new double[arrTempC.Length];
-                for (int i = 0; i < arrTempC.Length; i++)
+
+                itemNum = arrTempC.Length;
+                monoCoefficient1 = new double[itemNum];
+                for (int i = 0; i < itemNum; i++)
                     monoCoefficient1[i] = Double.Parse(arrTempC[i]);
 
                 string[] arrTempP = new string[] { };
                 for (int i = 0; i < txtPower.Lines.Length; i++)
                     arrTempP = txtPower.Lines[i].Split(',');
+
                 monoPower1 = new int[arrTempP.Length];
                 for (int i = 0; i < arrTempP.Length; i++)
                     monoPower1[i] = int.Parse(arrTempP[i]);
@@ -79,7 +84,7 @@ namespace EquationsSolvingModule
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            IsCancelled1 = true;
+            isCancelled1 = true;
             this.Close();
         }
     }

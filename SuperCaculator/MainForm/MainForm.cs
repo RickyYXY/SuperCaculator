@@ -3,14 +3,8 @@ using MatrixCalculateForm;
 using PaintForm;
 using StandardCalculateForm;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DateCalculation;
 
 namespace MainForm
 {
@@ -20,6 +14,9 @@ namespace MainForm
         FunctionPaintForm paintForm = new FunctionPaintForm();
         DIForm diForm = new DIForm();
         MainMatrixForm matrixForm = new MainMatrixForm();
+        EquationsSolvingModule.MainForm solveEquForm=new EquationsSolvingModule.MainForm();
+        DateCalculation.DateCalculation dateForm = new DateCalculation.DateCalculation();
+
         public MainForm()
         {
             InitializeComponent();
@@ -66,6 +63,15 @@ namespace MainForm
                     case "matrix":
                         ShowForm(matrixForm);
                         break;
+                    case "solveEquation":
+                        ShowForm(solveEquForm);
+                        break;
+                    case "date":
+                        ShowForm(dateForm);
+                        break;
+                    case "unit":
+                        ShowForm(standardForm);   //需要修改为单位换算窗口
+                        break;
                     default:
                         ShowForm(standardForm);
                         break;
@@ -74,9 +80,17 @@ namespace MainForm
             }
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void MainForm_ResizeEnd(object sender, EventArgs e)
         {
+            if (Width <= 800)
+            {
+                Width = 800;
+            }
 
+            if (Height <= 500)
+            {
+                Height = 500;
+            }
         }
     }
 }

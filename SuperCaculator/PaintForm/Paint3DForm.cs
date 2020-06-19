@@ -14,14 +14,16 @@ namespace PaintForm
 {
     public partial class Paint3DForm : Form
     {
-        Func<double?, double?, double> Caculate;
-        Pen mypen;
-
+        readonly Func<double?, double?, double> Caculate;
+        readonly Pen mypen;
+        public double minX { get; set; }
+        public double maxX { get; set; }
+        public double minY { get; set; }
+        public double maxY { get; set; }
         //int XLENGTH, YLENGTH, ZLENGTH;
         //int Xstart, Ystart;
-
         //private const double sqrt2 = 1.4142135623730950488016887242;
-        private double rate;
+        private int rate;
 
         public Paint3DForm(string exp, Func<double?, double?, double> Caculate)
         {
@@ -37,6 +39,10 @@ namespace PaintForm
             //Caculate = (x, y) => x + y;
             //Caculate = (x, y) => x / y;
             pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height);
+            textBox_minX.DataBindings.Add("Text", this, "minX");
+            textBox_maxX.DataBindings.Add("Text", this, "maxX");
+            textBox_minY.DataBindings.Add("Text", this, "minY");
+            textBox_maxY.DataBindings.Add("Text", this, "maxY");
         }
 
         private void TrackBar_Scroll(object sender, EventArgs e)
@@ -54,6 +60,7 @@ namespace PaintForm
                 }
             }
         }
+
         private void Button_clean_Click(object sender, EventArgs e)
         {
             //Graphics g = pictureBox.CreateGraphics();
@@ -67,19 +74,19 @@ namespace PaintForm
 
         private void Button_draw_Click(object sender, EventArgs e)
         {
-            double minX, minY, maxX, maxY;
-            try
-            {
-                minX = double.Parse(textBox_minX.Text);
-                maxX = double.Parse(textBox_maxX.Text);
-                minY = double.Parse(textBox_minY.Text);
-                maxY = double.Parse(textBox_maxY.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
+            //double minX, minY, maxX, maxY;
+            //try
+            //{
+            //    minX = double.Parse(textBox_minX.Text);
+            //    maxX = double.Parse(textBox_maxX.Text);
+            //    minY = double.Parse(textBox_minY.Text);
+            //    maxY = double.Parse(textBox_maxY.Text);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //    return;
+            //}
             if (maxX <= minX || maxY <= minY)
             {
                 MessageBox.Show("数值输入不合法。");

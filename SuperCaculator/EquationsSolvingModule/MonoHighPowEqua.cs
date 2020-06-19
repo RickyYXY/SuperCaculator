@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace EquationsSolvingModule
 {
-    class MonoHighPowEqua
+    public class MonoHighPowEqua
     {
-        public double precision;
-        public double xInit;
+        public double precision;  // 精度
+        private int theMaxIterativeTime = 10 ^ 5; // 最大迭代次数
+        public bool isMaxIterated = false; // 是否达到最大迭代数
+        public double xInit;  // 解的初始值
+        public double xFinal; // 迭代结果
         public double[] coefficient;
         public int[] power;
 
@@ -22,7 +25,7 @@ namespace EquationsSolvingModule
             this.coefficient = coe;
             this.power = pow;
         }
-        public double GenerateEqua(double x)//方程
+        public double GenerateEqua(double x)  // 将x带入方程左侧求值
         {
             double sum = 0.0;
 
@@ -37,7 +40,7 @@ namespace EquationsSolvingModule
             return sum;
         }
 
-        public double GenerateDeriv(double x)//导数
+        public double GenerateDeriv(double x) // 求导数
         {
             double sum = 0.0;
 
@@ -51,21 +54,32 @@ namespace EquationsSolvingModule
             return sum;
         }
 
-        public double Solve()
+        public void Solve()  // 迭代求解
         {
             double x0 = xInit;
             double xn;
 
-            while (true)
+            for (int i = 0; i <= theMaxIterativeTime; i++)
             {
                 xn = x0 - GenerateEqua(x0) / GenerateDeriv(x0);
+
                 if (Math.Abs(xn - x0) < precision)
-                    return xn;
+                {
+                    xFinal = xn;
+                    return;
+                }
+                else if (i == theMaxIterativeTime)
+                {
+                    isMaxIterated = true;
+                    xFinal = xn;
+                    return;
+                }
+
                 x0 = xn;
             }
         }
 
-        public string MonoEquaToString()
+        public string MonoEquaToString()  // 将方程打印出来
         {
             string strEquation = "";
 
@@ -117,13 +131,13 @@ namespace EquationsSolvingModule
                 }
                 if (coefficient[coefficient.Length-1] < 0)
                 {
-                    strEquation += "+";
+                    strEquation += " + ";
                     strEquation += "(";
                     strEquation += coefficient[coefficient.Length-1].ToString();
                     strEquation += ")";
                 }
                 else if(coefficient[coefficient.Length-1] > 0){
-                    strEquation += "+";
+                    strEquation += " + ";
                     strEquation += coefficient[coefficient.Length-1].ToString();
                 }
             }

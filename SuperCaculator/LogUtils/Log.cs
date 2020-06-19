@@ -10,7 +10,7 @@ namespace LogUtils
     {
         public string Context
         {
-            get { return context.ToString("f10"); }
+            get { return context.ToString("f20"); }
         }
         private double context;
         public Log(double x)

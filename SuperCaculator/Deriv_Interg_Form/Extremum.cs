@@ -30,52 +30,26 @@ namespace DerivIntergForm
         {
             if (up < down)
                 throw new Exception("上界不可小于下界！");
-
             taskList.Clear();
-            double maxVal, minVal;
+            MinMaxVal result = new MinMaxVal();
             funcExp = exp;
             Function.Function function = new Function.Function(exp);
-            maxVal = function.GetValue(down);
-            minVal = function.GetValue(down);
-            if (concurr_num  >= (int)((up - down) / precision))
-            {
-                for (double x = down + precision; x <= up; x += precision)
-                {
-                    double temp = x;
-                    Task<MinMaxVal> task = Task.Run(() => ThreadCal_S(temp));
-                    taskList.Add(task);
-                }
-            }
-            else
-            {
-                interval = (up - down) / (2 * concurr_num);
-                double x = down + interval;
-                for (; x < up; x += interval)
-                {
-                    double temp = x;
-                    Task<MinMaxVal> task = Task.Run(() => ThreadCal_M(temp));
-                    taskList.Add(task);
-                }
-                minVal = Math.Min(minVal, function.GetValue(up));
-                maxVal = Math.Max(maxVal, function.GetValue(up));
-                for (x = (x - interval + precision); x < up; x += precision)
-                {
-                    minVal = Math.Min(minVal, function.GetValue(x));
-                    maxVal = Math.Max(maxVal, function.GetValue(x));
-                }
-            }
+            result.MaxVal = function.GetValue(down);
+            result.MinVal = function.GetValue(down);
 
+            ProduceTask(up, down, concurr_num, result, function);
             Task.WaitAll(taskList.ToArray());
+
             foreach (Task<MinMaxVal> t in taskList)
             {
-                minVal = Math.Min(minVal, t.Result.MinVal);
-                maxVal = Math.Max(maxVal, t.Result.MaxVal);
+                result.MinVal = Math.Min(result.MinVal, t.Result.MinVal);
+                result.MaxVal = Math.Max(result.MaxVal, t.Result.MaxVal);
             }
-            min = minVal;
-            max = maxVal;
+            min = result.MinVal;
+            max = result.MaxVal;
         }
 
-        private MinMaxVal ThreadCal_S(double x)
+        private MinMaxVal ThreadCalSingle(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             MinMaxVal temp = new MinMaxVal();
@@ -83,7 +57,7 @@ namespace DerivIntergForm
             temp.MinVal = temp.MaxVal;
             return temp;
         }
-        private MinMaxVal ThreadCal_M(double x)
+        private MinMaxVal ThreadCalMutiple(double x)
         {
             Function.Function function = new Function.Function(funcExp);
             MinMaxVal temp = new MinMaxVal();
@@ -96,6 +70,39 @@ namespace DerivIntergForm
                 temp.MinVal = Math.Min(temp.MinVal, result);
             }
             return temp;
+        }
+        private void ProduceTask(double up, double down,
+            int concurr_num, MinMaxVal result, Function.Function function)
+        {
+            if (concurr_num >= (int)((up - down) / precision))
+            {
+                for (double x = down + precision; x < up; x += precision)
+                {
+                    double temp = x;
+                    Task<MinMaxVal> task = Task.Run(() => ThreadCalSingle(temp));
+                    taskList.Add(task);
+                }
+                result.MinVal = Math.Min(result.MinVal, function.GetValue(up));
+                result.MaxVal = Math.Max(result.MaxVal, function.GetValue(up));
+            }
+            else
+            {
+                interval = (up - down) / (2 * concurr_num);
+                double x = down + interval;
+                for (; x < up; x += interval)
+                {
+                    double temp = x;
+                    Task<MinMaxVal> task = Task.Run(() => ThreadCalMutiple(temp));
+                    taskList.Add(task);
+                }
+                for (x = (x - interval + precision); x < up; x += precision)
+                {
+                    result.MinVal = Math.Min(result.MinVal, function.GetValue(x));
+                    result.MaxVal = Math.Max(result.MaxVal, function.GetValue(x));
+                }
+                result.MinVal = Math.Min(result.MinVal, function.GetValue(up));
+                result.MaxVal = Math.Max(result.MaxVal, function.GetValue(up));
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace DerivIntegForm
-{ 
+{
     class Integral
     {
         private double precision;
@@ -23,6 +23,9 @@ namespace DerivIntegForm
         {
             taskList.Clear();
             double sign = 1;
+            double result = 0;
+            funcExp = exp;
+            Function.Function function = new Function.Function(exp);
             if (up < down)
             {
                 double temp = up;
@@ -30,18 +33,41 @@ namespace DerivIntegForm
                 down = temp;
                 sign = -1;
             }
-            double result = 0;
-            funcExp = exp;
-            Function.Function function = new Function.Function(exp);
             result += function.GetValue(up);
             result += function.GetValue(down);
 
+            ProduceTask(up, down, concurr_num, ref result, function);
+            Task.WaitAll(taskList.ToArray());
+            foreach (Task<double> t in taskList)
+                result += t.Result;
+            return sign * result * precision / 2;
+        }
+
+        private double ThreadCalSingle(double x)
+        {
+            Function.Function function = new Function.Function(funcExp);
+            double temp = 2 * function.GetValue(x);
+            return temp;
+        }
+
+        private double ThreadCalMutiple(double x)
+        {
+            Function.Function function = new Function.Function(funcExp);
+            double temp = 0;
+            for (double t = 0; t < interval; t += precision)
+                temp += 2 * function.GetValue(x - t);
+            return temp;
+        }
+
+        private void ProduceTask(double up, double down,
+            int concurr_num, ref double result, Function.Function function)
+        {
             if (concurr_num >= (int)((up - down) / precision))
             {
                 for (double x = down + precision; x < up; x += precision)
                 {
                     double temp = x;
-                    Task<double> task = Task.Run(() => ThreadCal_S(temp));
+                    Task<double> task = Task.Run(() => ThreadCalSingle(temp));
                     taskList.Add(task);
                 }
             }
@@ -52,41 +78,14 @@ namespace DerivIntegForm
                 for (; x < up; x += interval)
                 {
                     double temp = x;
-                    Task<double> task = Task.Run(() => ThreadCal_M(temp));
+                    Task<double> task = Task.Run(() => ThreadCalMutiple(temp));
                     taskList.Add(task);
                 }
                 double sum = 0;
                 for (x = (x - interval + precision); x < up; x += precision)
-                {
                     sum += 2 * function.GetValue(x);
-                }
                 result += sum;
             }
-
-            Task.WaitAll(taskList.ToArray());
-            foreach(Task<double> t in taskList)
-            {
-                result += t.Result;
-            }
-            return sign * result * precision / 2;
-        }
-
-        private double ThreadCal_S(double x)
-        {
-            Function.Function function = new Function.Function(funcExp);
-            double temp = 2 * function.GetValue(x);
-            return temp;
-        }
-
-        private double ThreadCal_M(double x)
-        {
-            Function.Function function = new Function.Function(funcExp);
-            double temp = 0;
-            for (double t = 0; t < interval; t += precision)
-            {
-                temp += 2 * function.GetValue(x - t);
-            }
-            return temp;
         }
     }
 }

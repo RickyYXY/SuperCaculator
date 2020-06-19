@@ -19,7 +19,7 @@ namespace EquationsSolvingModule
         public int[,] power1; // = new int[2, 2] { { 2, 2 }, { 2, 2 } };
         public double[] constant1; // = new double[] { 1, 2 };
         public string warning1;
-        public bool IsCancelled = false;
+        public bool isCancelled = false;
 
         public DataInputForm()
         {
@@ -59,6 +59,19 @@ namespace EquationsSolvingModule
                 this.Close();
                 return;
             }
+            if (txtCoe.Lines.Length != equationNum1)
+            {
+                warning1 = "错误！系数集行数错误！\r\n";
+                this.Close();
+                return;
+            }
+            if (txtPower.Lines.Length != equationNum1)
+            {
+                warning1 = "错误！次数集行数错误！\r\n";
+                this.Close();
+                return;
+            }
+
             coefficient1 = new double[equationNum1, unknowNum1];
             power1 = new int[equationNum1, unknowNum1];
             constant1 = new double[equationNum1];
@@ -111,7 +124,7 @@ namespace EquationsSolvingModule
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            IsCancelled = true;
+            isCancelled = true;
             this.Close();
         }
     }
