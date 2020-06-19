@@ -9,7 +9,8 @@ namespace Function
     public class FuncMatch
     {
         public static readonly string[] func_names = 
-            { "sin", "cos", "tan", "exp", "log" ,"ln","csc","sec","cot","abs","ceil","floor",
+            { "sin", "cos", "tan", "csc","sec","cot",
+            "exp", "log" ,"ln","lg","abs","ceil","floor",
             "arcsin","arccos","arctan","arccsc","arcsec","arccot",
             "sinh","cosh","tanh","csch","sech","coth",
             "arsinh","arcosh","artanh"};
@@ -43,6 +44,9 @@ namespace Function
                         case "ln":
                             Ln_function ln_Function = new Ln_function(exp);
                             return ln_Function.GetValue(x,y);
+                        case "lg":
+                            Lg_function lg_Function = new Lg_function(exp);
+                            return lg_Function.GetValue(x, y);
                         case "log":
                             int j = 0;
                             string temp = input.Substring(func_name.Length);

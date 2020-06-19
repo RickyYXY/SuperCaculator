@@ -105,8 +105,8 @@ namespace PaintForm
 
         private void DrawCoor()
         {
-            Font font1 = new Font("方正舒体", 15f);
-            Font font = new Font("方正舒体", 20f);
+            Font font1 = new Font("Cambria", 15f);
+            Font font = new Font("Cambria", 20f);
             Brush brush = Brushes.Black;
             Pen pen_coor = new Pen(Color.Gray);
             //Pen blackpen = new Pen(brush);

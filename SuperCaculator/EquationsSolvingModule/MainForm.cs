@@ -74,12 +74,21 @@ namespace EquationsSolvingModule
                     return;
                 }
 
-                xInit = f0.xInit1;
-                monoCoefficient = f0.monoCoefficient1;
-                monoPower = f0.monoPower1;
-                monoEqua = new MonoHighPowEqua(precision, xInit, monoCoefficient, monoPower);
-                txtPrint.Text = monoEqua.MonoEquaToString();
-
+                try
+                {
+                    xInit = f0.xInit1;
+                    monoCoefficient = new double[f0.itemNum];
+                    monoCoefficient = f0.monoCoefficient1;
+                    monoPower = new int[f0.itemNum - 1];
+                    monoPower = f0.monoPower1;
+                    monoEqua = new MonoHighPowEqua(precision, xInit, monoCoefficient, monoPower);
+                    txtPrint.Text = monoEqua.MonoEquaToString();
+                }
+                catch (Exception)
+                {
+                    txtWarn.Text = "错误！已关闭或输入格式有误！";
+                    return;
+                }
             }
             else
             {

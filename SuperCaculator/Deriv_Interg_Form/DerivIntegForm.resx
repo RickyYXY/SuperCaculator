@@ -184,4 +184,21 @@
   <metadata name="input_bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>227, 17</value>
   </metadata>
+  <data name="label_help_info.Text" xml:space="preserve">
+    <value>注意事项：
+1.请在英文输入环境下输入表达式。
+2.所有函数需标准化输入，函数后面请加括号。如sinx请写作sin(x)。
+3.设置的计算精度越大，积分、极值计算所花费的时间越长。
+4.计算结果为近似值，暂不提供精确值与符号模式的计算。
+
+支持函数库：
+对数/指数函数：exp  ln  lg  log[任意数字]，如log32(x) 
+功能函数：abs(绝对值)  ceil(向上取整)  floor(向下取整)
+三角函数：sin  cos  tan  csc  sec  cot
+反三角函数：arcsin  arccos  arctan  arccsc  arcsec  arccot
+双曲函数：sinh  cosh  tanh  csch  sech  coth
+反双曲函数：arsinh  arcosh  artanh
+
+</value>
+  </data>
 </root>

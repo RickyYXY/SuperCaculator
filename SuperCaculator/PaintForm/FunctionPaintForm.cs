@@ -78,11 +78,24 @@ namespace PaintForm
             using (SaveFileDialog save = new SaveFileDialog())
             {
                 save.FileName = "picture2D";
-                save.Filter = "(.jpg)|*.jpg";
+                //save.Filter = "(.jpg)|*.jpg"; 
+                save.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|PNG Image|*.png";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
-                    MessageBox.Show("保存成功");
+                    switch (save.FilterIndex)
+                    {
+                        case 1:
+                            pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                            break;
+                        case 2:
+                            pictureBox_2D.Image.Save(save.FileName, ImageFormat.Bmp);
+                            break;
+                        case 3:
+                            pictureBox_2D.Image.Save(save.FileName, ImageFormat.Png);
+                            break;
+                    }
+                    //pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                    MessageBox.Show("保存成功。");
                 }
             }
         }
@@ -90,6 +103,11 @@ namespace PaintForm
         private void Button_draw_2D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_2D.Text;
+            if(exp == "")
+            {
+                MessageBox.Show("请输入表达式。");
+                return;
+            }
             try
             {
                 Function.Function func = new Function.Function(exp);
@@ -175,10 +193,22 @@ namespace PaintForm
             using (SaveFileDialog save = new SaveFileDialog())
             {
                 save.FileName = "picture3D";
-                save.Filter = "(.jpg)|*.jpg";
+                //save.Filter = "(.jpg)|*.jpg";
+                save.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|PNG Image|*.png";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox_3D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                    switch (save.FilterIndex)
+                    {
+                        case 1:
+                            pictureBox_3D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                            break;
+                        case 2:
+                            pictureBox_3D.Image.Save(save.FileName, ImageFormat.Bmp);
+                            break;
+                        case 3:
+                            pictureBox_3D.Image.Save(save.FileName, ImageFormat.Png);
+                            break;
+                    }
                     MessageBox.Show("保存成功");
                 }
             }
@@ -187,6 +217,11 @@ namespace PaintForm
         private void Button_draw_3D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_3D.Text;
+            if (exp == "")
+            {
+                MessageBox.Show("请输入表达式。");
+                return;
+            }
             try
             {
                 Function.Function func = new Function.Function(exp);
@@ -199,7 +234,7 @@ namespace PaintForm
             }
             if (MaxX_3D <= MinX_3D || MaxY_3D <= MinY_3D)
             {
-                MessageBox.Show("数值输入不合法。");
+                MessageBox.Show("定义域输入不合法。");
                 return;
             }
             Bitmap bitmap = new Bitmap(pictureBox_3D.Width, pictureBox_3D.Height);

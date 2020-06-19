@@ -39,23 +39,24 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblfangchengNum);
             this.panel1.Controls.Add(this.cboEquNum);
@@ -76,10 +77,10 @@
             // 
             // cboEquNum
             // 
-            this.cboEquNum.BackColor = System.Drawing.Color.AliceBlue;
+            this.cboEquNum.BackColor = System.Drawing.SystemColors.Menu;
             this.cboEquNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboEquNum.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cboEquNum.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEquNum.FormattingEnabled = true;
             this.cboEquNum.Items.AddRange(new object[] {
             "1",
@@ -87,9 +88,9 @@
             "3",
             "4",
             "5"});
-            this.cboEquNum.Location = new System.Drawing.Point(121, 20);
+            this.cboEquNum.Location = new System.Drawing.Point(121, 17);
             this.cboEquNum.Name = "cboEquNum";
-            this.cboEquNum.Size = new System.Drawing.Size(59, 25);
+            this.cboEquNum.Size = new System.Drawing.Size(59, 27);
             this.cboEquNum.TabIndex = 6;
             // 
             // lblWarn
@@ -110,7 +111,7 @@
             this.txtPower.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPower.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtPower.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPower.Location = new System.Drawing.Point(3, 26);
             this.txtPower.Multiline = true;
             this.txtPower.Name = "txtPower";
@@ -142,7 +143,7 @@
             this.txtCoe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCoe.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtCoe.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCoe.Location = new System.Drawing.Point(3, 26);
             this.txtCoe.Multiline = true;
             this.txtCoe.Name = "txtCoe";
@@ -151,7 +152,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnConfirm.BackColor = System.Drawing.Color.LightCyan;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirm.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnConfirm.Location = new System.Drawing.Point(11, 15);
@@ -164,7 +165,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnCancel.BackColor = System.Drawing.Color.LightCyan;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.Location = new System.Drawing.Point(93, 15);
@@ -180,6 +181,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.MintCream;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.splitContainer1);
             this.panel4.Controls.Add(this.panel6);
@@ -187,28 +189,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(557, 323);
             this.panel4.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.lblWarn);
-            this.panel6.Location = new System.Drawing.Point(11, 280);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(539, 36);
-            this.panel6.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.btnCancel);
-            this.panel5.Controls.Add(this.btnConfirm);
-            this.panel5.Location = new System.Drawing.Point(1, 391);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(556, 62);
-            this.panel5.TabIndex = 8;
             // 
             // splitContainer1
             // 
@@ -231,6 +211,29 @@
             this.splitContainer1.SplitterDistance = 263;
             this.splitContainer1.TabIndex = 8;
             // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.lblWarn);
+            this.panel6.Location = new System.Drawing.Point(11, 280);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(539, 36);
+            this.panel6.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.MintCream;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btnCancel);
+            this.panel5.Controls.Add(this.btnConfirm);
+            this.panel5.Location = new System.Drawing.Point(1, 391);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(556, 62);
+            this.panel5.TabIndex = 8;
+            // 
             // DataInputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -241,20 +244,20 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "DataInputForm";
-            this.Text = "DataInputForm";
+            this.Text = "多元方程组";
             this.Load += new System.EventHandler(this.DataInputForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

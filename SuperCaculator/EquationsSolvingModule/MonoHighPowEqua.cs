@@ -131,13 +131,13 @@ namespace EquationsSolvingModule
                 }
                 if (coefficient[coefficient.Length-1] < 0)
                 {
-                    strEquation += "+";
+                    strEquation += " + ";
                     strEquation += "(";
                     strEquation += coefficient[coefficient.Length-1].ToString();
                     strEquation += ")";
                 }
                 else if(coefficient[coefficient.Length-1] > 0){
-                    strEquation += "+";
+                    strEquation += " + ";
                     strEquation += coefficient[coefficient.Length-1].ToString();
                 }
             }

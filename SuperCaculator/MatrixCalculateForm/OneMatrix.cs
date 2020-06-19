@@ -410,8 +410,10 @@ namespace MatrixCalculateForm
                     u = i * matrix.Columns + p;
                     w = i * matrix.Columns + q;
                     fm = mtxEigenVector.elements[u];
-                    mtxEigenVector.elements[u] = fm * cn + mtxEigenVector.elements[w] * sn;
-                    mtxEigenVector.elements[w] = -fm * sn + mtxEigenVector.elements[w] * cn;
+                    //mtxEigenVector.elements[u] = fm * cn + mtxEigenVector.elements[w] * sn;
+                    //mtxEigenVector.elements[w] = -fm * sn + mtxEigenVector.elements[w] * cn;
+                    mtxEigenVector.elements[u] = Math.Round(fm * cn + mtxEigenVector.elements[w] * sn, 2);
+                    mtxEigenVector.elements[w] = Math.Round(-fm * sn + mtxEigenVector.elements[w] * cn, 2);
                 }
             }
         }

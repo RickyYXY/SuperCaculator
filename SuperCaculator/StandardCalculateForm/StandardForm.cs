@@ -66,8 +66,22 @@ namespace StandardCalculateForm
 
         private void btnAnswer_Click(object sender, EventArgs e)
         {
-            Function.Function func = new Function.Function(equation);
-            equation = richTxtEquation.Text = func.GetValue().ToString();
+            try
+            {
+                if (HandleEquation.IsGeneralOp(equation.Last()))
+                {
+                    MessageBox.Show("请在算式最后输入参与计算的数字！");
+                }
+                else
+                {
+                    Function.Function func = new Function.Function(equation);
+                    equation = richTxtEquation.Text = func.GetValue().ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("不支持计算此算式，请重新输入！");
+            }
         }
 
         private void btnShift_Click(object sender, EventArgs e)

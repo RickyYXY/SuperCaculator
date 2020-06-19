@@ -624,17 +624,24 @@ namespace MatrixCalculateForm
             Init(tem.Length, textBox.Lines.Length);
             numColumns = tem.Length;
             numRows = textBox.Lines.Length;
-            for (int i = 0; i < numRows; i++)
+            try
             {
-                string[] temp = arr[i].Split();
-                if (temp.Length != numColumns)
+                for (int i = 0; i < numRows; i++)
                 {
-                    return false;
+                    string[] temp = arr[i].Split();
+                    if (temp.Length != numColumns)
+                    {
+                        return false;
+                    }
+                    for (int j = 0; j < numColumns; j++)
+                    {
+                        SetElement(i, j, Convert.ToInt32(temp[j]));
+                    }
                 }
-                for (int j = 0; j < numColumns; j++)
-                {
-                    SetElement(i, j, Convert.ToInt32(temp[j]));
-                }
+            }
+            catch
+            {
+                MessageBox.Show("输入字符串格式有误! 请重新输入");
             }
             return true;
         }
@@ -668,6 +675,27 @@ namespace MatrixCalculateForm
             sw.Flush();
             sw.Close();
             sw.Dispose();
+            return true;
+        }
+        public bool DiagonalMatrix(double[] element)
+        {
+            int temp = 0;
+            int length = element.Length;
+            for (int i = 0; i < length; ++i)
+            {
+                for (int j = 0; j < length; ++j)
+                {
+                    if (i == j)
+                    {
+                        if (temp < length)
+                        {
+                            double temp1 = Math.Round(element[temp], 2);
+                            SetElement(i, j, temp1);
+                            temp++;
+                        }
+                    }
+                }
+            }
             return true;
         }
     }

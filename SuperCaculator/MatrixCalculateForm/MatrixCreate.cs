@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MatrixCalculateForm
 {
-    class MatrixCreate : Matrix
+    public class MatrixCreate : Matrix
     {
         //生成零矩阵
         //public bool ZerosMatrix()
@@ -31,15 +31,22 @@ namespace MatrixCalculateForm
         }
 
         //生成对角矩阵
-        public bool DiagonalMatrix(int element)
+        public bool DiagonalMatrix(double[] element)
         {
-            for (int i = 0; i < numRows; ++i)
+            int temp = 0;
+            int length = element.Length;
+            for (int i = 0; i < length; ++i)
             {
-                for (int j = 0; j < numColumns; ++j)
+                for (int j = 0; j < length; ++j)
                 {
                     if (i == j)
                     {
-                        SetElement(i, j, element);
+                        if(temp < length)
+                        {
+                            double temp1 = Math.Round(element[temp], 2);
+                            SetElement(i, j, temp1);
+                            temp++;
+                        }
                     }
                 }
             }                       

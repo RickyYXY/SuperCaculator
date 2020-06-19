@@ -32,69 +32,76 @@ namespace Function
         public virtual double GetValue(double? x = null, double? y = null)//计算二元函数值
         {
             Stack<double> figures = new Stack<double>();
-            foreach (string unit in RPNExpression)
+            try
             {
-                if (unit == "x")
-                    if (x == null)
-                        throw new FunctionException("计算不支持x作为自变量！", 7);
-                    else
-                        figures.Push(x.Value);
-                else if (unit == "y")
-                    if (y == null)
-                        throw new FunctionException("计算不支持y作为自变量！", 8);
-                    else
-                        figures.Push(y.Value);
-                else if (unit == "e")
-                    figures.Push(Math.E);
-                else if (unit == "pi")
-                    figures.Push(Math.PI);
-                else if (double.TryParse(unit, out double result))
-                    figures.Push(result);
-                else if (unit == "+" || unit == "-" || unit == "*"
-                    || unit == "/" || unit == "^" || unit == "!")
+                foreach (string unit in RPNExpression)
                 {
-                    double n1, n2;
-                    switch (unit)
+                    if (unit == "x")
+                        if (x == null)
+                            throw new FunctionException("计算不支持x作为自变量！", 7);
+                        else
+                            figures.Push(x.Value);
+                    else if (unit == "y")
+                        if (y == null)
+                            throw new FunctionException("计算不支持y作为自变量！", 8);
+                        else
+                            figures.Push(y.Value);
+                    else if (unit == "e")
+                        figures.Push(Math.E);
+                    else if (unit == "pi")
+                        figures.Push(Math.PI);
+                    else if (double.TryParse(unit, out double result))
+                        figures.Push(result);
+                    else if (unit == "+" || unit == "-" || unit == "*"
+                        || unit == "/" || unit == "^" || unit == "!")
                     {
-                        case "+":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 + n1);
-                            break;
-                        case "-":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 - n1);
-                            break;
-                        case "*":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 * n1);
-                            break;
-                        case "/":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(n2 / n1);
-                            break;
-                        case "^":
-                            n1 = figures.Pop();
-                            n2 = figures.Pop();
-                            figures.Push(Math.Pow(n2, n1));
-                            break;
-                        case "!":
-                            n1 = figures.Pop(); //0弹出
-                            n2 = figures.Pop();
-                            figures.Push(Factorial(n2));
-                            break;
-                        default:
-                            break;
+                        double n1, n2;
+                        switch (unit)
+                        {
+                            case "+":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 + n1);
+                                break;
+                            case "-":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 - n1);
+                                break;
+                            case "*":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 * n1);
+                                break;
+                            case "/":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(n2 / n1);
+                                break;
+                            case "^":
+                                n1 = figures.Pop();
+                                n2 = figures.Pop();
+                                figures.Push(Math.Pow(n2, n1));
+                                break;
+                            case "!":
+                                n1 = figures.Pop(); //0弹出
+                                n2 = figures.Pop();
+                                figures.Push(Factorial(n2));
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        double func_result = FuncMatch.MatchFuncCal(unit, x, y);
+                        figures.Push(func_result);
                     }
                 }
-                else
-                {
-                    double func_result = FuncMatch.MatchFuncCal(unit, x, y);
-                    figures.Push(func_result);
-                }
+            }
+            catch (InvalidOperationException)
+            {
+                throw new FunctionException("输入算式中存在非法部分，请检查！", 10);
             }
             double ans = figures.Pop();
             return ans;
@@ -103,7 +110,6 @@ namespace Function
         private void BuildRPN(string exp) //生成后缀表达式
         {
             Stack<string> st = new Stack<string>();
-
             for (int i = 0; i < exp.Length; i++)
             {
                 string temp = exp[i].ToString();
@@ -187,7 +193,10 @@ namespace Function
                     bool flag2 = false;
                     foreach (string reg in FuncMatch.func_names)
                     {
-                        int ind = exp.IndexOf(reg, i); //确认exp中含有reg函数
+                        string s = reg;
+                        if (s != "log")
+                            s += "(";
+                        int ind = exp.IndexOf(s, i); //确认exp中含有reg函数
                         if (ind == i)
                         {
                             int j;
@@ -235,7 +244,7 @@ namespace Function
                 }
             }
             while (st.Count > 0)
-                RPNExpression.Add(st.Pop());
+                RPNExpression.Add(st.Pop());           
         }
 
         static public double Factorial(double x)
@@ -282,6 +291,14 @@ namespace Function
         public override double GetValue(double? x, double? y)
         {
             return Math.Log(base.GetValue(x, y), Math.E);
+        }
+    }
+    class Lg_function : Function
+    {
+        public Lg_function(string exp) : base(exp) { }
+        public override double GetValue(double? x, double? y)
+        {
+            return Math.Log(base.GetValue(x, y), 10);
         }
     }
 
@@ -415,7 +432,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) / 2;
+            return (Math.Exp(temp) - Math.Exp(-temp)) / 2;
         }
     }
     class Cosh_function : Function
@@ -424,7 +441,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E)) / 2;
+            return (Math.Exp(temp) + Math.Exp(-temp)) / 2;
         }
     }
     class Tanh_function : Function
@@ -433,8 +450,8 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E)) 
-                / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+            return (Math.Exp(temp) - Math.Exp(-temp))
+                / (Math.Exp(temp) + Math.Exp(-temp));
         }
     }
     class Csch_function : Function
@@ -443,7 +460,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return 2 / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+            return 2 / (Math.Exp(temp) - Math.Exp(-temp));
         }
     }
     class Sech_function : Function
@@ -452,7 +469,7 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return 2 / (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E));
+            return 2 / (Math.Exp(temp) + Math.Exp(-temp));
         }
     }
     class Coth_function : Function
@@ -461,12 +478,13 @@ namespace Function
         public override double GetValue(double? x = null, double? y = null)
         {
             double temp = base.GetValue(x, y);
-            return (Math.Log(temp, Math.E) + Math.Log(-temp, Math.E))
-                / (Math.Log(temp, Math.E) - Math.Log(-temp, Math.E));
+            return (Math.Exp(temp) + Math.Exp(-temp))
+                / (Math.Exp(temp) - Math.Exp(-temp));
         }
     }
+
     //反双曲函数
-    class Asinh_function:Function
+    class Asinh_function :Function
     {
         public Asinh_function(string exp) : base(exp) { }
         public override double GetValue(double? x = null, double? y = null)
