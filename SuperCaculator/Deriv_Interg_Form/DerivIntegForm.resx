@@ -184,7 +184,7 @@
   <metadata name="input_bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>227, 17</value>
   </metadata>
-  <data name="label_help_info.Text" xml:space="preserve">
+  <data name="textBox_help_info.Text" xml:space="preserve">
     <value>注意事项：
 1.请在英文输入环境下输入表达式。
 2.所有函数需标准化输入，函数后面请加括号。如sinx请写作sin(x)。
@@ -197,8 +197,6 @@
 三角函数：sin  cos  tan  csc  sec  cot
 反三角函数：arcsin  arccos  arctan  arccsc  arcsec  arccot
 双曲函数：sinh  cosh  tanh  csch  sech  coth
-反双曲函数：arsinh  arcosh  artanh
-
-</value>
+反双曲函数：arsinh  arcosh  artanh</value>
   </data>
 </root>
