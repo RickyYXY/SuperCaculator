@@ -12,10 +12,10 @@ using Xfrog.Net;
 
 namespace UnitConversion
 {
-    public partial class Form1 : Form
+    public partial class ConversionForm : Form
     {
         JsonObject transformer { get; set; }
-        public Form1()
+        public ConversionForm()
         {
             InitializeComponent();
             transformer = CurrencyAPI.getInformation();

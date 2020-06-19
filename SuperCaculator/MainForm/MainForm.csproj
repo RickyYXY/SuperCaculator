@@ -109,6 +109,10 @@
       <Project>{993e55fd-3782-4dca-9b11-09459234fef2}</Project>
       <Name>StandardCalculateForm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UnitConversion\UnitConversion.csproj">
+      <Project>{30778710-9df3-4105-97b2-9896161c58a8}</Project>
+      <Name>UnitConversion</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
