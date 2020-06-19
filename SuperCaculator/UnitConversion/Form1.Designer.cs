@@ -67,13 +67,19 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -83,6 +89,12 @@
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -107,7 +119,7 @@
             "角度"});
             this.comboBox1.Location = new System.Drawing.Point(3, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 35);
+            this.comboBox1.Size = new System.Drawing.Size(209, 35);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
@@ -118,9 +130,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 179);
+            this.button1.Location = new System.Drawing.Point(3, 219);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 42);
+            this.button1.Size = new System.Drawing.Size(145, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = false;
@@ -130,9 +142,9 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(110, 179);
+            this.button2.Location = new System.Drawing.Point(154, 219);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 42);
+            this.button2.Size = new System.Drawing.Size(145, 50);
             this.button2.TabIndex = 2;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
@@ -142,9 +154,9 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(217, 179);
+            this.button3.Location = new System.Drawing.Point(305, 219);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 42);
+            this.button3.Size = new System.Drawing.Size(145, 50);
             this.button3.TabIndex = 3;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
@@ -155,9 +167,9 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 135);
+            this.button4.Location = new System.Drawing.Point(3, 165);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 38);
+            this.button4.Size = new System.Drawing.Size(145, 48);
             this.button4.TabIndex = 4;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
@@ -167,9 +179,9 @@
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(110, 135);
+            this.button5.Location = new System.Drawing.Point(154, 165);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 38);
+            this.button5.Size = new System.Drawing.Size(145, 48);
             this.button5.TabIndex = 5;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
@@ -179,9 +191,9 @@
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(217, 135);
+            this.button6.Location = new System.Drawing.Point(305, 165);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 38);
+            this.button6.Size = new System.Drawing.Size(145, 48);
             this.button6.TabIndex = 6;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
@@ -191,9 +203,9 @@
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(3, 91);
+            this.button7.Location = new System.Drawing.Point(3, 111);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(101, 38);
+            this.button7.Size = new System.Drawing.Size(145, 48);
             this.button7.TabIndex = 7;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
@@ -203,9 +215,9 @@
             // 
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(110, 91);
+            this.button8.Location = new System.Drawing.Point(154, 111);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(101, 38);
+            this.button8.Size = new System.Drawing.Size(145, 48);
             this.button8.TabIndex = 8;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
@@ -215,9 +227,9 @@
             // 
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Location = new System.Drawing.Point(217, 91);
+            this.button9.Location = new System.Drawing.Point(305, 111);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(101, 38);
+            this.button9.Size = new System.Drawing.Size(145, 48);
             this.button9.TabIndex = 9;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
@@ -229,9 +241,9 @@
             this.button0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button0.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button0.Location = new System.Drawing.Point(324, 91);
+            this.button0.Location = new System.Drawing.Point(456, 111);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(102, 38);
+            this.button0.Size = new System.Drawing.Size(148, 48);
             this.button0.TabIndex = 10;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = false;
@@ -243,9 +255,9 @@
             this.buttonpoint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonpoint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonpoint.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonpoint.Location = new System.Drawing.Point(324, 135);
+            this.buttonpoint.Location = new System.Drawing.Point(456, 165);
             this.buttonpoint.Name = "buttonpoint";
-            this.buttonpoint.Size = new System.Drawing.Size(102, 38);
+            this.buttonpoint.Size = new System.Drawing.Size(148, 48);
             this.buttonpoint.TabIndex = 11;
             this.buttonpoint.Text = ".";
             this.buttonpoint.UseVisualStyleBackColor = false;
@@ -257,9 +269,9 @@
             this.buttonreset.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonreset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonreset.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonreset.Location = new System.Drawing.Point(324, 3);
+            this.buttonreset.Location = new System.Drawing.Point(456, 3);
             this.buttonreset.Name = "buttonreset";
-            this.buttonreset.Size = new System.Drawing.Size(102, 38);
+            this.buttonreset.Size = new System.Drawing.Size(148, 48);
             this.buttonreset.TabIndex = 13;
             this.buttonreset.Text = "<-";
             this.buttonreset.UseVisualStyleBackColor = false;
@@ -270,9 +282,9 @@
             this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(166, 3);
+            this.comboBox2.Location = new System.Drawing.Point(218, 3);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 38);
+            this.comboBox2.Size = new System.Drawing.Size(265, 38);
             this.comboBox2.TabIndex = 15;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
@@ -283,9 +295,9 @@
             this.buttonCE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonCE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCE.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCE.Location = new System.Drawing.Point(324, 47);
+            this.buttonCE.Location = new System.Drawing.Point(456, 57);
             this.buttonCE.Name = "buttonCE";
-            this.buttonCE.Size = new System.Drawing.Size(102, 38);
+            this.buttonCE.Size = new System.Drawing.Size(148, 48);
             this.buttonCE.TabIndex = 17;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = false;
@@ -300,7 +312,7 @@
             this.textBox1.Location = new System.Drawing.Point(22, 68);
             this.textBox1.MaxLength = 4;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 39);
+            this.textBox1.Size = new System.Drawing.Size(485, 39);
             this.textBox1.TabIndex = 18;
             this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -325,9 +337,9 @@
             // 
             this.buttonA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonA.Location = new System.Drawing.Point(3, 47);
+            this.buttonA.Location = new System.Drawing.Point(3, 57);
             this.buttonA.Name = "buttonA";
-            this.buttonA.Size = new System.Drawing.Size(101, 38);
+            this.buttonA.Size = new System.Drawing.Size(145, 48);
             this.buttonA.TabIndex = 20;
             this.buttonA.Text = "A";
             this.buttonA.UseVisualStyleBackColor = true;
@@ -337,9 +349,9 @@
             // 
             this.buttonB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonB.Location = new System.Drawing.Point(110, 47);
+            this.buttonB.Location = new System.Drawing.Point(154, 57);
             this.buttonB.Name = "buttonB";
-            this.buttonB.Size = new System.Drawing.Size(101, 38);
+            this.buttonB.Size = new System.Drawing.Size(145, 48);
             this.buttonB.TabIndex = 21;
             this.buttonB.Text = "B";
             this.buttonB.UseVisualStyleBackColor = true;
@@ -349,9 +361,9 @@
             // 
             this.buttonC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonC.Location = new System.Drawing.Point(217, 47);
+            this.buttonC.Location = new System.Drawing.Point(305, 57);
             this.buttonC.Name = "buttonC";
-            this.buttonC.Size = new System.Drawing.Size(101, 38);
+            this.buttonC.Size = new System.Drawing.Size(145, 48);
             this.buttonC.TabIndex = 22;
             this.buttonC.Text = "C";
             this.buttonC.UseVisualStyleBackColor = true;
@@ -363,7 +375,7 @@
             this.buttonD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonD.Location = new System.Drawing.Point(3, 3);
             this.buttonD.Name = "buttonD";
-            this.buttonD.Size = new System.Drawing.Size(101, 38);
+            this.buttonD.Size = new System.Drawing.Size(145, 48);
             this.buttonD.TabIndex = 23;
             this.buttonD.Text = "D";
             this.buttonD.UseVisualStyleBackColor = true;
@@ -373,9 +385,9 @@
             // 
             this.buttonE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonE.Location = new System.Drawing.Point(110, 3);
+            this.buttonE.Location = new System.Drawing.Point(154, 3);
             this.buttonE.Name = "buttonE";
-            this.buttonE.Size = new System.Drawing.Size(101, 38);
+            this.buttonE.Size = new System.Drawing.Size(145, 48);
             this.buttonE.TabIndex = 24;
             this.buttonE.Text = "E";
             this.buttonE.UseVisualStyleBackColor = true;
@@ -386,9 +398,9 @@
             this.buttonF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonF.FlatAppearance.BorderSize = 0;
             this.buttonF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonF.Location = new System.Drawing.Point(217, 3);
+            this.buttonF.Location = new System.Drawing.Point(305, 3);
             this.buttonF.Name = "buttonF";
-            this.buttonF.Size = new System.Drawing.Size(101, 38);
+            this.buttonF.Size = new System.Drawing.Size(145, 48);
             this.buttonF.TabIndex = 25;
             this.buttonF.Text = "F";
             this.buttonF.UseVisualStyleBackColor = true;
@@ -411,9 +423,9 @@
             this.buttonnegative.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonnegative.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonnegative.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonnegative.Location = new System.Drawing.Point(324, 179);
+            this.buttonnegative.Location = new System.Drawing.Point(456, 219);
             this.buttonnegative.Name = "buttonnegative";
-            this.buttonnegative.Size = new System.Drawing.Size(102, 42);
+            this.buttonnegative.Size = new System.Drawing.Size(148, 50);
             this.buttonnegative.TabIndex = 27;
             this.buttonnegative.Text = "+/-";
             this.buttonnegative.UseVisualStyleBackColor = false;
@@ -428,7 +440,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(429, 345);
+            this.tabControl1.Size = new System.Drawing.Size(607, 418);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage1
@@ -442,7 +454,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(421, 305);
+            this.tabPage1.Size = new System.Drawing.Size(539, 305);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "单位";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -461,7 +473,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(368, 56);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(486, 56);
             this.tableLayoutPanel3.TabIndex = 27;
             // 
             // tabPage3
@@ -471,7 +483,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(421, 305);
+            this.tabPage3.Size = new System.Drawing.Size(599, 378);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "货币";
             // 
@@ -487,32 +499,28 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(415, 299);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(593, 372);
             this.tableLayoutPanel4.TabIndex = 30;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Controls.Add(this.tableLayoutPanel10);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 152);
+            this.groupBox2.Location = new System.Drawing.Point(3, 189);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(409, 144);
+            this.groupBox2.Size = new System.Drawing.Size(587, 180);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "外币->人民币";
             // 
             // textBox7
             // 
+            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(3, 28);
+            this.textBox7.Location = new System.Drawing.Point(3, 3);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(196, 31);
+            this.textBox7.Size = new System.Drawing.Size(281, 31);
             this.textBox7.TabIndex = 12;
             this.textBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox7_MouseClick);
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
@@ -524,14 +532,14 @@
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.BackColor = System.Drawing.Color.MintCream;
+            this.button11.BackColor = System.Drawing.SystemColors.Window;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MintCream;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("方正舒体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button11.Location = new System.Drawing.Point(273, 108);
+            this.button11.Location = new System.Drawing.Point(290, 41);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(129, 30);
+            this.button11.Size = new System.Drawing.Size(282, 26);
             this.button11.TabIndex = 32;
             this.button11.Text = "汇率详情";
             this.button11.UseVisualStyleBackColor = false;
@@ -542,7 +550,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("楷体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(0, 63);
+            this.label17.Location = new System.Drawing.Point(3, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(56, 14);
             this.label17.TabIndex = 32;
@@ -553,7 +561,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.MintCream;
             this.label14.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(7, 84);
+            this.label14.Location = new System.Drawing.Point(3, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(34, 23);
             this.label14.TabIndex = 16;
@@ -565,16 +573,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(243, 84);
+            this.label15.Location = new System.Drawing.Point(290, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 25);
+            this.label15.Size = new System.Drawing.Size(282, 25);
             this.label15.TabIndex = 15;
             this.label15.Text = "人民币";
             // 
             // comboBox4
             // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox4.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.IntegralHeight = false;
@@ -601,67 +608,44 @@
             "巴西雷亚尔",
             "韩元",
             "南非林特"});
-            this.comboBox4.Location = new System.Drawing.Point(220, 28);
+            this.comboBox4.Location = new System.Drawing.Point(290, 3);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(181, 31);
+            this.comboBox4.Size = new System.Drawing.Size(282, 31);
             this.comboBox4.TabIndex = 13;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             this.comboBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox4_KeyPress);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.tableLayoutPanel9);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 143);
+            this.groupBox1.Size = new System.Drawing.Size(587, 180);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "人民币->外币";
             // 
             // textBox6
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(3, 26);
+            this.textBox6.Location = new System.Drawing.Point(3, 3);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 31);
+            this.textBox6.Size = new System.Drawing.Size(281, 31);
             this.textBox6.TabIndex = 5;
             this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox6_MouseClick);
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
-            // button10
-            // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.BackColor = System.Drawing.Color.MintCream;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MintCream;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("方正舒体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(273, 106);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(129, 31);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "汇率详情";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("楷体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(3, 61);
+            this.label16.Location = new System.Drawing.Point(3, 38);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(56, 14);
             this.label16.TabIndex = 31;
@@ -674,59 +658,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(243, 29);
+            this.label12.Location = new System.Drawing.Point(290, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 25);
+            this.label12.Size = new System.Drawing.Size(282, 38);
             this.label12.TabIndex = 10;
             this.label12.Text = "人民币";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.IntegralHeight = false;
-            this.comboBox3.Items.AddRange(new object[] {
-            "美元",
-            "欧元",
-            "港币",
-            "日元",
-            "英镑",
-            "澳大利亚元",
-            "加拿大元",
-            "泰国铢",
-            "新加坡元",
-            "瑞士法郎",
-            "丹麦克朗",
-            "澳门元",
-            "林吉特",
-            "挪威克朗",
-            "新西兰元",
-            "菲律宾比索",
-            "卢布",
-            "瑞典克朗",
-            "新台币",
-            "巴西雷亚尔",
-            "韩元",
-            "南非林特"});
-            this.comboBox3.Location = new System.Drawing.Point(220, 76);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(181, 28);
-            this.comboBox3.TabIndex = 6;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.MintCream;
-            this.label13.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(7, 84);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 23);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "13";
             // 
             // tableLayoutPanel1
             // 
@@ -758,7 +694,7 @@
             this.tableLayoutPanel1.Controls.Add(this.buttonnegative, 3, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 354);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 427);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -766,7 +702,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 224);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(607, 272);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
             // tableLayoutPanel2
@@ -781,15 +717,177 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.52134F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.47865F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(435, 581);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(613, 702);
             this.tableLayoutPanel2.TabIndex = 27;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.textBox6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label12, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label16, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(575, 70);
+            this.tableLayoutPanel5.TabIndex = 32;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.label17, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.textBox7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.comboBox4, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(575, 70);
+            this.tableLayoutPanel6.TabIndex = 33;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label15, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.button11, 1, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 79);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(575, 70);
+            this.tableLayoutPanel8.TabIndex = 34;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.IntegralHeight = false;
+            this.comboBox3.Items.AddRange(new object[] {
+            "美元",
+            "欧元",
+            "港币",
+            "日元",
+            "英镑",
+            "澳大利亚元",
+            "加拿大元",
+            "泰国铢",
+            "新加坡元",
+            "瑞士法郎",
+            "丹麦克朗",
+            "澳门元",
+            "林吉特",
+            "挪威克朗",
+            "新西兰元",
+            "菲律宾比索",
+            "卢布",
+            "瑞典克朗",
+            "新台币",
+            "巴西雷亚尔",
+            "韩元",
+            "南非林特"});
+            this.comboBox3.Location = new System.Drawing.Point(290, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(282, 28);
+            this.comboBox3.TabIndex = 6;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.MintCream;
+            this.label13.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 23);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "13";
+            // 
+            // button10
+            // 
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button10.BackColor = System.Drawing.SystemColors.Window;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MintCream;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("方正舒体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button10.Location = new System.Drawing.Point(290, 41);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(282, 26);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "汇率详情";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.button10, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label13, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.comboBox3, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 79);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(575, 70);
+            this.tableLayoutPanel7.TabIndex = 33;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel7, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel5, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(581, 152);
+            this.tableLayoutPanel9.TabIndex = 34;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel8, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel6, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(581, 152);
+            this.tableLayoutPanel10.TabIndex = 35;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(435, 581);
+            this.ClientSize = new System.Drawing.Size(613, 702);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("方正舒体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "Form1";
@@ -802,11 +900,19 @@
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -852,13 +958,19 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
 
