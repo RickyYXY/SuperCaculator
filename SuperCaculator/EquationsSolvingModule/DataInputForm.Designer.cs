@@ -68,10 +68,10 @@
             // lblfangchengNum
             // 
             this.lblfangchengNum.AutoSize = true;
-            this.lblfangchengNum.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblfangchengNum.Location = new System.Drawing.Point(11, 20);
+            this.lblfangchengNum.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblfangchengNum.Location = new System.Drawing.Point(15, 20);
             this.lblfangchengNum.Name = "lblfangchengNum";
-            this.lblfangchengNum.Size = new System.Drawing.Size(104, 17);
+            this.lblfangchengNum.Size = new System.Drawing.Size(123, 20);
             this.lblfangchengNum.TabIndex = 5;
             this.lblfangchengNum.Text = "方程的个数：";
             // 
@@ -88,9 +88,9 @@
             "3",
             "4",
             "5"});
-            this.cboEquNum.Location = new System.Drawing.Point(121, 17);
+            this.cboEquNum.Location = new System.Drawing.Point(140, 19);
             this.cboEquNum.Name = "cboEquNum";
-            this.cboEquNum.Size = new System.Drawing.Size(59, 27);
+            this.cboEquNum.Size = new System.Drawing.Size(71, 27);
             this.cboEquNum.TabIndex = 6;
             // 
             // lblWarn
@@ -112,29 +112,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPower.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPower.Location = new System.Drawing.Point(3, 26);
+            this.txtPower.Location = new System.Drawing.Point(3, 29);
             this.txtPower.Multiline = true;
             this.txtPower.Name = "txtPower";
-            this.txtPower.Size = new System.Drawing.Size(264, 244);
+            this.txtPower.Size = new System.Drawing.Size(264, 241);
             this.txtPower.TabIndex = 3;
             // 
             // lblInputPow
             // 
             this.lblInputPow.AutoSize = true;
-            this.lblInputPow.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInputPow.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblInputPow.Location = new System.Drawing.Point(3, 6);
             this.lblInputPow.Name = "lblInputPow";
-            this.lblInputPow.Size = new System.Drawing.Size(152, 17);
+            this.lblInputPow.Size = new System.Drawing.Size(180, 20);
             this.lblInputPow.TabIndex = 2;
             this.lblInputPow.Text = "输入方程组次数集：";
             // 
             // lblInCoe
             // 
             this.lblInCoe.AutoSize = true;
-            this.lblInCoe.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInCoe.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblInCoe.Location = new System.Drawing.Point(3, 6);
             this.lblInCoe.Name = "lblInCoe";
-            this.lblInCoe.Size = new System.Drawing.Size(152, 17);
+            this.lblInCoe.Size = new System.Drawing.Size(180, 20);
             this.lblInCoe.TabIndex = 0;
             this.lblInCoe.Text = "输入方程组系数集：";
             // 
@@ -144,17 +144,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCoe.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoe.Location = new System.Drawing.Point(3, 26);
+            this.txtCoe.Location = new System.Drawing.Point(3, 29);
             this.txtCoe.Multiline = true;
             this.txtCoe.Name = "txtCoe";
-            this.txtCoe.Size = new System.Drawing.Size(257, 244);
+            this.txtCoe.Size = new System.Drawing.Size(257, 241);
             this.txtCoe.TabIndex = 1;
             // 
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.LightCyan;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfirm.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnConfirm.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnConfirm.Location = new System.Drawing.Point(11, 15);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(65, 31);
@@ -167,8 +167,8 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.LightCyan;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancel.Font = new System.Drawing.Font("方正舒体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCancel.Location = new System.Drawing.Point(93, 15);
+            this.btnCancel.Font = new System.Drawing.Font("方正舒体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCancel.Location = new System.Drawing.Point(82, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(65, 31);
             this.btnCancel.TabIndex = 2;
