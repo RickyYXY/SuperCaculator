@@ -95,7 +95,7 @@ namespace PaintForm
                             break;
                     }
                     //pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
-                    MessageBox.Show("保存成功");
+                    MessageBox.Show("保存成功。");
                 }
             }
         }
@@ -103,6 +103,11 @@ namespace PaintForm
         private void Button_draw_2D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_2D.Text;
+            if(exp == "")
+            {
+                MessageBox.Show("请输入表达式。");
+                return;
+            }
             try
             {
                 Function.Function func = new Function.Function(exp);
@@ -212,6 +217,11 @@ namespace PaintForm
         private void Button_draw_3D_Click(object sender, EventArgs e)
         {
             string exp = textBox_exp_3D.Text;
+            if (exp == "")
+            {
+                MessageBox.Show("请输入表达式。");
+                return;
+            }
             try
             {
                 Function.Function func = new Function.Function(exp);
