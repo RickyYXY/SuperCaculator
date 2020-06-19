@@ -20,33 +20,40 @@ namespace UnitConversion
         }
         public static JsonObject getInformation()
         {
-            string appkey = "3f761b5b5a2373d9f8001e0985b64f63"; //配置申请的appkey
-
-
-            string url1 = "http://web.juhe.cn:8080/finance/exchange/rmbquot";
-
-            var parameters1 = new Dictionary<string, string>();
-
-            parameters1.Add("key", appkey);//申请的key
-            parameters1.Add("type", ""); //两种格式(0或者1,默认为0)
-
-            string result1 = sendPost(url1, parameters1, "get");
-
-            JsonObject newObj1 = new JsonObject(result1);
-            String errorCode1 = newObj1["error_code"].Value;
-
-            if (errorCode1 == "0")
+            try
             {
-                Console.WriteLine("成功");
-                Console.WriteLine(newObj1);
-                return newObj1;
+                string appkey = "3f761b5b5a2373d9f8001e0985b64f63"; //配置申请的appkey
+
+
+                string url1 = "http://web.juhe.cn:8080/finance/exchange/rmbquot";
+
+                var parameters1 = new Dictionary<string, string>();
+
+                parameters1.Add("key", appkey);//申请的key
+                parameters1.Add("type", ""); //两种格式(0或者1,默认为0)
+
+                string result1 = sendPost(url1, parameters1, "get");
+
+                JsonObject newObj1 = new JsonObject(result1);
+                String errorCode1 = newObj1["error_code"].Value;
+
+                if (errorCode1 == "0")
+                {
+                    Console.WriteLine("成功");
+                    Console.WriteLine(newObj1);
+                    return newObj1;
+                }
+                else
+                {
+                    Console.WriteLine(newObj1["error_code"].Value + ":" + newObj1["reason"].Value);
+                    return null;
+                }
             }
-            else
+            catch
             {
-                Console.WriteLine(newObj1["error_code"].Value + ":" + newObj1["reason"].Value);
+                MessageBox.Show("发生错误");
                 return null;
             }
-
 
 
 
@@ -93,20 +100,28 @@ namespace UnitConversion
             }
             else
             {
-                //创建请求
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url + "?" + BuildQuery(parameters, "utf8"));
+                try
+                {
+                    //创建请求
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url + "?" + BuildQuery(parameters, "utf8"));
 
-                //GET请求
-                request.Method = "GET";
-                request.ReadWriteTimeout = 5000;
-                request.ContentType = "text/html;charset=UTF-8";
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                Stream myResponseStream = response.GetResponseStream();
-                StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
+                    //GET请求
+                    request.Method = "GET";
+                    request.ReadWriteTimeout = 5000;
+                    request.ContentType = "text/html;charset=UTF-8";
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    Stream myResponseStream = response.GetResponseStream();
+                    StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
 
-                //返回内容
-                string retString = myStreamReader.ReadToEnd();
-                return retString;
+                    //返回内容
+                    string retString = myStreamReader.ReadToEnd();
+                    return retString;
+                }
+                catch
+                {
+                    MessageBox.Show("发生错误");
+                    return "";
+                }
             }
         }
 
