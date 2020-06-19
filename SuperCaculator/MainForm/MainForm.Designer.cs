@@ -60,7 +60,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.panel1.Size = new System.Drawing.Size(999, 565);
+            this.panel1.Size = new System.Drawing.Size(1280, 545);
             this.panel1.TabIndex = 1;
             // 
             // panelChild
@@ -72,7 +72,7 @@
             this.panelChild.Location = new System.Drawing.Point(256, 13);
             this.panelChild.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(726, 540);
+            this.panelChild.Size = new System.Drawing.Size(1007, 520);
             this.panelChild.TabIndex = 1;
             // 
             // treeView1
@@ -105,15 +105,15 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode6,
             treeNode9});
-            this.treeView1.Size = new System.Drawing.Size(231, 538);
+            this.treeView1.Size = new System.Drawing.Size(231, 518);
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MenuClick);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 565);
+            this.ClientSize = new System.Drawing.Size(1280, 545);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("方正舒体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
