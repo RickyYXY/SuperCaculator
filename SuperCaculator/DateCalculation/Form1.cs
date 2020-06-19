@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DateCalculation
 {
-    public partial class Form1 : Form
+    public partial class DateCalculation : Form
     {
-        public Form1()
+        public DateCalculation()
         {
             InitializeComponent();
         }
