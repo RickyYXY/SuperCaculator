@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 
@@ -586,6 +587,29 @@ namespace MatrixCalculateForm
          */
         public Matrix Multiply(Matrix other)
         {
+            //// 首先检查行列数是否符合要求
+            //if (numColumns != other.GetNumRows())
+            //    throw new Exception("矩阵的行/列数不匹配。");
+
+            //// ruct the object we are going to return
+            //Matrix result = new Matrix(numRows, other.GetNumColumns());
+
+
+            //double value;
+            //for (int i = 0; i < result.GetNumRows(); ++i)
+            //{
+            //    for (int j = 0; j < other.GetNumColumns(); ++j)
+            //    {
+            //        value = 0.0;
+            //        for (int k = 0; k < numColumns; ++k)
+            //        {
+            //            value += GetElement(i, k) * other.GetElement(k, j);
+            //        }
+
+            //        result.SetElement(i, j, value);
+            //    }
+            //}
+            //return result;
             // 首先检查行列数是否符合要求
             if (numColumns != other.GetNumRows())
                 throw new Exception("矩阵的行/列数不匹配。");
@@ -593,23 +617,26 @@ namespace MatrixCalculateForm
             // ruct the object we are going to return
             Matrix result = new Matrix(numRows, other.GetNumColumns());
 
-            
-            double value;
-            for (int i = 0; i < result.GetNumRows(); ++i)
-            {
-                for (int j = 0; j < other.GetNumColumns(); ++j)
-                {
-                    value = 0.0;
-                    for (int k = 0; k < numColumns; ++k)
-                    {
-                        value += GetElement(i, k) * other.GetElement(k, j);
-                    }
+            int m = numRows; //矩阵A的行数
+            int n = numColumns; //矩阵A的列数
+            int t = other.GetNumColumns();//矩阵B的列数
 
-                    result.SetElement(i, j, value);
+            //矩阵A的每一行创建一个任务，然后并行执行
+            Parallel.For(0, m, i => {
+                for (int j = 0; j < t; j++)
+                {
+                    double temp = 0;
+                    for (int k = 0; k < n; k++)
+                    {
+                        temp += GetElement(i, k) * other.GetElement(k, j);
+                    }
+                    //result[i, j] = temp;
+                    result.SetElement(i, j, temp);
                 }
-            }
+            });
 
             return result;
+            
         }
         //从TextBox读取数据
         public bool ReadAndCheckMatrix(TextBox textBox)

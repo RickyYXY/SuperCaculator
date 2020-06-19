@@ -25,54 +25,75 @@ namespace MatrixCalculateForm
         //矩阵相乘
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((MatrixAtextBox.Text == "") || (MatrixBtextBox.Text == ""))
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if ((MatrixAtextBox.Text == "") || (MatrixBtextBox.Text == ""))
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                matrixC.Init(0, 0);
+                MatrixCtextBox.Text = "";
+                matrixA.ReadAndCheckMatrix(MatrixAtextBox);
+                matrixB.ReadAndCheckMatrix(MatrixBtextBox);
+                matrixC = TwoMatrix.MatrixMul(matrixA, matrixB);
+                var fontsize = (int)(MatrixCtextBox.Width / (Math.Max(matrixC.Columns, matrixC.Rows))) / 5;
+                MatrixCtextBox.Font = new System.Drawing.Font(MatrixCtextBox.Font.FontFamily, fontsize);
+                Matrix.WriteMatrix(MatrixCtextBox, matrixC);
             }
-            matrixC.Init(0, 0);
-            MatrixCtextBox.Text = "";
-            matrixA.ReadAndCheckMatrix(MatrixAtextBox);
-            matrixB.ReadAndCheckMatrix(MatrixBtextBox);
-            matrixC = TwoMatrix.MatrixMul(matrixA, matrixB);
-            var fontsize = (int)(MatrixCtextBox.Width / (Math.Max(matrixC.Columns, matrixC.Rows))) / 5;
-            MatrixCtextBox.Font = new System.Drawing.Font(MatrixCtextBox.Font.FontFamily, fontsize);
-            Matrix.WriteMatrix(MatrixCtextBox, matrixC);
+            catch
+            {
+                MessageBox.Show("矩阵行列不匹配!");
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if ((MatrixAtextBox.Text == "") || (MatrixBtextBox.Text == ""))
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            matrixC.Init(0, 0);
-            MatrixCtextBox.Text = "";
-            matrixA.ReadAndCheckMatrix(MatrixAtextBox);
-            matrixB.ReadAndCheckMatrix(MatrixBtextBox);
-            matrixC = TwoMatrix.MatrixAdd(matrixA, matrixB);
-            var fontsize = (int)(MatrixCtextBox.Width / (Math.Max(matrixC.Columns, matrixC.Rows))) / 5;
-            MatrixCtextBox.Font = new System.Drawing.Font(MatrixCtextBox.Font.FontFamily, fontsize);
+                if ((MatrixAtextBox.Text == "") || (MatrixBtextBox.Text == ""))
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                matrixC.Init(0, 0);
+                MatrixCtextBox.Text = "";
+                matrixA.ReadAndCheckMatrix(MatrixAtextBox);
+                matrixB.ReadAndCheckMatrix(MatrixBtextBox);
+                matrixC = TwoMatrix.MatrixAdd(matrixA, matrixB);
+                var fontsize = (int)(MatrixCtextBox.Width / (Math.Max(matrixC.Columns, matrixC.Rows))) / 5;
+                MatrixCtextBox.Font = new System.Drawing.Font(MatrixCtextBox.Font.FontFamily, fontsize);
 
-            Matrix.WriteMatrix(MatrixCtextBox, matrixC);
+                Matrix.WriteMatrix(MatrixCtextBox, matrixC);
+            }
+            catch
+            {
+                MessageBox.Show("矩阵行列不匹配!");
+            }
         }
 
         private void buttonSub_Click(object sender, EventArgs e)
         {
-            if ((MatrixAtextBox.Text == "") || (MatrixBtextBox.Text == ""))
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if ((MatrixAtextBox.Text == "") || (MatrixBtextBox.Text == ""))
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                matrixC.Init(0, 0);
+                MatrixCtextBox.Text = "";
+                matrixA.ReadAndCheckMatrix(MatrixAtextBox);
+                matrixB.ReadAndCheckMatrix(MatrixBtextBox);
+                matrixC = TwoMatrix.MatrixSub(matrixA, matrixB);
+                var fontsize = (int)(MatrixCtextBox.Width / (Math.Max(matrixC.Columns, matrixC.Rows))) / 5;
+                MatrixCtextBox.Font = new System.Drawing.Font(MatrixCtextBox.Font.FontFamily, fontsize);
+                Matrix.WriteMatrix(MatrixCtextBox, matrixC);
             }
-            matrixC.Init(0, 0);
-            MatrixCtextBox.Text = "";
-            matrixA.ReadAndCheckMatrix(MatrixAtextBox);
-            matrixB.ReadAndCheckMatrix(MatrixBtextBox);
-            matrixC = TwoMatrix.MatrixSub(matrixA, matrixB);
-            var fontsize = (int)(MatrixCtextBox.Width / (Math.Max(matrixC.Columns, matrixC.Rows))) / 5;
-            MatrixCtextBox.Font = new System.Drawing.Font(MatrixCtextBox.Font.FontFamily, fontsize);
-            Matrix.WriteMatrix(MatrixCtextBox, matrixC);
+            catch
+            {
+                MessageBox.Show("矩阵行列不匹配!");
+            }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -105,132 +126,167 @@ namespace MatrixCalculateForm
                 MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MatrixETextBox.Text = "";
-            matrixE = OneMatrix.MatrixTranspose(matrixD);
-            Matrix.WriteMatrix(MatrixETextBox, matrixE);
-            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows)))/5;
-            MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
+            try
+            {
+                MatrixETextBox.Text = "";
+                matrixE = OneMatrix.MatrixTranspose(matrixD);
+                Matrix.WriteMatrix(MatrixETextBox, matrixE);
+                var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
+                MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
+            }
+            catch
+            {
+                MessageBox.Show("出现未知错误!");
+            }
             //var buttonsize = MatrixETextBox.Font.Size;
 
         }
 
         private void Inversebutton_Click(object sender, EventArgs e)
         {
-            if (MatrixDTextBox.Text == "")
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (MatrixDTextBox.Text == "")
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+                {
+                    MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (!OneMatrix.MatrixInverse(matrixD))
+                {
+                    MessageBox.Show("该矩阵无逆矩阵", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    MatrixETextBox.Text = "";
+                    var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixD.Columns, matrixD.Rows))) / 15;
+                    MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
+                    Matrix.WriteMatrix(MatrixETextBox, matrixD);
+                }
             }
-            if(!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+            catch
             {
-                MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if(!OneMatrix.MatrixInverse(matrixD))
-            {
-                MessageBox.Show("该矩阵无逆矩阵", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                MatrixETextBox.Text = "";
-                var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixD.Columns, matrixD.Rows))) / 15;
-                MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
-                Matrix.WriteMatrix(MatrixETextBox, matrixD);
+                MessageBox.Show("出现未知错误!");
             }
         }
 
         private void ComputeDetbutton_Click(object sender, EventArgs e)
         {
-            if (MatrixDTextBox.Text == "")
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (MatrixDTextBox.Text == "")
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+                {
+                    MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                //matrixE.Init(0, 0);
+                MatrixETextBox.Text = "";
+                double temp = OneMatrix.ComputeDetGauss(matrixD);
+                if (Math.Abs(temp) < 0.000000001)
+                {
+                    temp = 0;
+                }
+                double[] result = new double[1] { temp };
+                matrixE.Init(1, 1);
+                matrixE.SetData(result);
+                var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 15;
+                MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
+                Matrix.WriteMatrix(MatrixETextBox, matrixE);
             }
-            if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+            catch
             {
-                MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                MessageBox.Show("出现未知错误!");
             }
-            //matrixE.Init(0, 0);
-            MatrixETextBox.Text = "";
-            double temp = OneMatrix.ComputeDetGauss(matrixD);
-            if(Math.Abs(temp)<0.000000001)
-            {
-                temp = 0;
-            }
-            double[] result = new double[1] { temp };
-            matrixE.Init(1, 1);
-            matrixE.SetData(result);
-            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 15;
-            MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
-            Matrix.WriteMatrix(MatrixETextBox, matrixE);
         }
         
         private void ComputeRankbutton_Click(object sender, EventArgs e)
         {
-            if (MatrixDTextBox.Text == "")
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (MatrixDTextBox.Text == "")
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+                {
+                    MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                //matrixE.Init(0, 0);
+                MatrixETextBox.Text = "";
+                int temp = OneMatrix.ComputeRankGauss(matrixD);
+                double[] result = new double[1] { temp };
+                matrixE.Init(1, 1);
+                matrixE.SetData(result);
+                var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
+                MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
+                Matrix.WriteMatrix(MatrixETextBox, matrixE);
             }
-            if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+            catch
             {
-                MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                MessageBox.Show("出现未知错误!");
             }
-            //matrixE.Init(0, 0);
-            MatrixETextBox.Text = "";
-            int temp = OneMatrix.ComputeRankGauss(matrixD);
-            double[] result = new double[1] { temp };
-            matrixE.Init(1, 1);
-            matrixE.SetData(result);
-            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
-            MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
-            Matrix.WriteMatrix(MatrixETextBox, matrixE);
         }
         public Matrix matrixEvj1;
         public Matrix matrixEvj2;
         private void ComputeEvJbutton_Click(object sender, EventArgs e)
         {
-            if (MatrixDTextBox.Text == "")
+            try
             {
-                MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (MatrixDTextBox.Text == "")
+                {
+                    MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+                {
+                    MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (matrixD.GetNumColumns() != matrixD.GetNumRows())
+                {
+                    MessageBox.Show("该矩阵不为方阵，无法求出特征值与特征向量", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                //MatrixEvjForm form = new MatrixEvjForm();
+                double[] Evj1 = new double[matrixD.GetNumRows()];
+                if (!OneMatrix.ComputeEvJacobi(matrixD, Evj1, matrixE, 100, 0.1))
+                {
+                    MessageBox.Show("特征值与特征向量求解失败", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    //matrixEvj1.Init(0, 0);
+                    matrixEvj1textbox.Text = "";
+                    //matrixEvj2.Init(0, 0);
+                    matrixEvj2textbox.Text = "";
+
+                    matrixEvj1 = new Matrix(Evj1.Length, Evj1.Length);
+                    var fontsize1 = (int)(matrixEvj1textbox.Width / (Math.Max(matrixEvj1.Columns, matrixEvj1.Rows))) / 3;
+                    matrixEvj1textbox.Font = new System.Drawing.Font(matrixEvj1textbox.Font.FontFamily, fontsize1);
+                    matrixEvj1.DiagonalMatrix(Evj1);
+                    matrixEvj2 = new Matrix(matrixE);
+                    var fontsize2 = (int)(matrixEvj2textbox.Width / (Math.Max(matrixEvj2.Columns, matrixEvj2.Rows))) / 4;
+                    matrixEvj2textbox.Font = new System.Drawing.Font(matrixEvj2textbox.Font.FontFamily, fontsize2);
+                    Matrix.WriteMatrix(matrixEvj1textbox, matrixEvj1);
+                    Matrix.WriteMatrix(matrixEvj2textbox, matrixEvj2);
+                }
             }
-            if (!matrixD.ReadAndCheckMatrix(MatrixDTextBox))
+            catch
             {
-                MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (matrixD.GetNumColumns() != matrixD.GetNumRows())
-            {
-                MessageBox.Show("该矩阵不为方阵，无法求出特征值与特征向量", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            //MatrixEvjForm form = new MatrixEvjForm();
-            double[] Evj1 = new double[matrixD.GetNumRows()];
-            if (!OneMatrix.ComputeEvJacobi(matrixD, Evj1, matrixE, 100, 0.1 ))
-            {
-                MessageBox.Show("特征值与特征向量求解失败", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                //matrixEvj1.Init(0, 0);
-                matrixEvj1textbox.Text = "";
-                //matrixEvj2.Init(0, 0);
-                matrixEvj2textbox.Text = "";
-                
-                matrixEvj1 = new Matrix(Evj1.Length, Evj1.Length);
-                var fontsize1 = (int)(matrixEvj1textbox.Width / (Math.Max(matrixEvj1.Columns, matrixEvj1.Rows))) / 3;
-                matrixEvj1textbox.Font = new System.Drawing.Font(matrixEvj1textbox.Font.FontFamily, fontsize1);
-                matrixEvj1.DiagonalMatrix(Evj1);
-                matrixEvj2 = new Matrix(matrixE);
-                var fontsize2 = (int)(matrixEvj2textbox.Width / (Math.Max(matrixEvj2.Columns, matrixEvj2.Rows))) / 4;
-                matrixEvj2textbox.Font = new System.Drawing.Font(matrixEvj2textbox.Font.FontFamily, fontsize2);
-                Matrix.WriteMatrix(matrixEvj1textbox, matrixEvj1);
-                Matrix.WriteMatrix(matrixEvj2textbox, matrixEvj2);
+                MessageBox.Show("出现未知错误!");
             }
         }
 
@@ -249,73 +305,94 @@ namespace MatrixCalculateForm
         //保存按钮
         private void button2_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            //设置对话框标题
-            sfd.Title = "保存导出矩阵";
-            //设置默认文件名
-            sfd.FileName = "Matrix.txt";
-            //保存对话框是否记忆上次打开的目录 
-            sfd.RestoreDirectory = true;
-            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
-                string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                matrixSave.ReadAndCheckMatrix(MatrixETextBox);
-                Matrix.WriteMatrixToFile(localFilePath, matrixSave);
-                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                SaveFileDialog sfd = new SaveFileDialog();
+                //设置对话框标题
+                sfd.Title = "保存导出矩阵";
+                //设置默认文件名
+                sfd.FileName = "Matrix.txt";
+                //保存对话框是否记忆上次打开的目录 
+                sfd.RestoreDirectory = true;
+                sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                    matrixSave.ReadAndCheckMatrix(MatrixETextBox);
+                    Matrix.WriteMatrixToFile(localFilePath, matrixSave);
+                    MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                }
+                else
+                {
+                    MessageBox.Show("取消保存");
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("取消保存");
-                return;
+                MessageBox.Show("保存失败!");
             }
         }
 
         Matrix twomatrixsave = new Matrix();
         private void button3_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            //设置对话框标题
-            sfd.Title = "保存导出矩阵";
-            //设置默认文件名
-            sfd.FileName = "Matrix.txt";
-            //保存对话框是否记忆上次打开的目录 
-            sfd.RestoreDirectory = true;
-            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
-                string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                twomatrixsave.ReadAndCheckMatrix(MatrixCtextBox);
-                Matrix.WriteMatrixToFile(localFilePath, twomatrixsave);
-                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                SaveFileDialog sfd = new SaveFileDialog();
+                //设置对话框标题
+                sfd.Title = "保存导出矩阵";
+                //设置默认文件名
+                sfd.FileName = "Matrix.txt";
+                //保存对话框是否记忆上次打开的目录 
+                sfd.RestoreDirectory = true;
+                sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                    twomatrixsave.ReadAndCheckMatrix(MatrixCtextBox);
+                    Matrix.WriteMatrixToFile(localFilePath, twomatrixsave);
+                    MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                }
+                else
+                {
+                    MessageBox.Show("取消保存");
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("取消保存");
-                return;
+                MessageBox.Show("保存失败!");
             }
         }
 
         private void MatrixEvj1Save_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            //设置对话框标题
-            sfd.Title = "保存导出矩阵";
-            //设置默认文件名
-            sfd.FileName = "Matrix.txt";
-            //保存对话框是否记忆上次打开的目录 
-            sfd.RestoreDirectory = true;
-            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
-                string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                Matrix.WriteMatrixToFile(localFilePath, matrixEvj1);
-                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                SaveFileDialog sfd = new SaveFileDialog();
+                //设置对话框标题
+                sfd.Title = "保存导出矩阵";
+                //设置默认文件名
+                sfd.FileName = "Matrix.txt";
+                //保存对话框是否记忆上次打开的目录 
+                sfd.RestoreDirectory = true;
+                sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                    Matrix.WriteMatrixToFile(localFilePath, matrixEvj1);
+                    MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                }
+                else
+                {
+                    MessageBox.Show("取消保存");
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("取消保存");
-                return;
+                MessageBox.Show("保存失败!");
             }
         }
 
@@ -347,47 +424,61 @@ namespace MatrixCalculateForm
 
         private void MatrixEvj1Save_Click_1(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            //设置对话框标题
-            sfd.Title = "保存导出矩阵";
-            //设置默认文件名
-            sfd.FileName = "Matrix.txt";
-            //保存对话框是否记忆上次打开的目录 
-            sfd.RestoreDirectory = true;
-            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
-                string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                Matrix.WriteMatrixToFile(localFilePath, matrixEvj1);
-                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                SaveFileDialog sfd = new SaveFileDialog();
+                //设置对话框标题
+                sfd.Title = "保存导出矩阵";
+                //设置默认文件名
+                sfd.FileName = "Matrix.txt";
+                //保存对话框是否记忆上次打开的目录 
+                sfd.RestoreDirectory = true;
+                sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                    Matrix.WriteMatrixToFile(localFilePath, matrixEvj1);
+                    MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                }
+                else
+                {
+                    MessageBox.Show("取消保存");
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("取消保存");
-                return;
+                MessageBox.Show("保存失败!");
             }
         }
 
         private void MatrixEvj2Save_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            //设置对话框标题
-            sfd.Title = "保存导出矩阵";
-            //设置默认文件名
-            sfd.FileName = "Matrix.txt";
-            //保存对话框是否记忆上次打开的目录 
-            sfd.RestoreDirectory = true;
-            sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
-                string localFilePath = sfd.FileName.ToString(); //获得文件路径
-                Matrix.WriteMatrixToFile(localFilePath, matrixEvj2);
-                MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                SaveFileDialog sfd = new SaveFileDialog();
+                //设置对话框标题
+                sfd.Title = "保存导出矩阵";
+                //设置默认文件名
+                sfd.FileName = "Matrix.txt";
+                //保存对话框是否记忆上次打开的目录 
+                sfd.RestoreDirectory = true;
+                sfd.Filter = "TxT 文本文件（*.txt）|*.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string localFilePath = sfd.FileName.ToString(); //获得文件路径
+                    Matrix.WriteMatrixToFile(localFilePath, matrixEvj2);
+                    MessageBox.Show(sfd.FileName.ToString() + "\n保存成功！");
+                }
+                else
+                {
+                    MessageBox.Show("取消保存");
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("取消保存");
-                return;
+                MessageBox.Show("保存失败!");
             }
         }
     }
