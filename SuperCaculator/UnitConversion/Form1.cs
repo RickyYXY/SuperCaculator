@@ -628,12 +628,19 @@ namespace UnitConversion
         //转外币
         private void RMBChange()
         {
-            label16.Text = "";
-            double money = 0;
-            try { money = Convert.ToDouble(textBox6.Text); } catch { label16.Text = "输入不合法"; }
-            double rate = Double.Parse(CurrencyAPI.searchInformation(transformer, comboBox3.SelectedIndex, "bankConversionPri"));
-            double result = money * 100 / rate;
-            label13.Text = Math.Round(result, 2).ToString();
+            try
+            {
+                label16.Text = "";
+                double money = 0;
+                try { money = Convert.ToDouble(textBox6.Text); } catch { label16.Text = "输入不合法"; }
+                double rate = Double.Parse(CurrencyAPI.searchInformation(transformer, comboBox3.SelectedIndex, "bankConversionPri"));
+                double result = money * 100 / rate;
+                label13.Text = Math.Round(result, 2).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("发生错误");
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -644,12 +651,19 @@ namespace UnitConversion
         //转人民币
         private void ForeignCurrencyChange()
         {
-            label17.Text = "";
-            double money = 0;
-            try { money = Convert.ToDouble(textBox7.Text); } catch { label17.Text = "输入不合法"; }
-            double rate = Double.Parse(CurrencyAPI.searchInformation(transformer, comboBox4.SelectedIndex, "bankConversionPri"));
-            double result = money * rate / 100;
-            label14.Text = Math.Round(result, 2).ToString();
+            try
+            {
+                label17.Text = "";
+                double money = 0;
+                try { money = Convert.ToDouble(textBox7.Text); } catch { label17.Text = "输入不合法"; }
+                double rate = Double.Parse(CurrencyAPI.searchInformation(transformer, comboBox4.SelectedIndex, "bankConversionPri"));
+                double result = money * rate / 100;
+                label14.Text = Math.Round(result, 2).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("发生错误");
+            }
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -660,12 +674,19 @@ namespace UnitConversion
         //显示汇率详情
         private void ShowRate(ComboBox comboBox)
         {
-            string currency = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "name");
-            string date = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "date");
-            string bankconversion = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "bankConversionPri");
-            string time = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "time");
-            ExchangeRate form = new ExchangeRate(currency, date, bankconversion, time);
-            form.Show();
+            try
+            {
+                string currency = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "name");
+                string date = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "date");
+                string bankconversion = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "bankConversionPri");
+                string time = CurrencyAPI.searchInformation(transformer, comboBox.SelectedIndex, "time");
+                ExchangeRate form = new ExchangeRate(currency, date, bankconversion, time);
+                form.Show();
+            }
+            catch
+            {
+                MessageBox.Show("发生错误");
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
