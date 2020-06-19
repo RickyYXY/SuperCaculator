@@ -78,10 +78,23 @@ namespace PaintForm
             using (SaveFileDialog save = new SaveFileDialog())
             {
                 save.FileName = "picture2D";
-                save.Filter = "(.jpg)|*.jpg";
+                //save.Filter = "(.jpg)|*.jpg"; 
+                save.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|PNG Image|*.png";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                    switch (save.FilterIndex)
+                    {
+                        case 1:
+                            pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                            break;
+                        case 2:
+                            pictureBox_2D.Image.Save(save.FileName, ImageFormat.Bmp);
+                            break;
+                        case 3:
+                            pictureBox_2D.Image.Save(save.FileName, ImageFormat.Png);
+                            break;
+                    }
+                    //pictureBox_2D.Image.Save(save.FileName, ImageFormat.Jpeg);
                     MessageBox.Show("保存成功");
                 }
             }
@@ -175,10 +188,22 @@ namespace PaintForm
             using (SaveFileDialog save = new SaveFileDialog())
             {
                 save.FileName = "picture3D";
-                save.Filter = "(.jpg)|*.jpg";
+                //save.Filter = "(.jpg)|*.jpg";
+                save.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|PNG Image|*.png";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox_3D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                    switch (save.FilterIndex)
+                    {
+                        case 1:
+                            pictureBox_3D.Image.Save(save.FileName, ImageFormat.Jpeg);
+                            break;
+                        case 2:
+                            pictureBox_3D.Image.Save(save.FileName, ImageFormat.Bmp);
+                            break;
+                        case 3:
+                            pictureBox_3D.Image.Save(save.FileName, ImageFormat.Png);
+                            break;
+                    }
                     MessageBox.Show("保存成功");
                 }
             }
@@ -199,7 +224,7 @@ namespace PaintForm
             }
             if (MaxX_3D <= MinX_3D || MaxY_3D <= MinY_3D)
             {
-                MessageBox.Show("数值输入不合法。");
+                MessageBox.Show("定义域输入不合法。");
                 return;
             }
             Bitmap bitmap = new Bitmap(pictureBox_3D.Width, pictureBox_3D.Height);

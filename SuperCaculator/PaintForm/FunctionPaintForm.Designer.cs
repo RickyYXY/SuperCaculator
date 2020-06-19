@@ -59,26 +59,26 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.trackBar = new System.Windows.Forms.TrackBar();
             this.label_density = new System.Windows.Forms.Label();
-            this.textBox_exp_3D = new System.Windows.Forms.TextBox();
-            this.label_func_3D = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label_range_3D = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_minY_3D = new System.Windows.Forms.TextBox();
+            this.textBox_maxY_3D = new System.Windows.Forms.TextBox();
+            this.label_Y_3D = new System.Windows.Forms.Label();
+            this.label_X_3D = new System.Windows.Forms.Label();
+            this.textBox_maxX_3D = new System.Windows.Forms.TextBox();
+            this.textBox_minX_3D = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.button_save_3D = new System.Windows.Forms.Button();
             this.button_color_3D = new System.Windows.Forms.Button();
             this.button_clear_3D = new System.Windows.Forms.Button();
-            this.label_range_3D = new System.Windows.Forms.Label();
-            this.textBox_maxY_3D = new System.Windows.Forms.TextBox();
-            this.textBox_minX_3D = new System.Windows.Forms.TextBox();
-            this.textBox_maxX_3D = new System.Windows.Forms.TextBox();
-            this.label_Y_3D = new System.Windows.Forms.Label();
-            this.textBox_minY_3D = new System.Windows.Forms.TextBox();
-            this.label_X_3D = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label_func_3D = new System.Windows.Forms.Label();
+            this.textBox_exp_3D = new System.Windows.Forms.TextBox();
             this.tabPage_help = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl.SuspendLayout();
             this.tabPage_2D.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2D)).BeginInit();
@@ -94,13 +94,13 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
-            this.tabPage_help.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tabPage_help.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -250,7 +250,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(762, 58);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
@@ -305,6 +305,7 @@
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(762, 64);
             this.tableLayoutPanel13.TabIndex = 0;
             // 
@@ -316,7 +317,6 @@
             this.textBox_exp_2D.Name = "textBox_exp_2D";
             this.textBox_exp_2D.Size = new System.Drawing.Size(606, 56);
             this.textBox_exp_2D.TabIndex = 2;
-            this.textBox_exp_2D.Text = "x+x*sin(x)+2";
             // 
             // label_func_2D
             // 
@@ -499,66 +499,37 @@
             this.label_density.Text = "密度:";
             this.label_density.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox_exp_3D
+            // tableLayoutPanel2
             // 
-            this.textBox_exp_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_exp_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.textBox_exp_3D.Location = new System.Drawing.Point(203, 3);
-            this.textBox_exp_3D.Name = "textBox_exp_3D";
-            this.textBox_exp_3D.Size = new System.Drawing.Size(556, 56);
-            this.textBox_exp_3D.TabIndex = 9;
-            this.textBox_exp_3D.Text = "x*x*y*y";
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel12, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(768, 269);
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // label_func_3D
+            // tableLayoutPanel9
             // 
-            this.label_func_3D.AutoSize = true;
-            this.label_func_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_func_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.label_func_3D.Location = new System.Drawing.Point(3, 0);
-            this.label_func_3D.Name = "label_func_3D";
-            this.label_func_3D.Size = new System.Drawing.Size(194, 64);
-            this.label_func_3D.TabIndex = 15;
-            this.label_func_3D.Text = "F(x, y) =";
-            this.label_func_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button_save_3D
-            // 
-            this.button_save_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_save_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_save_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_save_3D.Location = new System.Drawing.Point(509, 3);
-            this.button_save_3D.Name = "button_save_3D";
-            this.button_save_3D.Size = new System.Drawing.Size(250, 52);
-            this.button_save_3D.TabIndex = 17;
-            this.button_save_3D.Text = "保存";
-            this.button_save_3D.UseVisualStyleBackColor = false;
-            this.button_save_3D.Click += new System.EventHandler(this.Button_save_3D_Click);
-            // 
-            // button_color_3D
-            // 
-            this.button_color_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_color_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_color_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_color_3D.Location = new System.Drawing.Point(3, 3);
-            this.button_color_3D.Name = "button_color_3D";
-            this.button_color_3D.Size = new System.Drawing.Size(247, 52);
-            this.button_color_3D.TabIndex = 15;
-            this.button_color_3D.Text = "颜色";
-            this.button_color_3D.UseVisualStyleBackColor = false;
-            this.button_color_3D.Click += new System.EventHandler(this.Button_color_3D_Click);
-            // 
-            // button_clear_3D
-            // 
-            this.button_clear_3D.BackColor = System.Drawing.Color.LightCyan;
-            this.button_clear_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_clear_3D.Font = new System.Drawing.Font("方正舒体", 20F);
-            this.button_clear_3D.Location = new System.Drawing.Point(256, 3);
-            this.button_clear_3D.Name = "button_clear_3D";
-            this.button_clear_3D.Size = new System.Drawing.Size(247, 52);
-            this.button_clear_3D.TabIndex = 16;
-            this.button_clear_3D.Text = "清屏";
-            this.button_clear_3D.UseVisualStyleBackColor = false;
-            this.button_clear_3D.Click += new System.EventHandler(this.Button_clean_3D_Click);
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.label_range_3D, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 1, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 73);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(762, 129);
+            this.tableLayoutPanel9.TabIndex = 1;
             // 
             // label_range_3D
             // 
@@ -572,6 +543,38 @@
             this.label_range_3D.Text = "范围:";
             this.label_range_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.textBox_minY_3D, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.textBox_maxY_3D, 2, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label_Y_3D, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label_X_3D, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.textBox_maxX_3D, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.textBox_minX_3D, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(200, 3);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(559, 123);
+            this.tableLayoutPanel10.TabIndex = 20;
+            // 
+            // textBox_minY_3D
+            // 
+            this.textBox_minY_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_minY_3D.Font = new System.Drawing.Font("Cambria", 25F);
+            this.textBox_minY_3D.Location = new System.Drawing.Point(3, 64);
+            this.textBox_minY_3D.Name = "textBox_minY_3D";
+            this.textBox_minY_3D.Size = new System.Drawing.Size(213, 56);
+            this.textBox_minY_3D.TabIndex = 12;
+            this.textBox_minY_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // textBox_maxY_3D
             // 
             this.textBox_maxY_3D.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -581,26 +584,6 @@
             this.textBox_maxY_3D.Size = new System.Drawing.Size(214, 56);
             this.textBox_maxY_3D.TabIndex = 13;
             this.textBox_maxY_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox_minX_3D
-            // 
-            this.textBox_minX_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_minX_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.textBox_minX_3D.Location = new System.Drawing.Point(3, 3);
-            this.textBox_minX_3D.Name = "textBox_minX_3D";
-            this.textBox_minX_3D.Size = new System.Drawing.Size(213, 56);
-            this.textBox_minX_3D.TabIndex = 10;
-            this.textBox_minX_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox_maxX_3D
-            // 
-            this.textBox_maxX_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_maxX_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.textBox_maxX_3D.Location = new System.Drawing.Point(342, 3);
-            this.textBox_maxX_3D.Name = "textBox_maxX_3D";
-            this.textBox_maxX_3D.Size = new System.Drawing.Size(214, 56);
-            this.textBox_maxX_3D.TabIndex = 11;
-            this.textBox_maxX_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_Y_3D
             // 
@@ -614,16 +597,6 @@
             this.label_Y_3D.Text = "< y <";
             this.label_Y_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox_minY_3D
-            // 
-            this.textBox_minY_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_minY_3D.Font = new System.Drawing.Font("Cambria", 25F);
-            this.textBox_minY_3D.Location = new System.Drawing.Point(3, 64);
-            this.textBox_minY_3D.Name = "textBox_minY_3D";
-            this.textBox_minY_3D.Size = new System.Drawing.Size(213, 56);
-            this.textBox_minY_3D.TabIndex = 12;
-            this.textBox_minY_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label_X_3D
             // 
             this.label_X_3D.AutoSize = true;
@@ -636,6 +609,118 @@
             this.label_X_3D.TabIndex = 18;
             this.label_X_3D.Text = "< x <";
             this.label_X_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_maxX_3D
+            // 
+            this.textBox_maxX_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_maxX_3D.Font = new System.Drawing.Font("Cambria", 25F);
+            this.textBox_maxX_3D.Location = new System.Drawing.Point(342, 3);
+            this.textBox_maxX_3D.Name = "textBox_maxX_3D";
+            this.textBox_maxX_3D.Size = new System.Drawing.Size(214, 56);
+            this.textBox_maxX_3D.TabIndex = 11;
+            this.textBox_maxX_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox_minX_3D
+            // 
+            this.textBox_minX_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_minX_3D.Font = new System.Drawing.Font("Cambria", 25F);
+            this.textBox_minX_3D.Location = new System.Drawing.Point(3, 3);
+            this.textBox_minX_3D.Name = "textBox_minX_3D";
+            this.textBox_minX_3D.Size = new System.Drawing.Size(213, 56);
+            this.textBox_minX_3D.TabIndex = 10;
+            this.textBox_minX_3D.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 3;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel12.Controls.Add(this.button_save_3D, 2, 0);
+            this.tableLayoutPanel12.Controls.Add(this.button_color_3D, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.button_clear_3D, 1, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 208);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(762, 58);
+            this.tableLayoutPanel12.TabIndex = 2;
+            // 
+            // button_save_3D
+            // 
+            this.button_save_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_save_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_save_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_save_3D.Location = new System.Drawing.Point(511, 3);
+            this.button_save_3D.Name = "button_save_3D";
+            this.button_save_3D.Size = new System.Drawing.Size(248, 52);
+            this.button_save_3D.TabIndex = 17;
+            this.button_save_3D.Text = "保存";
+            this.button_save_3D.UseVisualStyleBackColor = false;
+            this.button_save_3D.Click += new System.EventHandler(this.Button_save_3D_Click);
+            // 
+            // button_color_3D
+            // 
+            this.button_color_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_color_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_color_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_color_3D.Location = new System.Drawing.Point(3, 3);
+            this.button_color_3D.Name = "button_color_3D";
+            this.button_color_3D.Size = new System.Drawing.Size(248, 52);
+            this.button_color_3D.TabIndex = 15;
+            this.button_color_3D.Text = "颜色";
+            this.button_color_3D.UseVisualStyleBackColor = false;
+            this.button_color_3D.Click += new System.EventHandler(this.Button_color_3D_Click);
+            // 
+            // button_clear_3D
+            // 
+            this.button_clear_3D.BackColor = System.Drawing.Color.LightCyan;
+            this.button_clear_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_clear_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_clear_3D.Location = new System.Drawing.Point(257, 3);
+            this.button_clear_3D.Name = "button_clear_3D";
+            this.button_clear_3D.Size = new System.Drawing.Size(248, 52);
+            this.button_clear_3D.TabIndex = 16;
+            this.button_clear_3D.Text = "清屏";
+            this.button_clear_3D.UseVisualStyleBackColor = false;
+            this.button_clear_3D.Click += new System.EventHandler(this.Button_clean_3D_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.label_func_3D, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox_exp_3D, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(762, 64);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // label_func_3D
+            // 
+            this.label_func_3D.AutoSize = true;
+            this.label_func_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_func_3D.Font = new System.Drawing.Font("Cambria", 25F);
+            this.label_func_3D.Location = new System.Drawing.Point(3, 0);
+            this.label_func_3D.Name = "label_func_3D";
+            this.label_func_3D.Size = new System.Drawing.Size(194, 64);
+            this.label_func_3D.TabIndex = 15;
+            this.label_func_3D.Text = "F(x, y) =";
+            this.label_func_3D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_exp_3D
+            // 
+            this.textBox_exp_3D.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_exp_3D.Font = new System.Drawing.Font("Cambria", 25F);
+            this.textBox_exp_3D.Location = new System.Drawing.Point(203, 3);
+            this.textBox_exp_3D.Name = "textBox_exp_3D";
+            this.textBox_exp_3D.Size = new System.Drawing.Size(556, 56);
+            this.textBox_exp_3D.TabIndex = 9;
             // 
             // tabPage_help
             // 
@@ -672,92 +757,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel9, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel12, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(768, 269);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.label_range_3D, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 1, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 73);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(762, 129);
-            this.tableLayoutPanel9.TabIndex = 1;
-            // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 3;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Controls.Add(this.textBox_minY_3D, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.textBox_maxY_3D, 2, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label_Y_3D, 1, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label_X_3D, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox_maxX_3D, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox_minX_3D, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(200, 3);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(559, 123);
-            this.tableLayoutPanel10.TabIndex = 20;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 3;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.Controls.Add(this.button_save_3D, 2, 0);
-            this.tableLayoutPanel12.Controls.Add(this.button_color_3D, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.button_clear_3D, 1, 0);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 208);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 1;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(762, 58);
-            this.tableLayoutPanel12.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.label_func_3D, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox_exp_3D, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(762, 64);
-            this.tableLayoutPanel3.TabIndex = 3;
-            // 
             // FunctionPaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -785,9 +784,6 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
-            this.tabPage_help.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
@@ -796,6 +792,9 @@
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tabPage_help.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -812,7 +811,6 @@
         private System.Windows.Forms.Label label_X_2D;
         private System.Windows.Forms.Label label_func_2D;
         private System.Windows.Forms.Button button_draw_2D;
-        private System.Windows.Forms.TextBox textBox_exp_2D;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button button_save_2D;
         private System.Windows.Forms.Button button_color_2D;
@@ -852,5 +850,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TextBox textBox_exp_2D;
     }
 }
