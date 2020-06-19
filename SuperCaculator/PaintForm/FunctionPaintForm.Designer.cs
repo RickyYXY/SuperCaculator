@@ -210,7 +210,7 @@
             // 
             this.button_draw_2D.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw_2D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_draw_2D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_draw_2D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.button_draw_2D.Location = new System.Drawing.Point(777, 3);
             this.button_draw_2D.Name = "button_draw_2D";
             this.button_draw_2D.Size = new System.Drawing.Size(188, 204);
@@ -450,7 +450,7 @@
             // 
             this.button_draw_3D.BackColor = System.Drawing.Color.LightCyan;
             this.button_draw_3D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_draw_3D.Font = new System.Drawing.Font("方正舒体", 20F);
+            this.button_draw_3D.Font = new System.Drawing.Font("方正舒体", 25F);
             this.button_draw_3D.Location = new System.Drawing.Point(3, 63);
             this.button_draw_3D.Name = "button_draw_3D";
             this.button_draw_3D.Size = new System.Drawing.Size(182, 203);
@@ -749,7 +749,7 @@
             // 
             // textBox_help
             // 
-            this.textBox_help.BackColor = System.Drawing.Color.LightCyan;
+            this.textBox_help.BackColor = System.Drawing.Color.MintCream;
             this.textBox_help.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_help.Font = new System.Drawing.Font("方正舒体", 18F);
             this.textBox_help.Location = new System.Drawing.Point(3, 3);

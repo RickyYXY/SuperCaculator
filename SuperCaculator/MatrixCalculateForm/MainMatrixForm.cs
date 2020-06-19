@@ -30,6 +30,8 @@ namespace MatrixCalculateForm
                 MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            matrixC.Init(0, 0);
+            MatrixCtextBox.Text = "";
             matrixA.ReadAndCheckMatrix(MatrixAtextBox);
             matrixB.ReadAndCheckMatrix(MatrixBtextBox);
             matrixC = TwoMatrix.MatrixMul(matrixA, matrixB);
@@ -45,6 +47,8 @@ namespace MatrixCalculateForm
                 MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            matrixC.Init(0, 0);
+            MatrixCtextBox.Text = "";
             matrixA.ReadAndCheckMatrix(MatrixAtextBox);
             matrixB.ReadAndCheckMatrix(MatrixBtextBox);
             matrixC = TwoMatrix.MatrixAdd(matrixA, matrixB);
@@ -61,6 +65,8 @@ namespace MatrixCalculateForm
                 MessageBox.Show("请输入数据", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            matrixC.Init(0, 0);
+            MatrixCtextBox.Text = "";
             matrixA.ReadAndCheckMatrix(MatrixAtextBox);
             matrixB.ReadAndCheckMatrix(MatrixBtextBox);
             matrixC = TwoMatrix.MatrixSub(matrixA, matrixB);
@@ -99,6 +105,7 @@ namespace MatrixCalculateForm
                 MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            MatrixETextBox.Text = "";
             matrixE = OneMatrix.MatrixTranspose(matrixD);
             Matrix.WriteMatrix(MatrixETextBox, matrixE);
             var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows)))/5;
@@ -126,7 +133,8 @@ namespace MatrixCalculateForm
             }
             else
             {
-                var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
+                MatrixETextBox.Text = "";
+                var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixD.Columns, matrixD.Rows))) / 15;
                 MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
                 Matrix.WriteMatrix(MatrixETextBox, matrixD);
             }
@@ -144,8 +152,11 @@ namespace MatrixCalculateForm
                 MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            //matrixE.Init(0, 0);
+            MatrixETextBox.Text = "";
             double temp = OneMatrix.ComputeDetGauss(matrixD);
             double[] result = new double[1] { temp };
+            matrixE.Init(1, 1);
             matrixE.SetData(result);
             var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
             MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
@@ -164,10 +175,13 @@ namespace MatrixCalculateForm
                 MessageBox.Show("矩阵行列有误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            //matrixE.Init(0, 0);
+            MatrixETextBox.Text = "";
             int temp = OneMatrix.ComputeRankGauss(matrixD);
             double[] result = new double[1] { temp };
+            matrixE.Init(1, 1);
             matrixE.SetData(result);
-            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 2;
+            var fontsize = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 5;
             MatrixETextBox.Font = new System.Drawing.Font(MatrixETextBox.Font.FontFamily, fontsize);
             Matrix.WriteMatrix(MatrixETextBox, matrixE);
         }
@@ -199,12 +213,17 @@ namespace MatrixCalculateForm
             }
             else
             {
-                var fontsize1 = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 6;
+                //matrixEvj1.Init(0, 0);
+                matrixEvj1textbox.Text = "";
+                //matrixEvj2.Init(0, 0);
+                matrixEvj2textbox.Text = "";
+                
                 matrixEvj1 = new Matrix(Evj1.Length, Evj1.Length);
+                var fontsize1 = (int)(matrixEvj1textbox.Width / (Math.Max(matrixEvj1.Columns, matrixEvj1.Rows))) / 3;
                 matrixEvj1textbox.Font = new System.Drawing.Font(matrixEvj1textbox.Font.FontFamily, fontsize1);
                 matrixEvj1.DiagonalMatrix(Evj1);
                 matrixEvj2 = new Matrix(matrixE);
-                var fontsize2 = (int)(MatrixETextBox.Width / (Math.Max(matrixE.Columns, matrixE.Rows))) / 10;
+                var fontsize2 = (int)(matrixEvj2textbox.Width / (Math.Max(matrixEvj2.Columns, matrixEvj2.Rows))) / 4;
                 matrixEvj2textbox.Font = new System.Drawing.Font(matrixEvj2textbox.Font.FontFamily, fontsize2);
                 Matrix.WriteMatrix(matrixEvj1textbox, matrixEvj1);
                 Matrix.WriteMatrix(matrixEvj2textbox, matrixEvj2);
