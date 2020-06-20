@@ -35,11 +35,11 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Transposebutton = new System.Windows.Forms.Button();
-            this.ComputeEvJbutton = new System.Windows.Forms.Button();
             this.MatrixDClear = new System.Windows.Forms.Button();
             this.Inversebutton = new System.Windows.Forms.Button();
             this.ComputeRankbutton = new System.Windows.Forms.Button();
             this.ComputeDetbutton = new System.Windows.Forms.Button();
+            this.ComputeEvJbutton = new System.Windows.Forms.Button();
             this.MatrixDTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -212,21 +212,6 @@
             this.Transposebutton.UseVisualStyleBackColor = false;
             this.Transposebutton.Click += new System.EventHandler(this.Transposebutton_Click);
             // 
-            // ComputeEvJbutton
-            // 
-            this.ComputeEvJbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComputeEvJbutton.BackColor = System.Drawing.Color.LightCyan;
-            this.ComputeEvJbutton.Font = new System.Drawing.Font("方正舒体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ComputeEvJbutton.Location = new System.Drawing.Point(3, 214);
-            this.ComputeEvJbutton.Name = "ComputeEvJbutton";
-            this.ComputeEvJbutton.Size = new System.Drawing.Size(93, 100);
-            this.ComputeEvJbutton.TabIndex = 8;
-            this.ComputeEvJbutton.Text = "矩阵特征值与特征向量";
-            this.ComputeEvJbutton.UseVisualStyleBackColor = false;
-            this.ComputeEvJbutton.Click += new System.EventHandler(this.ComputeEvJbutton_Click);
-            // 
             // MatrixDClear
             // 
             this.MatrixDClear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -286,6 +271,21 @@
             this.ComputeDetbutton.Text = "矩阵行列式";
             this.ComputeDetbutton.UseVisualStyleBackColor = false;
             this.ComputeDetbutton.Click += new System.EventHandler(this.ComputeDetbutton_Click);
+            // 
+            // ComputeEvJbutton
+            // 
+            this.ComputeEvJbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComputeEvJbutton.BackColor = System.Drawing.Color.LightCyan;
+            this.ComputeEvJbutton.Font = new System.Drawing.Font("方正舒体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ComputeEvJbutton.Location = new System.Drawing.Point(3, 214);
+            this.ComputeEvJbutton.Name = "ComputeEvJbutton";
+            this.ComputeEvJbutton.Size = new System.Drawing.Size(93, 100);
+            this.ComputeEvJbutton.TabIndex = 8;
+            this.ComputeEvJbutton.Text = "矩阵特征值与特征向量";
+            this.ComputeEvJbutton.UseVisualStyleBackColor = false;
+            this.ComputeEvJbutton.Click += new System.EventHandler(this.ComputeEvJbutton_Click);
             // 
             // MatrixDTextBox
             // 
@@ -412,7 +412,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.31965F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.68035F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel4.Controls.Add(this.MatrixEvj2Save, 3, 1);
             this.tableLayoutPanel4.Controls.Add(this.MatrixEvj1Save, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.label8, 0, 0);
@@ -434,9 +434,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MatrixEvj2Save.BackColor = System.Drawing.Color.LightCyan;
             this.MatrixEvj2Save.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MatrixEvj2Save.Location = new System.Drawing.Point(721, 27);
+            this.MatrixEvj2Save.Location = new System.Drawing.Point(720, 27);
             this.MatrixEvj2Save.Name = "MatrixEvj2Save";
-            this.MatrixEvj2Save.Size = new System.Drawing.Size(43, 322);
+            this.MatrixEvj2Save.Size = new System.Drawing.Size(44, 322);
             this.MatrixEvj2Save.TabIndex = 9;
             this.MatrixEvj2Save.Text = "保存矩阵特征向量";
             this.MatrixEvj2Save.UseVisualStyleBackColor = false;
@@ -449,7 +449,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MatrixEvj1Save.BackColor = System.Drawing.Color.LightCyan;
             this.MatrixEvj1Save.Font = new System.Drawing.Font("方正舒体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MatrixEvj1Save.Location = new System.Drawing.Point(673, 27);
+            this.MatrixEvj1Save.Location = new System.Drawing.Point(672, 27);
             this.MatrixEvj1Save.Name = "MatrixEvj1Save";
             this.MatrixEvj1Save.Size = new System.Drawing.Size(42, 322);
             this.MatrixEvj1Save.TabIndex = 8;
@@ -473,7 +473,7 @@
             this.matrixEvj2textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.matrixEvj2textbox.Location = new System.Drawing.Point(347, 27);
+            this.matrixEvj2textbox.Location = new System.Drawing.Point(346, 27);
             this.matrixEvj2textbox.Multiline = true;
             this.matrixEvj2textbox.Name = "matrixEvj2textbox";
             this.matrixEvj2textbox.ReadOnly = true;
@@ -489,7 +489,7 @@
             this.matrixEvj1textbox.Multiline = true;
             this.matrixEvj1textbox.Name = "matrixEvj1textbox";
             this.matrixEvj1textbox.ReadOnly = true;
-            this.matrixEvj1textbox.Size = new System.Drawing.Size(338, 322);
+            this.matrixEvj1textbox.Size = new System.Drawing.Size(337, 322);
             this.matrixEvj1textbox.TabIndex = 3;
             // 
             // label9
@@ -497,7 +497,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("方正舒体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(439, 0);
+            this.label9.Location = new System.Drawing.Point(438, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 24);
             this.label9.TabIndex = 2;
@@ -795,9 +795,9 @@
             this.label7.Font = new System.Drawing.Font("方正舒体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.Location = new System.Drawing.Point(3, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(747, 53);
+            this.label7.Size = new System.Drawing.Size(747, 90);
             this.label7.TabIndex = 0;
-            this.label7.Text = "该矩阵计算模块输入格式为：使用空格分隔每个元素，使用换行符输入下一行";
+            this.label7.Text = "该矩阵计算模块输入格式为：使用空格分隔每个元素，使用换行符输入下一行\r\n求特征值与特征向量功能只能用于实对称矩阵\r\n";
             // 
             // MainMatrixForm
             // 
